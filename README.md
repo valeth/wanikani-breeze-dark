@@ -1,7 +1,7 @@
 WaniKani Breeze Dark Theme
 ==========================
 
-A Stylish theme for the WaniKani website.
+A [Stylish](https://addons.mozilla.org/en-US/firefox/addon/stylish) theme for the WaniKani website.
 
 Using the KDE Breeze theme color palette.
 
@@ -22,3 +22,30 @@ Colours
 
 
 [KDE Visual Design Group HIG](https://community.kde.org/KDE_Visual_Design_Group/HIG/Color)
+
+
+Progress
+--------
+- [ ] dashboard
+- [ ] lesson
+- [ ] review
+- [ ] level
+- [ ] radicals
+ + [ ] meaning
+ + [ ] progress
+- [ ] kanji
+ + [ ] combined
+ + [ ] meaning
+ + [ ] reading
+ + [ ] progress
+- [ ] vocabulary
+ + [ ] combined
+ + [ ] meaning
+ + [ ] reading
+ + [ ] progress
+- [ ] community
+- [ ] profile
+- [ ] settings
+ + [ ] account
+ + [ ] subscription
+ + [ ] billing
