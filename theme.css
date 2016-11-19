@@ -1,16 +1,5 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 
-/* colours
-#fcfcfc  rgb(252, 252, 252)  Paper White
-#eff0f1  rgb(239, 240, 241)  Cardboard Grey
-#4d4d4d  rgb(77, 77, 77)     Iron Grey
-#31363b  rgb(49, 54, 59)     Charcoal Grey
-#232629  rgb(35, 38, 41)     Shade Black
-#3daee9  rgb(61, 174, 233)   Plasma Blue
-#f67400  rgb(246, 116, 0)    Danger Orange
-#1d99f3  rgb(29, 153, 243)   Icon Blue
-*/
-
 @-moz-document domain("wanikani.com") {
   * {
     color: rgb(252, 252, 252) !important;
@@ -26,7 +15,6 @@
   #query {
     border: 1px solid;
     border-color: rgb(61, 174, 233) !important;
-    /*border-color: rgb(29, 153, 243) !important;*/
     background-image: none !important;
     background-color: rgb(29, 153, 243) !important;
   }
@@ -101,16 +89,11 @@
     background-color: rgb(35, 38, 41) !important;
   }
 
-  .burned,
-  .enlightened,
-  .master,
-  .guru,
-  .apprentice,
-  .burned,
-  .enlightened,
-  .master span,
-  .guru span,
-  .apprentice span {
+  .burned, .burned span,
+  .enlightened, .enlightened span,
+  .master, .master span,
+  .guru, .guru span,
+  .apprentice, .apprentice span {
     background-image: none !important;
     background-color: rgb(35, 38, 41) !important;
   }
