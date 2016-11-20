@@ -1,0 +1,20 @@
+/* settings page */
+
+.btn {
+	border: 1px solid;
+	background-image: none !important;
+	border-color: rgb(61, 174, 233) !important;
+	background-color: rgb(49, 54, 59) !important;
+}
+
+.page-list {
+	background-color: rgb(35, 38, 41) !important;
+}
+
+.page-list ul li a {
+	border: none;
+	border-right: 1px solid;
+	border-color: rgb(61, 174, 233);
+	background-image: none !important;
+	background-color: rgb(29, 153, 243) !important;
+}
