@@ -1,0 +1,9 @@
+* {
+	color: <%= Colours::TEXT %> !important;
+	text-shadow: none !important;
+}
+
+body {
+	background-image: none !important;
+	background-color: <%= Colours::BACKGROUND %> !important;
+}

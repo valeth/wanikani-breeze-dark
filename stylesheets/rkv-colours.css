@@ -1,0 +1,41 @@
+/* radicals color */
+
+tr[id|=radical],
+span.radical,
+.highlight-radical,
+#character.radical,
+section.progression .radicals-progress .bar,
+.nav .dropdown.radicals.open .dropdown-toggle
+{
+	background-color: <%= Colours::RADICAL %> !important;
+	background-image: none !important;
+	box-shadow: none !important;
+}
+
+
+/* kanji colour */
+
+tr[id|=kanji],
+span.kanji,
+.highlight-kanji,
+#character.kanji
+{
+	background-color: <%= Colours::KANJI %> !important;
+	background-image: none !important;
+	box-shadow: none !important;
+}
+
+
+/* vocabulary colour */
+
+tr[id|=vocabulary],
+span.vocabulary,
+.highlight-vocabulary,
+#character.vocabulary,
+#main-info.vocabulary,       /* lesson header */
+#batch-items span.vocabulary /* lesson progress bottom */
+{
+	background-color: <%= Colours::VOCABULARY %> !important;
+	background-image: none !important;
+	box-shadow: none !important;
+}
