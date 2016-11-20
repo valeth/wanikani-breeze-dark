@@ -1,0 +1,38 @@
+/* lessons page */
+
+#lesson-ready-continue,
+#quiz-ready-continue,
+#lesson #supplement-info {
+	background-color: <%= Colours::SUBSECTION %> !important;
+}
+
+#lesson #supplement-info {
+	box-shadow: none !important;
+}
+
+#lesson #next-btn:hover,
+#lesson #prev-btn:hover {
+	background-color: <%= Colours::BACKGROUND %> !important;
+	opacity: 0.5;
+}
+
+#lessons #supplement-nav li::before {
+	border-color: transparent transparent <%= Colours::SUBSECTION %> transparent !important;
+}
+
+#batch-items li[data-index=quiz] span {
+	background-color: <%= Colours::BACKGROUND %> !important;
+}
+
+
+/* userscript: lesson reorder */
+
+#reorderBtn,
+#reorderVBtn {
+	border-color: <%= Colours::SUBSECTION %> !important;
+	border-style: solid;
+	border-radius: 5px;
+	background-color: <%= Colours::SUBSECTION %> !important;
+	margin-top: 2px;
+	width: 200px;
+}
