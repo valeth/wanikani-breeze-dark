@@ -12,6 +12,17 @@ section.progression .radicals-progress .bar,
 	box-shadow: none !important;
 }
 
+.nav .radicals.open .dropdown-menu li.nested-level a:hover
+{
+	background-color: rgb(201, 206, 59) !important;
+}
+
+.nav .dropdown.radicals.open ul.dropdown-menu::before,
+.nav .dropdown.radicals.open ul.dropdown-menu::after
+{
+	border-bottom: 9px solid rgb(201, 206, 59) !important;
+	border-bottom-color: rgb(201, 206, 59) !important;
+}
 
 /* kanji colour */
 
