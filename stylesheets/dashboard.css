@@ -1,0 +1,55 @@
+/* dashboard */
+
+#query {
+	border: 3px solid;
+	border-color: <%= Colours::SUBSECTION %> !important;
+	background-image: none !important;
+	background-color: transparent !important;
+}
+
+.search-list {
+	border: none !important;
+	background-color: transparent !important;
+}
+
+.search-list .btn {
+	border: none !important;
+	background-color: transparent !important;
+	box-shadow: none !important;
+}
+
+.navbar .nav .dropdown-toggle span {
+	border-color: <%= Colours::BACKGROUND %> !important;
+	box-shadow: none !important;
+}
+
+.navbar-inner {
+	border: none !important;
+}
+
+.navbar-inner,
+.dashboard section.progression,
+.none-available,
+.see-more,
+.review-stats,
+#information {
+	background-image: none !important;
+	background-color: <%= Colours::SUBSECTION %> !important;
+	box-shadow: none !important;
+}
+
+.none-available div {
+	box-shadow: none !important;
+	border: none !important;
+}
+
+.forum-topics-list table td,
+.blog-item {
+	background-image: none !important;
+	background-color: <%= Colours::LIST_ITEM %> !important;
+}
+
+.dashboard-sub-section h3 {
+	background-image: none !important;
+	background-color: <%= Colours::LIST_HEAD %> !important;
+}
