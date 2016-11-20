@@ -1,0 +1,18 @@
+:primary:
+  :paper_white:   '#fcfcfc'
+  :iron_grey:     '#4d4d4d'
+  :charcoal_grey: '#31363b'
+  :shade_black:   '#232629'
+  :plasma_blue:   '#3daee9'
+
+:secondary:
+  :icon_red:         '#da4453'
+  :danger_red:       '#ed1515'
+  :icon_orange:      '#f47750'
+  :beware_orange:    '#f67400'
+  :icon_yellow:      '#fdbc4b'
+  :sunbeam_yellow:   '#c9ce3b'
+  :mellow_turquoise: '#1cdc9a'
+  :icon_green:       '#2ecc71'
+  :verdant_green:    '#11d116'
+  :icon_blue:        '#1d99f3'
