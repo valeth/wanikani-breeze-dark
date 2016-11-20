@@ -1,0 +1,13 @@
+/* kanji colour */
+
+tr[id|=kanji],
+span.kanji,
+.highlight-kanji,
+#main-info.kanji,
+#batch-items span.kanji
+{
+	background-color: <%= Colours::KANJI %> !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	color: <%= Colours::BACKGROUND %> !important;
+}

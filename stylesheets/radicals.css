@@ -23,30 +23,3 @@ section.progression .radicals-progress .bar,
 	border-bottom: 9px solid rgb(201, 206, 59) !important;
 	border-bottom-color: rgb(201, 206, 59) !important;
 }
-
-/* kanji colour */
-
-tr[id|=kanji],
-span.kanji,
-.highlight-kanji,
-#character.kanji
-{
-	background-color: <%= Colours::KANJI %> !important;
-	background-image: none !important;
-	box-shadow: none !important;
-}
-
-
-/* vocabulary colour */
-
-tr[id|=vocabulary],
-span.vocabulary,
-.highlight-vocabulary,
-#character.vocabulary,
-#main-info.vocabulary,       /* lesson header */
-#batch-items span.vocabulary /* lesson progress bottom */
-{
-	background-color: <%= Colours::VOCABULARY %> !important;
-	background-image: none !important;
-	box-shadow: none !important;
-}

@@ -1,0 +1,13 @@
+/* vocabulary colour */
+
+tr[id|=vocabulary],
+span.vocabulary,
+.highlight-vocabulary,
+#main-info.vocabulary,       /* lesson header */
+#batch-items span.vocabulary /* lesson progress bottom */
+{
+	background-color: <%= Colours::VOCABULARY %> !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	color: <%= Colours::BACKGROUND %> !important;
+}
