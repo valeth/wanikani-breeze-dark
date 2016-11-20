@@ -9,6 +9,9 @@ module Colours
     LIST_ITEM   = COLOURS[:primary][:plasma_blue]
     LIST_HEAD   = COLOURS[:secondary][:icon_blue]
 
+    INCORRECT   = COLOURS[:secondary][:danger_red]
+    CORRECT     = COLOURS[:secondary][:icon_green]
+
     RADICAL     = COLOURS[:secondary][:icon_blue]
     KANJI       = COLOURS[:secondary][:icon_yellow]
     VOCABULARY  = COLOURS[:secondary][:icon_green]
