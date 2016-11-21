@@ -7,3 +7,8 @@ body {
 	background-image: none !important;
 	background-color: <%= Colours::BACKGROUND %> !important;
 }
+
+#hotkeys {
+	background-color: <%= Colours::SUBSECTION %> !important;
+}
+
