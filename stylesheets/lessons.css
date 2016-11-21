@@ -1,26 +1,38 @@
 /* lessons page */
 
-#lesson-ready-continue,
-#quiz-ready-continue,
-#lesson #supplement-info {
+#header-buttons li a,
+#header-buttons li i,
+#lessons #stats li
+{
+	color: <%= Colours::BACKGROUND %> !important;
+}
+
+#lessons #lesson-ready-continue,
+#lessons #quiz-ready-continue,
+#lessons #supplement-info
+{
 	background-color: <%= Colours::SUBSECTION %> !important;
 }
 
-#lesson #supplement-info {
+#lessons #supplement-info
+{
 	box-shadow: none !important;
 }
 
-#lesson #supplement-info blockquote {
+#lessons #supplement-info blockquote
+{
 	background-color: <%= Colours::SUBSECTION %> !important;
 }
 
-#lesson #next-btn:hover,
-#lesson #prev-btn:hover {
+#lessons #next-btn:hover,
+#lessons #prev-btn:hover
+{
 	background-color: <%= Colours::BACKGROUND %> !important;
 	opacity: 0.5;
 }
 
-#lessons #supplement-nav li::before {
+#lessons #supplement-nav li::before
+{
 	border-color: transparent transparent <%= Colours::SUBSECTION %> transparent !important;
 }
 
@@ -30,19 +42,27 @@
 	color: <%= Colours::BACKGROUND %> !important;
 }
 
-#batch-items li[data-index=quiz] span {
+#lessons #batch-items li[data-index=quiz] span
+{
 	background-color: <%= Colours::BACKGROUND %> !important;
 }
 
 
 /* userscript: lesson reorder */
 
-#reorderBtn,
-#reorderVBtn {
+#lessons #divSt
+{
+	margin-top: 2vh;
+	color: <%= Colours::BACKGROUND %> !important;
+}
+
+#lessons #reorderBtn,
+#lessons #reorderVBtn
+{
 	border-color: <%= Colours::SUBSECTION %> !important;
 	border-style: solid;
 	border-radius: 5px;
 	background-color: <%= Colours::SUBSECTION %> !important;
-	margin-top: 2px;
+	margin-top: 1vh;
 	width: 200px;
 }
