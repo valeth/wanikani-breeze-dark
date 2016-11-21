@@ -1,26 +1,31 @@
 /* levels */
 
-#burned {
+div.dashboard #burned
+{
 	background-image: none !important;
 	background-color: <%= Colours::BURNED %> !important;
 }
 
-#enlightened {
+div.dashboard #enlightened
+{
 	background-image: none !important;
 	background-color: <%= Colours::ENLIGHTENED %> !important;
 }
 
-#master {
+div.dashboard #master
+{
 	background-image: none !important;
 	background-color: <%= Colours::MASTER %> !important;
 }
 
-#guru {
+div.dashboard #guru
+{
 	background-image: none !important;
 	background-color: <%= Colours::GURU %> !important;
 }
 
-#apprentice {
+div.dashboard #apprentice
+{
 	background-image: none !important;
 	background-color: <%= Colours::APPRENTICE %> !important;
 }
