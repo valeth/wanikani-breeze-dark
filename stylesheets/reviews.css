@@ -1,4 +1,4 @@
-/* reviews page */
+/* review summary */
 
 #review-stats-radicals,
 #review-stats-kanji,
@@ -44,68 +44,63 @@
 
 /* review */
 
-#question-type {
+#reviews #question-type {
 	background-image: none !important;
 }
 
-#question-type.meaning {
+#reviews #question-type.meaning,
+#reviews #question-type.reading
+{
 	background-color: transparent !important;
 	border-color: transparent !important;
 }
 
-#question-type.reading {
-	background-color: transparent !important;
-	border-color: transparent !important;
-}
-
-#user-response,
-#answer-form fieldset button {
-	background-color: transparent !important;
+#reviews #user-response,
+#reviews #answer-form fieldset button
+{
 	border-bottom: 1px solid !important;
 	border-color: <%= Colours::SUBSECTION %> !important;
 }
 
-#user-response {
+#reviews #user-response {
 	box-shadow: none !important;
 }
 
-#additional-content li[id^=option] span {
+#reviews #additional-content li[id^=option] span {
 	background-color: <%= Colours::BACKGROUND %> !important;
 	box-shadow: none !important;
 	border-right: 1px solid !important;
 	border-color: <%= Colours::SUBSECTION %> !important;
 }
 
-#additional-content li[id^=option]:last-child span {
+#reviews #additional-content li[id^=option]:last-child span {
 	border-right: none !important;
 }
 
 
-#additional-content li[id^=option] span::before {
+#reviews #additional-content li::before {
 	background-color: inherit !important;
-	color: <%= Colours::TEXT %> !important;
+	color: <%= Colours::SUBSECTION %> !important;
 	box-shadow: none !important;
 }
 
-#all-info {
+#reviews #all-info {
 	background-color: transparent !important;
 }
 
-#hotkeys {
-	background-color: <%= Colours::SUBSECTION %> !important;
-}
-
-#answer-exception span {
+#reviews #answer-exception span {
 	background-color: <%= Colours::SUBSECTION %> !important;
 	box-shadow: none !important;
 }
 
-#answer-exception span::before {
+#reviews #answer-exception span::before {
 	content: "";
 	border-color: transparent transparent <%= Colours::SUBSECTION %> transparent !important;
 }
 
-#question-type .srs-up,
-#question-type .srs-down {
+#reviews #question-type .srs-up,
+#reviews #question-type .srs-down
+{
 	background-color: transparent !important;
+	color: <%= Colours::BACKGROUND %> !important;
 }
