@@ -5,11 +5,19 @@ span.radical,
 .highlight-radical,
 #character.radical,
 section.progression .radicals-progress .bar,
-.nav .dropdown.radicals.open .dropdown-toggle
+.nav .dropdown.radicals.open .dropdown-toggle,
+#lessons span.highlight-radicals,
+#reviews #character.radical
 {
 	background-color: <%= Colours::RADICAL %> !important;
 	background-image: none !important;
 	box-shadow: none !important;
+}
+
+#lessons span.highlight-radicals
+{
+	border: solid 2px;
+	border-radius: 5px;
 }
 
 .nav .radicals.open .dropdown-menu li.nested-level a:hover
