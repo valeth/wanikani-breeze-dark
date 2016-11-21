@@ -1,17 +1,17 @@
 /* settings page */
 
-.btn {
+div.account .btn {
 	border: 1px solid;
 	background-image: none !important;
 	border-color: rgb(61, 174, 233) !important;
 	background-color: rgb(49, 54, 59) !important;
 }
 
-.page-list {
+div.account .page-list {
 	background-color: rgb(35, 38, 41) !important;
 }
 
-.page-list ul li a {
+div.account .page-list ul li a {
 	border: none;
 	border-right: 1px solid;
 	border-color: rgb(61, 174, 233);
