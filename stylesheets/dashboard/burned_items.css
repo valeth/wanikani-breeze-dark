@@ -3,6 +3,7 @@
 div.dashboard section.recent-retired
 {
 	background-color: <%= Colours::SUBSECTION %> !important;
+	border-radius: 5px;
 	box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
 }
 

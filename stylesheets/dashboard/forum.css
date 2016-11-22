@@ -3,12 +3,17 @@
 div.dashboard section.forum-topics-list
 {
 	background-color: <%= Colours::SUBSECTION %> !important;
+	border-radius: 5px;
 	box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
 }
 
-div.dashboard section.forum-topics-list table td,
-div.dashboard section.blog tr.blog-item
+div.dashboard section.forum-topics-list table td
 {
 	background-image: none !important;
 	background-color: <%= Colours::LIST_ITEM %> !important;
+}
+
+div.dashboard section.forum-topics-list div.see-more a
+{
+	background-image: none !important;
 }
