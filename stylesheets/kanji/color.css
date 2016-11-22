@@ -1,5 +1,3 @@
-/* kanji colour */
-
 #lessons span.highlight-kanji,
 #reviews #character.kanji,
 #reviews #character.kanji span,
@@ -12,7 +10,8 @@ div.dashboard section.recent-unlocks tr[id|=kanji],
 div.dashboard section.low-percentage tr[id|=kanji],
 div.dashboard section.recent-retired tr[id|=kanji],
 div.dashboard section.progression li[id|=kanji] a,
-div.dashboard section.progression div.kanji-progress div.bar
+div.dashboard section.progression div.kanji-progress div.bar,
+#search section.search-results li[id|=kanji]
 {
 	background-color: <%= Colours::KANJI %> !important;
 	background-image: none !important;
@@ -24,16 +23,22 @@ div.dashboard section.progression div.kanji-progress div.bar
 div.dashboard section.recent-unlocks tr[id|=kanji] a span,
 div.dashboard section.recent-unlocks tr[id|=kanji] a time,
 div.dashboard section.low-percentage tr[id|=kanji] a span,
-div.dashboard section.recent-retired tr[id|=kanji] a span
+div.dashboard section.recent-retired tr[id|=kanji] a span,
+#search section.search-results li[id|=kanji] span,
+#search section.search-results li[id|=kanji] li
 {
 	color: <%= Colours::BACKGROUND %> !important;
 }
 
 #reviews-summary #correct li.kanji,
-#reviews-summary #incorrect li.kanji,
-#reviews #character.kanji
+#reviews-summary #incorrect li.kanji
 {
 	box-shadow: none !important;
+}
+
+#search section.search-results li[id|=kanji]
+{
+	border-color: <%= Colours::KANJI %> !important;
 }
 
 #lessons span.highlight-kanji,
