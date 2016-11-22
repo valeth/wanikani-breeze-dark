@@ -11,3 +11,11 @@ body {
 #hotkeys {
 	background-color: <%= Colours::SUBSECTION %> !important;
 }
+
+#loading {
+	background-color: <%= Colours::BACKGROUND %> !important;
+}
+
+#additional-content-load {
+	background-color: <%= Colours::SUBSECTION %> !important;
+}
