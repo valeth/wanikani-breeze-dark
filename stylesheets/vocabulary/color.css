@@ -1,5 +1,3 @@
-/* vocabulary colour */
-
 #lessons span.highlight-vocabulary,
 #lessons #main-info.vocabulary,
 #lessons #batch-items span.vocabulary,
@@ -10,7 +8,8 @@
 div.popover.srs div.popover-content li:nth-child(3),
 div.dashboard section.recent-unlocks tr[id|=vocabulary],
 div.dashboard section.low-percentage tr[id|=vocabulary],
-div.dashboard section.recent-retired tr[id|=vocabulary]
+div.dashboard section.recent-retired tr[id|=vocabulary],
+#search section.search-results li[id|=vocabulary]
 {
 	background-color: <%= Colours::VOCABULARY %> !important;
 	background-image: none !important;
@@ -22,16 +21,22 @@ div.dashboard section.recent-retired tr[id|=vocabulary]
 div.dashboard section.recent-unlocks tr[id|=vocabulary] a span,
 div.dashboard section.recent-unlocks tr[id|=vocabulary] a time,
 div.dashboard section.low-percentage tr[id|=vocabulary] a span,
-div.dashboard section.recent-retired tr[id|=vocabulary] a span
+div.dashboard section.recent-retired tr[id|=vocabulary] a span,
+#search section.search-results li[id|=vocabulary] span,
+#search section.search-results li[id|=vocabulary] li
 {
 	color: <%= Colours::BACKGROUND %> !important;
 }
 
 #reviews-summary #correct li.vocabulary,
-#reviews-summary #incorrect li.vocabulary,
-#reviews #character.vocabulary
+#reviews-summary #incorrect li.vocabulary
 {
 	box-shadow: none !important;
+}
+
+#search section.search-results li[id|=vocabulary]
+{
+	border-color: <%= Colours::VOCABULARY %> !important;
 }
 
 #lessons span.highlight-vocabulary,
