@@ -2,17 +2,17 @@
 
 #reviews-summary #review-stats-answered-correctly
 {
-	box-shadow: none !important;
 	border-radius: 5px;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.2) !important;
 }
 
-#reviews-summary #review-stats-radicals,
-#reviews-summary #review-stats-kanji,
-#reviews-summary #review-stats-vocabulary
+#reviews-summary div#review-stats-radicals,
+#reviews-summary div#review-stats-kanji,
+#reviews-summary div#review-stats-vocabulary
 {
 	/* background-image: none !important; */
 	background-color: <%= Colours::SUBSECTION %> !important;
-	box-shadow: none !important;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.2) !important;
 }
 
 #reviews-summary #review-stats-radicals
@@ -25,13 +25,23 @@
 	border-radius: 0 5px 5px 0;
 }
 
+#reviews-summary #incorrect h2,
+#reviews-summary #incorrect h2 strong,
+#reviews-summary #correct h2,
+#reviews-summary #correct h2 strong
+{
+	color: <%= Colours::BACKGROUND %> !important;
+}
+
 #reviews-summary #incorrect h2
 {
+	border-radius: 5px 5px 0 0;
 	background-color: <%= Colours::INCORRECT %> !important;
 }
 
 #reviews-summary #correct h2
 {
+	border-radius: 5px 5px 0 0;
 	background-color: <%= Colours::CORRECT %> !important;
 }
 
@@ -39,8 +49,8 @@
 #reviews-summary #incorrect
 {
 	background-color: <%= Colours::SUBSECTION %> !important;
-	box-shadow: none !important;
 	border-radius: 5px;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
 }
 
 #reviews-summary #correct h3 strong,

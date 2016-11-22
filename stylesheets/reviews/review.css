@@ -19,30 +19,41 @@
 	border-color: transparent !important;
 }
 
+#reviews #character
+{
+	box-shadow: 0 3px 3px  rgba(0,0,0,0.5) !important;
+	opacity: 0.80;
+}
+
+#reviews #answer-form fieldset
+{
+	padding-left: 0;
+	padding-right: 0;
+}
+
 #reviews #answer-form fieldset input
 {
-	box-shadow: none !important;
+	box-shadow: inset 0 3px 3px rgba(0,0,0,0.5),
+	            0 3px 3px rgba(0,0,0,0.5) !important;
 }
 
-#reviews #answer-form fieldset input,
-#reviews #answer-form fieldset button
+#reviews #answer-form fieldset input
 {
-	background-color: <%= Colours::BACKGROUND %> !important;
-	border-bottom: 1px solid !important;
-	border-color: <%= Colours::SUBSECTION %> !important;
+	background-color: <%= Colours::TEXTFIELD %> !important;
 }
 
-#reviews #answer-form fieldset.incorrect input,
-#reviews #answer-form fieldset.incorrect input:disabled,
-#reviews #answer-form fieldset.incorrect button
+#reviews #answer-form fieldset button,
+#reviews #answer-form fieldset.incorrect button,
+#reviews #answer-form fieldset.correct button
 {
+	background-color: transparent !important;
+}
+
+#reviews #answer-form fieldset.incorrect input:disabled {
 	background-color: <%= Colours::INCORRECT %> !important;
 }
 
-#reviews #answer-from fieldset.correct input,
-#reviews #answer-form fieldset.correct input:disabled,
-#reviews #answer-form fieldset.correct button
-{
+#reviews #answer-form fieldset.correct input:disabled {
 	background-color: <%= Colours::CORRECT %> !important;
 }
 
@@ -65,8 +76,22 @@
 #reviews #information
 {
 	background-color: <%= Colours::SUBSECTION %> !important;
-	box-shadow: none !important;
 	border-radius: 5px;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.3) !important;
+}
+
+#reviews #information section#note-meaning fieldset,
+#reviews #information section#note-reading fieldset
+{
+	background-color: <%= Colours::BACKGROUND %> !important;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.3) inset !important;
+}
+
+#reviews #information section#note-meaning fieldset button,
+#reviews #information section#note-reading fieldset button
+{
+	background-color: transparent !important;
 }
 
 #reviews #additional-content li span::before {
@@ -81,7 +106,8 @@
 
 #reviews #answer-exception span {
 	background-color: <%= Colours::SUBSECTION %> !important;
-	box-shadow: none !important;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.3) !important;
 }
 
 #reviews #answer-exception span::before {
