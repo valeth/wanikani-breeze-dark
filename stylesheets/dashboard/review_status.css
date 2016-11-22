@@ -4,7 +4,7 @@ div.dashboard section.review-status
 {
 	background-color: <%= Colours::SUBSECTION %> !important;
 	border-radius: 5px;
-	box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.5) !important;
 }
 
 div.dashboard section.review-status,
