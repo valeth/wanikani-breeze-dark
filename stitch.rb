@@ -1,8 +1,13 @@
 #!/usr/bin/env ruby
 
-require './colours'
 require 'erb'
+require 'yaml'
 
+module Colours
+    YAML.load_file('./colours.yml').each_pair do |key, value|
+        self.const_set(key.upcase, value)
+    end
+end
 
 css_base = <<~EOF
     @namespace url(http://www.w3.org/1999/xhtml);
@@ -19,18 +24,19 @@ css_base = <<~EOF
 
 to_insert = ''
 
-Dir['./stylesheets/*.css'].each do |file|
-    puts "appending #{file}"
+files = Dir['./stylesheets/**/*.css']
+puts "stitching together #{files.size} CSS files..."
 
+files.each do |file|
     erb = ERB.new(File.read(file))
-    erb.result.each_line do |line|
-        to_insert << "  #{line}"
-    end
+    erb.result.each_line { |l| to_insert << "  #{l}" }
 
     to_insert << "\n\n"
 end
 
 stylish_css_doc = format(css_base, css: to_insert)
+stylish_css_doc.gsub!(/^\n/, "")
+stylish_css_doc.gsub!(/^\s*$/, "")
 
 outfile = open('stylish.css', 'w')
 outfile.truncate(0)

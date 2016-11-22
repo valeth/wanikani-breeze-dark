@@ -1,3 +1,3 @@
 task :default do
-    ruby 'combine.rb'
+    ruby 'stitch.rb'
 end

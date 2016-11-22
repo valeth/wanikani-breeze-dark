@@ -1,18 +1,41 @@
-:primary:
-  :paper_white:   '#fcfcfc'
-  :iron_grey:     '#4d4d4d'
-  :charcoal_grey: '#31363b'
-  :shade_black:   '#232629'
-  :plasma_blue:   '#3daee9'
+# :primary:
+#   :paper_white:   '#fcfcfc'
+#   :iron_grey:     '#4d4d4d'
+#   :charcoal_grey: '#31363b'
+#   :shade_black:   '#232629'
+#   :plasma_blue:   '#3daee9'
 
-:secondary:
-  :icon_red:         '#da4453'
-  :danger_red:       '#ed1515'
-  :icon_orange:      '#f47750'
-  :beware_orange:    '#f67400'
-  :icon_yellow:      '#fdbc4b'
-  :sunbeam_yellow:   '#c9ce3b'
-  :mellow_turquoise: '#1cdc9a'
-  :icon_green:       '#2ecc71'
-  :verdant_green:    '#11d116'
-  :icon_blue:        '#1d99f3'
+# :secondary:
+#   :icon_red:         '#da4453'
+#   :danger_red:       '#ed1515'
+#   :icon_orange:      '#f47750'
+#   :beware_orange:    '#f67400'
+#   :icon_yellow:      '#fdbc4b'
+#   :sunbeam_yellow:   '#c9ce3b'
+#   :mellow_turquoise: '#1cdc9a'
+#   :icon_green:       '#2ecc71'
+#   :verdant_green:    '#11d116'
+#   :icon_blue:        '#1d99f3'
+
+text:           '#fcfcfc'
+background:     '#31363b'
+subsection:     '#232629'
+
+dropdown:       '#4d4d4d'
+popover_border: '#3daee9'
+
+list_head:      '#1d99f3'
+list_item:      '#3daee9'
+
+incorrect:      '#ed1515'
+correct:        '#2ecc71'
+
+radical:        '#3daee9'
+kanji:          '#fdbc4b'
+vocabulary:     '#2ecc71'
+
+apprentice:     '#1d99f3'
+guru:           '#1cdc9a'
+master:         '#c9ce3b'
+enlightened:    '#f47750'
+burned:         '#232629'
