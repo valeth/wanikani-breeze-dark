@@ -1,9 +1,10 @@
-/* level progress */
-
 div.dashboard section.progression
 {
 	background-color: <%= Colours::SUBSECTION %> !important;
 	box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+	border-radius: 5px !important;
+	margin-top: 0 !important;
+	margin-bottom: 1vh !important;
 }
 
 div.dashboard section.progression hr
