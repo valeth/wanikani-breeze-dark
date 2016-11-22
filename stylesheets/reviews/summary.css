@@ -1,0 +1,52 @@
+/* reviews summary */
+
+#reviews-summary #review-stats-answered-correctly
+{
+	box-shadow: none !important;
+	border-radius: 5px;
+}
+
+#reviews-summary #review-stats-radicals,
+#reviews-summary #review-stats-kanji,
+#reviews-summary #review-stats-vocabulary
+{
+	/* background-image: none !important; */
+	background-color: <%= Colours::SUBSECTION %> !important;
+	box-shadow: none !important;
+}
+
+#reviews-summary #review-stats-radicals
+{
+	border-radius: 5px 0 0 5px;
+}
+
+#reviews-summary #review-stats-vocabulary
+{
+	border-radius: 0 5px 5px 0;
+}
+
+#reviews-summary #incorrect h2
+{
+	background-color: <%= Colours::INCORRECT %> !important;
+}
+
+#reviews-summary #correct h2
+{
+	background-color: <%= Colours::CORRECT %> !important;
+}
+
+#reviews-summary #correct,
+#reviews-summary #incorrect
+{
+	background-color: <%= Colours::SUBSECTION %> !important;
+	box-shadow: none !important;
+	border-radius: 5px;
+}
+
+#reviews-summary #correct h3 strong,
+#reviews-summary #correct h3 span,
+#reviews-summary #incorrect h3 strong,
+#reviews-summary #incorrect h3 span
+{
+	background-color: <%= Colours::SUBSECTION %> !important;
+}

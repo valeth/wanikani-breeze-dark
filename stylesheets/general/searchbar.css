@@ -1,0 +1,22 @@
+/* search bar below navbar */
+
+#search #query
+{
+	border: none;
+	background-image: none !important;
+	background-color: <%= Colours::SUBSECTION %> !important;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.5) inset !important;
+}
+
+#search div.search-list
+{
+	border: none !important;
+	background-color: transparent !important;
+}
+
+#search div.search-list a.btn
+{
+	border: none !important;
+	background-color: transparent !important;
+	box-shadow: none !important;
+}

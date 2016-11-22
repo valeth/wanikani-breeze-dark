@@ -1,0 +1,126 @@
+/* review */
+
+#reviews #summary-button i,
+#reviews #stats i,
+#reviews #stats span
+{
+	color: <%= Colours::BACKGROUND %> !important;
+}
+
+#reviews #question-type
+{
+	background-image: none !important;
+}
+
+#reviews #question-type.meaning,
+#reviews #question-type.reading
+{
+	background-color: transparent !important;
+	border-color: transparent !important;
+}
+
+#reviews #answer-form fieldset input
+{
+	box-shadow: none !important;
+}
+
+#reviews #answer-form fieldset input,
+#reviews #answer-form fieldset button
+{
+	background-color: <%= Colours::BACKGROUND %> !important;
+	border-bottom: 1px solid !important;
+	border-color: <%= Colours::SUBSECTION %> !important;
+}
+
+#reviews #answer-form fieldset.incorrect input,
+#reviews #answer-form fieldset.incorrect input:disabled,
+#reviews #answer-form fieldset.incorrect button
+{
+	background-color: <%= Colours::INCORRECT %> !important;
+}
+
+#reviews #answer-from fieldset.correct input,
+#reviews #answer-form fieldset.correct input:disabled,
+#reviews #answer-form fieldset.correct button
+{
+	background-color: <%= Colours::CORRECT %> !important;
+}
+
+#reviews #additional-content li span {
+	background-color: <%= Colours::BACKGROUND %> !important;
+	box-shadow: none !important;
+	border-right: 1px solid !important;
+	border-color: <%= Colours::SUBSECTION %> !important;
+}
+
+#reviews #additional-content li::before
+{
+	border-color: transparent transparent <%= Colours::SUBSECTION %> transparent !important;
+}
+
+#reviews #additional-content li:last-child span {
+	border-right: none !important;
+}
+
+#reviews #information
+{
+	background-color: <%= Colours::SUBSECTION %> !important;
+	box-shadow: none !important;
+	border-radius: 5px;
+}
+
+#reviews #additional-content li span::before {
+	background-color: inherit !important;
+	color: <%= Colours::TEXT %> !important;
+	box-shadow: none !important;
+}
+
+#reviews #all-info {
+	background-color: transparent !important;
+}
+
+#reviews #answer-exception span {
+	background-color: <%= Colours::SUBSECTION %> !important;
+	box-shadow: none !important;
+}
+
+#reviews #answer-exception span::before {
+	content: "";
+	border-color: transparent transparent <%= Colours::SUBSECTION %> transparent !important;
+}
+
+#reviews #question-type .srs-up,
+#reviews #question-type .srs-down
+{
+	background-color: transparent !important;
+	color: <%= Colours::BACKGROUND %> !important;
+}
+
+#reviews #item-info li.user-synonyms-add-btn::before
+{
+	background-color: transparent !important;
+}
+
+#reviews #item-info li.user-synonyms-add-form input
+{
+	background-color: transparent !important;
+}
+
+#reviews #item-info li.user-synonyms-add-form button
+{
+	background-color: <%= Colours::BACKGROUND %> !important;
+	border: 2px solid;
+	border-color: <%= Colours::BACKGROUND %> !important;
+	height: 2vh;
+}
+
+#reviews #last-items li ul
+{
+	background-color: <%= Colours::BACKGROUND %> !important;
+}
+
+#reviews #kana-chart ul[id^=chart-] li:hover
+{
+	background-color: <%= Colours::BACKGROUND %> !important;
+	box-shadow: none !important;
+}

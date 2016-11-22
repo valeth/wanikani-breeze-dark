@@ -1,0 +1,77 @@
+/* kanji colour */
+
+#lessons span.highlight-kanji,
+#reviews #character.kanji,
+#reviews #character.kanji span,
+#reviews span.highlight-kanji,
+#reviews #related-items span.kanji,
+#reviews #last-items li.kanji ul li[title=Characters],
+#reviews-summary #correct li.kanji,
+div.popover.srs div.popover-content li:nth-child(2),
+div.dashboard section.recent-unlocks tr[id|=kanji],
+div.dashboard section.low-percentage tr[id|=kanji],
+div.dashboard section.recent-retired tr[id|=kanji],
+div.dashboard section.progression li[id|=kanji] a,
+div.dashboard section.progression div.kanji-progress div.bar
+{
+	background-color: <%= Colours::KANJI %> !important;
+	background-image: none !important;
+	color: <%= Colours::BACKGROUND %> !important;
+}
+
+#reviews-summary #correct li.kanji a,
+#reviews-summary #incorrect li.kanji a,
+div.dashboard section.recent-unlocks tr[id|=kanji] a span,
+div.dashboard section.recent-unlocks tr[id|=kanji] a time,
+div.dashboard section.low-percentage tr[id|=kanji] a span,
+div.dashboard section.recent-retired tr[id|=kanji] a span
+{
+	color: <%= Colours::BACKGROUND %> !important;
+}
+
+#reviews-summary #correct li.kanji,
+#reviews-summary #incorrect li.kanji,
+#reviews #character.kanji
+{
+	box-shadow: none !important;
+}
+
+#lessons span.highlight-kanji,
+#reviews span.highlight-kanji
+{
+	border: solid 1px;
+	border-radius: 5px;
+	border-color: <%= Colours::KANJI %>;
+}
+
+div.navbar ul.nav li.kanji.open a.dropdown-toggle
+{
+	background-color: <%= Colours::KANJI %> !important;
+	opacity: 0.80;
+}
+
+div.navbar ul.nav li.kanji.open ul.dropdown-menu::before,
+div.navbar ul.nav li.kanji.open ul.dropdown-menu::after
+{
+	border-bottom: 9px solid <%= Colours::KANJI %> !important;
+	color: <%= Colours::KANJI %> !important;
+}
+
+div.navbar ul.nav li.kanji.open ul.dropdown-menu
+{
+	background-color: <%= Colours::KANJI %> !important;
+}
+
+div.navbar ul.nav li.kanji.open ul.dropdown-menu li a,
+div.navbar ul.nav li.kanji.open a.dropdown-toggle,
+div.navbar ul.nav li.kanji.open a.dropdown-toggle span,
+div.navbar ul.nav li.kanji.open a.dropdown-toggle i,
+div.navbar ul.nav li.kanji.open ul.dropdown-menu li.nav-header
+{
+	color: <%= Colours::BACKGROUND %> !important;
+}
+
+div.navbar ul.nav li.kanji.open ul.dropdown-menu li a:hover
+{
+	background-color: rgba(0,0,0,0.2) !important;
+}

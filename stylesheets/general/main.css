@@ -11,4 +11,3 @@ body {
 #hotkeys {
 	background-color: <%= Colours::SUBSECTION %> !important;
 }
-

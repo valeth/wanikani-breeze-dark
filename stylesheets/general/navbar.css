@@ -1,0 +1,42 @@
+/* navigation bar */
+
+div.navbar div.navbar-inner
+{
+	background-image: none !important;
+	background-color: <%= Colours::SUBSECTION %> !important;
+	border: none !important;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.5);
+}
+
+div.navbar ul.nav a.dropdown-toggle span
+{
+	border-color: <%= Colours::BACKGROUND %> !important;
+	box-shadow: none !important;
+}
+
+
+div.navbar div.navbar-inner li.account a.dropdown-toggle span
+{
+	border: 5px solid !important;
+	border-color: <%= Colours::BACKGROUND %> !important;
+}
+
+div.navbar ul.nav li.levels.open a.dropdown-toggle
+{
+	background-color: <%= Colours::DROPDOWN %> !important;
+	opacity: 0.80;
+}
+
+div.navbar ul.nav li.levels.open ul.dropdown-menu::after
+{
+	content: '';
+	border-left: 9px solid transparent !important;
+	border-right: 9px solid transparent !important;
+	border-bottom: 9px solid <%= Colours::DROPDOWN %> !important;
+	color: <%= Colours::DROPDOWN %> !important;
+}
+
+div.navbar ul.nav li.levels.open ul.dropdown-menu
+{
+	background-color: <%= Colours::DROPDOWN %> !important;
+}

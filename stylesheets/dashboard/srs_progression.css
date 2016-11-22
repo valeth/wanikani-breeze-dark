@@ -1,0 +1,64 @@
+/* SRS progress */
+
+div.dashboard section.srs-progress
+{
+	margin-bottom: 1vh;
+	background-color: transparent !important;
+}
+
+div.dashboard section.srs-progress ul
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+div.dashboard section.srs-progress li
+{
+	margin-left: 1vh;
+	margin-right: 1vh;
+	box-shadow: none;
+	opacity: 0.7;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.5) !important;
+}
+
+div.dashboard section.srs-progress li:first-child
+{
+	border-radius: 5px;
+	margin-left: 0;
+}
+
+div.dashboard section.srs-progress li:last-child
+{
+	border-radius: 5px;
+	margin-right: 0;
+}
+
+/*
+div.popover
+{
+	border-color: <%= Colours::POPOVER_BORDER %> !important;
+}
+
+div.popover div.arrow,
+div.popover div.arrow::after
+{
+	border-right-color: <%= Colours::POPOVER_BORDER %> !important;
+}
+*/
+
+div.popover.srs h3.popover-title
+{
+	background-color: <%= Colours::SUBSECTION %> !important;
+	box-shadow: none !important;
+}
+
+div.popover.srs div.popover-content li
+{
+	border: none !important;
+}
+
+div.popover.srs div.popover-content li span
+{
+	color: <%= Colours::BACKGROUND %> !important;
+}
