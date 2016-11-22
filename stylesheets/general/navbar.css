@@ -14,19 +14,20 @@ div.navbar ul.nav a.dropdown-toggle span
 	box-shadow: none !important;
 }
 
-
-div.navbar div.navbar-inner li.account a.dropdown-toggle span
+div.navbar li.account a.dropdown-toggle span
 {
 	border: 5px solid !important;
 	border-color: <%= Colours::BACKGROUND %> !important;
 }
 
-div.navbar ul.nav li.levels.open a.dropdown-toggle
+div.navbar li.account.open a.dropdown-toggle,
+div.navbar li.levels.open a.dropdown-toggle
 {
 	background-color: <%= Colours::DROPDOWN %> !important;
 	opacity: 0.80;
 }
 
+div.navbar li.account.open ul.dropdown-menu::after,
 div.navbar ul.nav li.levels.open ul.dropdown-menu::after
 {
 	content: '';
@@ -36,7 +37,20 @@ div.navbar ul.nav li.levels.open ul.dropdown-menu::after
 	color: <%= Colours::DROPDOWN %> !important;
 }
 
-div.navbar ul.nav li.levels.open ul.dropdown-menu
+div.navbar li.account.open ul.dropdown-menu,
+div.navbar li.levels.open ul.dropdown-menu
 {
 	background-color: <%= Colours::DROPDOWN %> !important;
+}
+
+div.navbar li.account.open ul.dropdown-menu
+{
+	border-radius: 5px 0 5px 5px !important;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.5) !important;
+}
+
+div.navbar li.levels.open ul.dropdown-menu
+{
+	border-radius: 0 5px 5px 5px !important;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.5) !important;
 }
