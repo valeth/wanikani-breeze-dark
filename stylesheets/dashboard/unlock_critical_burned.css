@@ -1,12 +1,15 @@
-/* burned items*/
-
+div.dashboard section.recent-unlocks,
+div.dashboard section.low-percentage,
 div.dashboard section.recent-retired
 {
 	background-color: <%= Colours::SUBSECTION %> !important;
 	border-radius: 5px;
 	box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+	min-height: 431px;
 }
 
+div.dashboard section.recent-unlocks tr.none-available div,
+div.dashboard section.low-percentage tr.none-available div,
 div.dashboard section.recent-retired tr.none-available div
 {
 	box-shadow: none !important;
