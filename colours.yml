@@ -22,6 +22,7 @@ background:     '#31363b'
 subsection:     '#232629'
 textfield:      '#232629'
 progress_bar:   '#1d99f3'
+progress_back:  '#4d4d4d'
 
 dropdown:       '#4d4d4d'
 popover_border: '#3daee9'

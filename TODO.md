@@ -16,7 +16,7 @@
  + [x] reading
  + [x] progress
 - [ ] community
-- [ ] profile
+- [x] profile
 - [ ] settings
  + [ ] account
  + [ ] subscription

@@ -1,3 +1,4 @@
+#public-profile div.worst-vocabulary span.vocabulary-icon,
 #lessons span.highlight-vocabulary,
 #lessons #supplement-info span.vocabulary,
 #lessons #information #related-items span.vocabulary,
@@ -22,6 +23,7 @@ section[id|=level][id$=vocabulary] li.character-item /* levels page */
 	color: <%= Colours::BACKGROUND %> !important;
 }
 
+#public-profile div.worst-vocabulary span.vocabulary-icon span,
 #reviews-summary #correct li.vocabulary a,
 #reviews-summary #incorrect li.vocabulary a,
 div.dashboard section.recent-unlocks tr[id|=vocabulary] a span,

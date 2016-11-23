@@ -1,3 +1,4 @@
+#public-profile div.worst-kanji span.kanji-icon,
 #lessons span.highlight-kanji,
 #lessons #supplement-info span.kanji,
 #lessons #information #related-items span.kanji,
@@ -24,6 +25,7 @@ section[id|=level][id$=kanji] li.character-item /* levels page */
 	color: <%= Colours::BACKGROUND %> !important;
 }
 
+#public-profile div.worst-kanji span.kanji-icon span,
 #reviews-summary #correct li.kanji a,
 #reviews-summary #incorrect li.kanji a,
 #lessons-summary #kanji li a,
