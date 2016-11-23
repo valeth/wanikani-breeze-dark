@@ -1,0 +1,59 @@
+aside.additional-info.lattice-percentages.legend ul span,
+section.lattice-single-character li a {
+	background-color: <%= Colours::SUBSECTION %> !important;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5) !important;
+}
+
+aside.additional-info.lattice-percentages.legend ul span.percentage-0-20,
+section.lattice-single-character li[data-sorted] a.percentage-0-20 {
+	background-color: <%= Colours::LATTICE_0 %> !important;
+}
+
+aside.additional-info.lattice-percentages.legend ul span.percentage-21-40,
+section.lattice-single-character li[data-sorted] a.percentage-21-40 {
+	background-color: <%= Colours::LATTICE_21 %> !important;
+}
+
+aside.additional-info.lattice-percentages.legend ul span.percentage-41-60,
+section.lattice-single-character li[data-sorted] a.percentage-41-60 {
+	background-color: <%= Colours::LATTICE_41 %> !important;
+}
+
+aside.additional-info.lattice-percentages.legend ul span.percentage-61-80,
+section.lattice-single-character li[data-sorted] a.percentage-61-80 {
+	background-color: <%= Colours::LATTICE_61 %> !important;
+}
+
+aside.additional-info.lattice-percentages.legend ul span.percentage-81-100,
+section.lattice-single-character li[data-sorted] a.percentage-81-100 {
+	background-color: <%= Colours::LATTICE_81 %> !important;
+}
+
+
+aside.additional-info.lattice-percentages.legend {
+	background-color: <%= Colours::SUBSECTION %> !important;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5) !important;
+}
+
+aside.additional-info.lattice-percentages.legend ul span {
+	margin-right: 1vw;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5) !important;
+}
+
+
+section.lattice-single-character li {
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	background-color: transparent !important;
+	overflow: unset !important;
+}
+
+section.lattice-single-character li[data-sorted] a,
+section.lattice-single-character li[data-sorted] a i
+{
+	color: <%= Colours::BACKGROUND %> !important;
+}
+
