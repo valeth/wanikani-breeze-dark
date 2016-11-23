@@ -1,6 +1,6 @@
 - [x] dashboard
 - [ ] lesson
-- [ ] review
+- [x] review
 - [ ] level
 - [ ] radicals
  + [ ] meaning

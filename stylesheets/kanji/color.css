@@ -5,6 +5,7 @@
 #reviews #related-items span.kanji,
 #reviews #last-items li.kanji ul li[title=Characters],
 #reviews-summary #correct li.kanji,
+#reviews-summary #incorrect li.kanji,
 div.popover.srs div.popover-content li:nth-child(2),
 div.dashboard section.recent-unlocks tr[id|=kanji],
 div.dashboard section.low-percentage tr[id|=kanji],

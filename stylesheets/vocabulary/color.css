@@ -5,6 +5,7 @@
 #reviews span.highlight-vocabulary,
 #reviews #last-items li.vocabulary ul li[title=Characters],
 #reviews-summary #correct li.vocabulary,
+#reviews-summary #incorrect li.vocabulary,
 div.popover.srs div.popover-content li:nth-child(3),
 div.dashboard section.recent-unlocks tr[id|=vocabulary],
 div.dashboard section.low-percentage tr[id|=vocabulary],

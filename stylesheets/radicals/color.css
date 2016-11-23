@@ -6,6 +6,7 @@
 #reviews span.highlight-radical,
 #reviews #last-items li.radicals ul li[title=Characters],
 #reviews-summary #correct li.radicals,
+#reviews-summary #incorrect li.radicals,
 div.popover.srs div.popover-content li:nth-child(1),
 div.dashboard section.recent-unlocks tr[id|=radical],
 div.dashboard section.low-percentage tr[id|=radical],
