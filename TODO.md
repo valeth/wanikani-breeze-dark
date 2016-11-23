@@ -1,20 +1,20 @@
 - [x] dashboard
 - [x] lesson
 - [x] review
-- [ ] level
-- [ ] radicals
- + [ ] meaning
- + [ ] progress
-- [ ] kanji
- + [ ] combined
- + [ ] meaning
- + [ ] reading
- + [ ] progress
-- [ ] vocabulary
- + [ ] combined
- + [ ] meaning
- + [ ] reading
- + [ ] progress
+- [x] level
+- [x] radicals
+ + [x] meaning
+ + [x] progress
+- [x] kanji
+ + [x] combined
+ + [x] meaning
+ + [x] reading
+ + [x] progress
+- [x] vocabulary
+ + [x] combined
+ + [x] meaning
+ + [x] reading
+ + [x] progress
 - [ ] community
 - [ ] profile
 - [ ] settings
