@@ -12,3 +12,5 @@ Using the KDE Breeze theme color palette.
 Simply run `rake` from within the project directory.
 
 Then copy content of the generated `stylish.css` into a new Stylish theme.
+
+> NOTE: If you are using Chromium/Chrome use the Mozilla format import.
