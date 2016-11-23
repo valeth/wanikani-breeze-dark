@@ -14,7 +14,8 @@ div.popover.srs div.popover-content li:nth-child(3),
 div.dashboard section.recent-unlocks tr[id|=vocabulary],
 div.dashboard section.low-percentage tr[id|=vocabulary],
 div.dashboard section.recent-retired tr[id|=vocabulary],
-#search section.search-results li[id|=vocabulary]
+#search section.search-results li[id|=vocabulary],
+section[id|=level][id$=vocabulary] li.character-item /* levels page */
 {
 	background-color: <%= Colours::VOCABULARY %> !important;
 	background-image: none !important;
@@ -29,7 +30,9 @@ div.dashboard section.low-percentage tr[id|=vocabulary] a span,
 div.dashboard section.recent-retired tr[id|=vocabulary] a span,
 #search section.search-results li[id|=vocabulary] span,
 #search section.search-results li[id|=vocabulary] li,
-#lessons-summary #vocabulary li a
+#lessons-summary #vocabulary li a,
+section[id|=level][id$=vocabulary] li.character-item span, /* levels page */
+section[id|=level][id$=vocabulary] li.character-item li    /* levels page */
 {
 	color: <%= Colours::BACKGROUND %> !important;
 }

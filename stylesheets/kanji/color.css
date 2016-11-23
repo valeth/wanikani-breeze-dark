@@ -16,7 +16,8 @@ div.dashboard section.low-percentage tr[id|=kanji],
 div.dashboard section.recent-retired tr[id|=kanji],
 div.dashboard section.progression li[id|=kanji] a,
 div.dashboard section.progression div.kanji-progress div.bar,
-#search section.search-results li[id|=kanji]
+#search section.search-results li[id|=kanji],
+section[id|=level][id$=kanji] li.character-item /* levels page */
 {
 	background-color: <%= Colours::KANJI %> !important;
 	background-image: none !important;
@@ -31,7 +32,9 @@ div.dashboard section.recent-unlocks tr[id|=kanji] a time,
 div.dashboard section.low-percentage tr[id|=kanji] a span,
 div.dashboard section.recent-retired tr[id|=kanji] a span,
 #search section.search-results li[id|=kanji] span,
-#search section.search-results li[id|=kanji] li
+#search section.search-results li[id|=kanji] li,
+section[id|=level][id$=kanji] li.character-item span, /* levels page */
+section[id|=level][id$=kanji] li.character-item li    /* levels page */
 {
 	color: <%= Colours::BACKGROUND %> !important;
 }

@@ -18,7 +18,8 @@ div.dashboard section.recent-retired tr[id|=radical],
 div.dashboard section.progression li[id|=radical] a,
 div.dashboard section.progression li[id|=radical] a i,
 div.dashboard section.progression div.radicals-progress div.bar,
-#search section.search-results li[id|=radical]
+#search section.search-results li[id|=radical],
+section[id|=level][id$=radicals] li.character-item /* levels page */
 {
 	background-color: <%= Colours::RADICAL %> !important;
 	background-image: none !important;
@@ -38,7 +39,10 @@ div.dashboard section.recent-unlocks tr[id|=radical] a time,
 div.dashboard section.low-percentage tr[id|=radical] a span,
 div.dashboard section.recent-retired tr[id|=radical] a span,
 #search section.search-results li[id|=radical] span,
-#search section.search-results li[id|=radical] li
+#search section.search-results li[id|=radical] li,
+section[id|=level][id$=radicals] li.character-item span, /* levels page */
+section[id|=level][id$=radicals] li.character-item i,    /* levels page */
+section[id|=level][id$=radicals] li.character-item li    /* levels page */
 {
 	color: <%= Colours::BACKGROUND %> !important;
 }
