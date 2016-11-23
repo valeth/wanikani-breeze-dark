@@ -1,35 +1,61 @@
 aside.additional-info.lattice-percentages.legend ul span,
-section.lattice-single-character li a {
+aside.additional-info.lattice-progression.legend ul span {
+	color: <%= Colours::BACKGROUND %> !important;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5) inset !important;
+}
+
+aside.additional-info.lattice-percentages.legend ul span.locked,
+aside.additional-info.lattice-progression.legend ul span.locked,
+aside.additional-info.lattice-progression.legend ul span.burned-lattice {
+	background-color: <%= Colours::BACKGROUND %> !important;
+	color: <%= Colours::TEXT %> !important;
+}
+
+aside.additional-info.lattice-percentages.legend ul span.locked,
+aside.additional-info.lattice-progression.legend ul span.locked {
+	background-color: <%= Colours::LATTICE_LOCKED %> !important;
+}
+
+section.lattice-single-character li a,
+section.lattice-multi-character li a {
 	background-color: <%= Colours::SUBSECTION %> !important;
+	color: <%= Colours::BACKGROUND %> !important;
 	box-shadow: 5px 5px 5px rgba(0,0,0,0.5) !important;
 }
 
 aside.additional-info.lattice-percentages.legend ul span.percentage-0-20,
-section.lattice-single-character li[data-sorted] a.percentage-0-20 {
+section.lattice-single-character li[data-sorted] a.percentage-0-20,
+section.lattice-multi-character li[data-sorted] a.percentage-0-20 {
 	background-color: <%= Colours::LATTICE_0 %> !important;
 }
 
 aside.additional-info.lattice-percentages.legend ul span.percentage-21-40,
-section.lattice-single-character li[data-sorted] a.percentage-21-40 {
+section.lattice-single-character li[data-sorted] a.percentage-21-40,
+section.lattice-multi-character li[data-sorted] a.percentage-21-40
+{
 	background-color: <%= Colours::LATTICE_21 %> !important;
 }
 
 aside.additional-info.lattice-percentages.legend ul span.percentage-41-60,
-section.lattice-single-character li[data-sorted] a.percentage-41-60 {
+section.lattice-single-character li[data-sorted] a.percentage-41-60,
+section.lattice-multi-character li[data-sorted] a.percentage-41-60 {
 	background-color: <%= Colours::LATTICE_41 %> !important;
 }
 
 aside.additional-info.lattice-percentages.legend ul span.percentage-61-80,
-section.lattice-single-character li[data-sorted] a.percentage-61-80 {
+section.lattice-single-character li[data-sorted] a.percentage-61-80,
+section.lattice-multi-character li[data-sorted] a.percentage-61-80 {
 	background-color: <%= Colours::LATTICE_61 %> !important;
 }
 
 aside.additional-info.lattice-percentages.legend ul span.percentage-81-100,
-section.lattice-single-character li[data-sorted] a.percentage-81-100 {
+section.lattice-single-character li[data-sorted] a.percentage-81-100,
+section.lattice-multi-character li[data-sorted] a.percentage-81-100 {
 	background-color: <%= Colours::LATTICE_81 %> !important;
 }
 
 
+aside.additional-info.lattice-progression.legend,
 aside.additional-info.lattice-percentages.legend {
 	background-color: <%= Colours::SUBSECTION %> !important;
 	border-radius: 5px;
@@ -38,22 +64,67 @@ aside.additional-info.lattice-percentages.legend {
 
 aside.additional-info.lattice-percentages.legend ul span {
 	margin-right: 1vw;
-	box-shadow: 5px 5px 5px rgba(0,0,0,0.5) !important;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5) inset !important;
 }
 
 
-section.lattice-single-character li {
+section.lattice-single-character li,
+section.lattice-multi-character li
+{
 	margin-top: 1vh;
 	margin-bottom: 1vh;
-	margin-left: 1vw;
-	margin-right: 1vw;
+	margin-left: 5px;
+	margin-right: 5px;
 	background-color: transparent !important;
 	overflow: unset !important;
 }
 
 section.lattice-single-character li[data-sorted] a,
-section.lattice-single-character li[data-sorted] a i
-{
+section.lattice-single-character li[data-sorted] a i,
+section.lattice-multi-character li[data-sorted] a {
 	color: <%= Colours::BACKGROUND %> !important;
 }
 
+
+aside.additional-info.lattice-progression.legend ul span.apprentice-lattice,
+section.lattice-single-character li[data-sorted] a.apprentice-lattice,
+section.lattice-multi-character li[data-sorted] a.apprentice-lattice {
+	background-color: <%= Colours::APPRENTICE %> !important;
+}
+
+aside.additional-info.lattice-progression.legend ul span.guru-lattice,
+section.lattice-single-character li[data-sorted] a.guru-lattice,
+section.lattice-multi-character li[data-sorted] a.guru-lattice {
+	background-color: <%= Colours::GURU %> !important;
+}
+
+aside.additional-info.lattice-progression.legend ul span.master-lattice,
+section.lattice-single-character li[data-sorted] a.master-lattice,
+section.lattice-multi-character li[data-sorted] a.master-lattice {
+	background-color: <%= Colours::MASTER %> !important;
+}
+
+aside.additional-info.lattice-progression.legend ul span.enlighten-lattice,
+section.lattice-single-character li[data-sorted] a.enlighten-lattice,
+section.lattice-multi-character li[data-sorted] a.enlighten-lattice {
+	background-color: <%= Colours::ENLIGHTENED %> !important;
+}
+
+aside.additional-info.lattice-progression.legend ul span.burned-lattice,
+section.lattice-single-character li[data-sorted] a.burned-lattice,
+section.lattice-multi-character li[data-sorted] a.burned-lattice {
+	background-color: <%= Colours::BURNED %> !important;
+	color: <%= Colours::TEXT %> !important;
+}
+
+section.lattice-single-character li a,
+section.lattice-multi-character li a {
+	background-color: <%= Colours::LATTICE_LOCKED %> !important;
+	color: <%= Colours::TEXT %> !important;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5) inset !important;
+}
+
+section.lattice-single-character li[data-sorted] a,
+section.lattice-multi-character li[data-sorted] a {
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5) !important;
+}

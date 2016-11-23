@@ -44,6 +44,7 @@ master:         '#c9ce3b'
 enlightened:    '#f47750'
 burned:         '#232629'
 
+lattice_locked: '#4d4d4d'
 lattice_0:      '#f47750'
 lattice_21:     '#c9ce3b'
 lattice_41:     '#3daee9'
