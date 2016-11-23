@@ -24,6 +24,7 @@ textfield:      '#232629'
 
 dropdown:       '#4d4d4d'
 popover_border: '#3daee9'
+popover_progress: '#3daee9'
 
 list_head:      '#1d99f3'
 list_item:      '#3daee9'
