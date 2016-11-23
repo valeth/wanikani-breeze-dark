@@ -1,4 +1,4 @@
-- [ ] dashboard
+- [x] dashboard
 - [ ] lesson
 - [ ] review
 - [ ] level

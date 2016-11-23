@@ -1,5 +1,3 @@
-/* navigation bar */
-
 div.navbar div.navbar-inner
 {
 	background-image: none !important;
@@ -12,6 +10,14 @@ div.navbar ul.nav a.dropdown-toggle span
 {
 	border-color: <%= Colours::BACKGROUND %> !important;
 	box-shadow: none !important;
+}
+
+div.navbar ul.nav li.lessons span,
+div.navbar ul.nav li.reviews span
+{
+	background-color: <%= Colours::SUBSECTION %> !important;
+	background-image: none !important;
+	border-color: <%= Colours::BACKGROUND %> !important;
 }
 
 div.navbar li.account a.dropdown-toggle span

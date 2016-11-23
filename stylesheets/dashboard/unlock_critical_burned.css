@@ -1,11 +1,24 @@
+div.dashboard div.row div.row
+{
+	position: relative !important;
+}
+
+div.dashboard section.recent-unlocks div.span4,
+div.dashboard section.low-percentage div.span4,
+div.dashboard section.recent-retired div.span4
+{
+	position: relative !important;
+	float: left;
+}
+
 div.dashboard section.recent-unlocks,
 div.dashboard section.low-percentage,
 div.dashboard section.recent-retired
 {
+	min-height: 45vh !important;
 	background-color: <%= Colours::SUBSECTION %> !important;
 	border-radius: 5px;
 	box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
-	min-height: 431px;
 }
 
 div.dashboard section.recent-unlocks tr.none-available div,
@@ -13,5 +26,20 @@ div.dashboard section.low-percentage tr.none-available div,
 div.dashboard section.recent-retired tr.none-available div
 {
 	box-shadow: none !important;
+	border: none !important;
+}
+
+
+div.dashboard section.recent-unlocks tr,
+div.dashboard section.low-percentage tr,
+div.dashboard section.recent-retired tr
+{
+	border-bottom: 1px solid <%= Colours::LIST_SEPARATOR %> !important;
+}
+
+div.dashboard section.recent-unlocks tr:last-child,
+div.dashboard section.low-percentage tr:last-child,
+div.dashboard section.recent-retired tr:last-child
+{
 	border: none !important;
 }

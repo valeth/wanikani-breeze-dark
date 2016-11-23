@@ -4,7 +4,7 @@ div.dashboard section.blog
 	background-color: <%= Colours::SUBSECTION %> !important;
 	border-radius: 5px;
 	box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
-	min-height: 623px;
+	min-height: 57vh !important;
 }
 
 div.dashboard section.forum-topics-list table td,
