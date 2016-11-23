@@ -7,14 +7,16 @@ div.account .btn {
 	background-color: rgb(49, 54, 59) !important;
 }
 
-div.account .page-list {
+div.account .page-list
+{
 	background-color: rgb(35, 38, 41) !important;
 }
 
-div.account .page-list ul li a {
+div.account .page-list ul li a
+{
+	background-color: <%= Colours::LIST_ITEM %> !important;
+	background-image: none !important;
 	border: none;
 	border-right: 1px solid;
-	border-color: rgb(61, 174, 233);
-	background-image: none !important;
-	background-color: rgb(29, 153, 243) !important;
+	border-color: <%= Colours::LIST_SEPARATOR %>;
 }
