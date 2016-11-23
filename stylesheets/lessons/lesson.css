@@ -1,10 +1,10 @@
-/* lessons */
-
 #header-buttons li a,
 #header-buttons li i,
-#lessons #stats li
+#lessons #stats li,
+#lessons #stats li span
 {
 	color: <%= Colours::BACKGROUND %> !important;
+	background-color: transparent !important;
 }
 
 #lessons #lesson-ready-continue,
@@ -14,9 +14,39 @@
 	background-color: <%= Colours::SUBSECTION %> !important;
 }
 
+#lessons header
+{
+	box-shadow: 0 3px 3px  rgba(0,0,0,0.5) !important;
+}
+
+#lessons #supplement-nav li::before
+{
+	border-color: transparent transparent <%= Colours::SUBSECTION %> transparent !important;
+}
+
+#lessons #supplement-nav
+{
+	background-color: transparent !important;
+}
+
 #lessons #supplement-info
 {
-	box-shadow: none !important;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.5) !important;
+	border-radius: 5px;
+}
+
+#lessons #supplement-info div.note-meaning fieldset,
+#lessons #supplement-info div.note-reading fieldset
+{
+	background-color: <%= Colours::BACKGROUND %> !important;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.5) inset !important;
+}
+
+#lessons #supplement-info div.note-meaning fieldset button,
+#lessons #supplement-info div.note-reading fieldset button
+{
+	background-color: transparent !important;
 }
 
 #lessons #supplement-info blockquote
@@ -31,10 +61,6 @@
 	opacity: 0.5;
 }
 
-#lessons #supplement-nav li::before
-{
-	border-color: transparent transparent <%= Colours::SUBSECTION %> transparent !important;
-}
 
 #lessons #character,
 #lessons #meaning

@@ -1,5 +1,5 @@
 - [x] dashboard
-- [ ] lesson
+- [x] lesson
 - [x] review
 - [ ] level
 - [ ] radicals

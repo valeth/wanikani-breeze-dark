@@ -1,6 +1,10 @@
 /* radicals color */
 
 #lessons span.highlight-radical,
+#lessons #supplement-info span.radical,
+#lessons #information #related-items span.radical,
+#lessons-summary #radicals li,
+#lessons-summary #radicals h2,
 #reviews #character.radical,
 #reviews #character.radical span,
 #reviews span.highlight-radical,
@@ -25,6 +29,8 @@ div.dashboard section.progression div.radicals-progress div.bar,
 #reviews-summary #correct li.radicals a i,
 #reviews-summary #incorrect li.radicals a,
 #reviews-summary #incorrect li.radicals a i,
+#lessons-summary #radicals li a,
+#lessons-summary #radicals li a i,
 #reviews #character.radical span,
 #reviews #character.radical span i,
 div.dashboard section.recent-unlocks tr[id|=radical] a span,
@@ -38,7 +44,8 @@ div.dashboard section.recent-retired tr[id|=radical] a span,
 }
 
 #reviews-summary #correct li.radicals,
-#reviews-summary #incorrect li.radicals
+#reviews-summary #incorrect li.radicals,
+#lessons-summary #radicals li
 {
 	box-shadow: none !important;
 }
@@ -49,6 +56,7 @@ div.dashboard section.recent-retired tr[id|=radical] a span,
 }
 
 #lessons span.highlight-radical,
+#lessons-summary #radicals li,
 #reviews span.highlight-radical
 {
 	border: solid 1px;

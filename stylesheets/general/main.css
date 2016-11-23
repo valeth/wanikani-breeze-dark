@@ -12,7 +12,9 @@ body {
 	background-color: <%= Colours::SUBSECTION %> !important;
 }
 
-#loading {
+#loading,
+#loading-screen
+{
 	background-color: <%= Colours::BACKGROUND %> !important;
 }
 

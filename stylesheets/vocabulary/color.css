@@ -1,6 +1,10 @@
 #lessons span.highlight-vocabulary,
+#lessons #supplement-info span.vocabulary,
+#lessons #information #related-items span.vocabulary,
 #lessons #main-info.vocabulary,
 #lessons #batch-items span.vocabulary,
+#lessons-summary #vocabulary li,
+#lessons-summary #vocabulary h2,
 #reviews #character.vocabulary,
 #reviews span.highlight-vocabulary,
 #reviews #last-items li.vocabulary ul li[title=Characters],
@@ -24,13 +28,16 @@ div.dashboard section.recent-unlocks tr[id|=vocabulary] a time,
 div.dashboard section.low-percentage tr[id|=vocabulary] a span,
 div.dashboard section.recent-retired tr[id|=vocabulary] a span,
 #search section.search-results li[id|=vocabulary] span,
-#search section.search-results li[id|=vocabulary] li
+#search section.search-results li[id|=vocabulary] li,
+#lessons-summary #vocabulary li a
 {
 	color: <%= Colours::BACKGROUND %> !important;
 }
 
 #reviews-summary #correct li.vocabulary,
-#reviews-summary #incorrect li.vocabulary
+#reviews-summary #incorrect li.vocabulary,
+#lessons #batch-items span.vocabulary,
+#lessons-summary #vocabulary li
 {
 	box-shadow: none !important;
 }
@@ -41,6 +48,8 @@ div.dashboard section.recent-retired tr[id|=vocabulary] a span,
 }
 
 #lessons span.highlight-vocabulary,
+#lessons #batch-items span.vocabulary,
+#lessons-summary #vocabulary li,
 #reviews span.highlight-vocabulary
 {
 	border: solid 2px;

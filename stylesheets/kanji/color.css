@@ -1,4 +1,8 @@
 #lessons span.highlight-kanji,
+#lessons #supplement-info span.kanji,
+#lessons #information #related-items span.kanji,
+#lessons-summary #kanji li,
+#lessons-summary #kanji h2,
 #reviews #character.kanji,
 #reviews #character.kanji span,
 #reviews span.highlight-kanji,
@@ -21,6 +25,7 @@ div.dashboard section.progression div.kanji-progress div.bar,
 
 #reviews-summary #correct li.kanji a,
 #reviews-summary #incorrect li.kanji a,
+#lessons-summary #kanji li a,
 div.dashboard section.recent-unlocks tr[id|=kanji] a span,
 div.dashboard section.recent-unlocks tr[id|=kanji] a time,
 div.dashboard section.low-percentage tr[id|=kanji] a span,
@@ -32,7 +37,8 @@ div.dashboard section.recent-retired tr[id|=kanji] a span,
 }
 
 #reviews-summary #correct li.kanji,
-#reviews-summary #incorrect li.kanji
+#reviews-summary #incorrect li.kanji,
+#lessons-summary #kanji li
 {
 	box-shadow: none !important;
 }
@@ -43,6 +49,7 @@ div.dashboard section.recent-retired tr[id|=kanji] a span,
 }
 
 #lessons span.highlight-kanji,
+#lessons-summary #kanji li,
 #reviews span.highlight-kanji
 {
 	border: solid 1px;
