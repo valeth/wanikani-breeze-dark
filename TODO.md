@@ -20,4 +20,4 @@
 - [ ] settings
  + [x] account
  + [ ] subscription
- + [ ] billing
+ + [x] billing
