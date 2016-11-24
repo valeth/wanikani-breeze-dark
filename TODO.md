@@ -15,8 +15,9 @@
  + [x] meaning
  + [x] reading
  + [x] progress
-- [ ] community
-- [x] profile
+- [x] community
+ + [x] profile
+ + [x] forums
 - [ ] settings
  + [x] account
  + [ ] subscription
