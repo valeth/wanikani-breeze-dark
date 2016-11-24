@@ -1,5 +1,3 @@
-/* radicals color */
-
 #lessons span.highlight-radical,
 #lessons #supplement-info span.radical,
 #lessons #information #related-items span.radical,
@@ -34,6 +32,8 @@ section[id|=level][id$=radicals] li.character-item /* levels page */
 #lessons-summary #radicals li a i,
 #reviews #character.radical span,
 #reviews #character.radical span i,
+#lessons #supplement-info span.radical,
+#lessons #supplement-info span.radical i,
 div.dashboard section.recent-unlocks tr[id|=radical] a span,
 div.dashboard section.recent-unlocks tr[id|=radical] a time,
 div.dashboard section.low-percentage tr[id|=radical] a span,
