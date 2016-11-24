@@ -23,8 +23,11 @@ background:         rgb(49, 54, 59)         # 31363b
 subsection:         rgb(35, 38, 41)         # 232629
 textfield:          rgb(35, 38, 41)         # 232629
 
+action_destructive: rgb(246, 116, 0)        # f67400
+
 shadow:             rgba(0, 0, 0, 0.5)      # 000000
 inset_shadow:       rgba(0, 0, 0, 0.5)      # 000000
+focus_shadow:       rgba(61, 174, 233, 0.5) # 3daee9
 
 sub_active:         rgb(246, 116, 0)        # f67400
 sub_active_shadow:  rgba(246, 116, 0, 0.5)  # f67400

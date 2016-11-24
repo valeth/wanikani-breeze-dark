@@ -1,0 +1,40 @@
+div.account-billing-payment-information-record tr {
+	background-color: <%= Colours::BACKGROUND %> !important;
+}
+div.account-billing-payment-information-record tr:hover {
+	background-color: <%= Colours::SUBSECTION %> !important;
+}
+div.account-billing-payment-information-record tr th,
+div.account-billing-payment-information-record tr td {
+	background-color: transparent !important;
+}
+
+div.account-subscription form .control-group input[type="text"] {
+	background-color: <%= Colours::SUBSECTION %> !important;
+	border-radius: 5px !important;
+	border: none !important;
+	box-shadow: 5px 5px 5px <%= Colours::SHADOW %>;
+}
+
+div.account-subscription form .control-group input[type="text"]:focus {
+	border: none !important;
+	box-shadow: 0 0 5px <%= Colours::FOCUS_SHADOW %> !important;
+}
+
+div.account-subscription-payment-submit button {
+	background-color: <%= Colours::ACTION_DESTRUCTIVE %> !important;
+	border-radius: 5px !important;
+	box-shadow: 5px 5px 5px <%= Colours::SHADOW %>;
+}
+
+
+div.account-billing-payment-history tr {
+	background-color: <%= Colours::BACKGROUND %> !important;
+}
+div.account-billing-payment-history tr:hover {
+	background-color: <%= Colours::SUBSECTION %> !important;
+}
+div.account-billing-payment-history tr th,
+div.account-billing-payment-history tr td {
+	background-color: transparent !important;
+}
