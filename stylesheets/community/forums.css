@@ -1,0 +1,46 @@
+div.community div.page-list
+{
+	background-color: <%= Colours::SUBSECTION %> !important;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5) !important;
+}
+
+div.community div.page-list li.page-list-header span {
+	border: none !important;
+}
+
+div.community div.page-list li a {
+	background-color: <%= Colours::LIST_ITEM %> !important;
+	background-image: none !important;
+	border: none;
+	border-right: 1px solid;
+	border-color: <%= Colours::LIST_SEPARATOR %>;
+}
+
+div.community div.page-list li:nth-child(2) a {
+	border-radius: 5px 0 0 5px;
+}
+
+div.community div.page-list li:last-child a {
+	border: none;
+	border-radius: 0 5px 5px 0;
+}
+
+
+div.community section#top-members,
+div.community section#new-members,
+div.community section#chat {
+	background-color: <%= Colours::SUBSECTION %> !important;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5) !important;
+}
+
+
+div.community section#chat li::before {
+	background-color: <%= Colours::SUBSECTION %> !important;
+	border-radius: 5px;
+}
+
+div.community section#chat li {
+	border-radius: 5px;
+}
