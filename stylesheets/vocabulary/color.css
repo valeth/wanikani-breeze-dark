@@ -57,7 +57,7 @@ section[id|=level][id$=vocabulary] li.character-item li    /* levels page */
 #lessons-summary #vocabulary li,
 #reviews span.highlight-vocabulary
 {
-	border: solid 2px;
+	border: solid 1px;
 	border-radius: 5px;
 	border-color: <%= Colours::VOCABULARY %>;
 }

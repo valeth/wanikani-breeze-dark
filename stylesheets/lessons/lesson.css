@@ -8,7 +8,7 @@
 }
 
 #lessons #lesson-ready-continue,
-#lessons #quiz-ready-continue,
+#quiz-ready-continue,
 #lessons #supplement-info
 {
 	background-color: <%= Colours::SUBSECTION %> !important;
