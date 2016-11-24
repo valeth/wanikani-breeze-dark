@@ -18,6 +18,6 @@
 - [ ] community
 - [x] profile
 - [ ] settings
- + [ ] account
+ + [x] account
  + [ ] subscription
  + [ ] billing
