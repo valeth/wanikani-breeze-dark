@@ -1,5 +1,5 @@
 aside.additional-info.level-list.legend,
-div.page-list,
+aside.additional-info.level-list.legend + div.page-list,
 section[id|=level]
 {
 	background-color: <%= Colours::SUBSECTION %> !important;
@@ -8,12 +8,12 @@ section[id|=level]
 }
 
 
-div.page-list li.page-list-header span
+aside.additional-info.level-list.legend + div.page-list li.page-list-header span
 {
 	border: none !important;
 }
 
-div.page-list li a
+aside.additional-info.level-list.legend + div.page-list li a
 {
 	background-color: <%= Colours::LIST_ITEM %> !important;
 	background-image: none !important;
@@ -22,13 +22,13 @@ div.page-list li a
 	border-color: <%= Colours::LIST_SEPARATOR %>;
 }
 
-div.page-list li:last-child a
+aside.additional-info.level-list.legend + div.page-list li:last-child a
 {
 	border: none;
 	border-radius: 0 5px 5px 0;
 }
 
-div.page-list li:nth-child(2) a
+aside.additional-info.level-list.legend + div.page-list li:nth-child(2) a
 {
 	border-radius: 5px 0 0 5px;
 }
