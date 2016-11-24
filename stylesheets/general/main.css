@@ -21,3 +21,8 @@ body {
 #additional-content-load {
 	background-color: <%= Colours::SUBSECTION %> !important;
 }
+
+div.alert {
+	background-color: <%= Colours::SUBSECTION %> !important;
+	border: none !important;
+}
