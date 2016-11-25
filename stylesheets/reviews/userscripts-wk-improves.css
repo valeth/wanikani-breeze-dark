@@ -36,6 +36,12 @@ div[id|=qtip] div.qtip-title {
 	background-image: none !important;
 }
 
+#wki_srs_popup_wrapper div.wki_srs_popup_icon,
+#wki_srs_popup_wrapper div#wki_srs_popup_message
+{
+	background-color: transparent !important;
+}
+
 div[id|=qtip] div.qtip-tip,
 div[id|=qtip] canvas {
 
