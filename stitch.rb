@@ -38,7 +38,7 @@ stylish_css_doc = format(css_base, css: to_insert)
 stylish_css_doc.gsub!(/^\n/, "")
 stylish_css_doc.gsub!(/^\s*$/, "")
 
-outfile = open('stylish.css', 'w')
+outfile = open('out.css', 'w')
 outfile.truncate(0)
 outfile.write(stylish_css_doc)
 outfile.close
