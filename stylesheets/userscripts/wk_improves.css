@@ -1,3 +1,5 @@
+/* userscript: WaniKani improve */
+
 #reviews #additional-content #wki_button {
 	border-right: 1px solid !important;
 	border-color: <%= Colours::SUBSECTION %> !important;
