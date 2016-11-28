@@ -1,0 +1,35 @@
+#public-profile body header div.avatar {
+  background-color: <%= Colours::BACKGROUND %> !important;
+  box-shadow: inset 0 5px 5px rgba(0,0,0,0.5)
+}
+
+#public-profile body header div.avatar img {
+  box-shadow: 0 5px 5px rgba(0,0,0,0.5)
+}
+
+
+#public-profile body header div.user-info {
+  background-color: <%= Colours::SUBSECTION %> !important;
+  background-image: none !important;
+  box-shadow: inset 0 5px 5px rgba(0,0,0,0.5),
+  0 5px 5px rgba(0,0,0,0.5);
+}
+
+#public-profile body header div.user-info::after {
+  border-bottom-color: transparent !important;
+}
+
+
+#public-profile body div.knowledge-distribution div.srs-levels li span {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+#public-profile body div.wall-of-shame {
+  background-color: transparent !important;
+}
+
+#public-profile body div.wall-of-shame h3 span {
+  background-color: <%= Colours::PROGRESS_BACK %> !important;
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.5);
+}
