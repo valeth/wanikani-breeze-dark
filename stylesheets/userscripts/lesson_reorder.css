@@ -1,14 +1,12 @@
 /* userscript: lesson reorder */
 
-#lessons #divSt
-{
+#lessons #divSt {
 	margin-top: 2vh;
 	color: <%= Colours::BACKGROUND %> !important;
 }
 
 #lessons #reorderBtn,
-#lessons #reorderVBtn
-{
+#lessons #reorderVBtn {
 	border-color: <%= Colours::SUBSECTION %> !important;
 	border-style: solid;
 	border-radius: 5px;
