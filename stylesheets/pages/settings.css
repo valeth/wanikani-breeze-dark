@@ -1,0 +1,71 @@
+/* settings page */
+
+.account #user_lesson_batch_size {
+  background-color: <%= Colours::BUTTON_BACKGROUND %> !important;
+  border-color: <%= Colours::BUTTON_BORDER %> !important;
+}
+
+
+/* subscription page */
+
+.account-subscription .account-subscription-plan {
+  background-color: <%= Colours::SUBSECTION %> !important;
+  border: none !important;
+  border-radius: 5px !important;
+  box-shadow: 5px 5px 5px <%= Colours::SHADOW %>;
+}
+
+.account-subscription .account-subscription-plan-active {
+  border-color: <%= Colours::SUB_ACTIVE %> !important;
+  box-shadow: 0 0 5px <%= Colours::SUB_ACTIVE_SHADOW %>;
+}
+
+.account-subscription .account-subscription-plans .account-subscription-plan .account-subscription-plan-select button.btn[type="button"] {
+  background-color: <%= Colours::SUBSECTION %> !important;
+  border-radius: 0 0 5px 5px !important;
+}
+
+.account-subscription .account-subscription-plans .account-subscription-plan.account-subscription-plan-active .account-subscription-plan-select button.btn[type="button"] {
+  background: <%= Colours::SUB_ACTIVE %> !important;
+}
+
+#account-subscription-coupon-form #coupon {
+  background-color: <%= Colours::SUBSECTION %> !important;
+  border: none;
+  border-radius: 5px !important;
+  box-shadow: 5px 5px 5px <%= Colours::SHADOW %>;
+}
+
+.account-subscription-payment-processor-info {
+  background-color: <%= Colours::SUBSECTION %> !important;
+  border: none;
+  border-radius: 5px !important;
+  box-shadow: 5px 5px 5px <%= Colours::SHADOW %>;
+}
+
+.account-subscription-payment-submit button[type=submit]:disabled {
+  background-color: <%= Colours::SUB_ACTIVE %> !important;
+  border-radius: 5px !important;
+  box-shadow: 5px 5px 5px <%= Colours::SHADOW %>;
+}
+
+
+/* billing page */
+
+.account-subscription form .control-group input[type="text"] {
+  background-color: <%= Colours::SUBSECTION %> !important;
+  border-radius: 5px !important;
+  border: none !important;
+  box-shadow: 5px 5px 5px <%= Colours::SHADOW %>;
+}
+
+.account-subscription form .control-group input[type="text"]:focus {
+  border: none !important;
+  box-shadow: 0 0 5px <%= Colours::FOCUS_SHADOW %> !important;
+}
+
+.account-subscription-payment-submit button {
+  background-color: <%= Colours::ACTION_DESTRUCTIVE %> !important;
+  border-radius: 5px !important;
+  box-shadow: 5px 5px 5px <%= Colours::SHADOW %>;
+}
