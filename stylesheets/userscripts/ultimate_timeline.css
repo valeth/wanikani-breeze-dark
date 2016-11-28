@@ -1,0 +1,53 @@
+/* userscript: ultimate timeline */
+
+/* not the best solution, but it works for now */
+* {
+  fill: <%= Colours::TEXT %> !important;
+}
+
+#timeln {
+  background-color: <%= Colours::SUBSECTION %> !important;
+  box-shadow: 3px 3px 3px <%= Colours::SHADOW %> !important;
+  border-radius: 5px !important;
+  border: none !important;
+}
+
+#timeln > h4,
+#timeln > i::before,
+#timeln > form {
+  margin-top: 5px !important;
+}
+
+#timeln > h4 {
+  margin-left: 1vw;
+}
+
+#timeln-graph {
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+
+#timeln-settings {
+  background-color: <%= Colours::POPOVER_BACKGROUND %> !important;
+  box-shadow: 3px 3px 3px <%= Colours::SHADOW %> !important;
+  border-radius: 5px !important;
+  border: none !important;
+}
+
+#timeln-settings > h4 {
+  background-color: <%= Colours::SUBSECTION %> !important;
+}
+
+#timeln-settings form > select,
+#timeln-settings form > input {
+  background-color: transparent !important;
+}
+
+#timeln-settings button {
+  background-color: <%= Colours::BUTTON_BACKGROUND %> !important;
+  background-image: none !important;
+  border: 1px solid;
+  border-color: <%= Colours::BUTTON_BORDER %> !important;
+  border-radius: 5px;
+}
