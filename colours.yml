@@ -22,6 +22,7 @@ text:               rgb(252, 252, 252)      # fcfcfc
 background:         rgb(49, 54, 59)         # 31363b
 subsection:         rgb(35, 38, 41)         # 232629
 textfield:          rgb(35, 38, 41)         # 232629
+textform:           rgb(77, 77, 77)         # 4d4d4d
 
 action_destructive: rgb(246, 116, 0)        # f67400
 
@@ -39,7 +40,8 @@ progress_bar:       rgb(29, 153, 243)       # 1d99f3
 progress_back:      rgb(77, 77, 77)         # 4d4d4d
 
 dropdown:           rgb(77, 77, 77)         # 4d4d4d
-popover_border:     rgb(61, 174, 233)       # 3daee9
+popover_border:     rgb(77, 77, 77)         # 4d4d4d
+popover_background: rgb(77, 77, 77)         # 4d4d4d
 popover_progress:   rgb(61, 174, 233)       # 3daee9
 
 list_head:          rgb(29, 153, 243)       # 1d99f3
