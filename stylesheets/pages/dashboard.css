@@ -1,0 +1,126 @@
+/* available and upcoming reviews */
+
+.dashboard .review-status {
+  margin-top: 1vh !important;
+  margin-bottom: 1vh !important;
+  border: 1px hidden !important;
+}
+
+.dashboard .review-status li {
+  background-color: none !important;
+  border: none !important;
+}
+
+
+/* SRS progress */
+
+.dashboard .srs-progress {
+  margin-bottom: 1vh !important;
+}
+
+.dashboard .srs-progress ul > li {
+  border-right: 1px solid <%= Colours::LIST_SEPARATOR %>;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.dashboard .srs-progress li:first-child {
+  border-radius: 5px 0 0 5px !important;
+}
+
+.dashboard .srs-progress li:last-child {
+  border: none;
+  border-radius: 0 5px 5px 0 !important;
+}
+
+
+/* level progress */
+
+.dashboard .progression {
+  margin-top: 0 !important;
+  margin-bottom: 1vh !important;
+}
+
+.dashboard .progression hr {
+  border-bottom: 1px solid <%= Colours::BACKGROUND %>;
+  border-top: 1px solid <%= Colours::BACKGROUND %>;
+  color: <%= Colours::BACKGROUND %> !important;
+}
+
+.dashboard .progression .lattice-single-character {
+  background-image: none !important;
+}
+
+.dashboard .progression .lattice-single-character ul li {
+  background-color: transparent !important;
+}
+
+
+/* unlocks, critical and burns */
+
+.dashboard .recent-unlocks,
+.dashboard .low-percentage,
+.dashboard .recent-retired {
+  min-height: 445px !important;
+}
+
+.dashboard .row .row {
+  position: relative !important;
+}
+
+.dashboard .recent-unlocks .span4,
+.dashboard .low-percentage .span4,
+.dashboard .recent-retired .span4 {
+  position: relative !important;
+  float: left;
+}
+
+.dashboard .recent-unlocks tr,
+.dashboard .low-percentage tr,
+.dashboard .recent-retired tr {
+  border-bottom: 1px solid <%= Colours::LIST_SEPARATOR %> !important;
+}
+
+.dashboard .recent-unlocks tr:last-child,
+.dashboard .low-percentage tr:last-child,
+.dashboard .recent-retired tr:last-child {
+  border: none !important;
+}
+
+.dashboard .none-available,
+.dashboard .see-more {
+  background-image: none !important;
+  background-color: <%= Colours::SUBSECTION %> !important;
+  box-shadow: none !important;
+}
+
+.dashboard .none-available div {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.dashboard .see-more a {
+  background-image: none !important;
+}
+
+
+/* forum and blog */
+
+.dashboard .forum-topics-list,
+.dashboard .blog {
+  min-height: 585px !important;
+}
+
+.dashboard-sub-section h3 {
+  box-shadow: inset 0 -5px 10px <%= Colours::SHADOW %> !important;
+  background-image: none !important;
+  background-color: <%= Colours::LIST_HEAD %> !important;
+}
+
+
+.dashboard .forum-topics-list table td,
+.dashboard .blog-item {
+  background-image: none !important;
+  background-color: <%= Colours::LIST_ITEM %> !important;
+}
