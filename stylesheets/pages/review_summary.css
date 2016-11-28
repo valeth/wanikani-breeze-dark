@@ -1,0 +1,61 @@
+/* reviews summary */
+
+#reviews-summary #start-session a
+{
+  background-color:rgb(46, 204, 113) !important
+}
+#reviews-summary #start-session a.disabled
+{
+  color:rgb(252, 252, 252) !important;
+  background-color:black !important;
+}
+
+#reviews-summary #review-stats-answered-correctly {
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px <%= Colours::SHADOW %> !important;
+}
+
+#reviews-summary div#review-stats-radicals,
+#reviews-summary div#review-stats-kanji,
+#reviews-summary div#review-stats-vocabulary {
+  background-color: <%= Colours::SUBSECTION %> !important;
+  box-shadow: 3px 3px 3px <%= Colours::SHADOW %> !important;
+}
+
+#reviews-summary #review-stats-radicals
+{
+  border-radius: 5px 0 0 5px;
+}
+
+#reviews-summary #review-stats-vocabulary
+{
+  border-radius: 0 5px 5px 0;
+}
+
+#reviews-summary #incorrect h2,
+#reviews-summary #incorrect h2 strong,
+#reviews-summary #correct h2,
+#reviews-summary #correct h2 strong
+{
+  color: <%= Colours::BACKGROUND %> !important;
+}
+
+#reviews-summary #incorrect h2
+{
+  border-radius: 5px 5px 0 0;
+  background-color: <%= Colours::INCORRECT %> !important;
+}
+
+#reviews-summary #correct h2
+{
+  border-radius: 5px 5px 0 0;
+  background-color: <%= Colours::CORRECT %> !important;
+}
+
+#reviews-summary #correct h3 strong,
+#reviews-summary #correct h3 span,
+#reviews-summary #incorrect h3 strong,
+#reviews-summary #incorrect h3 span
+{
+  background-color: <%= Colours::SUBSECTION %> !important;
+}
