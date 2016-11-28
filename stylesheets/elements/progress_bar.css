@@ -1,0 +1,47 @@
+.progress {
+  background-color: <%= Colours::PROGRESS_BACK %> !important;
+  background-image: none !important;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5) inset;
+}
+
+.progress .bar {
+  background-color: <%= Colours::PROGRESS_BAR %>;
+  background-image: none !important;
+  height: 60%;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
+
+.progress .bar span {
+  background-color: <%= Colours::DROPDOWN %>;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  opacity: 0.8;
+}
+
+.progress .bar span::after {
+  border-top-color: <%= Colours::DROPDOWN %>;
+  opacity: 0.9;
+}
+
+/* dashboard kanji progress threshold */
+
+.progress .bar .threshold {
+  line-height: 110%;
+  height: 60%;
+  opacity: 0.50;
+  box-shadow: 1px 0 0 <%= Colours::TEXT %> !important;
+}
+
+/* progress bars in level pages */
+
+#progress section,
+section[id|=level] .progress {
+  margin-left: 2vw !important;
+  margin-right: 2vw !important;
+}

@@ -1,0 +1,41 @@
+.popover {
+  background-color: <%= Colours::POPOVER_BACKGROUND %> !important;
+  border-color: <%= Colours::POPOVER_BORDER %> !important;
+  box-shadow: 5px 5px 5px <%= Colours::SHADOW %> !important;
+}
+.popover .popover-title {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.popover.srs .arrow,
+.popover.srs .arrow::after,
+.popover.lattice .arrow,
+.popover.lattice .arrow::after {
+  border-right-color: <%= Colours::POPOVER_BORDER %> !important;
+}
+
+
+.popover.srs .popover-content li {
+  border-bottom: 1px solid <%= Colours::LIST_SEPARATOR %> !important;
+}
+
+.popover.srs .popover-content li:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.popover.srs .popover-content li:last-child {
+  border-radius: 0 0 5px 5px;
+  border: none !important;
+}
+
+.popover.srs .popover-content li span {
+  color: <%= Colours::BACKGROUND %> !important;
+}
+
+
+.popover.lattice .bar {
+  background-color: <%= Colours::POPOVER_PROGRESS %> !important;
+  background-image: none !important;
+  line-height: 100%;
+}

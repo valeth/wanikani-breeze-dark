@@ -1,0 +1,6 @@
+.btn {
+  background-color: <%= Colours::BUTTON_BACKGROUND %> !important;
+  background-image: none !important;
+  border: 1px solid;
+  border-color: <%= Colours::BUTTON_BORDER %> !important;
+}

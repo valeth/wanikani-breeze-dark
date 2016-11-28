@@ -1,0 +1,14 @@
+[id^=note-] form fieldset {
+  background-color: <%= Colours::TEXTFORM %> !important;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px <%= Colours::INSET_SHADOW %> inset !important;
+}
+
+[id^=note-] form fieldset textarea {
+  -webkit-text-fill-color: <%= Colours::TEXT %> !important;
+  color: <%= Colours::TEXT %> !important;
+}
+
+[id^=note-] form fieldset button {
+  background-color: transparent !important;
+}

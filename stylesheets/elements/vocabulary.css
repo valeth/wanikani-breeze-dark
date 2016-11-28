@@ -1,0 +1,47 @@
+.vocabulary-icon,
+.highlight-vocabulary,
+#character.vocabulary,
+#main-info.vocabulary,
+span.vocabulary,
+.vocabulary ul li[title=Characters],
+#vocabulary h2,
+tr[id|=vocabulary],
+li[id|=vocabulary],
+li[class|=vocabulary],
+[id$=vocabulary] .character-item,
+.popover.srs .popover-content li:nth-child(3),
+.navbar .open.vocabulary .dropdown-menu,
+.navbar .open.vocabulary .dropdown-toggle {
+  background-color: <%= Colours::VOCABULARY %> !important;
+  background-image: none !important;
+}
+
+.vocabulary-icon span,
+.highlight-vocabulary,
+#character.vocabulary span,
+span.vocabulary,
+#vocabulary li a,
+#vocabulary h2,
+tr[id|=vocabulary] a span,
+tr[id|=vocabulary] a time,
+tr[id|=vocabulary] span,
+li[id|=vocabulary] li,
+li[id|=vocabulary] a,
+li[class|=vocabulary] a,
+[id$=vocabulary] .character-item span,
+[id$=vocabulary] .character-item li,
+.popover.srs .popover-content li:nth-child(3),
+.navbar .open.vocabulary .dropdown-menu::before,
+.navbar .open.vocabulary .dropdown-menu::after {
+  color: <%= Colours::BACKGROUND %> !important;
+}
+
+li.vocabulary,
+span.vocabulary {
+  box-shadow: none !important;
+}
+
+.navbar .open.vocabulary .dropdown-menu::before,
+.navbar .open.vocabulary .dropdown-menu::after {
+  border-bottom: 9px solid <%= Colours::VOCABULARY %> !important;
+}

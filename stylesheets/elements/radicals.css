@@ -1,0 +1,52 @@
+.radical-icon,
+.highlight-radical,
+#character.radical,
+#main-info.radical,
+span.radical,
+.radical ul li [title=Characters],
+#radicals h2,
+tr[id|=radical],
+li[id|=radical],
+li[class|=radical],
+.radicals-progress .bar,
+.radicals-progress li[id|=radical] a,
+[id$=radicals] .character-item,
+.popover.srs .popover-content li:nth-child(1),
+.navbar .open.radicals .dropdown-menu,
+.navbar .open.radicals .dropdown-toggle {
+  background-color: <%= Colours::RADICAL %> !important;
+  background-image: none !important;
+}
+
+.radical-icon span,
+.highlight-radical,
+#character.radical span,
+span.radical,
+span.radical i,
+#radical li a,
+#radicals h2,
+tr[id|=radical] a span,
+tr[id|=radical] a time,
+li[id|=radical] span,
+li[id|=radical] li,
+li[id|=radical] a,
+li[id|=radical] a i
+li[class|=radical] a,
+li[class|=radical] a i,
+[id$=radicals] .character-item span,
+[id$=radicals] .character-item li,
+i[class|=radical],
+.popover.srs .popover-content li:nth-child(1),
+.navbar .open.radicals .dropdown-menu::before,
+.navbar .open.radicals .dropdown-menu::after {
+  color: <%= Colours::BACKGROUND %> !important;
+}
+
+li.radical {
+  box-shadow: none !important;
+}
+
+.navbar .open.radicals .dropdown-menu::before,
+.navbar .open.radicals .dropdown-menu::after {
+  border-bottom: 9px solid <%= Colours::RADICAL %> !important;
+}

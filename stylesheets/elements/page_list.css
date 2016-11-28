@@ -1,0 +1,37 @@
+.page-list {
+  background-color: <%= Colours::SUBSECTION %> !important;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px <%= Colours::SHADOW %> !important;
+}
+
+.page-list li a {
+  background-color: <%= Colours::LIST_ITEM %> !important;
+  background-image: none !important;
+  border: none !important;
+  border-right: 1px solid !important;
+  border-color: <%= Colours::LIST_SEPARATOR %> !important;
+}
+
+.page-list li:last-child a {
+  border: none !important;
+  border-radius: 0 5px 5px 0;
+}
+
+.page-list li:first-child a {
+  border-radius: 5px 0 0 5px;
+}
+
+
+/* levels page + forums*/
+
+.page-list-header span {
+  border: none !important;
+}
+
+.page-list-header + li a {
+  border-radius: 5px 0 0 5px;
+}
+
+.page-list.multi-page li.disabled span {
+  border: none;
+}

@@ -1,0 +1,20 @@
+.dashboard .review-status,
+.dashboard .srs-progress,
+.dashboard .progression,
+.dashboard .recent-unlocks,
+.dashboard .low-percentage,
+.dashboard .recent-retired,
+.dashboard .forum-topics-list,
+.dashboard .blog,
+.community #top-members,
+.community #new-members,
+.community #chat,
+#reviews #information,
+#reviews-summary #correct,
+#reviews-summary #incorrect,
+#progress {
+  background-color: <%= Colours::SUBSECTION %> !important;
+  box-shadow: 3px 3px 3px <%= Colours::SHADOW %> !important;
+  border-radius: 5px !important;
+  border: none !important;
+}

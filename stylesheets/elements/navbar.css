@@ -1,0 +1,83 @@
+.navbar .additional span:first-child,
+.navbar .title span {
+  box-shadow: none !important;
+}
+
+.navbar .navbar-inner {
+  background-image: none !important;
+  background-color: <%= Colours::SUBSECTION %> !important;
+  border: none !important;
+  box-shadow: 0 3px 3px <%= Colours::SHADOW %> !important;
+}
+
+.navbar .open .dropdown-menu {
+  box-shadow: 3px 3px 3px <%= Colours::SHADOW %> !important;
+  border-radius: 0 5px 5px 5px !important;
+  border: none !important;
+}
+
+.navbar .dropdown-toggle span {
+  border-color: <%= Colours::BACKGROUND %> !important;
+  box-shadow: none !important;
+}
+
+.navbar .open .dropdown-toggle {
+  background-color: <%= Colours::DROPDOWN %> !important;
+  opacity: 0.80;
+}
+
+.navbar .open .dropdown-menu li a,
+.navbar .open .dropdown-menu .nav-header,
+.navbar .open .dropdown-toggle,
+.navbar .open .dropdown-toggle span,
+.navbar .open .dropdown-toggle i {
+  color: <%= Colours::BACKGROUND %> !important;
+}
+
+.navbar .open .dropdown-menu li a:hover {
+  background-color: <%= Colours::SHADOW %> !important;
+}
+
+.navbar .open .dropdown-menu::before,
+.navbar .open .dropdown-menu::after {
+  border-left: 9px solid transparent !important;
+  border-right: 9px solid transparent !important;
+}
+
+
+/* lessons + reviews + account */
+
+.navbar .lessons span,
+.navbar .reviews span {
+  background-color: <%= Colours::SUBSECTION %> !important;
+  background-image: none !important;
+  border-color: <%= Colours::BACKGROUND %> !important;
+}
+
+.navbar .open.levels .dropdown-menu,
+.navbar .open.account .dropdown-menu {
+  background-color: <%= Colours::DROPDOWN %> !important;
+  box-shadow: 3px 3px 3px <%= Colours::SHADOW %> !important;
+}
+
+.navbar .open.levels .dropdown-menu li a,
+.navbar .open.account .dropdown-menu li a {
+  color: <%= Colours::TEXT %> !important;
+}
+
+.navbar .open.levels .dropdown-menu::after,
+.navbar .open.account .dropdown-menu::after {
+  border-left: 9px solid transparent !important;
+  border-right: 9px solid transparent !important;
+  border-bottom: 9px solid <%= Colours::DROPDOWN %> !important;
+  color: <%= Colours::DROPDOWN %> !important;
+}
+
+.navbar .account .dropdown-toggle span {
+  border: 5px solid !important;
+  border-color: <%= Colours::BACKGROUND %> !important;
+}
+
+.navbar .open.account .dropdown-menu {
+  border-radius: 5px 0 5px 5px !important;
+}

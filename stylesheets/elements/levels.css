@@ -1,0 +1,56 @@
+/* levels */
+
+.dashboard .srs-progress ul > li#burned span {
+  color: <%= Colours::TEXT %> !important;
+  text-shadow: 1px 1px 2px <%= Colours::TEXT %> !important;
+}
+
+li[data-sorted] .burned-lattice,
+span.burned-lattice {
+  background-color: <%= Colours::BURNED %> !important;
+  color: <%= Colours::TEXT %> !important;
+}
+
+
+.dashboard .srs-progress ul > li#enlightened span {
+  color: <%= Colours::ENLIGHTENED %> !important;
+  text-shadow: 1px 1px 2px <%= Colours::ENLIGHTENED %> !important;
+}
+
+li[data-sorted] .enlighten-lattice,
+span.enlighten-lattice {
+  background-color: <%= Colours::ENLIGHTENED %> !important;
+}
+
+
+.dashboard .srs-progress ul > li#master span {
+  color: <%= Colours::MASTER %> !important;
+  text-shadow: 1px 1px 2px <%= Colours::ENLIGHTENED %> !important;
+}
+
+li[data-sorted] .master-lattice,
+span.master-lattice {
+  background-color: <%= Colours::MASTER %> !important;
+}
+
+
+.dashboard .srs-progress ul > li#guru span {
+  color: <%= Colours::GURU %> !important;
+  text-shadow: 1px 1px 2px <%= Colours::GURU %> !important;
+}
+
+li[data-sorted] .guru-lattice,
+span.guru-lattice {
+  background-color: <%= Colours::GURU %> !important;
+}
+
+
+.dashboard .srs-progress ul > li#apprentice span {
+  color: <%= Colours::APPRENTICE %> !important;
+  text-shadow: 1px 1px 2px <%= Colours::APPRENTICE %> !important;
+}
+
+li[data-sorted] .apprentice-lattice,
+span.apprentice-lattice {
+  background-color: <%= Colours::APPRENTICE %> !important;
+}
