@@ -3,8 +3,16 @@
 require 'erb'
 require 'yaml'
 
+YML = YAML.load_file('./colours.yml')
+
 module Colours
-    YAML.load_file('./colours.yml').each_pair do |key, value|
+    YML['colours'].each_pair do |key, value|
+        self.const_set(key.upcase, value)
+    end
+end
+
+module Shadow
+    YML['shadows'].each_pair do |key, value|
         self.const_set(key.upcase, value)
     end
 end
@@ -28,8 +36,12 @@ files = Dir['./stylesheets/**/*.css']
 puts "stitching together #{files.size} CSS files..."
 
 files.each do |file|
-    erb = ERB.new(File.read(file))
-    erb.result.each_line { |l| to_insert << "  #{l}" }
+    begin
+        erb = ERB.new(File.read(file))
+        erb.result.each_line { |l| to_insert << "  #{l}" }
+    rescue NameError
+        abort "Failed to parse file #{file}"
+    end
 
     to_insert << "\n\n"
 end
