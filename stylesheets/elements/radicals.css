@@ -25,7 +25,7 @@ span.highlight-radical,                           /* review, lesson */
 span.radical, span.radical i,                     /* review, lesson */
 #character.radical span,                          /* review */
 li.radical ul li [title=Characters],              /* review */
-li[class|=radical] a, li[class|=radical] a i,     /* review summary */
+li[class^=radical] a, li[class^=radical] a i,     /* review summary, lesson summary */
 #radicals h2,                                     /* lesson summary */
 #radical li a,                                    /* */
 tr[id|=radical] a span, tr[id|=radical] a span i, /* unlock, critical, burned */
