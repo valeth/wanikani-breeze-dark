@@ -7,7 +7,7 @@
 }
 
 .dashboard .review-status li {
-  background-color: none !important;
+  background-color: transparent !important;
   border: none !important;
 }
 

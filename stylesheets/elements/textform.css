@@ -1,7 +1,7 @@
 [id^=note-] form fieldset {
   background-color: <%= Colours::TEXTFORM %> !important;
   border-radius: 5px;
-  box-shadow: <%= Shadow::TEXTFORM %> inset !important;
+  box-shadow: <%= Shadow::TEXTFORM %> !important;
 }
 
 [id^=note-] form fieldset textarea {
