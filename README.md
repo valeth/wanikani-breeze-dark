@@ -14,3 +14,5 @@ Simply run `rake` from within the project directory.
 Then copy content of the generated `out.css` into a new Stylish theme.
 
 > NOTE: If you are using Chromium/Chrome use the Mozilla format import.
+
+Check the `screenshots` directory for some screenshots of the theme.
