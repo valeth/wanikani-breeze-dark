@@ -1,6 +1,8 @@
 /* levels */
 
-span.locked-item,
+span.locked-item.radical,
+span.locked-item.kanji,
+span.locked-item.vocabulary,
 .character-item.locked {
   background-image: url("https://cdn-staging.wanikani.com/assets/default-v2/stripes-5e8494366c1615da046bd0f587cfeef6786e7ba17863df1329767ca3b89140e0.png") !important;
 }
