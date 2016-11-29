@@ -1,24 +1,31 @@
+# Main
+
 - [x] dashboard
 - [x] lesson
 - [x] review
-- [x] level
 - [x] radicals
- + [x] meaning
- + [x] progress
+ + [x] lattice
+ + [x] levels
+ + [x] info
 - [x] kanji
- + [x] combined
- + [x] meaning
- + [x] reading
- + [x] progress
+ + [x] lattice
+ + [x] levels
+ + [x] info
 - [x] vocabulary
- + [x] combined
- + [x] meaning
- + [x] reading
- + [x] progress
-- [x] community
- + [x] profile
- + [x] forums
-- [ ] settings
- + [x] account
+ + [x] lattice
+ + [x] levels
+ + [x] info
+- [x] profile
+- [x] forums
+- [ ] account
+ + [x] settings
  + [ ] subscription
  + [x] billing
+
+
+# User Scripts
+
+- [x] Ultimate Timeline
+- [x] WaniKani Improve
+- [x] Lesson Reorder
+- [x] Similar Kanji
