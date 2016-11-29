@@ -35,7 +35,8 @@
   line-height: 110%;
   height: 60%;
   opacity: 0.50;
-  box-shadow: 1px 0 0 <%= Colours::TEXT %> !important;
+  box-shadow: 1px 0 0 <%= Colours::SUBSECTION %> !important;
+  color: <%= Colours::SUBSECTION %> !important;
 }
 
 /* progress bars in level pages */
