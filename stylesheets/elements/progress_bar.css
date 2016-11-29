@@ -34,9 +34,8 @@
 .progress .bar .threshold {
   line-height: 110%;
   height: 60%;
-  opacity: 0.75;
-  box-shadow: 1px 0 0 <%= Colours::SUBSECTION %> !important;
-  color: <%= Colours::SUBSECTION %> !important;
+  opacity: 0.50;
+  box-shadow: 1px 0 0 <%= Colours::TEXT %> !important;
 }
 
 /* progress bars in level pages */
