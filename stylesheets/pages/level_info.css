@@ -1,40 +1,12 @@
-aside.additional-info.level-list.legend,
-section[id|=level] {
-  background-color: <%= Colours::SUBSECTION %> !important;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.5) !important;
-}
-
 section[id|=level] header {
   background-color: transparent !important;
 }
 
-section[id|=level] ul.single-character-grid {
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  padding-left: 1vw;
-  padding-right: 1vw;
+section[id|=level] {
+  padding: 10px;
+  margin-bottom: 1vh !important;
 }
 
-section[id|=level] ul.single-character-grid li.character-item {
-  margin: 10px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.5) !important;
-}
-
-
-section[id|=level] ul.multi-character-grid {
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  padding-left: 1vw;
-  padding-right: 1vw;
-}
-
-section[id|=level] ul.multi-character-grid li.character-item {
-  width: 98%;
-  margin: 10px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.5) !important;
+section[id|=level] ul[class*=character-grid] {
+  margin: 5px;
 }

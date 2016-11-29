@@ -8,16 +8,9 @@
 
 /* subscription page */
 
-.account-subscription .account-subscription-plan {
-  background-color: <%= Colours::SUBSECTION %> !important;
-  border: none !important;
-  border-radius: 5px !important;
-  box-shadow: 5px 5px 5px <%= Colours::SHADOW %>;
-}
-
 .account-subscription .account-subscription-plan-active {
   border-color: <%= Colours::SUB_ACTIVE %> !important;
-  box-shadow: 0 0 5px <%= Colours::SUB_ACTIVE_SHADOW %>;
+  box-shadow: <%= Shadow::SUB_ACTIVE %> !important;
 }
 
 .account-subscription .account-subscription-plans .account-subscription-plan .account-subscription-plan-select button.btn[type="button"] {
@@ -29,43 +22,27 @@
   background: <%= Colours::SUB_ACTIVE %> !important;
 }
 
-#account-subscription-coupon-form #coupon {
-  background-color: <%= Colours::SUBSECTION %> !important;
-  border: none;
-  border-radius: 5px !important;
-  box-shadow: 5px 5px 5px <%= Colours::SHADOW %>;
-}
-
-.account-subscription-payment-processor-info {
-  background-color: <%= Colours::SUBSECTION %> !important;
-  border: none;
-  border-radius: 5px !important;
-  box-shadow: 5px 5px 5px <%= Colours::SHADOW %>;
+#account-subscription-coupon-form #coupon:focus {
+  border: none !important;
+  box-shadow: <%= Shadow::FOCUS %> !important;
 }
 
 .account-subscription-payment-submit button[type=submit]:disabled {
   background-color: <%= Colours::SUB_ACTIVE %> !important;
   border-radius: 5px !important;
-  box-shadow: 5px 5px 5px <%= Colours::SHADOW %>;
+  box-shadow: <%= Shadow::SUB_ACTIVE %>;
 }
 
 
 /* billing page */
 
-.account-subscription form .control-group input[type="text"] {
-  background-color: <%= Colours::SUBSECTION %> !important;
-  border-radius: 5px !important;
-  border: none !important;
-  box-shadow: 5px 5px 5px <%= Colours::SHADOW %>;
-}
-
 .account-subscription form .control-group input[type="text"]:focus {
   border: none !important;
-  box-shadow: 0 0 5px <%= Colours::FOCUS_SHADOW %> !important;
+  box-shadow: <%= Shadow::FOCUS %> !important;
 }
 
 .account-subscription-payment-submit button {
   background-color: <%= Colours::ACTION_DESTRUCTIVE %> !important;
   border-radius: 5px !important;
-  box-shadow: 5px 5px 5px <%= Colours::SHADOW %>;
+  box-shadow: <%= Shadow::PAYMENT_SUBMIT %>;
 }

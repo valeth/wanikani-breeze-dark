@@ -1,0 +1,23 @@
+.level-icon,
+[class$=-highlight] {
+  box-shadow: none !important;
+}
+
+.individual-item .span12 > section {
+  padding: 10px;
+  margin-bottom: 1vh !important;
+}
+
+.individual-item li[id|=radical],
+.individual-item .additional-info {
+  background-color: transparent !important;
+}
+
+.individual-item li[id|=radical] a {
+  color: <%= Colours::TEXT %> !important;
+}
+
+section#progress {
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
