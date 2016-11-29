@@ -25,7 +25,7 @@ css_base = <<~EOF
      *       for the individual css source files
      */
 
-    @-moz-document domain(wanikani.com) {
+    @-moz-document domain(www.wanikani.com) {
     %{css}
     }
     EOF
