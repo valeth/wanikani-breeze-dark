@@ -1,48 +1,58 @@
-.kanji-icon,
-.highlight-kanji,
-#character.kanji,
-#main-info.kanji,
-span.kanji,
-.kanji ul li [title=Characters],
-#kanji h2,
-tr[id|=kanji],
-li[id|=kanji],
-li[class|=kanji],
-.kanji-progress .bar,
-.kanji-progress li[id|=kanji] a,
-[id$=kanji] .character-item,
-.popover.srs .popover-content li:nth-child(2),
-.navbar .open.kanji .dropdown-toggle,
-.navbar .open.kanji .dropdown-menu {
+li[id|=kanji],                                  /* level, search */
+.kanji-icon,                                    /* info, profile */
+span.kanji-highlight,                           /* info */
+span.highlight-kanji,                           /* review, lesson */
+span.kanji,                                     /* review, lesson */
+#character.kanji,                               /* review */
+li.kanji ul > li[title=Characters],             /* review */
+#main-info.kanji,                               /* lesson */
+#kanji h2,                                      /* lesson summary */
+li[class|=kanji],                               /* review summary, lesson */
+tr[id|=kanji],                                  /* unlock, critical, burned */
+.kanji-progress .bar,                           /* dashboard, profile */
+.kanji-progress li[id|=kanji] a,                /* dashboard, profile */
+.popover.srs .popover-content li:nth-child(2),  /* dashboard */
+.navbar .open.kanji .dropdown-toggle,           /* navbar */
+.navbar .open.kanji .dropdown-menu {            /* navbar */
   background-color: <%= Colours::KANJI %> !important;
   background-image: none !important;
 }
 
-.kanji-icon span,
-.highlight-kanji,
-#character.kanji span,
-span.kanji,
-#kanji li a,
-#kanji h2,
-tr[id|=kanji] a span,
-tr[id|=kanji] a time,
-li[id|=kanji] span,
-li[id|=kanji] li,
-li[id|=kanji] a,
-li[class|=kanji] a,
-[id$=kanji] .character-item span,
-[id$=kanji] .character-item li,
-.popover.srs .popover-content li:nth-child(2),
-.navbar .open.kanji .dropdown-menu::before,
-.navbar .open.kanji .dropdown-menu::after {
+li[id|=kanji] span,                             /* level, search */
+.kanji-icon span,                               /* info, profile */
+span.kanji-highlight,                           /* info */
+span.highlight-kanji,                           /* review, lesson */
+span.kanji,                                     /* review, lesson */
+#character.kanji span,                          /* review */
+li.kanji ul > li[title=Characters],             /* review */
+li[class|=kanji] a,                             /* review summary */
+#kanji h2,                                      /* lesson summary */
+#kanji li a,                                    /* */
+tr[id|=kanji] a span,                           /* unlock, critical, burned */
+tr[id|=kanji] a time,                           /* unlock, burned */
+li[id|=kanji] li,                               /* search */
+li[id|=kanji] a,                                /* dashboard, search */
+.popover.srs .popover-content li:nth-child(2),  /* popover */
+.navbar .open.kanji .dropdown-menu::before,     /* navbar */
+.navbar .open.kanji .dropdown-menu::after {     /* navbar */
   color: <%= Colours::BACKGROUND %> !important;
 }
 
-li.kanji {
+li.kanji,
+span.kanji,
+.kanji-icon {
   box-shadow: none !important;
 }
 
 .navbar .open.kanji .dropdown-menu::before,
 .navbar .open.kanji .dropdown-menu::after {
   border-bottom: 9px solid <%= Colours::KANJI %> !important;
+}
+
+.navbar .kanji .dropdown-toggle:hover span {
+  border-color: <%= Colours::KANJI %> !important;
+}
+
+.navbar .open.kanji .dropdown-toggle:hover span {
+  border-color: <%= Colours::BACKGROUND %> !important;
 }

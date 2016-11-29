@@ -1,52 +1,58 @@
-.radical-icon,
-.highlight-radical,
-#character.radical,
-#main-info.radical,
-span.radical,
-.radical ul li [title=Characters],
-#radicals h2,
-tr[id|=radical],
-li[id|=radical],
-li[class|=radical],
-.radicals-progress .bar,
-.radicals-progress li[id|=radical] a,
-[id$=radicals] .character-item,
-.popover.srs .popover-content li:nth-child(1),
-.navbar .open.radicals .dropdown-menu,
-.navbar .open.radicals .dropdown-toggle {
+li[id|=radical],                                  /* level, search */
+.radical-icon,                                    /* info, profile */
+span.radical-highlight,                           /* info */
+span.highlight-radical,                           /* review, lesson */
+span.radical,                                     /* review, lesson */
+#character.radical,                               /* review */
+li.radical ul li [title=Characters],              /* review */
+#main-info.radical,                               /* lesson */
+#radicals h2,                                     /* lesson summary */
+li[class|=radical],                               /* review summary, lesson */
+tr[id|=radical],                                  /* unlock, critical, burned */
+.radicals-progress .bar,                          /* dashboard, profile */
+.radicals-progress li[id|=radical] a,             /* dashboard, profile */
+.popover.srs .popover-content li:nth-child(1),    /* dashboard */
+.navbar .open.radicals .dropdown-menu,            /* navbar */
+.navbar .open.radicals .dropdown-toggle {         /* navbar */
   background-color: <%= Colours::RADICAL %> !important;
   background-image: none !important;
 }
 
-.radical-icon span,
-.highlight-radical,
-#character.radical span,
-span.radical,
-span.radical i,
-#radical li a,
-#radicals h2,
-tr[id|=radical] a span,
-tr[id|=radical] a time,
-li[id|=radical] span,
-li[id|=radical] li,
-li[id|=radical] a,
-li[id|=radical] a i
-li[class|=radical] a,
-li[class|=radical] a i,
-[id$=radicals] .character-item span,
-[id$=radicals] .character-item li,
-i[class|=radical],
-.popover.srs .popover-content li:nth-child(1),
-.navbar .open.radicals .dropdown-menu::before,
-.navbar .open.radicals .dropdown-menu::after {
+li[id|=radical] span,                             /* level, search */
+.radical-icon span,                               /* info */
+span.radical-highlight,                           /* info */
+span.highlight-radical,                           /* review, lesson */
+span.radical, span.radical i,                     /* review, lesson */
+#character.radical span,                          /* review */
+li.radical ul li [title=Characters],              /* review */
+li[class|=radical] a, li[class|=radical] a i,     /* review summary */
+#radicals h2,                                     /* lesson summary */
+#radical li a,                                    /* */
+tr[id|=radical] a span, tr[id|=radical] a span i, /* unlock, critical, burned */
+tr[id|=radical] a time,                           /* unlock, burned */
+li[id|=radical] li,                               /* search */
+li[id|=radical] a, li[id|=radical] a i,           /* dashboard, serach */
+.popover.srs .popover-content li:nth-child(1),    /* popover */
+.navbar .open.radicals .dropdown-menu::before,    /* navbar */
+.navbar .open.radicals .dropdown-menu::after {    /* navbar */
   color: <%= Colours::BACKGROUND %> !important;
 }
 
-li.radical {
+li.radicals,
+span.radical,
+.radical-icon {
   box-shadow: none !important;
 }
 
 .navbar .open.radicals .dropdown-menu::before,
 .navbar .open.radicals .dropdown-menu::after {
   border-bottom: 9px solid <%= Colours::RADICAL %> !important;
+}
+
+.navbar .radicals .dropdown-toggle:hover span {
+  border-color: <%= Colours::RADICAL %> !important;
+}
+
+.navbar .open.radicals .dropdown-toggle:hover span {
+  border-color: <%= Colours::BACKGROUND %> !important;
 }

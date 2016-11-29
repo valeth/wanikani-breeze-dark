@@ -1,3 +1,8 @@
+.account-subscription .account-subscription-plan,
+#account-subscription-coupon-form #coupon,
+.account-subscription-payment-processor-info,
+.account-subscription form .control-group input[type="text"],
+div.forum-posts-list table,
 .dashboard .review-status,
 .dashboard .srs-progress,
 .dashboard .progression,
@@ -12,9 +17,15 @@
 #reviews #information,
 #reviews-summary #correct,
 #reviews-summary #incorrect,
-#progress {
+#progress,
+section[class|=lattice],
+.lattice-progression.legend,
+.lattice-percentages.legend,
+.individual-item .span12 > section,
+aside.additional-info.level-list.legend,
+section[id|=level] {
   background-color: <%= Colours::SUBSECTION %> !important;
-  box-shadow: 3px 3px 3px <%= Colours::SHADOW %> !important;
+  box-shadow: <%= Shadow::SUBSECTION %> !important;
   border-radius: 5px !important;
   border: none !important;
 }

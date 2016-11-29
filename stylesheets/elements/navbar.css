@@ -7,13 +7,11 @@
   background-image: none !important;
   background-color: <%= Colours::SUBSECTION %> !important;
   border: none !important;
-  box-shadow: 0 3px 3px <%= Colours::SHADOW %> !important;
+  box-shadow: <%= Shadow::NAVBAR %> !important;
 }
 
-.navbar .open .dropdown-menu {
-  box-shadow: 3px 3px 3px <%= Colours::SHADOW %> !important;
+.navbar .dropdown-menu {
   border-radius: 0 5px 5px 5px !important;
-  border: none !important;
 }
 
 .navbar .dropdown-toggle span {
@@ -26,22 +24,16 @@
   opacity: 0.80;
 }
 
-.navbar .open .dropdown-menu li a,
-.navbar .open .dropdown-menu .nav-header,
+.navbar .open.radicals .dropdown-menu li a,
+.navbar .open.kanji .dropdown-menu li a,
+.navbar .open.vocabulary .dropdown-menu li a,
+.navbar .open.radicals .dropdown-menu .nav-header,
+.navbar .open.kanji .dropdown-menu .nav-header,
+.navbar .open.vocabulary .dropdown-menu .nav-header,
 .navbar .open .dropdown-toggle,
 .navbar .open .dropdown-toggle span,
 .navbar .open .dropdown-toggle i {
   color: <%= Colours::BACKGROUND %> !important;
-}
-
-.navbar .open .dropdown-menu li a:hover {
-  background-color: <%= Colours::SHADOW %> !important;
-}
-
-.navbar .open .dropdown-menu::before,
-.navbar .open .dropdown-menu::after {
-  border-left: 9px solid transparent !important;
-  border-right: 9px solid transparent !important;
 }
 
 
@@ -52,25 +44,6 @@
   background-color: <%= Colours::SUBSECTION %> !important;
   background-image: none !important;
   border-color: <%= Colours::BACKGROUND %> !important;
-}
-
-.navbar .open.levels .dropdown-menu,
-.navbar .open.account .dropdown-menu {
-  background-color: <%= Colours::DROPDOWN %> !important;
-  box-shadow: 3px 3px 3px <%= Colours::SHADOW %> !important;
-}
-
-.navbar .open.levels .dropdown-menu li a,
-.navbar .open.account .dropdown-menu li a {
-  color: <%= Colours::TEXT %> !important;
-}
-
-.navbar .open.levels .dropdown-menu::after,
-.navbar .open.account .dropdown-menu::after {
-  border-left: 9px solid transparent !important;
-  border-right: 9px solid transparent !important;
-  border-bottom: 9px solid <%= Colours::DROPDOWN %> !important;
-  color: <%= Colours::DROPDOWN %> !important;
 }
 
 .navbar .account .dropdown-toggle span {

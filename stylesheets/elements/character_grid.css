@@ -1,0 +1,19 @@
+[class*=character-grid] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  background-color: <%= Colours::GRID_BACKGROUND %> !important;
+  box-shadow: <%= Shadow::GRID_INSET %> !important;
+  border-radius: 5px;
+}
+
+.multi-character-grid {
+  flex-flow: wrap;
+}
+
+[class*=character-grid] > li {
+  border: none !important;
+  border-radius: 5px;
+  margin: 5px;
+  box-shadow: <%= Shadow::GRID %> !important;
+}

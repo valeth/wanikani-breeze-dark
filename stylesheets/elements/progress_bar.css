@@ -26,7 +26,7 @@
 
 .progress .bar span::after {
   border-top-color: <%= Colours::DROPDOWN %>;
-  opacity: 0.9;
+  opacity: inherit;
 }
 
 /* dashboard kanji progress threshold */

@@ -1,56 +1,66 @@
 /* levels */
 
+span.locked-item,
+.character-item.locked {
+  background-image: url("https://cdn-staging.wanikani.com/assets/default-v2/stripes-5e8494366c1615da046bd0f587cfeef6786e7ba17863df1329767ca3b89140e0.png") !important;
+}
+
+li[data-sorted] .burned-lattice,
+li[data-sorted] .burned-lattice i,
 .dashboard .srs-progress ul > li#burned span {
   color: <%= Colours::TEXT %> !important;
   text-shadow: 1px 1px 2px <%= Colours::TEXT %> !important;
 }
 
-li[data-sorted] .burned-lattice,
 span.burned-lattice {
   background-color: <%= Colours::BURNED %> !important;
   color: <%= Colours::TEXT %> !important;
 }
 
 
+li[data-sorted] .enlighten-lattice,
+li[data-sorted] .enlighten-lattice i,
 .dashboard .srs-progress ul > li#enlightened span {
   color: <%= Colours::ENLIGHTENED %> !important;
   text-shadow: 1px 1px 2px <%= Colours::ENLIGHTENED %> !important;
 }
 
-li[data-sorted] .enlighten-lattice,
 span.enlighten-lattice {
   background-color: <%= Colours::ENLIGHTENED %> !important;
 }
 
 
+li[data-sorted] .master-lattice,
+li[data-sorted] .master-lattice i,
 .dashboard .srs-progress ul > li#master span {
   color: <%= Colours::MASTER %> !important;
   text-shadow: 1px 1px 2px <%= Colours::ENLIGHTENED %> !important;
 }
 
-li[data-sorted] .master-lattice,
 span.master-lattice {
   background-color: <%= Colours::MASTER %> !important;
 }
 
 
+li[data-sorted] .guru-lattice,
+li[data-sorted] .guru-lattice i,
 .dashboard .srs-progress ul > li#guru span {
   color: <%= Colours::GURU %> !important;
   text-shadow: 1px 1px 2px <%= Colours::GURU %> !important;
 }
 
-li[data-sorted] .guru-lattice,
 span.guru-lattice {
   background-color: <%= Colours::GURU %> !important;
 }
 
 
+li[data-sorted] .apprentice-lattice,
+li[data-sorted] .apprentice-lattice i,
 .dashboard .srs-progress ul > li#apprentice span {
   color: <%= Colours::APPRENTICE %> !important;
   text-shadow: 1px 1px 2px <%= Colours::APPRENTICE %> !important;
 }
 
-li[data-sorted] .apprentice-lattice,
 span.apprentice-lattice {
   background-color: <%= Colours::APPRENTICE %> !important;
 }

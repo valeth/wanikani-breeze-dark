@@ -1,0 +1,23 @@
+.dropdown-menu {
+  background-color: <%= Colours::DROPDOWN %> !important;
+  border-radius: 5px !important;
+  border: none !important;
+  box-shadow: <%= Shadow::DROPDOWN %> !important;
+}
+
+.dropdown-menu .nav-header,
+.dropdown-menu li a {
+  color: <%= Colours::TEXT %> !important;
+}
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+  border-left: 9px solid transparent !important;
+  border-right: 9px solid transparent !important;
+  border-bottom-color: <%= Colours::DROPDOWN %> !important;
+  color: <%= Colours::DROPDOWN %> !important;
+}
+
+.dropdown-menu li a:hover {
+  background-color: <%= Colours::DROPDOWN_HOVER %> !important;
+}
