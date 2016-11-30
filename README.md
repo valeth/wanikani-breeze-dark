@@ -25,6 +25,8 @@ Then install the theme from [here](https://userstyles.org/styles/135572/wanikani
 
 > NOTE: Only required if you want to have the latest test build.
 
-Simply run `rake` from within the project directory.
+Switch to the `dev` branch.
 
-Then copy content of the generated `out.css` into a new Stylish theme.
+Then run `rake` from within the project directory.
+
+Then copy the content of the generated `out.css` into a new Stylish theme.
