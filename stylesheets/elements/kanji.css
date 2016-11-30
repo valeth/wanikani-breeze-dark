@@ -16,7 +16,6 @@ tr[id|=kanji],                                  /* unlock, critical, burned */
 .navbar .open.kanji .dropdown-menu {            /* navbar */
   background-color: <%= Colours::KANJI %> !important;
   background-image: none !important;
-  filter: brightness(80%);
 }
 
 li[id|=kanji] span,                             /* level, search */
