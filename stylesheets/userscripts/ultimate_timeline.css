@@ -22,6 +22,18 @@
   margin-left: 1vw;
 }
 
+#timeline .rad {
+  fill: <%= Colours::RADICAL %> !important;
+}
+
+#timeline .kan {
+  fill: <%= Colours::KANJI %> !important;
+}
+
+#timeline .voc {
+  fill: <%= Colours::VOCABULARY %> !important;
+}
+
 #timeln-graph {
   margin-left: 1vw;
   margin-right: 1vw;
