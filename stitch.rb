@@ -32,7 +32,7 @@ css_base = <<~EOF
 
 to_insert = ''
 
-files = Dir['./stylesheets/**/*.css']
+files = Dir['./stylesheets/**/*.css'].sort
 puts "stitching together #{files.size} CSS files..."
 
 files.each do |file|
