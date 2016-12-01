@@ -23,7 +23,7 @@ li[id|=radical] span,                             /* level, search */
 span.radical-highlight,                           /* info */
 span.highlight-radical,                           /* review, lesson */
 span.radical, span.radical i,                     /* review, lesson */
-#character.radical span,                          /* review */
+#character.radical span, #character.radical i,    /* review */
 li.radical ul li [title=Characters],              /* review */
 li[class^=radical] a, li[class^=radical] a i,     /* review summary, lesson summary */
 #radicals h2,                                     /* lesson summary */
