@@ -37,6 +37,8 @@ shadows:
   forum_header:      0 3px 3px rgba(0, 0, 0, 0.5)
   list_head:         0 -5px 10px rgba(0, 0, 0, 0.5) inset
   lattice_legend:    3px 3px 3px rgba(0, 0, 0, 0.5) inset
+  text_meaning:      0 0 10px rgb(218, 68, 83) # da4453
+  text_reading:      0 0 10px rgb(29, 153, 243) # 1d99f3
 
 colours:
   text:               rgb(252, 252, 252)      # fcfcfc
@@ -89,3 +91,6 @@ colours:
   lattice_41:         rgb(61, 174, 233)       # 3daee9
   lattice_61:         rgb(29, 153, 243)       # 1d99f3
   lattice_81:         rgb(28, 220, 154)       # 1cdc9a
+
+  text_meaning:      rgb(218, 68, 83) # da4453
+  text_reading:      rgb(29, 153, 243) # 1d99f3

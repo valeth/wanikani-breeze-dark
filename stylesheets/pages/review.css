@@ -125,3 +125,13 @@
   background-color: <%= Colours::BACKGROUND %> !important;
   box-shadow: none !important;
 }
+
+#question-type.meaning > h1 > strong {
+  text-shadow: <%= Shadow::TEXT_MEANING %> !important;
+  /* color: <%= Colours::TEXT_MEANING %> !important; */
+}
+
+#question-type.reading > h1 > strong {
+  text-shadow: <%= Shadow::TEXT_READING %> !important;
+  /* color: <%= Colours::TEXT_READING %> !important; */
+}
