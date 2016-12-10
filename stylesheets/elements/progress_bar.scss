@@ -1,0 +1,46 @@
+@import '../colors';
+
+.progress {
+    background-color: $progress-background-color !important;
+    background-image: none !important;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.5) inset;
+
+    .bar {
+        background-color: $progress-bar-color;
+        background-image: none !important;
+        height: 60%;
+        border-radius: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+
+        span {
+            background-color: $dropdown-color;
+            border-radius: 5px;
+            box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+            opacity: 0.8;
+        }
+
+        span::after {
+            border-top-color: $dropdown-color;
+            opacity: inherit;
+        }
+
+        .threshold {
+            line-height: 110%;
+            height: 60%;
+            opacity: 0.50;
+            box-shadow: 1px 0 0 $subsection-color !important;
+            color: $subsection-color !important;
+        }
+    }
+}
+
+#progress section,
+section[id|=level] .progress {
+    margin-left: 2vw !important;
+    margin-right: 2vw !important;
+}

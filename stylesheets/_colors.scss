@@ -1,0 +1,70 @@
+// color palette
+$paper-white:      rgb(252, 252, 252); // #fcfcfc
+$iron-grey:        rgb(77, 77, 77);    // #4d4d4d
+$charcoal-grey:    rgb(49, 54, 59);    // #31363b
+$shade-black:      rgb(35, 38, 41);    // #232629
+$plasma-blue:      rgb(61, 174, 233);  // #3daee9
+$icon-red:         rgb(218, 68, 83);   // #da4453
+$danger-red:       rgb(237, 21, 21);   // #ed1515
+$icon-orange:      rgb(244, 119, 80);  // #f47750
+$beware-orange:    rgb(246, 116, 0);   // #f67400
+$icon-yellow:      rgb(253, 188, 75);  // #fdbc4b
+$sunbeam-yellow:   rgb(201, 206, 59);  // #c9ce3b
+$mellow-turquoise: rgb(28, 220, 154);  // #1cdc9a
+$icon-green:       rgb(46, 204, 113);  // #2ecc71
+$verdant-green:    rgb(17, 209, 22);   // #11d116
+$icon-blue:        rgb(29, 153, 243);  // #1d99f3
+
+// colors
+$text-color:       $paper-white;
+$background-color: $charcoal-grey;
+
+$subsection-color: $shade-black;
+$textfield-color:  $shade-black;
+$textform-color:   $iron-grey;
+
+$popover-border-color:     $iron-grey;
+$popover-background-color: $iron-grey;
+$popover-progress-color:   $plasma-blue;
+
+$button-border-color:     $plasma-blue;
+$button-background-color: $charcoal-grey;
+
+$progress-bar-color:        $icon-blue;
+$progress-background-color: $iron-grey;
+
+$dropdown-color:       $iron-grey;
+$dropdown-hover-color: rgba(0, 0, 0, 0.2);
+
+$list-background-color: $iron-grey;
+$list-head-color:       $icon-blue;
+$list-item-color:       $plasma-blue;
+$list-separator-color:  $charcoal-grey;
+$list-hover-color:      rgba(0, 0, 0, 0.2);
+
+$incorrect-color: $danger-red;
+$correct-color:   $icon-green;
+
+$radical-color:    $plasma-blue;
+$kanji-color:      $icon-yellow;
+$vocabulary-color: $icon-green;
+
+$apprentice-color:  $icon-blue;
+$guru-color:        $mellow-turquoise;
+$master-color:      $sunbeam-yellow;
+$enlightened-color: $beware-orange;
+$burned-color:      $shade-black;
+
+$lattice-locked-color: $charcoal-grey;
+$lattice-0-color:      $icon-orange;
+$lattice-21-color:     $sunbeam-yellow;
+$lattice-41-color:     $plasma-blue;
+$lattice-61-color:     $icon-blue;
+$lattice-81-color:     $mellow-turquoise;
+
+$meaning-color: $icon-red;
+$reading-color: $icon-blue;
+
+$action-destructive-color: $beware-orange;
+$grid-background-color:    $iron-grey;
+$sub-active-color:         $beware-orange;

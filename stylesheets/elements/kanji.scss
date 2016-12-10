@@ -1,0 +1,83 @@
+@import '../colors';
+
+@mixin kanji-background {
+    background-color: $kanji-color !important;
+    background-image: none !important;
+}
+
+@mixin kanji-foreground {
+    color: $background-color !important;
+}
+
+li[id|=kanji],                                  /* level, search */
+.kanji-icon,                                    /* info, profile */
+span.kanji-highlight,                           /* info */
+span.highlight-kanji,                           /* review, lesson */
+span.kanji,                                     /* review, lesson */
+#character.kanji,                               /* review */
+li.kanji ul > li[title=Characters],             /* review */
+#main-info.kanji,                               /* lesson */
+#kanji h2,                                      /* lesson summary */
+li[class|=kanji],                               /* review summary, lesson */
+tr[id|=kanji],                                  /* unlock, critical, burned */
+.kanji-progress .bar,                           /* dashboard, profile */
+.kanji-progress li[id|=kanji] a {               /* dashboard, profile */
+    @include kanji-background;
+}
+
+li[id|=kanji] span,                             /* level, search */
+.kanji-icon span,                               /* info, profile */
+span.kanji-highlight,                           /* info */
+span.highlight-kanji,                           /* review, lesson */
+span.kanji,                                     /* review, lesson */
+#character.kanji span,                          /* review */
+li.kanji ul > li[title=Characters],             /* review */
+li[class|=kanji] a,                             /* review summary */
+#kanji h2,                                      /* lesson summary */
+#kanji li a,                                    /* */
+tr[id|=kanji] a span,                           /* unlock, critical, burned */
+tr[id|=kanji] a time,                           /* unlock, burned */
+li[id|=kanji] li,                               /* search */
+li[id|=kanji] a {                               /* dashboard, search */
+    @include kanji-foreground;
+}
+
+li.kanji,
+span.kanji,
+.kanji-icon {
+    box-shadow: none !important;
+}
+
+.popover.srs {
+    .popover-content {
+        li:nth-child(2) {
+            @include kanji-background;
+            @include kanji-foreground;
+        }
+    }
+}
+
+.navbar {
+    .open.kanji {
+        .dropdown-toggle,
+        .dropdown-menu {
+            @include kanji-background;
+        }
+
+        .dropdown-menu::before,
+        .dropdown-menu::after {
+            border-bottom: 9px solid $kanji-color !important;
+            @include kanji-foreground;
+        }
+
+        .dropdown-toggle:hover span {
+            border-color: $background-color !important;
+        }
+    }
+
+    .kanji {
+        .dropdown-toggle:hover span {
+            border-color: $kanji-color !important;
+        }
+    }
+}

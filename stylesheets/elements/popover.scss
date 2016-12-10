@@ -1,0 +1,40 @@
+@import '../colors';
+@import '../shadows';
+
+.popover {
+    background-color: $popover-background-color !important;
+    border-color: $popover-border-color !important;
+    box-shadow: $popover-shadow !important;
+
+    .popover-title {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        opacity: inherit;
+    }
+
+    .arrow,
+    .arrow::after {
+        border-right-color: $popover-border-color !important;
+        opacity: inherit;
+    }
+
+    .popover-content {
+        li {
+            margin-top: 3px !important;
+            margin-bottom: 3px !important;
+            border: none !important;
+            border-radius: 5px;
+            box-shadow: $popover-shadow;
+
+            span {
+                color: $background-color !important;
+            }
+        }
+    }
+
+    .bar {
+        background-color: $popover-progress-color !important;
+        background-image: none !important;
+        line-height: 100%;
+    }
+}

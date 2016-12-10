@@ -1,0 +1,132 @@
+@import '../colors';
+@import '../shadows';
+
+.dashboard {
+    .review-status {
+        margin-top: 1vh !important;
+        margin-bottom: 1vh !important;
+        border: 1px hidden !important;
+
+        li {
+            background-color: transparent !important;
+            border: none !important;
+        }
+    }
+
+    .srs-progress {
+        margin-bottom: 1vh !important;
+
+        ul > li {
+            border-right: 1px solid $list-separator-color;
+            box-shadow: none !important;
+            background-color: transparent !important;
+            background-image: none !important;
+        }
+
+        li:first-child {
+            border-radius: 5px 0 0 5px !important;
+        }
+
+        li:last-child {
+            border: none;
+            border-radius: 0 5px 5px 0 !important;
+        }
+    }
+
+    .progression {
+        margin-top: 0 !important;
+        margin-bottom: 1vh !important;
+
+        > div {
+            background-color: transparent !important;
+        }
+
+        hr {
+            border-bottom: 1px solid $background-color !important;
+            border-top: 1px solid $background-color !important;
+            color: $background-color !important;
+        }
+
+        span,
+        span > i {
+            color: $text-color !important;
+        }
+
+        .lattice-single-character {
+            background-image: none !important;
+
+            ul li {
+                background-color: transparent !important;
+            }
+        }
+    }
+
+    .row .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        margin-bottom: 1vh;
+    }
+
+    .span4 {
+        padding-bottom: 1vh;
+        padding-top: 1vh;
+    }
+
+    .kotoba-table-list {
+        min-height: 100%;
+
+        // tr {
+            //     border-bottom: 1px solid $list-separator-color !important;
+        // }
+
+        // tr:last-child {
+            //     border: none !important;
+        // }
+    }
+
+    .none-available,
+    .see-more {
+        background-image: none !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+
+        div {
+            border: none !important;
+            box-shadow: none !important;
+        }
+    }
+
+    .see-more a {
+        background-image: none !important;
+    }
+
+    .row .row .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        margin-bottom: 1vh;
+    }
+
+    .span6 {
+        padding-bottom: 1vh;
+        padding-top: 1vh;
+    }
+
+    .forum-topics-list,
+    .blog {
+        min-height: 100%;
+    }
+
+    // .forum-topics-list table td,
+    // .blog-item {
+        //     background-image: none !important;
+        //     background-color: $list-item-color !important;
+    // }
+}
+
+.dashboard-sub-section h3 {
+    box-shadow: $list-head-shadow !important;
+    background-image: none !important;
+    background-color: $list-head-color !important;
+}

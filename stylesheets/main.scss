@@ -1,0 +1,29 @@
+@import 'colors';
+
+* {
+    color: $text-color !important;
+    text-shadow: none !important;
+}
+
+body {
+    background-image: none !important;
+    background-color: $background-color !important;
+}
+
+#hotkeys {
+    background-color: $subsection-color !important;
+}
+
+#loading,
+#loading-screen {
+    background-color: $background-color !important;
+}
+
+#additional-content-load {
+    background-color: $subsection-color !important;
+}
+
+.alert {
+    background-color: $subsection-color !important;
+    border: none !important;
+}

@@ -1,0 +1,58 @@
+@import '../colors';
+@import '../shadows';
+
+#reviews-summary {
+    #start-session {
+        a {
+            background-color: $icon-green !important
+        }
+
+        a.disabled {
+            color: $text-color !important;
+            background-color:black !important;
+        }
+    }
+
+    #review-stats-answered-correctly {
+        border-radius: 5px;
+        box-shadow: $review-stats-shadow !important;
+    }
+
+    #review-stats-radicals,
+    #review-stats-kanji,
+    #review-stats-vocabulary {
+        background-color: $subsection-color !important;
+        box-shadow: $review-stats-shadow !important;
+    }
+
+    #review-stats-radicals {
+        border-radius: 5px 0 0 5px;
+    }
+
+    #review-stats-vocabulary {
+        border-radius: 0 5px 5px 0;
+    }
+
+    #incorrect,
+    #correct {
+        h2,
+        h2 strong {
+            color: $background-color !important;
+        }
+
+        h3 strong,
+        h3 span {
+            background-color: $subsection-color !important;
+        }
+    }
+
+    #incorrect h2 {
+        border-radius: 5px 5px 0 0;
+        background-color: $incorrect-color !important;
+    }
+
+    #correct h2 {
+        border-radius: 5px 5px 0 0;
+        background-color: $correct-color !important;
+    }
+}

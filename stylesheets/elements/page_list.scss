@@ -1,0 +1,49 @@
+@import '../colors';
+@import '../shadows';
+
+.page-list {
+    background-color: $subsection-color !important;
+    border-radius: 5px;
+    box-shadow: $page-list-shadow !important;
+
+    li > a {
+        background-color: $list-item-color !important;
+        background-image: none !important;
+        color: $background-color !important;
+        border: none !important;
+        border-right: 1px solid !important;
+        border-color: $list-separator-color !important;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        box-shadow: $page-list-shadow !important;
+    }
+
+    li > a:hover {
+        box-shadow: $focus-shadow !important;
+    }
+
+    li:last-child > a {
+        border: none !important;
+        border-radius: 0 5px 5px 0;
+    }
+
+    li:first-child > a {
+        border-radius: 5px 0 0 5px;
+    }
+
+    .disabled span {
+        border: none;
+    }
+}
+
+/* levels page + forums*/
+
+.page-list-header {
+    span {
+        border: none !important;
+    }
+
+    + li a {
+        border-radius: 5px 0 0 5px;
+    }
+}

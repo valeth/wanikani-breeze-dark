@@ -1,0 +1,38 @@
+@import '../colors';
+@import '../shadows';
+
+#search.in {
+    box-shadow: $searchbar-in-shadow !important;
+}
+
+#search {
+    #query {
+        border: none;
+        background-image: none !important;
+        background-color: $subsection-color !important;
+        box-shadow: $search-query-shadow !important;
+    }
+
+    .search-list {
+        border: none !important;
+        background-color: transparent !important;
+
+        .btn {
+            border: none !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+
+        .multi-character-grid {
+            box-shadow: $grid-shadow !important;
+
+            .character-item {
+                border-bottom: 1px solid $list-separator-color !important;
+            }
+
+            .character-item:last-child {
+                border: none !important;
+            }
+        }
+    }
+}

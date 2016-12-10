@@ -1,0 +1,105 @@
+@import '../colors';
+
+@mixin locked-background {
+    background-image: url("https://cdn-staging.wanikani.com/assets/default-v2/stripes-5e8494366c1615da046bd0f587cfeef6786e7ba17863df1329767ca3b89140e0.png") !important;
+}
+
+@mixin burned-text {
+    color: $text-color !important;
+    text-shadow: 1px 1px 2px $text-color !important;
+}
+
+@mixin enlightened-text {
+    color: $enlightened-color !important;
+    text-shadow: 1px 1px 2px $enlightened-color !important;
+}
+
+@mixin master-text {
+    color: $master-color !important;
+    text-shadow: 1px 1px 2px $master-color !important;
+}
+
+@mixin guru-text {
+    color: $guru-color !important;
+    text-shadow: 1px 1px 2px $guru-color !important;
+}
+
+@mixin apprentice-text {
+    color: $apprentice-color !important;
+    text-shadow: 1px 1px 2px $apprentice-color !important;
+}
+
+span.locked-item,
+.character-item.locked {
+    @include locked-background;
+}
+
+li[data-sorted] {
+    .burned-lattice,
+    .burned-lattice i {
+        @include burned-text;
+    }
+
+    .enlighten-lattice,
+    .enlighten-lattice i {
+        @include enlightened-text;
+    }
+
+    .master-lattice,
+    .master-lattice i {
+        @include master-text;
+    }
+
+    .guru-lattice,
+    .guru-lattice i {
+        @include guru-text;
+    }
+
+    .apprentice-lattice,
+    .apprentice-lattice i {
+        @include apprentice-text;
+    }
+}
+
+.dashboard .srs-progress {
+    ul > li#burned span {
+        @include burned-text;
+    }
+
+    ul > li#enlightened span {
+        @include enlightened-text;
+    }
+
+    ul > li#master span {
+        @include master-text;
+    }
+
+    ul > li#guru span {
+        @include guru-text;
+    }
+
+    ul > li#apprentice span {
+        @include apprentice-text;
+    }
+}
+
+span.burned-lattice {
+    background-color: $burned-color !important;
+    color: $text-color !important;
+}
+
+span.enlighten-lattice {
+    background-color: $enlightened-color !important;
+}
+
+span.master-lattice {
+    background-color: $master-color !important;
+}
+
+span.guru-lattice {
+    background-color: $guru-color !important;
+}
+
+span.apprentice-lattice {
+    background-color: $apprentice-color !important;
+}

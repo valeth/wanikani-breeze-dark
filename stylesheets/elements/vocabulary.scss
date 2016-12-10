@@ -1,0 +1,83 @@
+@import '../colors';
+
+@mixin vocabulary-background {
+    background-color: $vocabulary-color !important;
+    background-image: none !important;
+}
+
+@mixin vocabulary-foreground {
+    color: $background-color !important;
+}
+
+li[id|=vocabulary],                             /* level, search */
+.vocabulary-icon,                               /* info, profile */
+span.vocabulary-highlight,                      /* info */
+span.highlight-vocabulary,                      /* review, lesson */
+span.vocabulary,                                /* review, lesson */
+#character.vocabulary,                          /* review */
+li.vocabulary ul > li[title=Characters],        /* review */
+#main-info.vocabulary,                          /* lesson */
+#vocabulary h2,                                 /* lesson summary */
+li[class|=vocabulary],                          /* review summary, lesson */
+tr[id|=vocabulary],                             /* unlock, critical, burned */
+.vocabulary-progress .bar,                      /* dashboard, profile */
+.vocabulary-progress li[id|=radical] a {        /* dashboard, profile */
+    @include vocabulary-background;
+}
+
+li[id|=vocabulary] span,                          /* level, search */
+.vocabulary-icon span,                            /* info, profile */
+span.vocabulary-highlight,                        /* info */
+span.highlight-vocabulary,                        /* review, lesson */
+span.vocabulary,                                  /* review, lesson */
+#character.vocabulary span,                       /* review */
+li.vocabulary ul > li[title=Characters],          /* review */
+li[class|=vocabulary] a,                          /* review summary */
+#vocabulary h2,                                   /* lesson summary */
+#vocabulary li a,                                 /* */
+tr[id|=vocabulary] a span,                        /* unlock, critical, burned */
+tr[id|=vocabulary] a time,                        /* unlock, burned */
+li[id|=vocabulary] li,                            /* search */
+li[id|=vocabulary] a {                            /* dashboard, search */
+    @include vocabulary-foreground;
+}
+
+li.vocabulary,
+span.vocabulary,
+.vocabulary-icon {
+    box-shadow: none !important;
+}
+
+.popover.srs {
+    .popover-content {
+        li:nth-child(3) {
+            @include vocabulary-background;
+            @include vocabulary-foreground;
+        }
+    }
+}
+
+.navbar {
+    .open.vocabulary {
+        .dropdown-menu,
+        .dropdown-toggle {
+            @include vocabulary-background;
+        }
+
+        .dropdown-menu::before,
+        .dropdown-menu::after {
+            border-bottom: 9px solid $vocabulary-color !important;
+            @include vocabulary-foreground;
+        }
+
+        .dropdown-toggle:hover span {
+            border-color: $background-color !important;
+        }
+    }
+
+    .vocabulary {
+        .dropdown-toggle:hover span {
+            border-color: $vocabulary-color !important;
+        }
+    }
+}

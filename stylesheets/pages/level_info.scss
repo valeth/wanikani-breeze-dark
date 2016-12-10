@@ -1,0 +1,12 @@
+section[id|=level] {
+    padding: 10px;
+    margin-bottom: 1vh !important;
+
+    header {
+        background-color: transparent !important;
+    }
+
+    ul[class*=character-grid] {
+        margin: 5px;
+    }
+}

@@ -1,21 +1,6 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby -w
 
-require 'erb'
-require 'yaml'
-
-YML = YAML.load_file('./colours.yml')
-
-module Colours
-    YML['colours'].each_pair do |key, value|
-        self.const_set(key.upcase, value)
-    end
-end
-
-module Shadow
-    YML['shadows'].each_pair do |key, value|
-        self.const_set(key.upcase, value)
-    end
-end
+# frozen_string_literal: true
 
 css_base = <<~EOF
     @namespace url(http://www.w3.org/1999/xhtml);
@@ -32,25 +17,16 @@ css_base = <<~EOF
 
 to_insert = ''
 
-files = Dir['./stylesheets/**/*.css'].sort
+files = Dir['./out/**/*.css'].sort
 puts "stitching together #{files.size} CSS files..."
 
 files.each do |file|
-    begin
-        erb = ERB.new(File.read(file))
-        erb.result.each_line { |l| to_insert << "  #{l}" }
-    rescue NameError
-        abort "Failed to parse file #{file}"
-    end
-
-    to_insert << "\n\n"
+  to_insert = "#{to_insert}#{File.read(file)}\n"
 end
 
 stylish_css_doc = format(css_base, css: to_insert)
-stylish_css_doc.gsub!(/^\n/, "")
-stylish_css_doc.gsub!(/^\s*$/, "")
 
-outfile = open('out.css', 'w')
-outfile.truncate(0)
-outfile.write(stylish_css_doc)
-outfile.close
+open('out.css', 'w') do |outfile|
+  outfile.truncate(0)
+  outfile.write(stylish_css_doc)
+end

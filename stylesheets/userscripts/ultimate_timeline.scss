@@ -1,0 +1,103 @@
+@import '../colors';
+@import '../shadows';
+
+/* not the best solution, but it works for now */
+* {
+    fill: $text-color !important;
+}
+
+#timeln {
+    background-color: $subsection-color !important;
+    box-shadow: $timeline-shadow !important;
+    border-radius: 5px !important;
+    border: none !important;
+
+    > h4,
+    > i::before,
+    > form {
+        margin-top: 5px !important;
+    }
+
+    > h4 {
+        margin-left: 1vw;
+    }
+
+    .rad {
+        fill: $radical-color !important;
+    }
+
+    .kan {
+        fill: $kanji-color !important;
+    }
+
+    .voc {
+        fill: $vocabulary-color !important;
+    }
+}
+
+#timeln-graph {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+
+#timeln-settings {
+    background-color: $popover-background-color !important;
+    box-shadow: $timeline-shadow !important;
+    border-radius: 5px !important;
+    border: none !important;
+
+    > h4 {
+        background-color: $subsection-color !important;
+    }
+
+    form > select,
+    form > input {
+        background-color: transparent !important;
+        border-color: $button-border-color !important;
+    }
+
+    button {
+        background-color: $button-background-color !important;
+        background-image: none !important;
+        border: 1px solid;
+        border-color: $button-border-color !important;
+        border-radius: 5px;
+    }
+}
+
+#graph-bar-info {
+    background-color: $popover-background-color !important;
+    border-radius: 5px;
+    box-shadow: $timeline-shadow !important;
+
+    .tot {
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+
+    .rad {
+        background-color: $radical-color !important;
+        background-image: none !important;
+        color: $background-color !important;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .kan {
+        background-color: $kanji-color !important;
+        background-image: none !important;
+        color: $background-color !important;
+    }
+
+    .voc {
+        background-color: $vocabulary-color !important;
+        background-image: none !important;
+        color: $background-color !important;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .cur {
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+}
