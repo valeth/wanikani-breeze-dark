@@ -1,0 +1,6 @@
+AllCops:
+  TargetRubyVersion: 2.3
+
+# Frozen String Literals would break the clipboard
+Style/FrozenStringLiteralComment:
+  Enabled: false
