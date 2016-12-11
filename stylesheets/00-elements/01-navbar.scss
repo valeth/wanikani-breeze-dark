@@ -38,7 +38,6 @@
         }
 
         .dropdown-toggle {
-            background-color: $dropdown-color !important;
             color: $background-color !important;
             opacity: 0.80;
 
@@ -81,8 +80,17 @@
 
     .open.account,
     .open.levels {
+        .dropdown-toggle {
+            background-color: $dropdown-color !important;
+            color: $text-color !important;
+
+            a, i, span {
+                color: $text-color !important;
+            }
+        }
+
         .dropdown-menu {
-            li, li > a {
+            a, li {
                 color: $text-color !important;
             }
         }

@@ -1,0 +1,15 @@
+@import '../colors';
+
+#divSt {
+    margin-top: 2vh;
+    color: $background-color !important;
+}
+
+button[id^=reorder] {
+    border-color: $subsection-color !important;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: $subsection-color !important;
+    margin-top: 1vh;
+    width: 200px;
+}

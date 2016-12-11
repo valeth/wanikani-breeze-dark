@@ -44,8 +44,8 @@
         }
 
         fieldset button,
-        #reviews #answer-form fieldset.incorrect button,
-        #reviews #answer-form fieldset.correct button {
+        fieldset.incorrect button,
+        fieldset.correct button {
             background-color: transparent !important;
         }
     }
@@ -112,6 +112,17 @@
                 border-color: $background-color !important;
                 height: 2vh;
             }
+        }
+    }
+
+    #related-items {
+        ul.kanji,
+        ul.kanji a {
+            background-color: transparent !important;
+        }
+
+        ul.kanji a {
+            color: $text-color !important;
         }
     }
 

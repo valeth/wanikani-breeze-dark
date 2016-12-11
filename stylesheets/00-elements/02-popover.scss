@@ -12,12 +12,6 @@
         opacity: inherit;
     }
 
-    .arrow,
-    .arrow::after {
-        border-right-color: $popover-border-color !important;
-        opacity: inherit;
-    }
-
     .popover-content {
         li {
             margin-top: 3px !important;
@@ -36,5 +30,14 @@
         background-color: $popover-progress-color !important;
         background-image: none !important;
         line-height: 100%;
+    }
+}
+
+.popover.srs,
+.popover.lattice {
+    .arrow,
+    .arrow::after {
+        border-right-color: $popover-border-color !important;
+        opacity: inherit;
     }
 }

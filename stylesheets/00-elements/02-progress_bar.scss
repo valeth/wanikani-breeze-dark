@@ -19,6 +19,7 @@
 
         span {
             background-color: $dropdown-color;
+            color: $text-color !important;
             border-radius: 5px;
             box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
             opacity: 0.8;
@@ -43,4 +44,9 @@
 section[id|=level] .progress {
     margin-left: 2vw !important;
     margin-right: 2vw !important;
+}
+
+[class$=-progress],
+[class^=worst-] {
+    background-color: transparent !important;
 }

@@ -9,33 +9,24 @@
     color: $background-color !important;
 }
 
-// level, search
 [id*=radical],
 [class*=radical] {
     @include radical-background;
     @include radical-foreground;
 
-    span,
-    li,
-    a,
-    i,
-    time {
+    span, li, a, i, time {
         @include radical-foreground;
     }
 
-    h2 {
-        @include radical-background;
-        @include radical-foreground;
+    i {
+        background-color: transparent !important;
     }
 
-    ul li [title=Characters] {
+    h2,
+    ul > li [title=Characters],
+    li > a {
         @include radical-background;
         @include radical-foreground;
-
-        // span,
-        // i {
-            //     @include radical-foreground;
-        // }
     }
 
     .bar {
@@ -43,8 +34,9 @@
     }
 }
 
-li.radicals,
-span.radical,
+li[class^=radical],
+li[id^=radical] a,
+span[class^=radical],
 .radical-icon {
     box-shadow: none !important;
 }
