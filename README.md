@@ -1,5 +1,9 @@
 # WaniKani Breeze Dark Theme
 
+[License](LICENSE) | [Screenshots](/screenshots)
+
+[![Code Climate](https://codeclimate.com/github/valeth/wanikani-breeze-dark/badges/gpa.svg)](https://codeclimate.com/github/valeth/wanikani-breeze-dark)
+
 A [Stylish](https://addons.mozilla.org/en-US/firefox/addon/stylish) theme for the WaniKani website.
 
 Using the KDE Breeze theme color palette.
