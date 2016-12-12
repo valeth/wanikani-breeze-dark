@@ -9,41 +9,30 @@
     color: $background-color !important;
 }
 
-li[id|=vocabulary],                             /* level, search */
-.vocabulary-icon,                               /* info, profile */
-span.vocabulary-highlight,                      /* info */
-span.highlight-vocabulary,                      /* review, lesson */
-span.vocabulary,                                /* review, lesson */
-#character.vocabulary,                          /* review */
-li.vocabulary ul > li[title=Characters],        /* review */
-#main-info.vocabulary,                          /* lesson */
-#vocabulary h2,                                 /* lesson summary */
-li[class|=vocabulary],                          /* review summary, lesson */
-tr[id|=vocabulary],                             /* unlock, critical, burned */
-.vocabulary-progress .bar,                      /* dashboard, profile */
-.vocabulary-progress li[id|=radical] a {        /* dashboard, profile */
+[id*=vocabulary],
+[class*=vocabulary] {
     @include vocabulary-background;
-}
-
-li[id|=vocabulary] span,                          /* level, search */
-.vocabulary-icon span,                            /* info, profile */
-span.vocabulary-highlight,                        /* info */
-span.highlight-vocabulary,                        /* review, lesson */
-span.vocabulary,                                  /* review, lesson */
-#character.vocabulary span,                       /* review */
-li.vocabulary ul > li[title=Characters],          /* review */
-li[class|=vocabulary] a,                          /* review summary */
-#vocabulary h2,                                   /* lesson summary */
-#vocabulary li a,                                 /* */
-tr[id|=vocabulary] a span,                        /* unlock, critical, burned */
-tr[id|=vocabulary] a time,                        /* unlock, burned */
-li[id|=vocabulary] li,                            /* search */
-li[id|=vocabulary] a {                            /* dashboard, search */
     @include vocabulary-foreground;
+
+    span, li, a, time {
+        @include vocabulary-foreground;
+    }
+
+    h2,
+    ul > li[title=Characters],
+    li > a {
+        @include vocabulary-background;
+        @include vocabulary-foreground;
+    }
+
+    .bar {
+        @include vocabulary-background;
+    }
 }
 
-li.vocabulary,
-span.vocabulary,
+li[class^=vocabulary],
+li[id^=vocabulary],
+span[class^=vocabulary],
 .vocabulary-icon {
     box-shadow: none !important;
 }

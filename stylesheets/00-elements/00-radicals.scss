@@ -23,7 +23,7 @@
     }
 
     h2,
-    ul > li [title=Characters],
+    ul > li[title=Characters],
     li > a {
         @include radical-background;
         @include radical-foreground;
