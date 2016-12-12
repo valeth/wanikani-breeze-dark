@@ -6,13 +6,13 @@ require 'sass/plugin'
 options = {}
 
 parser =
-    OptionParser.new do |opts|
-        opts.banner = "Usage: #{__FILE__} [options]"
+  OptionParser.new do |opts|
+    opts.banner = "Usage: #{__FILE__} [options]"
 
-        opts.on('-c', '--copy', 'Copy generated output to clipboard') do |c|
-            options[:copy] = c
-        end
+    opts.on('-c', '--copy', 'Copy generated output to clipboard') do |c|
+      options[:copy] = c
     end
+  end
 
 parser.parse!
 
@@ -31,21 +31,21 @@ css_base = <<~EOF
     @-moz-document domain(www.wanikani.com) {
     %{css}
     }
-    EOF
+EOF
 
 to_insert = ''
 files = Dir['./out/**/*.css'].sort
 puts "stitching together #{files.size} CSS files..."
 
 files.each do |file|
-    to_insert << "#{File.read(file)}\n"
+  to_insert << "#{File.read(file)}\n"
 end
 
 stylish_css_doc = format(css_base, css: to_insert)
 
 open('out.css', 'w') do |outfile|
-    outfile.truncate(0)
-    outfile.write(stylish_css_doc)
+  outfile.truncate(0)
+  outfile.write(stylish_css_doc)
 end
 
 `cat ./out.css | xsel -b`
