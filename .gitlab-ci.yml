@@ -1,0 +1,27 @@
+image: 'ruby:2.3.3'
+
+stages:
+  - test
+
+before_script:
+  - ruby -v
+  - gem install bundler --no-ri --no-rdoc
+  - bundle install --path vendor/bundle
+
+cache:
+  paths:
+    - vendor/bundle
+
+rubocop:
+  type: test
+  stage: test
+  environment: testing
+  script:
+    - rubocop
+
+sass:
+  type: test
+  stage: test
+  environment: testing
+  script:
+    - sass --update ./stylesheets
