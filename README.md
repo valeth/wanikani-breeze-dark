@@ -1,8 +1,8 @@
 # WaniKani Breeze Dark Theme
 
-[License](LICENSE) | [Screenshots](/screenshots)
-
+[![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/)
 [![Code Climate](https://codeclimate.com/github/valeth/wanikani-breeze-dark/badges/gpa.svg)](https://codeclimate.com/github/valeth/wanikani-breeze-dark)
+[![build status](https://gitlab.com/valeth/wanikani-breeze-dark/badges/master/build.svg)](https://gitlab.com/valeth/wanikani-breeze-dark/commits/master)
 
 A [Stylish](https://addons.mozilla.org/en-US/firefox/addon/stylish) theme for the WaniKani website.
 
