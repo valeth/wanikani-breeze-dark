@@ -16,7 +16,8 @@ div.forum-posts-list table,
 section[class|=lattice],
 .individual-item .span12 > section,
 .legend,
-section[id|=level] {
+section[id|=level],
+pre {
     @include subsection;
 }
 
