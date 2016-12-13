@@ -20,3 +20,7 @@
     margin: 5px;
     box-shadow: $grid-shadow !important;
 }
+
+[class*=character-grid] > li > a {
+    background-color: transparent !important;
+}

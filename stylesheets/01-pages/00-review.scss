@@ -116,12 +116,12 @@
     }
 
     #related-items {
-        ul.kanji,
-        ul.kanji a {
+        ul,
+        ul a {
             background-color: transparent !important;
         }
 
-        ul.kanji a {
+        ul a {
             color: $text-color !important;
         }
     }
