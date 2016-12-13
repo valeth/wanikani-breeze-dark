@@ -17,24 +17,18 @@ parser =
 parser.parse!
 
 Sass::Plugin.options[:template_location] = './stylesheets'
-Sass::Plugin.options[:css_location] = './out'
+Sass::Plugin.options[:css_location] = './tmp/out'
+Sass::Plugin.options[:cache_location] ='./tmp/sass_cache'
 Sass::Plugin.update_stylesheets
 
 css_base = <<~EOF
-    @namespace url(http://www.w3.org/1999/xhtml);
-
-    /* INFO: this file has been generated
-    *       visit https://gitlab.com/valeth/wanikani-breeze-dark
-    *       for the individual css source files
-    */
-
     @-moz-document domain(www.wanikani.com) {
     %{css}
     }
 EOF
 
 to_insert = ''
-files = Dir['./out/**/*.css'].sort
+files = Dir['./tmp/out/**/*.css'].sort
 puts "stitching together #{files.size} CSS files..."
 
 files.each do |file|
@@ -43,9 +37,9 @@ end
 
 stylish_css_doc = format(css_base, css: to_insert)
 
-open('out.css', 'w') do |outfile|
+open('./tmp/out.css', 'w') do |outfile|
   outfile.truncate(0)
   outfile.write(stylish_css_doc)
 end
 
-`cat ./out.css | xsel -b`
+`cat ./tmp/out.css | xsel -b`
