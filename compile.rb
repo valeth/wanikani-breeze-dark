@@ -18,7 +18,7 @@ parser.parse!
 
 Sass::Plugin.options[:template_location] = './stylesheets'
 Sass::Plugin.options[:css_location] = './tmp/out'
-Sass::Plugin.options[:cache_location] ='./tmp/sass_cache'
+Sass::Plugin.options[:cache_location] = './tmp/sass_cache'
 Sass::Plugin.update_stylesheets
 
 css_base = <<~EOF
