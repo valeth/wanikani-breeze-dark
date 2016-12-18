@@ -24,6 +24,13 @@
     background-color: transparent !important;
 }
 
+.forum-posts-list table {
+    box-shadow: none !important;
+}
+
+#topic_title {
+    color: $text-color !important;
+}
 
 form#new_post fieldset ul.wysihtml5-toolbar {
     li a {
