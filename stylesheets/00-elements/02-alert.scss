@@ -1,0 +1,10 @@
+@import '../colors';
+
+section[class$=alert] {
+    background-color: $alert-color !important;
+    background-image: none !important;
+}
+
+section[class$=alert] > h3 {
+    color: $background-color !important;
+}

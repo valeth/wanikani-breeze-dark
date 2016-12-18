@@ -8,15 +8,17 @@
     border: none !important;
 }
 
+.forum-posts-list,
 .account-subscription .account-subscription-plan,
 #account-subscription-coupon-form #coupon,
 .account-subscription-payment-processor-info,
 .account-subscription form .control-group input[type="text"],
-div.forum-posts-list table,
+.forum-posts-list table,
 section[class|=lattice],
 .individual-item .span12 > section,
 .legend,
 section[id|=level],
+section[class$=alert],
 pre {
     @include subsection;
 }
