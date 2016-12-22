@@ -1,0 +1,12 @@
+engines:
+  bundler-audit:
+    enabled: true
+
+  duplication:
+    enabled: true
+
+  rubocop:
+    enabled: true
+
+  scss-lint:
+    enabled: true
