@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# frozen_string_literal: true
+
 require 'optparse'
 require 'sass/plugin'
 
@@ -27,13 +29,10 @@ css_base = <<~EOF
     }
 EOF
 
-to_insert = ''
 files = Dir['./tmp/out/**/*.css'].sort
 puts "stitching together #{files.size} CSS files..."
 
-files.each do |file|
-  to_insert << "#{File.read(file)}\n"
-end
+to_insert = files.map { |file| File.read(file) }.join("\n")
 
 stylish_css_doc = format(css_base, css: to_insert)
 
@@ -42,4 +41,7 @@ open('./tmp/out.css', 'w') do |outfile|
   outfile.write(stylish_css_doc)
 end
 
-`cat ./tmp/out.css | xsel -b`
+if options[:copy]
+  puts 'copying to clipboard...'
+  system('cat ./tmp/out.css | xsel --input --primary')
+end
