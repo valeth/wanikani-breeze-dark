@@ -72,13 +72,21 @@
     .kotoba-table-list {
         min-height: 100%;
 
-        // tr {
-            //     border-bottom: 1px solid $list-separator-color !important;
-        // }
+        tr {
+            background-color: transparent !important;
 
-        // tr:last-child {
-            //     border: none !important;
-        // }
+            td {
+                border-bottom: 1px solid $list-separator-color !important;
+            }
+        }
+
+        tr.none-available > td {
+            border-bottom: none !important;
+        }
+
+        tr:last-child {
+            border: none !important;
+        }
     }
 
     .none-available,
@@ -112,13 +120,12 @@
     .forum-topics-list,
     .blog {
         min-height: 100%;
-    }
 
-    // .forum-topics-list table td,
-    // .blog-item {
-        //     background-image: none !important;
-        //     background-color: $list-item-color !important;
-    // }
+        hr {
+            border-color: $list-separator-color !important;
+            color: $list-separator-color !important;
+        }
+    }
 }
 
 .dashboard-sub-section h3 {

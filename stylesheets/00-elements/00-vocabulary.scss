@@ -37,6 +37,21 @@ span[class^=vocabulary],
     box-shadow: none !important;
 }
 
+.kotoba-table-list {
+    tr[id^=vocabulary] {
+        span, time {
+            color: $vocabulary-color !important;
+            text-shadow: 1px 1px 2px $vocabulary-color !important;
+        }
+    }
+
+    tr[id^=vocabulary]:hover {
+        td {
+            border-bottom: 1px solid $vocabulary-color !important;
+        }
+    }
+}
+
 .popover.srs {
     .popover-content {
         li:nth-child(3) {

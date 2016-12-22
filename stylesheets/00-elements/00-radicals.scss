@@ -41,6 +41,21 @@ span[class^=radical],
     box-shadow: none !important;
 }
 
+.kotoba-table-list {
+    tr[id^=radical] {
+        span, time, i {
+            color: $radical-color !important;
+            text-shadow: 1px 1px 1px $radical-color !important;
+        }
+    }
+
+    tr[id^=radical]:hover {
+        td {
+            border-bottom: 1px solid $radical-color !important;
+        }
+    }
+}
+
 .popover.srs {
     .popover-content {
         li:nth-child(1) {
