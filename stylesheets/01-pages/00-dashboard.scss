@@ -129,7 +129,18 @@
 }
 
 .dashboard-sub-section h3 {
-    box-shadow: $list-head-shadow !important;
-    background-image: none !important;
     background-color: $list-head-color !important;
+    background-image: none !important;
+    color: $subsection-color !important;
+    box-shadow: none !important;
+
+    .heading-symbol {
+        border-color: $subsection-color !important;
+        box-shadow: none !important;
+    }
+
+    i::before {
+        color: $subsection-color !important;
+    }
+
 }
