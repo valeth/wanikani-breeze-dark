@@ -1,0 +1,30 @@
+scss_files: 'stylesheets/**/*.scss'
+
+linters:
+  # can't enable that, sorry
+  ImportantRule:
+    enabled: false
+
+  # use indent of 4 because 2 space indent is crazy
+  Indentation:
+    width: 4
+
+  SelectorDepth:
+    max_depth: 4
+
+  # because .5 looks ugly
+  LeadingZero:
+    enabled: false
+
+  SingleLinePerSelector:
+    enabled: false
+
+  # stuff I don't have control over
+  IdSelector:
+    enabled: false
+
+  UrlFormat:
+    enabled: false
+
+  SelectorFormat:
+    enabled: false
