@@ -1,0 +1,70 @@
+@import 'shared/colors';
+@import 'shared/shadows';
+@import 'shared/subsection';
+@import 'shared/button';
+@import 'shared/list';
+
+$forum-header-shadow: $default-shadow-v;
+$editor-shadow:       $default-shadow;
+$editor-focus-shadow: $default-focus-shadow;
+
+.forum-posts-list,
+.forum-posts-list table,
+#top-members,
+#new-members,
+#chat {
+    @include subsection;
+}
+
+.forum-topics-list tbody {
+    @include list;
+}
+
+.community {
+    #chat li::before {
+        background-color: $subsection-color !important;
+        border-radius: 5px;
+    }
+
+    #chat li {
+        border-radius: 5px;
+    }
+}
+
+.forum-header-bg::before {
+    background-color: $background-color !important;
+}
+
+.forum-header-bg {
+    box-shadow: $forum-header-shadow !important;
+}
+
+.forum-posts-list tbody tr {
+    background-color: transparent !important;
+}
+
+.forum-posts-list table {
+    box-shadow: none !important;
+}
+
+#topic_title {
+    color: $text-color !important;
+}
+
+#new_post .wysihtml5-toolbar {
+    li a {
+        background-color: $button-background-color !important;
+        background-image: none !important;
+        box-shadow: $editor-shadow !important;
+    }
+
+    li a:hover {
+        border: none !important;
+        box-shadow: $editor-focus-shadow !important;
+    }
+}
+
+.wysihtml5-sandbox {
+    border: none !important;
+    box-shadow: $editor-shadow !important;
+}

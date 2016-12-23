@@ -1,0 +1,49 @@
+@import 'shared/progressbar';
+
+
+.progress {
+    align-items: center;
+    background-color: $progress-background-color !important;
+    background-image: none !important;
+    border-radius: 10px;
+    box-shadow: $progressbar-shadow inset;
+    display: flex;
+
+    .bar {
+        background-color: $progressbar-background-color;
+        background-image: none !important;
+        border-radius: 10px;
+        box-shadow: $progressbar-shadow;
+        height: 60%;
+        margin-left: 5px;
+        margin-right: 5px;
+
+        span {
+            background-color: $progressbar-indicator-color;
+            border-radius: 5px;
+            box-shadow: $progressbar-shadow;
+            color: $text-color !important;
+            opacity: 0.8;
+        }
+
+        span::after {
+            border-top-color: $progressbar-indicator-color;
+            opacity: inherit;
+        }
+
+        .threshold {
+            box-shadow: $progressbar-threshold-shadow !important;
+            color: $progressbar-threshold-color !important;
+            height: 60%;
+            line-height: 110%;
+            opacity: 0.50;
+        }
+    }
+}
+
+// scss-lint:disable QualifyingElement
+#progress section,
+section[id|=level] .progress {
+    margin-left: 2vw !important;
+    margin-right: 2vw !important;
+}

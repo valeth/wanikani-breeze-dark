@@ -1,0 +1,19 @@
+@import 'shared/colors';
+
+
+[id|=level] {
+    margin-bottom: 1vh !important;
+    padding: 10px;
+
+    h2, header {
+        background-color: transparent !important;
+    }
+
+    h2 {
+        color: $text-color !important;
+    }
+
+    [class*=character-grid] {
+        margin: 5px;
+    }
+}

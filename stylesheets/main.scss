@@ -1,0 +1,89 @@
+@import 'shared/colors';
+@import 'shared/subsection';
+@import 'shared/list';
+
+$alert-color:              $beware-orange;
+$alert-text-color:         $iron-grey;
+$loading-background-color: $background-color;
+
+
+* {
+    color: $text-color !important;
+    text-shadow: none !important;
+}
+
+body {
+    background-color: $background-color !important;
+    background-image: none !important;
+}
+
+#loading,
+#loading-screen {
+    background-color: $loading-background-color !important;
+}
+
+.alert {
+    background-color: $alert-color !important;
+    border: none !important;
+}
+
+[class$=alert] {
+    @include subsection;
+
+    background-color: $alert-color !important;
+    background-image: none !important;
+
+    > h3 {
+        color: $alert-text-color !important;
+    }
+}
+
+// scss-lint:disable QualifyingElement
+.individual-item .span12 > section,
+section[class|=lattice],
+section[id|=level] {
+    @include subsection;
+}
+
+table {
+    background-color: transparent !important;
+    border-collapse: separate !important;
+
+    tbody > tr {
+        background-color: transparent !important;
+        border: 5px solid transparent !important;
+        border-radius: 5px !important;
+    }
+
+    tbody > tr:hover {
+        background-color: $list-hover-color !important;
+    }
+}
+
+
+@import 'symbols';
+@import 'popover';
+@import 'dropdown';
+@import 'navbar';
+@import 'searchbar';
+@import 'page_list';
+@import 'character_grid';
+@import 'progressbar';
+
+@import 'dashboard';
+@import 'profile';
+@import 'settings';
+@import 'forums';
+@import 'api';
+
+@import 'level_info';
+@import 'item_info';
+@import 'lattice';
+
+@import 'lesson';
+@import 'review_session';
+@import 'summary';
+
+@import 'userscripts/lesson_reorder';
+@import 'userscripts/ultimate_timeline';
+@import 'userscripts/wk_improves';

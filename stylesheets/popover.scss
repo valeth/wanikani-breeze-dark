@@ -1,0 +1,64 @@
+@import 'shared/colors';
+@import 'shared/popover';
+@import 'shared/symbol';
+
+
+.popover {
+    @include popover;
+
+    .popover-title {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        opacity: inherit;
+    }
+
+    .popover-content {
+        li {
+            border: none !important;
+            border-radius: 5px;
+            box-shadow: $popover-shadow;
+            margin-bottom: 3px !important;
+            margin-top: 3px !important;
+
+            // scss-lint:disable NestingDepth
+            span {
+                color: $background-color !important;
+            }
+        }
+    }
+
+    .bar {
+        background-color: $popover-progress-color !important;
+        background-image: none !important;
+        line-height: 100%;
+    }
+
+    &.srs {
+        // scss-lint:disable NestingDepth
+        .popover-content {
+            li:nth-child(1) {
+                @include radical-background;
+                @include radical-foreground;
+            }
+
+            li:nth-child(2) {
+                @include kanji-background;
+                @include kanji-foreground;
+            }
+
+            li:nth-child(3) {
+                @include vocabulary-background;
+                @include vocabulary-foreground;
+            }
+        }
+    }
+}
+
+.popover.srs,
+.popover.lattice {
+    .arrow,
+    .arrow::after {
+        border-right-color: $popover-border-color !important;
+        opacity: inherit;
+    }
+}

@@ -1,0 +1,12 @@
+@import 'colors';
+
+$button-background-color: $charcoal-grey;
+$button-border-color:     $plasma-blue;
+
+@mixin button {
+    background-color: $button-background-color !important;
+    background-image: none !important;
+    border: 1px solid;
+    border-color: $button-border-color !important;
+    border-radius: 5px;
+}

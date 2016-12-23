@@ -1,0 +1,12 @@
+@import 'colors';
+@import 'shadows';
+
+$subsection-color:  $shade-black;
+$subsection-shadow: $default-shadow;
+
+@mixin subsection {
+    background-color: $subsection-color !important;
+    box-shadow: $subsection-shadow !important;
+    border-radius: 5px !important;
+    border: none !important;
+}

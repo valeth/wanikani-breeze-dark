@@ -1,0 +1,21 @@
+@import 'colors';
+@import 'shadows';
+
+$list-background-color: $iron-grey;
+$list-head-color:       $icon-blue;
+$list-item-color:       $plasma-blue;
+$list-separator-color:  $charcoal-grey;
+$list-hover-color:      rgba(0, 0, 0, 0.2);
+
+$list-head-shadow: 0 -5px 10px $default-shadow-color inset;
+
+@mixin list {
+    tr {
+        background-color: transparent !important;
+
+        th,
+        td {
+            background-color: transparent !important;
+        }
+    }
+}

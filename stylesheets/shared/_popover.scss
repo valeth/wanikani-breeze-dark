@@ -1,0 +1,15 @@
+@import 'colors';
+@import 'shadows';
+
+$popover-background-color: $iron-grey;
+$popover-border-color:     $iron-grey;
+$popover-progress-color:   $plasma-blue;
+
+$popover-shadow: $default-shadow;
+
+@mixin popover {
+    background-color: $popover-background-color !important;
+    border-color: $popover-border-color !important;
+    border-radius: 5px !important;
+    box-shadow: $popover-shadow !important;
+}

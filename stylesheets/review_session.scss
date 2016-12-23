@@ -1,0 +1,212 @@
+@import 'shared/colors';
+@import 'shared/shadows';
+@import 'shared/symbol';
+@import 'shared/subsection';
+@import 'shared/correctness';
+@import 'shared/textfield';
+
+$meaning-color:         $icon-red;
+$reading-color:         $icon-blue;
+
+$answer-exception-shadow: $default-shadow;
+$review-character-shadow: $default-shadow-v;
+$answer-form-shadow:      $default-shadow-v inset, $default-shadow-v;
+$text-meaning-shadow:     0 0 10px $meaning-color;
+$text-reading-shadow:     0 0 10px $reading-color;
+
+
+#information,
+#correct,
+#incorrect {
+    @include subsection;
+}
+
+#summary-button i,
+#stats i,
+#stats span {
+    color: $background-color !important;
+}
+
+#question-type {
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+}
+
+.meaning,
+.reading {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.meaning > h1 > strong {
+    text-shadow: $text-meaning-shadow !important;
+}
+
+.reading > h1 > strong {
+    text-shadow: $text-reading-shadow !important;
+}
+
+#character {
+    box-shadow: $review-character-shadow !important;
+    opacity: 0.80;
+}
+
+#answer-form {
+    fieldset {
+        padding-left: 0;
+        padding-right: 0;
+
+        input {
+            background-color: $textfield-color !important;
+            box-shadow: $answer-form-shadow !important;
+        }
+
+        button {
+            background-color: transparent !important;
+        }
+    }
+
+    // scss-lint:disable QualifyingElement, MergeableSelector
+    fieldset.incorrect {
+        input[type=text]:disabled {
+            background-color: $incorrect-color !important;
+        }
+
+        button {
+            background-color: transparent !important;
+        }
+    }
+
+    // scss-lint:disable QualifyingElement, MergeableSelector
+    fieldset.correct {
+        input[type=text]:disabled {
+            background-color: $correct-color !important;
+        }
+
+        button {
+            background-color: transparent !important;
+        }
+    }
+}
+
+#additional-content {
+    li {
+        span {
+            background-color: $background-color !important;
+            border-color: $subsection-color !important;
+            box-shadow: none !important;
+        }
+
+        span::before {
+            background-color: inherit !important;
+            box-shadow: none !important;
+            color: $text-color !important;
+        }
+
+        span:hover::before {
+            background-color: $background-color !important;
+            box-shadow: none !important;
+            color: $text-color !important;
+        }
+    }
+
+    li::before {
+        border-color: transparent transparent $subsection-color !important;
+    }
+
+    li:last-child span {
+        border-right: none !important;
+    }
+
+}
+
+#option-wrap-up {
+    span::before,
+    span {
+        background-color: transparent !important;
+    }
+}
+
+#additional-content-load {
+    background-color: $subsection-color !important;
+}
+
+#answer-exception {
+    span {
+        background-color: $subsection-color !important;
+        border-radius: 5px;
+        box-shadow: $answer-exception-shadow !important;
+    }
+
+    span::before {
+        border-color: transparent transparent $subsection-color !important;
+    }
+}
+
+#all-info {
+    background-color: transparent !important;
+}
+
+#information {
+    background-color: $subsection-color !important;
+    border-radius: 5px;
+    box-shadow: $default-shadow !important;
+
+}
+
+#item-info {
+    .user-synonyms-add-btn::before {
+        background-color: transparent !important;
+    }
+
+    .user-synonyms-add-form {
+        input {
+            background-color: transparent !important;
+        }
+
+        button {
+            background-color: $background-color !important;
+            border: 2px solid;
+            border-color: $background-color !important;
+            height: 2vh;
+        }
+    }
+}
+
+#related-items {
+    ul, ul a {
+        background-color: transparent !important;
+    }
+
+    ul a {
+        color: $text-color !important;
+    }
+}
+
+#last-items li ul {
+    background-color: $background-color !important;
+
+    [title*=meaning],
+    [title*=reading] {
+        color: $text-color !important;
+    }
+}
+
+#kana-chart [id^=chart-] li:hover {
+    background-color: $background-color !important;
+    box-shadow: none !important;
+}
+
+#screen-lesson-ready #lesson-ready-continue {
+    background-color: $subsection-color !important;
+}
+
+.srs-up, .srs-down {
+    background-color: transparent !important;
+    color: $background-color !important;
+}
+
+#hotkeys {
+    background-color: $subsection-color !important;
+}

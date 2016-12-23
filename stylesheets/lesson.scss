@@ -1,0 +1,71 @@
+@import 'shared/colors';
+@import 'shared/shadows';
+
+$lesson-color: $shade-black;
+
+$lessons-header-shadow:  $default-shadow-v;
+$supplement-info-shadow: $default-shadow;
+$note-shadow:            $default-shadow inset;
+
+
+#header-buttons li a,
+#header-buttons li i,
+#lessons #stats li,
+#lessons #stats li span {
+    background-color: transparent !important;
+    color: $background-color !important;
+}
+
+#lessons #lesson-ready-continue,
+#quiz-ready-continue,
+#lessons #supplement-info {
+    background-color: $lesson-color !important;
+}
+
+#lessons header {
+    box-shadow: $lessons-header-shadow !important;
+}
+
+#supplement-nav {
+    background-color: transparent !important;
+
+    li::before {
+        border-color: transparent transparent $lesson-color !important;
+    }
+}
+
+#supplement-info {
+    border-radius: 5px;
+    box-shadow: $supplement-info-shadow !important;
+
+    .note-meaning,
+    .note-reading {
+        background-color: $background-color !important;
+        border-radius: 5px;
+        box-shadow: $note-shadow !important;
+
+        button {
+            background-color: transparent !important;
+        }
+    }
+
+    blockquote {
+        background-color: $lesson-color !important;
+    }
+}
+
+#next-btn:hover,
+#prev-btn:hover {
+    background-color: $background-color !important;
+    opacity: 0.5;
+}
+
+
+#character,
+#meaning {
+    color: $background-color !important;
+}
+
+#batch-items [data-index=quiz] span {
+    background-color: $background-color !important;
+}

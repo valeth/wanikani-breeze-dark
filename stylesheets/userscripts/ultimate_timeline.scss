@@ -1,0 +1,91 @@
+@import '../shared/colors';
+@import '../shared/shadows';
+@import '../shared/symbol';
+@import '../shared/popover';
+@import '../shared/subsection';
+@import '../shared/button';
+
+$timeline-shadow: $default-shadow;
+
+
+// not the best solution, but it works for now
+* {
+    fill: $text-color !important;
+}
+
+#timeln {
+    @include subsection;
+
+    > h4,
+    > i::before,
+    > form {
+        margin-top: 5px !important;
+    }
+
+    > h4 {
+        margin-left: 1vw;
+    }
+
+    .rad {
+        fill: $radical-color !important;
+    }
+
+    .kan {
+        fill: $kanji-color !important;
+    }
+
+    .voc {
+        fill: $vocabulary-color !important;
+    }
+}
+
+#timeln-graph {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+
+#timeln-settings {
+    @include popover;
+
+    > h4 {
+        background-color: transparent !important;
+    }
+
+    form > select,
+    form > input,
+    button {
+        @include button;
+    }
+}
+
+#graph-bar-info {
+    @include popover;
+
+    .tot {
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+
+    .rad {
+        @include radical-background;
+        border-radius: 5px 5px 0 0;
+        color: $background-color !important;
+    }
+
+    .kan {
+        @include kanji-background;
+        color: $background-color !important;
+    }
+
+    .voc {
+        @include vocabulary-background;
+        border-radius: 0 0 5px 5px;
+        color: $background-color !important;
+    }
+
+    .cur {
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+}

@@ -1,0 +1,53 @@
+@import '../shared/colors';
+
+$wki-color:      $shade-black;
+$wki-qtip-color: $icon-blue;
+
+
+#wki_button {
+    border-color: $wki-color !important;
+    border-right: 1px solid !important;
+
+    #wki_mimic_button,
+    .wki_item_wrapper,
+    .wki_button_item_label {
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+}
+
+[id|=qtip] {
+    background-color: $wki-color !important;
+    border: none !important;
+}
+
+[id|=qtip] .qtip-titlebar,
+[id|=qtip] .qtip-title {
+    background-color: $wki-qtip-color !important;
+    border: none !important;
+}
+
+
+#wki_settings_cancel,
+#wki_settings_save {
+    background-color: $wki-color !important;
+    background-image: none !important;
+}
+
+#wki_settings_button_label_bgcolor,
+#wki_settings_button_label_textcolor,
+#wki_settings_timer_show_next_item {
+    background-color: $wki-color !important;
+    background-image: none !important;
+}
+
+#wki_srs_popup_wrapper .wki_srs_popup_icon,
+#wki_srs_popup_wrapper #wki_srs_popup_message {
+    background-color: transparent !important;
+}
+
+[id|=qtip] .qtip-tip,
+[id|=qtip] canvas {
+    color: $wki-color !important;
+}

@@ -1,0 +1,53 @@
+@import 'colors';
+
+$apprentice-color:  $icon-blue;
+$guru-color:        $mellow-turquoise;
+$master-color:      $sunbeam-yellow;
+$enlightened-color: $beware-orange;
+$burned-color:      $shade-black;
+
+@mixin burned-text {
+    color: $text-color !important;
+    text-shadow: 1px 1px 2px $text-color !important;
+}
+
+@mixin enlightened-text {
+    color: $enlightened-color !important;
+    text-shadow: 1px 1px 2px $enlightened-color !important;
+}
+
+@mixin master-text {
+    color: $master-color !important;
+    text-shadow: 1px 1px 2px $master-color !important;
+}
+
+@mixin guru-text {
+    color: $guru-color !important;
+    text-shadow: 1px 1px 2px $guru-color !important;
+}
+
+@mixin apprentice-text {
+    color: $apprentice-color !important;
+    text-shadow: 1px 1px 2px $apprentice-color !important;
+}
+
+@mixin burned-background {
+    background-color: $burned-color !important;
+    color: $text-color !important;
+}
+
+@mixin enlightened-background {
+    background-color: $enlightened-color !important;
+}
+
+@mixin master-background {
+    background-color: $master-color !important;
+}
+
+@mixin guru-background {
+    background-color: $guru-color !important;
+}
+
+@mixin apprentice-background {
+    background-color: $apprentice-color !important;
+}

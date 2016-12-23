@@ -1,0 +1,159 @@
+@import 'shared/colors';
+@import 'shared/levels';
+@import 'shared/subsection';
+
+$lattice-locked-color: $charcoal-grey;
+$lattice-0-20-color:   $icon-orange;
+$lattice-21-40-color:  $sunbeam-yellow;
+$lattice-41-60-color:  $plasma-blue;
+$lattice-61-80-color:  $icon-blue;
+$lattice-81-100-color:  $mellow-turquoise;
+
+$lattice-legend-shadow: $default-shadow inset;
+
+@mixin locked-background {
+    background-image: url('https://cdn-staging.wanikani.com/assets/default-v2/stripes-5e8494366c1615da046bd0f587cfeef6786e7ba17863df1329767ca3b89140e0.png') !important;
+}
+
+@mixin lattice-percent-text($p) {
+    @if $p == '0-20' {
+        color: $lattice-0-20-color !important;
+        text-shadow: 1px 1px 2px $lattice-0-20-color !important;
+    } @else if $p == '21-40' {
+        color: $lattice-21-40-color !important;
+        text-shadow: 1px 1px 2px $lattice-21-40-color !important;
+    } @else if $p == '41-60' {
+        color: $lattice-41-60-color !important;
+        text-shadow: 1px 1px 2px $lattice-41-60-color !important;
+    } @else if $p == '61-81' {
+        color: $lattice-61-80-color !important;
+        text-shadow: 1px 1px 2px $lattice-61-80-color !important;
+    } @else {
+        color: $lattice-81-100-color !important;
+        text-shadow: 1px 1px 2px $lattice-81-100-color !important;
+    }
+}
+
+@mixin lattice-percent-background($p) {
+    @if $p == '0-20' {
+        background-color: $lattice-0-20-color !important;
+    } @else if $p == '21-40' {
+        background-color: $lattice-21-40-color !important;
+    } @else if $p == '41-60' {
+        background-color: $lattice-41-60-color !important;
+    } @else if $p == '61-81' {
+        background-color: $lattice-61-80-color !important;
+        text-shadow: 1px 1px 2px $lattice-61-80-color !important;
+    } @else {
+        background-color: $lattice-81-100-color !important;
+        text-shadow: 1px 1px 2px $lattice-81-100-color !important;
+    }
+}
+
+@mixin lattice-level-text($l) {
+    @if $l == 'apprentice' {
+        @include apprentice-text;
+    } @else if $l == 'guru' {
+        @include guru-text;
+    } @else if $l == 'master' {
+        @include master-text;
+    } @else if $l == 'enlighten' {
+        @include enlightened-text;
+    } @else {
+        @include burned-text;
+    }
+}
+
+@mixin lattice-level-background($l) {
+    @if $l == 'apprentice' {
+        @include apprentice-background;
+    } @else if $l == 'guru' {
+        @include guru-background;
+    } @else if $l == 'master' {
+        @include master-background;
+    } @else if $l == 'enlighten' {
+        @include enlightened-background;
+    } @else {
+        @include burned-text;
+    }
+}
+
+
+.locked-item, .character-item.locked {
+    @include locked-background;
+}
+
+// scss-lint:disable QualifyingElement
+section[class|=lattice] {
+    ul > li {
+        background-color: transparent !important;
+        margin-bottom: 1vh;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 1vh;
+
+        > a {
+            background-color: transparent !important;
+            box-shadow: none;
+        }
+    }
+}
+
+[class^=lattice-][class$=-character] {
+    li > a {
+        color: $lattice-locked-color !important;
+    }
+
+    [data-sorted] {
+        @each $p in '0-20', '21-40', '41-60', '61-80', '81-100' {
+            .percentage-#{$p},
+            .percentage-#{$p} > i {
+                @include lattice-percent-text($p);
+            }
+        }
+
+        @each $l in apprentice, guru, master, enlighten, burned {
+            .#{$l}-lattice,
+            .#{$l}-lattice i {
+                @include lattice-level-text($l);
+            }
+        }
+    }
+}
+
+.legend {
+    @include subsection;
+
+    ul {
+        span {
+            box-shadow: $lattice-legend-shadow !important;
+            color: $background-color !important;
+            margin-left: 1vh;
+            margin-right: 1vh;
+        }
+
+        .locked,
+        .burned-lattice {
+            background-color: $background-color !important;
+            color: $text-color !important;
+        }
+
+        .locked {
+            background-color: transparent !important;
+            box-shadow: none !important;
+            color: $lattice-locked-color !important;
+        }
+    }
+
+    @each $p in '0-20', '21-40', '41-60', '61-80', '81-100' {
+        .percentage-#{$p} {
+            @include lattice-percent-background($p);
+        }
+    }
+
+    @each $l in apprentice, guru, master, enlighten {
+        .#{$l}-lattice {
+            @include lattice-level-background($l);
+        }
+    }
+}

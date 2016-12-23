@@ -1,0 +1,135 @@
+@import 'shared/colors';
+@import 'shared/shadows';
+@import 'shared/symbol';
+
+$navbar-color: $shade-black;
+
+$navbar-shadow: $default-shadow-v;
+
+
+.navbar {
+    .title span,
+    .additional span:first-child {
+        box-shadow: none !important;
+    }
+
+    .navbar-inner {
+        background-color: $navbar-color !important;
+        background-image: none !important;
+        border: none !important;
+        box-shadow: $navbar-shadow !important;
+    }
+
+    .dropdown {
+        background: transparent !important;
+
+        a, i, span {
+            color: $text-color !important;
+        }
+
+        span {
+            border-color: $background-color !important;
+            box-shadow: none !important;
+        }
+    }
+
+    .dropdown-menu {
+        border-radius: 0 5px 5px !important;
+    }
+
+    .open.dropdown {
+        .nav-header,
+        li > a {
+            color: $background-color !important;
+        }
+
+        .dropdown-toggle {
+            color: $background-color !important;
+            opacity: 0.80;
+
+            // scss-lint:disable NestingDepth
+            a, i, span {
+                color: $background-color !important;
+            }
+
+            // scss-lint:disable NestingDepth
+            span {
+                border-color: $background-color !important;
+                box-shadow: none !important;
+            }
+        }
+    }
+
+    @each $type in radicals, kanji, vocabulary {
+        .open.#{$type} {
+            .dropdown-menu,
+            .dropdown-toggle {
+                @include symbol-background($type);
+            }
+
+            .dropdown-menu::before,
+            .dropdown-menu::after {
+                @include symbol-foreground($type);
+                border-bottom: 9px solid symbol-color($type) !important;
+            }
+
+            .dropdown-toggle:hover span {
+                border-color: $navbar-color !important;
+            }
+        }
+
+        .#{$type} {
+            .dropdown-toggle:hover span {
+                border-color: symbol-color($type) !important;
+            }
+        }
+    }
+
+    // lessons + reviews + account
+    .lessons,
+    .reviews {
+        span {
+            background-color: $navbar-color !important;
+            background-image: none !important;
+            border-color: $background-color !important;
+        }
+    }
+
+    .account {
+        .dropdown-toggle {
+
+            // scss-lint:disable NestingDepth
+            span {
+                border: 5px solid !important;
+                border-color: $background-color !important;
+            }
+        }
+
+    }
+
+    .open.account {
+        .dropdown-menu {
+            border-radius: 5px 0 5px 5px !important;
+        }
+    }
+
+    .open.account,
+    .open.levels {
+        .dropdown-toggle {
+            background-color: $dropdown-color !important;
+            color: $text-color !important;
+
+            // scss-lint:disable NestingDepth
+            a, i, span {
+                color: $text-color !important;
+            }
+        }
+
+        .dropdown-menu {
+            // scss-lint:disable NestingDepth
+            a, li {
+                color: $text-color !important;
+            }
+        }
+    }
+}

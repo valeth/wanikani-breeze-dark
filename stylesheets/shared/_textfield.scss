@@ -1,0 +1,22 @@
+@import 'colors';
+@import 'shadows';
+
+$textfield-color: $shade-black;
+$textform-color:  $iron-grey;
+
+$textform-shadow: $default-shadow inset;
+
+@mixin textfield {
+    background-color: $textform-color !important;
+    border-radius: 5px;
+    box-shadow: $textform-shadow !important;
+
+    textarea {
+        color: $text-color !important;
+        -webkit-text-fill-color: $text-color !important;
+    }
+
+    button {
+        background-color: transparent !important;
+    }
+}

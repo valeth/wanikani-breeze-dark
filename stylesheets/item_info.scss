@@ -1,0 +1,36 @@
+@import 'shared/colors';
+@import 'shared/textfield';
+
+
+.level-icon,
+[class$=-highlight] {
+    box-shadow: none !important;
+}
+
+.individual-item {
+    .span12 > section {
+        margin-bottom: 1vh !important;
+        padding: 10px;
+    }
+
+    h2,
+    [id|=radical],
+    .additional-info {
+        background-color: transparent !important;
+    }
+
+    h2,
+    [id|=radical] a {
+        color: $text-color !important;
+    }
+}
+
+#progress {
+    background-color: transparent !important;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+[id^=note-] form fieldset {
+    @include textfield;
+}

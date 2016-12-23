@@ -1,0 +1,36 @@
+@import 'shared/symbol';
+
+@each $type in radical, kanji, vocabulary {
+    // scss-lint:disable QualifyingElement
+    li[id^=#{$type}] a,
+    li[class^=#{$type}],
+    span[class^=#{$type}]
+    .#{$type}-icon {
+        box-shadow: none !important;
+    }
+
+    [id*=#{$type}], [class*=#{$type}] {
+        @include symbol-background($type);
+        color: $symbol-text-color !important;
+
+        span, li, a, i, time {
+            color: $symbol-text-color !important;
+        }
+
+        i {
+            background-color: transparent !important;
+        }
+
+        // scss-lint:disable QualifyingElement
+        h2,
+        ul > li[title=Characters],
+        li > a {
+            @include symbol-background(#{$type});
+            color: $symbol-text-color !important;
+        }
+
+        .bar {
+            @include symbol-background(#{$type});
+        }
+    }
+}
