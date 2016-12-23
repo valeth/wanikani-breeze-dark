@@ -1,12 +1,11 @@
 image: 'ruby:2.3.3'
 
 stages:
-  - test
+  - testing
 
 before_script:
-  - ruby -v
   - gem install bundler --no-ri --no-rdoc
-  - bundle install --path vendor/bundle
+  - bundle install --with=test --path vendor/bundle
 
 cache:
   paths:
@@ -14,14 +13,14 @@ cache:
 
 rubocop:
   type: test
-  stage: test
+  stage: testing
   environment: testing
   script:
     - rubocop
 
-sass:
+scss-lint:
   type: test
-  stage: test
+  stage: testing
   environment: testing
   script:
-    - sass --update ./stylesheets
+    - scss-lint

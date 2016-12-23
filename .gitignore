@@ -1,2 +1,7 @@
+# Ruby Stuff
+/.bundle
+/vendor
+
+# SCSS Stuff
 /.sass-cache
 /tmp
