@@ -16,7 +16,7 @@ rubocop:
   stage: testing
   environment: testing
   script:
-    - rubocop
+    - bundle exec rubocop
   only:
     - dev
 
@@ -25,6 +25,6 @@ scss-lint:
   stage: testing
   environment: testing
   script:
-    - scss-lint
+    - bundle exec scss-lint --format Stats
   only:
     - dev
