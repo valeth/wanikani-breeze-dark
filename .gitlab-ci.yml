@@ -17,6 +17,8 @@ rubocop:
   environment: testing
   script:
     - rubocop
+  only:
+    - dev
 
 scss-lint:
   type: test
@@ -24,3 +26,5 @@ scss-lint:
   environment: testing
   script:
     - scss-lint
+  only:
+    - dev
