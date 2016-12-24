@@ -87,7 +87,8 @@
     }
 }
 
-.progression {
+// scss-lint:disable QualifyingElement
+section.progression {
     @include subsection;
 
     margin-bottom: 1vh !important;
