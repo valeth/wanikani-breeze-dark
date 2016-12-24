@@ -1,44 +1,38 @@
 # frozen_string_literal: true
 
+require 'rake/clean'
 require 'scss_lint/rake_task'
+require 'rubocop/rake_task'
 require 'sass/plugin'
 
+RuboCop::RakeTask.new
 SCSSLint::RakeTask.new
 
-task default: :compile
+CLEAN.include('tmp', '.sass_cache')
+CLOBBER.include('out.css')
 
-desc 'Build the SCSS files'
-task :compile do
-    options = {
-        template_location: './stylesheets',
-        css_location:      './tmp/out',
-        cache_location:    './tmp/sass_cache'
-    }
-    Sass::Plugin.options.update(options)
-    Sass::Plugin.update_stylesheets
-
-    open('./tmp/out.css', 'w') do |outfile|
-        outfile.truncate(0)
-        outfile.write <<~EOF
-            @-moz-document domain(www.wanikani.com) {
-            #{File.read('./tmp/out/main.css')}
-            }
-        EOF
-    end
-end
-
-desc 'Copy out.css to the clipboard'
-task copy: :compile do
-    puts 'copying to clipboard...'
-    sh 'cat ./tmp/out.css | xsel --input --primary'
-end
-
-task :clean do
-    rm_rf './tmp'
-end
+task default: :build
 
 task test: [:rubocop, :scss_lint]
 
-task :rubocop do
-    sh 'rubocop'
+desc 'Build the CSS files from SCSS sources'
+task :build do
+    Sass::Plugin.options[:template_location] = 'stylesheets'
+    Sass::Plugin.options[:css_location] = 'tmp'
+    Sass::Plugin.update_stylesheets
+
+    open('out.css', 'w') do |outfile|
+        outfile.truncate(0)
+        outfile.write <<~CSS
+            @-moz-document domain(www.wanikani.com) {
+                #{File.read('tmp/main.css')}
+            }
+        CSS
+    end
+end
+
+desc 'Copy the generated out.css to the clipboard (requires the xsel program)'
+task copy: :build do
+    puts 'copying to clipboard...'
+    sh 'cat out.css | xsel --input --primary'
 end
