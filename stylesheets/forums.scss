@@ -4,9 +4,10 @@
 @import 'shared/button';
 @import 'shared/list';
 
-$forum-header-shadow: $default-shadow-v;
-$editor-shadow:       $default-shadow;
-$editor-focus-shadow: $default-focus-shadow;
+$forum-header-shadow:    $default-shadow-v;
+$editor-shadow:          $default-shadow;
+$editor-focus-shadow:    $default-focus-shadow;
+$forum-table-head-color: $plasma-blue;
 
 .forum-posts-list,
 .forum-posts-list table,
@@ -16,8 +17,18 @@ $editor-focus-shadow: $default-focus-shadow;
     @include subsection;
 }
 
-.forum-topics-list tbody {
-    @include list;
+.forum-topics-list {
+    table {
+        padding-top: 10px;
+    }
+
+    tbody {
+        @include list;
+
+        i::before {
+            color: $text-color !important;
+        }
+    }
 }
 
 .community {
