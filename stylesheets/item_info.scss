@@ -1,13 +1,25 @@
 @import 'shared/colors';
+@import 'shared/shadows';
 @import 'shared/textfield';
 @import 'shared/button';
 
+$icon-shadow: $default-shadow;
 
-.level-icon,
+
 [class$=-highlight] {
     box-shadow: none !important;
 }
 
+.level-icon {
+    @include subsection;
+    background-image: none !important;
+}
+
+@each $t in radical, kanji, vocabulary {
+    span.#{$t}-icon {
+        box-shadow: $default-shadow !important;
+    }
+}
 
 // user synonyms list
 
