@@ -3,12 +3,17 @@
 @import 'shared/textfield';
 @import 'shared/button';
 
+$correct-progress-color: $shade-black;
+
 $icon-shadow: $default-shadow;
 
 
 [class$=-highlight] {
     box-shadow: none !important;
 }
+
+
+// level and symbol icons
 
 .level-icon {
     @include subsection;
@@ -17,9 +22,10 @@ $icon-shadow: $default-shadow;
 
 @each $t in radical, kanji, vocabulary {
     span.#{$t}-icon {
-        box-shadow: $default-shadow !important;
+        box-shadow: $icon-shadow !important;
     }
 }
+
 
 // user synonyms list
 
@@ -68,6 +74,16 @@ $icon-shadow: $default-shadow;
     background-color: transparent !important;
     margin-left: 2vw;
     margin-right: 2vw;
+
+    [class$=-streak] span {
+        background-color: $correct-progress-color !important;
+    }
+
+    [class$=-correct] {
+        .progress {
+            background-color: $correct-progress-color !important;
+        }
+    }
 }
 
 [id^=note-] form fieldset {
