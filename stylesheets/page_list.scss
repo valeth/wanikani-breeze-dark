@@ -1,19 +1,23 @@
 @import 'shared/colors';
 @import 'shared/shadows';
 
-$page-list-color:           $shade-black;
-$page-list-item-color:      $plasma-blue;
-$page-list-text-color:      $iron-grey;
-$page-list-separator-color: $charcoal-grey;
+$page-list-background-color: $shade-black;
+$page-list-item-color:       $plasma-blue;
+$page-list-text-color:       $shade-black;
+$page-list-separator-color:  $charcoal-grey;
 
 $page-list-shadow:       $default-shadow;
 $page-list-focus-shadow: $default-focus-shadow;
 
 
 .page-list {
-    background-color: $page-list-color !important;
+    background-color: $page-list-background-color !important;
     border-radius: 5px;
     box-shadow: $page-list-shadow !important;
+
+    ul {
+        margin-left: 5px;
+    }
 
     li > a {
         background-color: $page-list-item-color !important;
@@ -48,6 +52,8 @@ $page-list-focus-shadow: $default-focus-shadow;
 // levels page + forums
 
 .page-list-header {
+    width: 110px;
+
     span {
         border: none !important;
     }
