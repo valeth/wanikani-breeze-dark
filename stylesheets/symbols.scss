@@ -4,7 +4,7 @@
     // scss-lint:disable QualifyingElement
     li[id^=#{$type}] a,
     li[class^=#{$type}],
-    span[class^=#{$type}]
+    span[class^=#{$type}],
     .#{$type}-icon {
         box-shadow: none !important;
     }
