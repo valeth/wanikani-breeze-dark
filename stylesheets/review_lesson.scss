@@ -134,27 +134,27 @@ $text-reading-shadow:     0 0 10px $reading-color;
         button {
             background-color: transparent !important;
         }
+    }
 
-        // scss-lint:disable QualifyingElement
-        &.incorrect {
-            input[type=text]:disabled {
-                background-color: $incorrect-color !important;
-            }
-
-            button {
-                background-color: transparent !important;
-            }
+    // scss-lint:disable QualifyingElement, MergeableSelector
+    fieldset.incorrect {
+        input[type=text]:disabled {
+            background-color: $incorrect-color !important;
         }
 
-        // scss-lint:disable QualifyingElement
-        &.correct {
-            input[type=text]:disabled {
-                background-color: $correct-color !important;
-            }
+        button {
+            background-color: transparent !important;
+        }
+    }
 
-            button {
-                background-color: transparent !important;
-            }
+    // scss-lint:disable QualifyingElement, MergeableSelector
+    fieldset.correct {
+        input[type=text]:disabled {
+            background-color: $correct-color !important;
+        }
+
+        button {
+            background-color: transparent !important;
         }
     }
 }
@@ -163,8 +163,8 @@ $text-reading-shadow:     0 0 10px $reading-color;
     li {
         span {
             background-color: $background-color !important;
-            border-right: 1px solid $addcon-sep-color !important;
             border-color: $subsection-color !important;
+            border-right: 1px solid $addcon-sep-color !important;
             box-shadow: none !important;
         }
 
