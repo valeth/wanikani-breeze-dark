@@ -4,3 +4,7 @@ engines:
 
   scss-lint:
     enabled: true
+
+ratings:
+  paths:
+    - "**.scss"
