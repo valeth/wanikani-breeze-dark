@@ -1,11 +1,38 @@
 @import 'shared/colors';
 @import 'shared/textfield';
+@import 'shared/button';
 
 
 .level-icon,
 [class$=-highlight] {
     box-shadow: none !important;
 }
+
+
+// user synonyms list
+
+.user-synonyms {
+    margin-left: 5px;
+
+    li::after {
+        background-color: transparent !important;
+    }
+}
+
+.user-synonyms-add-btn::before {
+    background-color: transparent !important;
+}
+
+.user-synonyms-add-form {
+    input {
+        border-bottom: none !important;
+    }
+
+    button {
+        @include button;
+    }
+}
+
 
 .individual-item {
     .span12 > section {
