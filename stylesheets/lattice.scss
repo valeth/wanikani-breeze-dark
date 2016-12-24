@@ -100,7 +100,8 @@ section[class|=lattice] {
 }
 
 [class^=lattice-][class$=-character] {
-    li > a {
+    li > a,
+    li > a > i {
         color: $lattice-locked-color !important;
     }
 
