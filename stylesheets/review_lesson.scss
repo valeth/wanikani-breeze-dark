@@ -5,8 +5,14 @@
 @import 'shared/correctness';
 @import 'shared/textfield';
 
-$meaning-color:         $icon-red;
-$reading-color:         $icon-blue;
+$lesson-color:           $shade-black;
+$lessons-header-shadow:  $default-shadow-v;
+$review-header-shadow:   $default-shadow-v;
+$supplement-info-shadow: $default-shadow;
+$note-shadow:            $default-shadow inset;
+$meaning-color:          $icon-red;
+$reading-color:          $icon-blue;
+$addcon-sep-color:       $shade-black;
 
 $answer-exception-shadow: $default-shadow;
 $review-character-shadow: $default-shadow-v;
@@ -15,22 +21,89 @@ $text-meaning-shadow:     0 0 10px $meaning-color;
 $text-reading-shadow:     0 0 10px $reading-color;
 
 
-#information,
-#correct,
-#incorrect {
-    @include subsection;
+#reviews #character {
+    box-shadow: $review-header-shadow !important;
 }
 
+#header-buttons li a,
+#header-buttons li i,
+#lessons #stats li,
+#lessons #stats li span,
+.srs-up,
+.srs-down {
+    background-color: transparent !important;
+    color: $background-color !important;
+}
+
+#lesson-ready-continue,
+#quiz-ready-continue,
+#supplement-info {
+    background-color: $lesson-color !important;
+}
+
+#lessons header {
+    box-shadow: $lessons-header-shadow !important;
+}
+
+#supplement-nav {
+    background-color: transparent !important;
+
+    li::before {
+        border-color: transparent transparent $lesson-color !important;
+    }
+}
+
+
+#supplement-info {
+    border-radius: 5px;
+    box-shadow: $supplement-info-shadow !important;
+
+    blockquote {
+        background-color: $lesson-color !important;
+    }
+}
+
+#next-btn:hover,
+#prev-btn:hover {
+    background-color: $background-color !important;
+    opacity: 0.5;
+}
+
+#character,
+#meaning,
 #summary-button i,
 #stats i,
 #stats span {
     color: $background-color !important;
 }
 
+#batch-items [data-index=quiz] span {
+    background-color: $background-color !important;
+}
+
+#information,
+#correct,
+#incorrect {
+    @include subsection;
+}
+
 #question-type {
     background-color: transparent !important;
     background-image: none !important;
     border: none !important;
+}
+
+.note-meaning,
+.note-reading {
+    fieldset {
+        background-color: $background-color !important;
+        border-radius: 5px;
+        box-shadow: $note-shadow !important;
+
+        button {
+            background-color: transparent !important;
+        }
+    }
 }
 
 .meaning,
@@ -47,10 +120,6 @@ $text-reading-shadow:     0 0 10px $reading-color;
     text-shadow: $text-reading-shadow !important;
 }
 
-#character {
-    box-shadow: $review-character-shadow !important;
-    opacity: 0.80;
-}
 
 #answer-form {
     fieldset {
@@ -65,27 +134,27 @@ $text-reading-shadow:     0 0 10px $reading-color;
         button {
             background-color: transparent !important;
         }
-    }
 
-    // scss-lint:disable QualifyingElement, MergeableSelector
-    fieldset.incorrect {
-        input[type=text]:disabled {
-            background-color: $incorrect-color !important;
+        // scss-lint:disable QualifyingElement
+        &.incorrect {
+            input[type=text]:disabled {
+                background-color: $incorrect-color !important;
+            }
+
+            button {
+                background-color: transparent !important;
+            }
         }
 
-        button {
-            background-color: transparent !important;
-        }
-    }
+        // scss-lint:disable QualifyingElement
+        &.correct {
+            input[type=text]:disabled {
+                background-color: $correct-color !important;
+            }
 
-    // scss-lint:disable QualifyingElement, MergeableSelector
-    fieldset.correct {
-        input[type=text]:disabled {
-            background-color: $correct-color !important;
-        }
-
-        button {
-            background-color: transparent !important;
+            button {
+                background-color: transparent !important;
+            }
         }
     }
 }
@@ -94,6 +163,7 @@ $text-reading-shadow:     0 0 10px $reading-color;
     li {
         span {
             background-color: $background-color !important;
+            border-right: 1px solid $addcon-sep-color !important;
             border-color: $subsection-color !important;
             box-shadow: none !important;
         }
@@ -109,24 +179,29 @@ $text-reading-shadow:     0 0 10px $reading-color;
             box-shadow: none !important;
             color: $text-color !important;
         }
+
+        &::before {
+            border-color: transparent transparent $subsection-color !important;
+        }
+
+        &:last-child span {
+            border-right: none !important;
+        }
     }
 
-    li::before {
-        border-color: transparent transparent $subsection-color !important;
-    }
+    // this BS requires extra handling apparently
+    ul .wrap-up-selected {
+        span,
+        span:hover::before {
+            background-color: $background-color !important;
+        }
 
-    li:last-child span {
-        border-right: none !important;
+        span::before {
+            background-color: inherit !important;
+        }
     }
-
 }
 
-#option-wrap-up {
-    span::before,
-    span {
-        background-color: transparent !important;
-    }
-}
 
 #additional-content-load {
     background-color: $subsection-color !important;
@@ -198,15 +273,7 @@ $text-reading-shadow:     0 0 10px $reading-color;
     box-shadow: none !important;
 }
 
-#screen-lesson-ready #lesson-ready-continue {
-    background-color: $subsection-color !important;
-}
-
-.srs-up, .srs-down {
-    background-color: transparent !important;
-    color: $background-color !important;
-}
-
+#screen-lesson-ready #lesson-ready-continue,
 #hotkeys {
     background-color: $subsection-color !important;
 }
