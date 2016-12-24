@@ -3,6 +3,8 @@
 @import 'shared/progressbar';
 
 $user-info-background-color: $shade-black;
+$user-progressbar-color:     $shade-black;
+$user-wos-header-color:      $shade-black;
 
 $wall-of-shame-shadow: $default-shadow inset;
 $user-avatar-shadow:   $default-shadow;
@@ -37,6 +39,10 @@ $user-info-shadow:     $default-shadow-v inset,
 .knowledge-distribution {
     [class$=-progress] {
         background-color: transparent !important;
+
+        .progress {
+            background-color: $user-progressbar-color !important;
+        }
     }
 
     div > span {
@@ -48,7 +54,7 @@ $user-info-shadow:     $default-shadow-v inset,
     background-color: transparent !important;
 
     h3 > span {
-        background-color: $progress-background-color !important;
+        background-color: $user-wos-header-color !important;
         box-shadow: $wall-of-shame-shadow !important;
     }
 
@@ -60,6 +66,10 @@ $user-info-shadow:     $default-shadow-v inset,
     [class$=-progress],
     [class^=worst-] {
         background-color: transparent !important;
+
+        .progress {
+            background-color: $user-progressbar-color !important;
+        }
     }
 
 }
