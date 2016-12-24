@@ -25,4 +25,4 @@ scss-lint:
   stage: testing
   environment: testing
   script:
-    - bundle exec rake scss_lint[--format, Stats]
+    - bundle exec rake 'scss_lint[--format, Stats]'
