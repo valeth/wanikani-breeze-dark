@@ -1,0 +1,39 @@
+@import 'shared/colors';
+@import 'shared/shadows';
+
+@import 'shared/subsection';
+@import 'shared/button';
+
+@mixin minimise-button {
+    [class^=icon-] {
+        background-color: transparent !important;
+        border: none !important;
+    }
+}
+
+#reviews .ui-small {
+    @include minimise-button;
+
+    background-color: transparent !important;
+}
+
+#reviews .ui {
+    @include subsection;
+    @include minimise-button;
+
+    #quick-next {
+        color: $iron-grey !important;
+
+        &.active {
+            color: $text-color !important;
+
+            &::before {
+                text-shadow: 0 0 10px $default-focus-shadow-color !important;
+            }
+        }
+    }
+
+    #reorder {
+        @include button;
+    }
+}
