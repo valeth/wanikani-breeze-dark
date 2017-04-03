@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '2.3.3'
+ruby File.read('.ruby-version')
 
 gem 'rake', '>= 11.0.0'
 gem 'sass', '>= 3.4.22'
