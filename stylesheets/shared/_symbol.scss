@@ -1,8 +1,8 @@
 @import 'colors';
 
-$radical-color:     $plasma-blue;
-$kanji-color:       $icon-yellow;
-$vocabulary-color:  $icon-green;
+$radical-color:    '/*[[RADICALS_COLOR]]*/'; // $plasma-blue
+$kanji-color:      '/*[[KANJI_COLOR]]*/'; // $icon-yellow
+$vocabulary-color: '/*[[VOCAB_COLOR]]*/'; // $icon-green
 $symbol-text-color: $shade-black;
 
 @function symbol-color($type) {
