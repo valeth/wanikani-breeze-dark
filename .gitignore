@@ -5,4 +5,4 @@
 # SCSS Stuff
 /.sass-cache
 /tmp
-out.css
+/*.css
