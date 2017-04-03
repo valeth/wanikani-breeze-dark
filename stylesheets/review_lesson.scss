@@ -7,12 +7,14 @@
 
 $lesson-color:           $shade-black;
 $lessons-header-shadow:  $default-shadow-v;
-$review-header-shadow:   $default-shadow-v;
+$review-header-shadow:   $default-shadow-v inset, $default-shadow-v;
 $supplement-info-shadow: $default-shadow;
 $note-shadow:            $default-shadow inset;
 $meaning-color:          $icon-red;
 $reading-color:          $icon-blue;
 $addcon-sep-color:       $shade-black;
+$reading-background-color: '/*[[REVIEW_READING_BG]]*/';
+$meaning-background-color: '/*[[REVIEW_MEANING_BG]]*/';
 
 $answer-exception-shadow: $default-shadow;
 $review-character-shadow: $default-shadow-v;
@@ -20,10 +22,6 @@ $answer-form-shadow:      $default-shadow-v inset, $default-shadow-v;
 $text-meaning-shadow:     0 0 10px $meaning-color;
 $text-reading-shadow:     0 0 10px $reading-color;
 
-
-#reviews #character {
-    box-shadow: $review-header-shadow !important;
-}
 
 #header-buttons li a,
 #header-buttons li i,
@@ -95,9 +93,19 @@ $text-reading-shadow:     0 0 10px $reading-color;
 }
 
 #question-type {
-    background-color: transparent !important;
     background-image: none !important;
-    border: none !important;
+    border: 0 !important;
+    box-shadow: $review-header-shadow !important;
+    margin: 0 !important;
+    padding: .67em 0 !important;
+
+    &.reading {
+        background-color: $reading-background-color !important;
+    }
+
+    &.meaning {
+        background-color: $meaning-background-color !important;
+    }
 }
 
 .note-meaning,
@@ -129,13 +137,16 @@ $text-reading-shadow:     0 0 10px $reading-color;
 
 
 #answer-form {
+    background-color: $textfield-color !important;
+    box-shadow: $answer-form-shadow !important;
+
     fieldset {
         padding-left: 0;
         padding-right: 0;
 
         input {
-            background-color: $textfield-color !important;
-            box-shadow: $answer-form-shadow !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
         }
 
         button {
