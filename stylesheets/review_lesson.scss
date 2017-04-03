@@ -87,6 +87,13 @@ $text-reading-shadow:     0 0 10px $reading-color;
     @include subsection;
 }
 
+#correct,
+#incorrect {
+    .hover li {
+        color: $text-color !important;
+    }
+}
+
 #question-type {
     background-color: transparent !important;
     background-image: none !important;
