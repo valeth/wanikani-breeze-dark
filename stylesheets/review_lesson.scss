@@ -138,9 +138,9 @@ $text-reading-shadow:     0 0 10px $reading-color;
 
 #answer-form {
     fieldset {
-        padding: 0;
         background-color: $textfield-color !important;
         box-shadow: $answer-form-shadow !important;
+        padding: 0;
 
         input {
             background-color: transparent !important;

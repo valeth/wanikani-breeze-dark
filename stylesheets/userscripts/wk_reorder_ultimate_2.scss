@@ -27,6 +27,7 @@
         &.active {
             color: $text-color !important;
 
+            // scss-lint:disable NestingDepth
             &::before {
                 text-shadow: 0 0 10px $default-focus-shadow-color !important;
             }
