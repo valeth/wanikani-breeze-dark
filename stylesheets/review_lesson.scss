@@ -7,7 +7,6 @@
 
 $lesson-color:           $shade-black;
 $lessons-header-shadow:  $default-shadow-v;
-$review-header-shadow:   $default-shadow-v inset, $default-shadow-v;
 $supplement-info-shadow: $default-shadow;
 $note-shadow:            $default-shadow inset;
 $meaning-color:          $icon-red;
@@ -16,9 +15,10 @@ $addcon-sep-color:       $shade-black;
 $reading-background-color: '/*[[REVIEW_READING_BG]]*/';
 $meaning-background-color: '/*[[REVIEW_MEANING_BG]]*/';
 
+$question-type-shadow:    $default-shadow-v inset;
+$answer-form-shadow:      $default-shadow-v inset, $default-shadow-v;
 $answer-exception-shadow: $default-shadow;
 $review-character-shadow: $default-shadow-v;
-$answer-form-shadow:      $default-shadow-v inset, $default-shadow-v;
 $text-meaning-shadow:     0 0 10px $meaning-color;
 $text-reading-shadow:     0 0 10px $reading-color;
 
@@ -95,7 +95,7 @@ $text-reading-shadow:     0 0 10px $reading-color;
 #question-type {
     background-image: none !important;
     border: 0 !important;
-    box-shadow: $review-header-shadow !important;
+    box-shadow: $question-type-shadow !important;
     margin: 0 !important;
     padding: .67em 0 !important;
 
@@ -137,12 +137,10 @@ $text-reading-shadow:     0 0 10px $reading-color;
 
 
 #answer-form {
-    background-color: $textfield-color !important;
-    box-shadow: $answer-form-shadow !important;
-
     fieldset {
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0;
+        background-color: $textfield-color !important;
+        box-shadow: $answer-form-shadow !important;
 
         input {
             background-color: transparent !important;
@@ -151,15 +149,15 @@ $text-reading-shadow:     0 0 10px $reading-color;
 
         button {
             background-color: transparent !important;
+            height: 2.3em !important;
         }
     }
 
     // scss-lint:disable QualifyingElement, MergeableSelector
     fieldset.incorrect {
-        input[type=text]:disabled {
-            background-color: $incorrect-color !important;
-        }
+        background-color: $incorrect-color !important;
 
+        input[type=text]:disabled,
         button {
             background-color: transparent !important;
         }
@@ -167,10 +165,9 @@ $text-reading-shadow:     0 0 10px $reading-color;
 
     // scss-lint:disable QualifyingElement, MergeableSelector
     fieldset.correct {
-        input[type=text]:disabled {
-            background-color: $correct-color !important;
-        }
+        background-color: $correct-color !important;
 
+        input[type=text]:disabled,
         button {
             background-color: transparent !important;
         }
