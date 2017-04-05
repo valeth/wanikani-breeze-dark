@@ -22,6 +22,7 @@ $icon-shadow: $default-shadow;
 
 @each $t in radical, kanji, vocabulary {
     span.#{$t}-icon {
+        border: none !important;
         box-shadow: $icon-shadow !important;
     }
 }
