@@ -17,7 +17,6 @@ $sub-focus-shadow:      $default-focus-shadow;
     @include button;
 }
 
-
 [class|=account-subscription],
 [class|=account-billing] {
     @include list;

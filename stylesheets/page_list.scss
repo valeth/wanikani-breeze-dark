@@ -1,10 +1,12 @@
 @import 'shared/colors';
 @import 'shared/shadows';
+@import 'shared/subsection';
 
 $page-list-background-color: $shade-black;
 $page-list-item-color:       $plasma-blue;
 $page-list-text-color:       $shade-black;
 $page-list-separator-color:  $charcoal-grey;
+$page-list-hover-color:      rgba(0, 0, 0, 0.2);
 
 $page-list-shadow:       $default-shadow;
 $page-list-focus-shadow: $default-focus-shadow;
@@ -60,5 +62,23 @@ $page-list-focus-shadow: $default-focus-shadow;
 
     + li a {
         border-radius: 5px 0 0 5px;
+    }
+}
+
+// settings + account pages
+
+.nav-tabs.nav-stacked {
+    @include subsection;
+
+    > li > a {
+        border: none !important;
+    }
+
+    > li > a:hover {
+        background-color: $page-list-hover-color !important;
+    }
+
+    > li.active > a:hover {
+        background-color: $page-list-item-color !important;
     }
 }
