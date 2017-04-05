@@ -10,15 +10,20 @@
     }
 }
 
+#lessons .ui-small,
 #reviews .ui-small {
     @include minimise-button;
 
     background-color: transparent !important;
 }
 
+#lessons .ui,
 #reviews .ui {
     @include subsection;
     @include minimise-button;
+
+    margin: 10px !important;
+    padding: 10px !important;
 
     #quick-next {
         color: $iron-grey !important;
