@@ -15,8 +15,12 @@ $symbol-text-color: $shade-black;
     }
 }
 
-@mixin symbol-background($type) {
+@mixin symbol-background-color($type) {
     background-color: symbol-color($type) !important;
+}
+
+@mixin symbol-background($type) {
+    @include symbol-background-color($type);
     background-image: none !important;
 }
 

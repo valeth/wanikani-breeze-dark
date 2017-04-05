@@ -108,8 +108,15 @@ section.progression {
     .lattice-single-character {
         background-image: none !important;
 
-        ul li {
+        ul > li {
             background-color: transparent !important;
+            margin: 2px 2px !important;
+        }
+
+        @each $type in radical, kanji {
+            li[id^=#{$type}] > a {
+                @include symbol-background-color($type);
+            }
         }
     }
 

@@ -32,7 +32,7 @@
         h2,
         ul > li[title=Characters],
         li > a {
-            @include symbol-background(#{$type});
+            @include symbol-background-color(#{$type});
             color: $symbol-text-color !important;
         }
 
