@@ -110,6 +110,7 @@ section.progression {
 
         ul > li {
             background-color: transparent !important;
+            padding: 2px !important;
         }
 
         @each $type in radical, kanji {
