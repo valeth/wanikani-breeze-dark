@@ -78,7 +78,8 @@ $page-list-focus-shadow: $default-focus-shadow;
         background-color: $page-list-hover-color !important;
     }
 
-    > li.active > a:hover {
+    > .active > a:hover,
+    > .active > a {
         background-color: $page-list-item-color !important;
     }
 }
