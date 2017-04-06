@@ -1,0 +1,35 @@
+@import 'shared/colors';
+@import 'shared/subsection';
+@import 'shared/button';
+
+[aria-describedby=divSRSGridSettings],
+[aria-describedby=ui-id-2] {
+    @include subsection;
+
+    .ui-widget-header {
+        border: none !important;
+
+        button,
+        .ui-button-icon {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+    }
+
+    .ui-dialog-buttonpane,
+    .ui-dialog-titlebar,
+    .ui-dialog-content tr:hover {
+        background-color: transparent !important;
+    }
+
+    .ui-dialog-content {
+        input, select {
+            min-width: 250px !important;
+        }
+    }
+
+    .ui-dialog-buttonset button {
+        @include button;
+    }
+}
