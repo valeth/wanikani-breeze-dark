@@ -4,6 +4,7 @@
 @import 'shared/subsection';
 @import 'shared/popover';
 @import 'shared/progressbar';
+@import 'shared/list';
 
 
 .dashboard {
@@ -193,17 +194,24 @@ section.progression {
 }
 
 .dashboard-sub-section h3 {
-    background-color: $list-head-color !important;
+    background-color: transparent !important;
     background-image: none !important;
+    border-bottom: 2px solid $list-separator-color !important;
     box-shadow: none !important;
-    color: $subsection-color !important;
+    color: $text-color !important;
+    padding-bottom: 3px !important;
+    padding-top: 3px !important;
+    text-align: left !important;
 
     .heading-symbol {
-        border-color: $subsection-color !important;
+        border: none !important;
         box-shadow: none !important;
+        display: inline !important;
+        margin-left: 0 !important;
+        margin-right: 5px !important;
     }
 
     i::before {
-        color: $subsection-color !important;
+        color: $text-color !important;
     }
 }
