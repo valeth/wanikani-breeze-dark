@@ -1,0 +1,21 @@
+@import 'shared/colors';
+@import 'shared/button';
+
+.nav-load > li:last-child a,
+.button {
+    @include button;
+}
+
+#explanation .bg-angled {
+    background-color: $background-color !important;
+}
+
+.explanation-item-mnemonics,
+.explanation-item-radicals,
+.explanation-item-kanji,
+.explanation-item-vocabulary,
+.explanation-item-lessons-reviews,
+.explanation-item-srs {
+    background-color: transparent !important;
+    color: $text-color !important;
+}
