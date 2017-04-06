@@ -151,7 +151,6 @@ section.progression {
         tr[id^=#{$type}] {
             span, time, i {
                 @include symbol-foreground($type);
-                text-shadow: 1px 1px 1px symbol-color($type) !important;
             }
         }
     }
