@@ -95,6 +95,7 @@ section.progression {
         @each $type in radical, kanji {
             li[id^=#{$type}] > a {
                 @include symbol-background-color($type);
+                filter: brightness(0.7);
             }
         }
     }
