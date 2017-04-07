@@ -33,6 +33,10 @@ $summary-shadow:      $default-shadow;
 #review-stats-vocabulary {
     background-color: $review-stats-color !important;
     box-shadow: $review-stats-shadow !important;
+
+    .review-stats-total span {
+        color: $text-color !important;
+    }
 }
 
 #review-stats-radicals {
