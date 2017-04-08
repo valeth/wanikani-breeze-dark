@@ -4,6 +4,7 @@ require 'rake/clean'
 require 'scss_lint/rake_task'
 require 'rubocop/rake_task'
 require 'sass/plugin'
+require 'yaml'
 
 RuboCop::RakeTask.new
 SCSSLint::RakeTask.new
@@ -11,17 +12,18 @@ SCSSLint::RakeTask.new
 CLEAN.include('tmp', '.sass_cache')
 CLOBBER.include('out.css')
 
-STYLISH_OPTIONS = {
-    RADICALS_COLOR:    '#3daee9',
-    KANJI_COLOR:       '#fdbc4b',
-    VOCAB_COLOR:       '#2ecc71',
-    REVIEW_READING_BG: 'transparent',
-    REVIEW_MEANING_BG: 'transparent'
-}.freeze
-
 task default: :build
 
 task test: [:rubocop, :scss_lint]
+
+STYLISH_OPTIONS = %w(
+    REVIEW_CHAR_BG
+    RADICALS_COLOR
+    KANJI_COLOR
+    VOCAB_COLOR
+    REVIEW_READING_BG
+    REVIEW_MEANING_BG
+).freeze
 
 desc 'Build the CSS files from SCSS sources'
 task :build do
@@ -36,7 +38,7 @@ task :build do
             }
         CSS
 
-        STYLISH_OPTIONS.keys.each do |opt|
+        STYLISH_OPTIONS.each do |opt|
             tmp = tmp.gsub(%("/*[[#{opt}]]*/"), %(/*[[#{opt}]]*/))
         end
 
@@ -47,10 +49,14 @@ end
 
 desc 'Replace Stylish option keys with default values'
 task replace: :build do
+    configfile = 'defaults.yml'
+    abort("cannot find #{configfile}") unless File.exist?(configfile)
+    config = YAML.safe_load(open(configfile))
+
     open('out.css') do |cssfile|
         tmp = cssfile.read
         open('out-replaced.css', 'w') do |outfile|
-            STYLISH_OPTIONS.each do |key, value|
+            config.each do |key, value|
                 tmp = tmp.gsub(%(/*[[#{key}]]*/), value)
             end
 

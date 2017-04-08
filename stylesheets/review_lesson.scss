@@ -67,13 +67,19 @@ $text-reading-shadow:     0 0 10px $reading-color;
     opacity: 0.5;
 }
 
-#character,
 #meaning,
 #summary-button i,
 #stats i,
 #stats span {
     color: $background-color !important;
 }
+
+#character {
+    box-shadow: none !important;
+}
+
+// scss-lint:disable Comment
+/*[[REVIEW_CHAR_BG]]*/
 
 #batch-items [data-index=quiz] span {
     background-color: $background-color !important;

@@ -1,0 +1,28 @@
+REVIEW_CHAR_BG: |-
+  #character {
+      background-color: #232629 !important;
+  }
+
+  #character.vocabulary span {
+      color: /*[[VOCAB_COLOR]]*/ !important
+  }
+
+  #character.kanji span {
+      color: /*[[KANJI_COLOR]]*/ !important
+  }
+
+  #character.radical span {
+      color: /*[[RADICALS_COLOR]]*/ !important
+  }
+
+  #stats i,
+  #stats span,
+  #summary-button i {
+      color: #fcfcfc !important;
+  }
+
+RADICALS_COLOR:    '#3daee9'
+KANJI_COLOR:       '#fdbc4b'
+VOCAB_COLOR:       '#2ecc71'
+REVIEW_READING_BG: 'transparent'
+REVIEW_MEANING_BG: 'transparent'
