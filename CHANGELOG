@@ -1,3 +1,9 @@
+2017-04-08 | Make the character background in reviews changeable
+2017-04-07 | Fix colors for total item numbers on review summary
+2017-04-06 | Add styling for login\signup page
+2017-04-06 | Fix spacing between subsections on dashboard
+2017-04-06 | Remove text shadows from tables on dashboard
+2017-04-05 | Fix styling for Reorder Ultimate userscript in lessons
 2017-04-05 | Add support for the WaniKani Dashboard Progress Plus userscript
 2017-04-05 | Update settings page styling to work with new layout
 2017-04-04 | Fixed correct/incorrect highlighting in reviews
