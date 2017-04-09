@@ -4,6 +4,7 @@
 @import 'shared/button';
 
 $correct-progress-color: $shade-black;
+$user-synonym-color:     $iron-grey;
 
 $icon-shadow: $default-shadow;
 
@@ -32,8 +33,17 @@ $icon-shadow: $default-shadow;
 
 // user synonyms list
 
+#information {
+    @include subsection;
+}
+
 .user-synonyms {
+    background-color: transparent !important;
     margin-left: 5px;
+
+    li, i {
+        color: $text-color !important;
+    }
 
     li::after {
         background-color: transparent !important;
@@ -46,7 +56,10 @@ $icon-shadow: $default-shadow;
 
 .user-synonyms-add-form {
     input {
-        border-bottom: none !important;
+        border: none !important;
+        border-bottom: 1px solid $user-synonym-color !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
     }
 
     button {
