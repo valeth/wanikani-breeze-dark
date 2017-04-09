@@ -5,25 +5,33 @@
 @import 'shared/subsection';
 @import 'shared/button';
 
+$timeline-burned-color: $charcoal-grey;
+$timeline-bar-color:    $iron-grey;
+
 $timeline-shadow: $default-shadow;
 
-
-// not the best solution, but it works for now
-* {
-    fill: $text-color !important;
-}
 
 #timeln {
     @include subsection;
 
+    // header, icons and day slider
     > h4,
     > i::before,
-    > form {
-        margin-top: 5px !important;
+    > #range_form {
+        margin-top: 10px !important;
     }
 
     > h4 {
-        margin-left: 1vw;
+        line-height: 0.70em !important;
+        margin-left: 10px !important;
+    }
+
+    > #range_form {
+        margin-right: 10px !important;
+
+        #range_input {
+            border: none !important;
+        }
     }
 
     .rad {
@@ -39,12 +47,30 @@ $timeline-shadow: $default-shadow;
     }
 }
 
+// the graph container
 #timeln-graph {
-    margin-left: 1vw;
-    margin-right: 1vw;
+    margin: 0 !important;
+    padding: 10px !important;
 }
 
+// the actual graph
+#timeline {
+    .label-x > text,
+    .label-y > text,
+    .arrows > polygon {
+        fill: $text-color !important;
+    }
 
+    .bars > .clr {
+        fill: $timeline-bar-color !important;
+    }
+
+    .bars > .bur {
+        fill: $timeline-burned-color !important;
+    }
+}
+
+// settings popover
 #timeln-settings {
     @include popover;
 
@@ -59,6 +85,7 @@ $timeline-shadow: $default-shadow;
     }
 }
 
+// info popover
 #graph-bar-info {
     @include popover;
 
@@ -87,5 +114,11 @@ $timeline-shadow: $default-shadow;
     .cur {
         background-color: transparent !important;
         background-image: none !important;
+    }
+
+    .bur {
+        background-color: $timeline-burned-color !important;
+        background-image: none !important;
+        border-radius: 5px !important;
     }
 }
