@@ -23,10 +23,6 @@ $text-meaning-shadow:     0 0 10px $meaning-color;
 $text-reading-shadow:     0 0 10px $reading-color;
 
 
-#header-buttons li a,
-#header-buttons li i,
-#lessons #stats li,
-#lessons #stats li span,
 .srs-up,
 .srs-down {
     background-color: transparent !important;
@@ -37,6 +33,21 @@ $text-reading-shadow:     0 0 10px $reading-color;
 #quiz-ready-continue,
 #supplement-info {
     background-color: $lesson-color !important;
+
+    @each $type in radical, kanji, vocabulary {
+        [id$=#{$type}] {
+            background-color: transparent !important;
+
+            h2 {
+                background-color: transparent !important;
+                color: $text-color !important;
+            }
+
+            span {
+                @include symbol-background-color(#{$type});
+            }
+        }
+    }
 }
 
 #lessons header {
@@ -67,13 +78,13 @@ $text-reading-shadow:     0 0 10px $reading-color;
     opacity: 0.5;
 }
 
-#meaning,
 #summary-button i,
 #stats i,
 #stats span {
     color: $background-color !important;
 }
 
+#main-info,
 #character {
     box-shadow: none !important;
 }
@@ -81,8 +92,12 @@ $text-reading-shadow:     0 0 10px $reading-color;
 // scss-lint:disable Comment
 /*[[REVIEW_CHAR_BG]]*/
 
-#batch-items [data-index=quiz] span {
-    background-color: $background-color !important;
+#batch-items {
+    position: relative !important;
+
+    [data-index=quiz] span {
+        background-color: $background-color !important;
+    }
 }
 
 #information,
