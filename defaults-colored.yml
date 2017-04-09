@@ -1,5 +1,4 @@
 REVIEW_CHAR_BG: |-
-
   #character.vocabulary {
       background-color: /*[[VOCAB_COLOR]]*/ !important
   }
