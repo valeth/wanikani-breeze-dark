@@ -1,0 +1,36 @@
+REVIEW_CHAR_BG: |-
+
+  #character.vocabulary {
+      background-color: /*[[VOCAB_COLOR]]*/ !important
+  }
+
+  #character.kanji {
+      background-color: /*[[KANJI_COLOR]]*/ !important
+  }
+
+  #character.radical {
+      background-color: /*[[RADICALS_COLOR]]*/ !important
+  }
+
+  #meaning,
+  #main-info #character,
+  #character span {
+      color: #232629 !important
+  }
+
+  #header-buttons li a,
+  #header-buttons li i,
+  #stats li,
+  #stats li span,
+  #stats i,
+  #stats span,
+  #summary-button i {
+      background-color: transparent !important;
+      color: #232629 !important;
+  }
+
+RADICALS_COLOR:    '#3daee9'
+KANJI_COLOR:       '#fdbc4b'
+VOCAB_COLOR:       '#2ecc71'
+REVIEW_READING_BG: 'transparent'
+REVIEW_MEANING_BG: 'transparent'
