@@ -7,85 +7,125 @@ $alert-text-color:         $iron-grey;
 $loading-background-color: $background-color;
 
 
-* {
-    color: $text-color !important;
-    text-shadow: none !important;
-}
-
-body {
-    background-color: $background-color !important;
-    background-image: none !important;
-}
-
-#loading,
-#loading-screen {
-    background-color: $loading-background-color !important;
-}
-
-.alert {
-    background-color: $alert-color !important;
-    border: none !important;
-}
-
-[class$=alert] {
-    @include subsection;
-
-    background-color: $alert-color !important;
-    background-image: none !important;
-
-    > h3 {
-        color: $alert-text-color !important;
+// Stuff that applies to everything
+@-moz-document domain(www.wanikani.com) {
+    * {
+        color: $text-color !important;
+        text-shadow: none !important;
     }
-}
 
-// scss-lint:disable QualifyingElement
-.individual-item .span12 > section,
-section[class|=lattice],
-section[id|=level] {
-    @include subsection;
-}
+    body {
+        @include main-background;
+    }
 
-table {
-    background-color: transparent !important;
-    border-collapse: separate !important;
+    .alert {
+        background-color: $alert-color !important;
+        border: none !important;
+    }
 
-    tbody > tr {
+    [class$=alert] {
+        @include subsection;
+
+        background-color: $alert-color !important;
+        background-image: none !important;
+
+        > h3 {
+            color: $alert-text-color !important;
+        }
+    }
+
+    table {
         background-color: transparent !important;
-        border: 5px solid transparent !important;
-        border-radius: 5px !important;
+        border-collapse: separate !important;
+
+        tbody > tr {
+            background-color: transparent !important;
+            border: 5px solid transparent !important;
+            border-radius: 5px !important;
+        }
+
+        tbody > tr:hover {
+            background-color: $list-hover-color !important;
+        }
     }
 
-    tbody > tr:hover {
-        background-color: $list-hover-color !important;
+    @import 'symbols';
+    @import 'popover';
+    @import 'dropdown';
+    @import 'navbar';
+    @import 'searchbar';
+    @import 'page_list';
+    @import 'character_grid';
+    @import 'progressbar';
+    @import 'input';
+
+    @import 'login';
+}
+
+// API documentation page
+@-moz-document url-prefix('https://www.wanikani.com/api') {
+    @import 'api';
+}
+
+// User profile
+@-moz-document url-prefix('https://www.wanikani.com/community/people') {
+    @import 'profile';
+}
+
+// Account settings
+@-moz-document regexp('https://www.wanikani.com/(settings|account)/.*') {
+    @import 'settings';
+}
+
+// Dashboard
+@-moz-document url-prefix('https://www.wanikani.com/dashboard') {
+    // scss-lint:disable QualifyingElement
+    section[id|=level] {
+        @include subsection;
+    }
+
+    @import 'dashboard';
+
+    @import 'userscripts/ultimate_timeline';
+    @import 'userscripts/wk_dashboard_progress_plus';
+    @import 'userscripts/srs_grid';
+}
+
+// Detailed item info
+@-moz-document regexp('https://www.wanikani.com/(radicals|kanji|vocabulary)/.*') {
+    @import 'item_info';
+
+    .individual-item .span12 > section {
+        @include subsection;
     }
 }
 
-@import 'symbols';
-@import 'popover';
-@import 'dropdown';
-@import 'navbar';
-@import 'searchbar';
-@import 'page_list';
-@import 'character_grid';
-@import 'progressbar';
-@import 'input';
+// Level infp page
+@-moz-document url-prefix('https://www.wanikani.com/level') {
+    @import 'level_info';
+}
 
-@import 'login';
-@import 'dashboard';
-@import 'profile';
-@import 'settings';
-@import 'api';
+// Lattice (progress, meaning, reading, combined)
+@-moz-document url-prefix('https://www.wanikani.com/lattice') {
+    @import 'lattice';
 
-@import 'level_info';
-@import 'item_info';
-@import 'lattice';
+    // scss-lint:disable QualifyingElement
+    section[class|=lattice] {
+        @include subsection;
+    }
+}
 
-@import 'review_lesson';
-@import 'summary';
+// Lesson and review pages and summaries
+@-moz-document regexp('https://www.wanikani.com/(review|lesson).*') {
+    #loading,
+    #loading-screen {
+        background-color: $loading-background-color !important;
+    }
 
-@import 'userscripts/lesson_reorder';
-@import 'userscripts/ultimate_timeline';
-@import 'userscripts/wk_improves';
-@import 'userscripts/wk_reorder_ultimate_2';
-@import 'userscripts/wk_dashboard_progress_plus';
-@import 'userscripts/srs_grid';
+    @import 'review_lesson';
+    @import 'summary';
+
+    @import 'userscripts/lesson_reorder';
+    @import 'userscripts/wk_improves';
+    @import 'userscripts/wk_reorder_ultimate_2';
+}

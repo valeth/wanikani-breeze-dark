@@ -32,11 +32,7 @@ task :build do
     Sass::Plugin.update_stylesheets
 
     open('out.css', 'w') do |outfile|
-        tmp = <<~CSS
-            @-moz-document domain(www.wanikani.com) {
-                #{File.read('tmp/main.css')}
-            }
-        CSS
+        tmp = File.read('tmp/main.css')
 
         STYLISH_OPTIONS.each do |opt|
             tmp = tmp.gsub(%("/*[[#{opt}]]*/"), %(/*[[#{opt}]]*/))
@@ -70,10 +66,12 @@ desc 'Copy the generated out.css to the clipboard (requires xsel)'
 task copy: :build do
     puts 'copying to clipboard...'
     sh 'cat out.css | xsel --input --primary'
+    sh 'cat out.css | xsel --input --clipboard'
 end
 
 desc 'Copy the generated out-replaced.css to the clipboard (requires xsel)'
 task copy_replaced: :replace do
     puts 'copying to clipboard...'
     sh 'cat out-replaced.css | xsel --input --primary'
+    sh 'cat out-replaced.css | xsel --input --clipboard'
 end
