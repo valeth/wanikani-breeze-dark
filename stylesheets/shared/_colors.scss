@@ -16,3 +16,13 @@ $icon-blue:        rgb(29, 153, 243);  // #1d99f3
 
 $text-color:       $paper-white;
 $background-color: $charcoal-grey;
+
+$background-image-url: 'https://cdn-staging.wanikani.com/assets/default-v2/bg-texture-f26fc7a5696f53a272eaffdfdd43eb215d33ef508c89ed2d0501903eaad2f29a.png';
+
+@mixin main-background {
+    // background-blend-mode: color-burn !important;
+    background-color: $background-color !important;
+    background-image: none !important;
+    // background-image: url($background-image-url) !important;
+    // background-repeat: repeat !important;
+}

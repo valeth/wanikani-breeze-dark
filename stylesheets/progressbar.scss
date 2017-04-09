@@ -1,10 +1,11 @@
+@import 'shared/colors';
 @import 'shared/progressbar';
 
 
 .progress {
+    @include main-background;
+
     align-items: center;
-    background-color: $progress-background-color !important;
-    background-image: none !important;
     border-radius: 10px;
     box-shadow: $progressbar-shadow inset;
     display: flex;
