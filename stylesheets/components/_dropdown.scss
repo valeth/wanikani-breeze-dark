@@ -1,0 +1,23 @@
+.dropdown-menu {
+    background-color: $dropdown-color !important;
+    border: none !important;
+    border-radius: 5px !important;
+    box-shadow: $dropdown-shadow !important;
+
+    .nav-header,
+    li a {
+        color: $text-color !important;
+    }
+
+    li a:hover {
+        background-color: $dropdown-hover-color !important;
+    }
+}
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+    border-bottom-color: $dropdown-color !important;
+    border-left: 9px solid transparent !important;
+    border-right: 9px solid transparent !important;
+    color: $dropdown-color !important;
+}

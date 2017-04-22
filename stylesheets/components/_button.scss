@@ -1,0 +1,7 @@
+button, .btn {
+    @extend %input-element;
+}
+
+.btn-danger {
+    background-color: $danger-red !important;
+}

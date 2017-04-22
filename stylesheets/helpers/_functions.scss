@@ -1,0 +1,9 @@
+@function symbol-color($type) {
+    @if $type == vocabulary {
+        @return $vocabulary-color;
+    } @else if $type == kanji {
+        @return $kanji-color;
+    } @else {
+        @return $radical-color;
+    }
+}

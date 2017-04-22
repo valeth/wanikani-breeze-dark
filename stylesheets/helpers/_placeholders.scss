@@ -1,0 +1,151 @@
+// characters
+%radical-background-color,
+%radicals-background-color {
+    background-color: $radical-color !important;
+}
+
+%kanji-background-color {
+    background-color: $kanji-color !important;
+}
+
+%vocabulary-background-color {
+    background-color: $vocabulary-color !important;
+}
+
+%radical-background,
+%radicals-background {
+    @extend %radical-background-color;
+    background-image: none !important;
+}
+
+%kanji-background {
+    @extend %kanji-background-color;
+    background-image: none !important;
+}
+
+%vocabulary-background {
+    @extend %vocabulary-background-color;
+    background-image: none !important;
+}
+
+%radical-foreground,
+%radicals-foreground {
+    color: $symbol-text-color !important;
+}
+
+%kanji-foreground {
+    color: $symbol-text-color !important;
+}
+
+%vocabulary-foreground {
+    color: $symbol-text-color !important;
+}
+
+// srs levels
+%burned-text {
+    color: $text-color !important;
+}
+
+%enlightened-text {
+    color: $enlightened-color !important;
+}
+
+%master-text {
+    color: $master-color !important;
+}
+
+%guru-text {
+    color: $guru-color !important;
+}
+
+%apprentice-text {
+    color: $apprentice-color !important;
+}
+
+%burned-background {
+    background-color: $burned-color !important;
+    color: $text-color !important;
+}
+
+%enlightened-background {
+    background-color: $enlightened-color !important;
+}
+
+%master-background {
+    background-color: $master-color !important;
+}
+
+%guru-background {
+    background-color: $guru-color !important;
+}
+
+%apprentice-background {
+    background-color: $apprentice-color !important;
+}
+
+// components
+%main-background {
+    background-blend-mode: color-burn !important;
+    background-color: $background-color !important;
+    background-image: $background-image-url !important;
+    background-repeat: repeat !important;
+}
+
+%input-element {
+    background-color: $button-background-color !important;
+    background-image: none !important;
+    border: 1px solid !important;
+    border-color: $button-border-color !important;
+    border-radius: 5px !important;
+}
+
+%button {
+    @extend %input-element;
+}
+
+%subsection {
+    background-color: $subsection-color !important;
+    border: none !important;
+    border-radius: 5px !important;
+    box-shadow: $subsection-shadow !important;
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+}
+
+%popover {
+    background-color: $popover-background-color !important;
+    border-color: $popover-border-color !important;
+    border-radius: 5px !important;
+    box-shadow: $popover-shadow !important;
+}
+
+%list {
+    tr {
+        background-color: transparent !important;
+
+        th,
+        td {
+            background-color: transparent !important;
+        }
+    }
+}
+
+%textfield {
+    background-color: $textform-color !important;
+    border-radius: 5px !important;
+    box-shadow: $textform-shadow !important;
+
+    textarea {
+        color: $text-color !important;
+        -webkit-text-fill-color: $text-color !important;
+    }
+
+    button {
+        background-color: transparent !important;
+    }
+}
+
+// lattice
+%locked-background {
+    background-image: $locked-image-url !important;
+}

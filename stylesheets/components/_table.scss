@@ -1,0 +1,14 @@
+table {
+    background-color: transparent !important;
+    border-collapse: separate !important;
+
+    tbody > tr {
+        background-color: transparent !important;
+        border: 5px solid transparent !important;
+        border-radius: 5px !important;
+    }
+
+    tbody > tr:hover {
+        background-color: $list-hover-color !important;
+    }
+}

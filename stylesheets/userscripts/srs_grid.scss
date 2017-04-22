@@ -1,10 +1,6 @@
-@import 'shared/colors';
-@import 'shared/subsection';
-@import 'shared/button';
-
 [aria-describedby=divSRSGridSettings],
 [aria-describedby=ui-id-2] {
-    @include subsection;
+    @extend %subsection;
 
     .ui-widget-header {
         border: none !important;
@@ -30,6 +26,6 @@
     }
 
     .ui-dialog-buttonset button {
-        @include button;
+        @extend %input-element;
     }
 }

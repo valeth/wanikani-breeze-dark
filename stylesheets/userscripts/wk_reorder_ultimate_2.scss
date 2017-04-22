@@ -1,9 +1,4 @@
-@import 'shared/colors';
-@import 'shared/shadows';
-@import 'shared/subsection';
-@import 'shared/button';
-
-@mixin minimise-button {
+%minimise-button {
     [class^=icon-] {
         background-color: transparent !important;
         border: none !important;
@@ -12,15 +7,15 @@
 
 #lessons .ui-small,
 #reviews .ui-small {
-    @include minimise-button;
+    @extend %minimise-button;
 
     background-color: transparent !important;
 }
 
 #lessons .ui,
 #reviews .ui {
-    @include subsection;
-    @include minimise-button;
+    @extend %subsection;
+    @extend %minimise-button;
 
     margin: 10px !important;
     padding: 10px !important;
@@ -39,6 +34,6 @@
     }
 
     #reorder {
-        @include button;
+        @extend %input-element;
     }
 }

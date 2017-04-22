@@ -1,10 +1,3 @@
-@import 'shared/colors';
-@import 'shared/shadows';
-@import 'shared/symbol';
-@import 'shared/popover';
-@import 'shared/subsection';
-@import 'shared/button';
-
 $timeline-burned-color: $charcoal-grey;
 $timeline-bar-color:    $iron-grey;
 
@@ -12,7 +5,7 @@ $timeline-shadow: $default-shadow;
 
 
 #timeln {
-    @include subsection;
+    @extend %subsection;
 
     // header, icons and day slider
     > h4,
@@ -72,7 +65,7 @@ $timeline-shadow: $default-shadow;
 
 // settings popover
 #timeln-settings {
-    @include popover;
+    @extend %popover;
 
     > h4 {
         background-color: transparent !important;
@@ -81,13 +74,13 @@ $timeline-shadow: $default-shadow;
     form > select,
     form > input,
     button {
-        @include button;
+        @extend %input-element;
     }
 }
 
 // info popover
 #graph-bar-info {
-    @include popover;
+    @extend %popover;
 
     .tot {
         background-color: transparent !important;
@@ -95,18 +88,18 @@ $timeline-shadow: $default-shadow;
     }
 
     .rad {
-        @include radical-background;
+        @extend %radical-background;
         border-radius: 5px 5px 0 0;
         color: $background-color !important;
     }
 
     .kan {
-        @include kanji-background;
+        @extend %kanji-background;
         color: $background-color !important;
     }
 
     .voc {
-        @include vocabulary-background;
+        @extend %vocabulary-background;
         border-radius: 0 0 5px 5px;
         color: $background-color !important;
     }

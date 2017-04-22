@@ -1,19 +1,51 @@
-@import 'shared/colors';
-@import 'shared/subsection';
-@import 'shared/list';
+@import 'helpers/variables';
+@import 'helpers/colors';
+@import 'helpers/functions';
+@import 'helpers/placeholders';
+@import 'helpers/mixins';
 
-$alert-color:              $beware-orange;
-$alert-text-color:         $iron-grey;
-$loading-background-color: $background-color;
+// scss-lint:disable Comment
+/* ### HTML Elements ### */
+@import 'components/blockquote';
+@import 'components/button';
+@import 'components/input';
+@import 'components/select';
+@import 'components/table';
+@import 'components/textarea';
 
+// scss-lint:disable Comment
+/* ### WaniKani Site Components ### */
+@import 'components/character_grid';
+@import 'components/characters';
+@import 'components/dropdown';
+@import 'components/lattice';
+@import 'components/navbar';
+@import 'components/page_list';
+@import 'components/popover';
+@import 'components/progressbar';
+@import 'components/searchbar';
 
+// scss-lint:disable Comment
+/* ### Pages ### */
+@import 'pages/api';
+@import 'pages/dashboard';
+@import 'pages/item_info';
+@import 'pages/level_info';
+@import 'pages/login';
+@import 'pages/profile';
+@import 'pages/review_lesson';
+@import 'pages/settings';
+@import 'pages/summary';
+
+// scss-lint:disable Comment
+/* ### Main ### */
 * {
     color: $text-color !important;
     text-shadow: none !important;
 }
 
 body {
-    @include main-background;
+    @extend %main-background;
 }
 
 .alert {
@@ -22,7 +54,7 @@ body {
 }
 
 [class$=alert] {
-    @include subsection;
+    @extend %subsection;
 
     background-color: $alert-color !important;
     background-image: none !important;
@@ -32,63 +64,12 @@ body {
     }
 }
 
-table {
-    background-color: transparent !important;
-    border-collapse: separate !important;
-
-    tbody > tr {
-        background-color: transparent !important;
-        border: 5px solid transparent !important;
-        border-radius: 5px !important;
-    }
-
-    tbody > tr:hover {
-        background-color: $list-hover-color !important;
-    }
-}
-
-@import 'symbols';
-@import 'popover';
-@import 'dropdown';
-@import 'navbar';
-@import 'searchbar';
-@import 'page_list';
-@import 'character_grid';
-@import 'progressbar';
-@import 'input';
-
-@import 'login';
-
-@import 'api';
-
-@import 'profile';
-
-@import 'settings';
 
 // scss-lint:disable QualifyingElement
-section[id|=level] {
-    @include subsection;
-}
-
-@import 'dashboard';
-
-@import 'userscripts/ultimate_timeline';
-@import 'userscripts/wk_dashboard_progress_plus';
-@import 'userscripts/srs_grid';
-
-@import 'item_info';
-
+section[id|=level],
+section[class|=lattice],
 .individual-item .span12 > section {
-    @include subsection;
-}
-
-@import 'level_info';
-
-@import 'lattice';
-
-// scss-lint:disable QualifyingElement
-section[class|=lattice] {
-    @include subsection;
+    @extend %subsection;
 }
 
 #loading,
@@ -96,9 +77,11 @@ section[class|=lattice] {
     background-color: $loading-background-color !important;
 }
 
-@import 'review_lesson';
-@import 'summary';
-
+// scss-lint:disable Comment
+/* ### Userscripts ### */
 @import 'userscripts/lesson_reorder';
 @import 'userscripts/wk_improves';
 @import 'userscripts/wk_reorder_ultimate_2';
+@import 'userscripts/ultimate_timeline';
+@import 'userscripts/wk_dashboard_progress_plus';
+@import 'userscripts/srs_grid';

@@ -1,0 +1,17 @@
+.api {
+    pre {
+        @extend %subsection;
+    }
+
+    code {
+        background-color: transparent !important;
+    }
+
+    [id$=list] {
+        background-color: transparent !important;
+
+        h2 {
+            background-color: inherit !important;
+        }
+    }
+}

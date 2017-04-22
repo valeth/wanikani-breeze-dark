@@ -1,0 +1,71 @@
+.page-list {
+    background-color: $page-list-background-color !important;
+    border-radius: 5px !important;
+    box-shadow: $page-list-shadow !important;
+
+    ul {
+        margin-left: 5px !important;
+    }
+
+    li > a {
+        background-color: $page-list-item-color !important;
+        background-image: none !important;
+        border: none !important;
+        border-color: $page-list-separator-color !important;
+        border-right: 1px solid !important;
+        box-shadow: $page-list-shadow !important;
+        color: $page-list-text-color !important;
+        margin-bottom: 5px !important;
+        margin-top: 5px !important;
+    }
+
+    li > a:hover {
+        box-shadow: $page-list-focus-shadow !important;
+    }
+
+    li:last-child > a {
+        border: none !important;
+        border-radius: 0 5px 5px 0 !important;
+    }
+
+    li:first-child > a {
+        border-radius: 5px 0 0 5px !important;
+    }
+
+    .disabled span {
+        border: 0 !important;
+    }
+}
+
+// levels page + forums
+
+.page-list-header {
+    width: 110px !important;
+
+    span {
+        border: none !important;
+    }
+
+    + li a {
+        border-radius: 5px 0 0 5px !important;
+    }
+}
+
+// settings + account pages
+
+.nav-tabs.nav-stacked {
+    @extend %subsection;
+
+    > li > a {
+        border: none !important;
+    }
+
+    > li > a:hover {
+        background-color: $page-list-hover-color !important;
+    }
+
+    > .active > a:hover,
+    > .active > a {
+        background-color: $page-list-item-color !important;
+    }
+}

@@ -1,0 +1,52 @@
+.progress {
+    align-items: center !important;
+    background-color: $background-color !important;
+    background-image: none !important;
+    border-radius: 10px !important;
+    box-shadow: $progressbar-shadow inset !important;
+    display: flex !important;
+
+    .bar {
+        background-color: $progressbar-background-color !important;
+        background-image: none !important;
+        border-radius: 10px !important;
+        box-shadow: $progressbar-shadow !important;
+        height: 60% !important;
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+
+        span {
+            background-color: $progressbar-indicator-color !important;
+            border-radius: 5px !important;
+            box-shadow: $progressbar-shadow !important;
+            color: $text-color !important;
+            opacity: 0.8 !important;
+        }
+
+        span::after {
+            border-top-color: $progressbar-indicator-color !important;
+            opacity: inherit !important;
+        }
+
+        .threshold {
+            box-shadow: $progressbar-threshold-shadow !important;
+            color: $progressbar-threshold-color !important;
+            height: 60% !important;
+            line-height: 110% !important;
+            opacity: 0.50 !important;
+        }
+    }
+}
+
+@each $type in radical, kanji, vocabulary {
+    [class*=#{$type}] .progress > .bar {
+        @extend %#{$type}-background-color;
+    }
+}
+
+// scss-lint:disable QualifyingElement
+#progress section,
+section[id|=level] .progress {
+    margin-left: 2vw !important;
+    margin-right: 2vw !important;
+}

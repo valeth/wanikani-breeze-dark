@@ -1,0 +1,19 @@
+[class*=character-grid] {
+    align-items: stretch;
+    background-color: $grid-background-color !important;
+    border-radius: 5px;
+    box-shadow: $grid-inset-shadow !important;
+    display: flex;
+    flex-wrap: wrap;
+
+    > li {
+        border: none !important;
+        border-radius: 5px;
+        box-shadow: $grid-shadow !important;
+        margin: 5px;
+
+        > a {
+            background-color: transparent !important;
+        }
+    }
+}

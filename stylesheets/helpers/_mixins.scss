@@ -1,0 +1,78 @@
+// characters
+@mixin symbol-background-color($type) {
+    background-color: symbol-color($type) !important;
+}
+
+@mixin symbol-background($type) {
+    @include symbol-background-color($type);
+    background-image: none !important;
+}
+
+@mixin symbol-foreground($type) {
+    color: symbol-color($type) !important;
+}
+
+// lattice
+// TODO: maybe convert mixins to placeholders, if possible
+@mixin lattice-percent-text($p) {
+    @if $p == '0-20' {
+        color: $lattice-0-20-color !important;
+        text-shadow: 1px 1px 2px $lattice-0-20-color !important;
+    } @else if $p == '21-40' {
+        color: $lattice-21-40-color !important;
+        text-shadow: 1px 1px 2px $lattice-21-40-color !important;
+    } @else if $p == '41-60' {
+        color: $lattice-41-60-color !important;
+        text-shadow: 1px 1px 2px $lattice-41-60-color !important;
+    } @else if $p == '61-81' {
+        color: $lattice-61-80-color !important;
+        text-shadow: 1px 1px 2px $lattice-61-80-color !important;
+    } @else {
+        color: $lattice-81-100-color !important;
+        text-shadow: 1px 1px 2px $lattice-81-100-color !important;
+    }
+}
+
+@mixin lattice-percent-background($p) {
+    @if $p == '0-20' {
+        background-color: $lattice-0-20-color !important;
+    } @else if $p == '21-40' {
+        background-color: $lattice-21-40-color !important;
+    } @else if $p == '41-60' {
+        background-color: $lattice-41-60-color !important;
+    } @else if $p == '61-81' {
+        background-color: $lattice-61-80-color !important;
+        text-shadow: 1px 1px 2px $lattice-61-80-color !important;
+    } @else {
+        background-color: $lattice-81-100-color !important;
+        text-shadow: 1px 1px 2px $lattice-81-100-color !important;
+    }
+}
+
+@mixin lattice-level-text($l) {
+    @if $l == 'apprentice' {
+        @extend %apprentice-text;
+    } @else if $l == 'guru' {
+        @extend %guru-text;
+    } @else if $l == 'master' {
+        @extend %master-text;
+    } @else if $l == 'enlighten' {
+        @extend %enlightened-text;
+    } @else {
+        @extend %burned-text;
+    }
+}
+
+@mixin lattice-level-background($l) {
+    @if $l == 'apprentice' {
+        @extend %apprentice-background;
+    } @else if $l == 'guru' {
+        @extend %guru-background;
+    } @else if $l == 'master' {
+        @extend %master-background;
+    } @else if $l == 'enlighten' {
+        @extend %enlightened-background;
+    } @else {
+        @extend %burned-text;
+    }
+}

@@ -1,0 +1,59 @@
+.popover {
+    @extend %popover;
+
+    .popover-title {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        opacity: inherit;
+    }
+
+    .popover-content {
+        li {
+            border: none !important;
+            border-radius: 5px !important;
+            box-shadow: $popover-shadow !important;
+            margin-bottom: 3px !important;
+            margin-top: 3px !important;
+
+            // scss-lint:disable NestingDepth
+            span {
+                color: $background-color !important;
+            }
+        }
+    }
+
+    .bar {
+        background-color: $popover-progress-color !important;
+        background-image: none !important;
+        line-height: 100% !important;
+    }
+
+    &.srs {
+        // scss-lint:disable NestingDepth
+        .popover-content {
+            li:nth-child(1) {
+                @extend %radical-background;
+                @extend %radical-foreground;
+            }
+
+            li:nth-child(2) {
+                @extend %kanji-background;
+                @extend %kanji-foreground;
+            }
+
+            li:nth-child(3) {
+                @extend %vocabulary-background;
+                @extend %vocabulary-foreground;
+            }
+        }
+    }
+
+    &.srs,
+    &.lattice {
+        .arrow,
+        .arrow::after {
+            border-right-color: $popover-border-color !important;
+            opacity: inherit !important;
+        }
+    }
+}

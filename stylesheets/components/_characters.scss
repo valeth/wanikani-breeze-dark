@@ -1,0 +1,38 @@
+@each $type in radical, kanji, vocabulary {
+    // disable box shadow for items in lessons and reviews
+    // scss-lint:disable QualifyingElement
+    li[id^=#{$type}] a,
+    li[class^=#{$type}],
+    span[class^=#{$type}] {
+        box-shadow: none !important;
+    }
+
+    // highlighting on lessons page
+    .highlight-#{$type} {
+        border: 1px solid symbol-color($type) !important;
+        border-radius: 3px !important;
+    }
+
+    // general kanji coloring
+    [id*=#{$type}], [class*=#{$type}] {
+        @extend %#{$type}-background;
+
+        color: $symbol-text-color !important;
+
+        span, li, a, i, time {
+            color: $symbol-text-color !important;
+        }
+
+        i {
+            background-color: transparent !important;
+        }
+
+        // scss-lint:disable QualifyingElement
+        h2,
+        ul > li[title=Characters],
+        li > a {
+            @extend %#{$type}-background-color;
+            color: $symbol-text-color !important;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+#start-session {
+    a {
+        background-color: $icon-green !important;
+    }
+
+    .disabled {
+        background-color: $reviews-button-color !important;
+        color: $text-color !important;
+    }
+}
+
+#review-stats-answered-correctly {
+    border-radius: 5px !important;
+    box-shadow: $review-stats-shadow !important;
+}
+
+#review-stats-radicals,
+#review-stats-kanji,
+#review-stats-vocabulary {
+    background-color: $review-stats-color !important;
+    box-shadow: $review-stats-shadow !important;
+
+    .review-stats-total span {
+        color: $text-color !important;
+    }
+}
+
+#review-stats-radicals {
+    border-radius: 5px 0 0 5px;
+}
+
+#review-stats-vocabulary {
+    border-radius: 0 5px 5px 0;
+}
+
+#incorrect,
+#correct {
+    h2, h2 strong {
+        color: $h2-text-color !important;
+    }
+
+    h3 strong, h3 span {
+        background-color: $h3-text-color !important;
+    }
+}
+
+#incorrect h2 {
+    background-color: $incorrect-color !important;
+    border-radius: 5px 5px 0 0;
+}
+
+#correct h2 {
+    background-color: $correct-color !important;
+    border-radius: 5px 5px 0 0;
+}
+
+#lessons-summary {
+    h2 strong {
+        color: $h2-text-color !important;
+    }
+
+    #radicals, #kanji, #vocabulary {
+        background-color: $summary-background-color !important;
+        border-radius: 5px;
+        box-shadow: $summary-shadow !important;
+
+        h2 {
+            border-radius: 5px 5px 0 0;
+        }
+    }
+}

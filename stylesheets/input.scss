@@ -1,9 +1,0 @@
-@import 'shared/button';
-
-$input-shadow: 0 -3px 3px -3px $default-shadow-color inset;
-
-select,
-input,
-textarea {
-    @include button;
-}

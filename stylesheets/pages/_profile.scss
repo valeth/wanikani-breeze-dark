@@ -1,0 +1,61 @@
+.avatar {
+    background-color: $background-color !important;
+    box-shadow: $user-avatar-shadow inset !important;
+
+    img {
+        box-shadow: $user-avatar-shadow !important;
+    }
+}
+
+.user-info {
+    background-color: $user-info-background-color !important;
+    background-image: none !important;
+    box-shadow: $user-info-shadow;
+}
+
+.user-info::after {
+    border-bottom-color: transparent !important;
+}
+
+.srs-levels li span {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.knowledge-distribution {
+    [class$=-progress] {
+        background-color: transparent !important;
+
+        .progress {
+            background-color: $user-progressbar-color !important;
+        }
+    }
+
+    div > span {
+        color: $text-color !important;
+    }
+}
+
+.wall-of-shame {
+    background-color: transparent !important;
+
+    h3 > span {
+        background-color: $user-wos-header-color !important;
+        box-shadow: $wall-of-shame-shadow !important;
+    }
+
+    li > span,
+    div > span {
+        color: $text-color !important;
+    }
+
+    [class$=-progress],
+    [class^=worst-] {
+        background-color: transparent !important;
+
+        .progress {
+            background-color: $user-progressbar-color !important;
+        }
+    }
+
+}
