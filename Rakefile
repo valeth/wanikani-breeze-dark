@@ -32,7 +32,7 @@ task :build do
     Sass::Plugin.update_stylesheets
 
     open('out.css', 'w') do |outfile|
-        tmp = File.read('tmp/main.css')
+        tmp = File.read('tmp/userstyle.css')
 
         STYLISH_OPTIONS.each do |opt|
             tmp = tmp.gsub(%("/*[[#{opt}]]*/"), %(/*[[#{opt}]]*/))
