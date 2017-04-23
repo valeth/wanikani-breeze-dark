@@ -1,14 +1,14 @@
 .navbar {
+    z-index: 1030 !important;
+
+    .navbar-inner {
+        @include sheet(auto, $navbar-color);
+        border: none !important;
+    }
+
     .title span,
     .additional span:first-child {
         box-shadow: none !important;
-    }
-
-    .navbar-inner {
-        background-color: $navbar-color !important;
-        background-image: none !important;
-        border: none !important;
-        box-shadow: $navbar-shadow !important;
     }
 
     .dropdown {

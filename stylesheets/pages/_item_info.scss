@@ -1,92 +1,48 @@
+@each $item in radical, kanji, vocabulary {
+    .#{$item}-icon,
+    .#{$item}-highlight {
+        @extend %#{$item}-background;
+    }
+}
+
 [class$=-highlight] {
     box-shadow: none !important;
 }
 
 // level and symbol icons
 
-.level-icon {
-    @extend %subsection;
-
-    background-image: none !important;
-}
-
-@each $t in radical, kanji, vocabulary {
-    span.#{$t}-icon {
-        border: none !important;
-        box-shadow: $icon-shadow !important;
-        margin-bottom: 10px !important;
-        margin-top: 10px !important;
-    }
-}
-
-
-// user synonyms list
-
-#information {
-    @extend %subsection;
-}
-
-.user-synonyms {
-    background-color: transparent !important;
-    margin-left: 5px;
-
-    li, i {
-        color: $text-color !important;
-    }
-
-    li::after {
-        background-color: transparent !important;
-    }
-}
-
-.user-synonyms-add-btn::before {
-    background-color: transparent !important;
-}
-
-.user-synonyms-add-form {
-    input {
-        border: none !important;
-        border-bottom: 1px solid $user-synonym-color !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-    }
-}
-
-
 .individual-item {
     .span12 > section {
-        margin-bottom: 1vh !important;
-        padding: 10px;
+        @extend %section;
+
+        padding: 10px !important;
     }
 
-    h2,
-    [id|=radical],
-    .additional-info {
+    section > h2 {
+        border-bottom: 1px solid $iron-grey !important;
+    }
+
+
+    h2, [id|=radical], .additional-info {
         background-color: transparent !important;
     }
 
-    h2,
-    [id|=radical] a {
+    h2, [id|=radical] a {
         color: $text-color !important;
     }
 }
 
 #progress {
-    background-color: transparent !important;
-    margin-left: 2vw;
-    margin-right: 2vw;
+    @extend %section;
+
+    @media (min-width: 1200px) {
+        width: 1170px !important;
+    }
+
+    margin-left: auto !important;
+    margin-right: auto !important;
 
     [class$=-streak] span {
         background-color: $correct-progress-color !important;
     }
-
-    [class$=-correct] {
-        .progress {
-            background-color: $correct-progress-color !important;
-        }
-    }
-}
-
-[id^=note-] form fieldset {
-    @extend %textfield;
 }

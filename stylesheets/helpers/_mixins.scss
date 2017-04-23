@@ -76,3 +76,13 @@
         @extend %burned-text;
     }
 }
+
+@mixin sheet($zindex, $bgcolor: $shade-black, $img: none) {
+    background-color: $bgcolor !important;
+    box-shadow: $default-shadow-v !important;
+    z-index: $zindex !important;
+
+    @if ($img != true) {
+        background-image: $img !important;
+    }
+}

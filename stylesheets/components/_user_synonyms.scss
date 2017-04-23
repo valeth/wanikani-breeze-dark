@@ -1,0 +1,25 @@
+.user-synonyms {
+    background-color: transparent !important;
+    margin-left: 5px;
+
+    li, i {
+        color: $text-color !important;
+    }
+
+    li::after {
+        background-color: transparent !important;
+    }
+}
+
+.user-synonyms-add-btn::before {
+    background-color: transparent !important;
+}
+
+.user-synonyms-add-form {
+    input {
+        border: none !important;
+        border-bottom: 1px solid $user-synonym-color !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+}

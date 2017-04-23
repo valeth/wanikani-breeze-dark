@@ -25,10 +25,6 @@
     }
 }
 
-#lessons header {
-    box-shadow: $lessons-header-shadow !important;
-}
-
 #supplement-nav {
     background-color: transparent !important;
 
@@ -59,33 +55,11 @@
     color: $background-color !important;
 }
 
-#main-info,
-#character {
-    box-shadow: none !important;
-}
-
 // scss-lint:disable Comment
 /*[[REVIEW_CHAR_BG]]*/
 
-#batch-items {
-    position: relative !important;
-
-    [data-index=quiz] span {
-        background-color: $background-color !important;
-    }
-}
-
-#information,
 #correct,
 #incorrect {
-    @extend %subsection;
-}
-
-#correct,
-#incorrect {
-    .hover li {
-        color: $text-color !important;
-    }
 }
 
 #question-type {
@@ -104,70 +78,11 @@
     }
 }
 
-.note-meaning,
-.note-reading {
-    fieldset {
-        background-color: $background-color !important;
-        border-radius: 5px !important;
-        box-shadow: $note-shadow !important;
-
-        button {
-            background-color: transparent !important;
-        }
-    }
-}
 
 .meaning,
 .reading {
     background-color: transparent !important;
     border-color: transparent !important;
-}
-
-.meaning > h1 > strong {
-    text-shadow: $text-meaning-shadow !important;
-}
-
-.reading > h1 > strong {
-    text-shadow: $text-reading-shadow !important;
-}
-
-
-#answer-form {
-    fieldset {
-        background-color: $textfield-color !important;
-        box-shadow: $answer-form-shadow !important;
-        padding: 0;
-
-        input {
-            background-color: transparent !important;
-            box-shadow: none !important;
-        }
-
-        button {
-            background-color: transparent !important;
-            height: 2.3em !important;
-        }
-    }
-
-    // scss-lint:disable QualifyingElement, MergeableSelector
-    fieldset.incorrect {
-        background-color: $incorrect-color !important;
-
-        input[type=text]:disabled,
-        button {
-            background-color: transparent !important;
-        }
-    }
-
-    // scss-lint:disable QualifyingElement, MergeableSelector
-    fieldset.correct {
-        background-color: $correct-color !important;
-
-        input[type=text]:disabled,
-        button {
-            background-color: transparent !important;
-        }
-    }
 }
 
 #additional-content {

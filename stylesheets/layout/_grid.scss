@@ -1,0 +1,10 @@
+.dashboard {
+    // unlocks, critical, burned
+    .row .row {
+        align-items: stretch;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px !important;
+        margin-top: 10px !important;
+    }
+}

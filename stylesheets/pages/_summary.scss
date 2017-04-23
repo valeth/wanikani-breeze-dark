@@ -1,3 +1,69 @@
+@each $item in radical, kanji, vocabulary {
+    [id$="summary"] {
+        // 3 lesson summary sections
+        [id^=#{$item}] {
+            @extend %section;
+
+            // header for lesson summary
+            h2 {
+                @extend %#{$item}-background;
+            }
+
+            div {
+                display: block !important;
+            }
+        }
+
+        ul > .#{$item} {
+            @extend %#{$item}-background;
+        }
+    }
+}
+
+[id$="summary"] {
+    h2 {
+        border-radius: 5px 5px 0 0 !important;
+        box-shadow: $default-shadow-v !important;
+        color: $summary-h2-color !important;
+
+        strong {
+            color: $summary-h2-color !important;
+        }
+    }
+
+    h3 {
+        border-bottom-color: $summary-h3-color !important;
+
+        strong, span {
+            background-color: $shade-black !important;
+            color: $summary-h3-color !important;
+        }
+    }
+
+    ul > li {
+        @extend %icon;
+
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
+
+    #correct, #incorrect {
+        @extend %section;
+
+        .hover li {
+            color: $text-color !important;
+        }
+    }
+
+    #correct h2 {
+        background-color: $correct-color !important;
+    }
+
+    #incorrect h2 {
+        background-color: $incorrect-color !important;
+    }
+}
+
 #start-session {
     a {
         background-color: $icon-green !important;
@@ -31,41 +97,4 @@
 
 #review-stats-vocabulary {
     border-radius: 0 5px 5px 0;
-}
-
-#incorrect,
-#correct {
-    h2, h2 strong {
-        color: $h2-text-color !important;
-    }
-
-    h3 strong, h3 span {
-        background-color: $h3-text-color !important;
-    }
-}
-
-#incorrect h2 {
-    background-color: $incorrect-color !important;
-    border-radius: 5px 5px 0 0;
-}
-
-#correct h2 {
-    background-color: $correct-color !important;
-    border-radius: 5px 5px 0 0;
-}
-
-#lessons-summary {
-    h2 strong {
-        color: $h2-text-color !important;
-    }
-
-    #radicals, #kanji, #vocabulary {
-        background-color: $summary-background-color !important;
-        border-radius: 5px;
-        box-shadow: $summary-shadow !important;
-
-        h2 {
-            border-radius: 5px 5px 0 0;
-        }
-    }
 }

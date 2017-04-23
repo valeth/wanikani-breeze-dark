@@ -1,3 +1,7 @@
+#public-profile header {
+    @include sheet(auto, $img: true);
+}
+
 .avatar {
     background-color: $background-color !important;
     box-shadow: $user-avatar-shadow inset !important;
@@ -8,9 +12,8 @@
 }
 
 .user-info {
-    background-color: $user-info-background-color !important;
-    background-image: none !important;
-    box-shadow: $user-info-shadow;
+    @include sheet(10, $user-info-background-color);
+    background-blend-mode: overlay;
 }
 
 .user-info::after {

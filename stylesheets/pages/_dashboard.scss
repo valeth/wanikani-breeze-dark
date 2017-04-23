@@ -1,16 +1,5 @@
-.dashboard {
-    // unlocks, critical, burned
-    .row .row {
-        align-items: stretch;
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 10px !important;
-        margin-top: 10px !important;
-    }
-}
-
 .review-status {
-    @extend %subsection;
+    @extend %section;
 
     border: 1px hidden !important;
 
@@ -21,7 +10,7 @@
 }
 
 .srs-progress {
-    @extend %subsection;
+    @extend %section;
 
     ul > li {
         background-color: transparent !important;
@@ -62,7 +51,9 @@
 
 // scss-lint:disable QualifyingElement
 section.progression {
-    @extend %subsection;
+    @extend %section;
+
+    // @extend %subsection;
 
     hr {
         border-bottom: 1px solid $background-color !important;
@@ -99,17 +90,18 @@ section.progression {
 .recent-unlocks,
 .low-percentage,
 .recent-retired {
-    @extend %subsection;
-
     margin-bottom: 0 !important;
     margin-top: 0 !important;
 }
 
 .kotoba-table-list {
+    @extend %section;
+
     min-height: 100%;
 
     tr {
         background-color: transparent !important;
+        background-image: none !important;
 
         td {
             border-bottom: 1px solid $list-separator-color !important;
@@ -155,10 +147,8 @@ section.progression {
 
 .forum-topics-list,
 .blog {
-    @extend %subsection;
+    @extend %section;
 
-    margin-bottom: 0 !important;
-    margin-top: 0 !important;
     min-height: 100% !important;
 
     hr {

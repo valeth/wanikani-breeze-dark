@@ -5,7 +5,7 @@ $timeline-shadow: $default-shadow;
 
 
 #timeln {
-    @extend %subsection;
+    @extend %section;
 
     // header, icons and day slider
     > h4,
