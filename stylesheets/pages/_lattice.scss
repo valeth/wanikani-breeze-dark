@@ -5,7 +5,7 @@
 // scss-lint:disable QualifyingElement
 section[class|=lattice] {
     @extend %section;
-    
+
     ul > li {
         background-color: transparent !important;
         margin-bottom: 1vh;
