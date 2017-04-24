@@ -6,7 +6,7 @@
 
             // header for lesson summary
             h2 {
-                @extend %#{$item}-background;
+                @extend %#{$item};
             }
 
             div {
@@ -15,15 +15,19 @@
         }
 
         ul > .#{$item} {
-            @extend %#{$item}-background;
+            @extend %#{$item};
         }
     }
 }
 
 [id$="summary"] {
+    nav {
+        border: none !important;
+    }
+
     h2 {
         border-radius: 5px 5px 0 0 !important;
-        box-shadow: $default-shadow-v !important;
+        box-shadow: $shadow-v !important;
         color: $summary-h2-color !important;
 
         strong {
@@ -64,9 +68,16 @@
     }
 }
 
+#back-dashboard {
+    @extend %click-input-element;
+}
+
 #start-session {
+    @extend %button;
+
     a {
         background-color: $icon-green !important;
+        color: $inverted-text-color !important;
     }
 
     .disabled {

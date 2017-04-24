@@ -1,0 +1,12 @@
+@each $item in radical, kanji, vocabulary {
+    [class^="highlight-#{$item}"],
+    [class$="#{$item}-highlight"] {
+        @extend %#{$item};
+    }
+}
+
+[class^="highlight"],
+[class$=-highlight] {
+    border-radius: 3px !important;
+    box-shadow: none !important;
+}

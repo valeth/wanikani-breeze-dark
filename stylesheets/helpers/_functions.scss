@@ -1,4 +1,4 @@
-@function symbol-color($type) {
+@function character-color($type) {
     @if $type == vocabulary {
         @return $vocabulary-color;
     } @else if $type == kanji {

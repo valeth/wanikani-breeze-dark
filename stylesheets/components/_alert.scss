@@ -1,0 +1,19 @@
+.alert {
+    background-color: $alert-color !important;
+    border: none !important;
+
+    * {
+        color: $inverted-text-color !important;
+    }
+}
+
+[class$=alert] {
+    @extend %section;
+
+    background-color: $alert-color !important;
+    background-image: none !important;
+
+    > h3 {
+        color: $inverted-text-color !important;
+    }
+}

@@ -51,30 +51,8 @@
         }
     }
 
-    @each $type in radicals, kanji, vocabulary {
-        .open.#{$type} {
-            .dropdown-menu,
-            .dropdown-toggle {
-                @extend %#{$type}-background;
-            }
-
-            .dropdown-menu::before,
-            .dropdown-menu::after {
-                @extend %#{$type}-foreground;
-
-                border-bottom: 9px solid symbol-color($type) !important;
-            }
-
-            .dropdown-toggle:hover span {
-                border-color: $navbar-color !important;
-            }
-        }
-
-        .#{$type} {
-            .dropdown-toggle:hover span {
-                border-color: symbol-color($type) !important;
-            }
-        }
+    @each $type in (radicals, kanji, vocabulary) {
+        @include dropdown-menu($type);
     }
 
     // lessons + reviews + account
@@ -89,7 +67,6 @@
 
     .account {
         .dropdown-toggle {
-
             // scss-lint:disable NestingDepth
             span {
                 border: 5px solid !important;

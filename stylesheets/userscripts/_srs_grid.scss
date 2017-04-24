@@ -1,6 +1,6 @@
 [aria-describedby=divSRSGridSettings],
 [aria-describedby=ui-id-2] {
-    @extend %subsection;
+    @extend %section;
 
     .ui-widget-header {
         border: none !important;
@@ -26,6 +26,6 @@
     }
 
     .ui-dialog-buttonset button {
-        @extend %input-element;
+        @extend %button;
     }
 }

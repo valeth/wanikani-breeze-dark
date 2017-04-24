@@ -1,0 +1,94 @@
+#lessons {
+    @each $item in radical, kanji, vocabulary {
+        // lesson header background and foreground color
+        #main-info.#{$item} {
+            @extend %#{$item}-inverted;
+
+            #character {
+                color: character-color($item) !important;
+            }
+        }
+
+        #supplement-info,
+        #batch-items {
+            [class^=#{$item}] {
+                @extend %#{$item};
+            }
+        }
+    }
+
+    // lesson header
+    header {
+        @include sheet(11);
+
+        position: relative !important;
+    }
+
+    #main-info {
+        box-shadow: none !important;
+    }
+
+    // lesson navigation
+    #supplement-nav {
+        @include sheet(9);
+
+        background-color: $charcoal-grey !important;
+
+        li::before {
+            border-bottom-color: $lesson-color !important;
+            bottom: -50px !important;
+            color: $shade-black !important;
+        }
+    }
+
+    #next-btn:hover,
+    #prev-btn:hover {
+        background-color: $section-color !important;
+        border-radius: 5px !important;
+        filter: brightness(0.8) !important;
+    }
+
+    // lesson content
+    #supplement-info {
+        @extend %section;
+
+        margin-top: 30px !important;
+    }
+
+    // lesson batch list
+    #batch-items {
+        position: relative !important;
+    }
+
+    // icons for batch list, breakdown and examples
+    #supplement-info,
+    #batch-items {
+        li span {
+            @extend %icon;
+        }
+    }
+}
+
+#lesson-ready-continue,
+#quiz-ready-continue {
+    background-color: $lesson-color !important;
+
+    @each $type in radical, kanji, vocabulary {
+        [id$=#{$type}] {
+            background-color: transparent !important;
+
+            h2 {
+                background-color: transparent !important;
+                color: $text-color !important;
+            }
+
+            span {
+                @extend %#{$type};
+            }
+        }
+    }
+}
+
+#screen-lesson-ready #lesson-ready-continue {
+    background-color: $section-color !important;
+}

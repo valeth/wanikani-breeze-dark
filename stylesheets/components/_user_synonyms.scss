@@ -17,9 +17,17 @@
 
 .user-synonyms-add-form {
     input {
+        background-color: transparent !important;
         border: none !important;
         border-bottom: 1px solid $user-synonym-color !important;
         border-radius: 0 !important;
         box-shadow: none !important;
+    }
+
+    button {
+        @extend %button;
+
+        height: 2em !important;
+        min-width: 2em !important;
     }
 }

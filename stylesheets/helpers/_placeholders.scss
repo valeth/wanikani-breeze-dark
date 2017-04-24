@@ -1,60 +1,28 @@
-%character-foreground-color {
-    color: $symbol-text-color !important;
-
-    span, li, a, i {
-        color: $symbol-text-color !important;
-    }
-}
-
 // radicals
-%radical-background-color,
-%radicals-background-color {
-    background-color: $radical-color !important;
+%radical, %radicals {
+    @include character('radical');
 }
 
-%radical-background,
-%radicals-background {
-    @extend %radical-background-color;
-    @extend %character-foreground-color;
-
-    background-image: none !important;
-}
-
-%radical-foreground,
-%radicals-foreground {
-    color: $symbol-text-color !important;
+%radical-inverted, %radicals-inverted {
+    @include character('radical', $inverted: true);
 }
 
 // kanji
-%kanji-background-color {
-    background-color: $kanji-color !important;
+%kanji {
+    @include character('kanji');
 }
 
-%kanji-background {
-    @extend %kanji-background-color;
-    @extend %character-foreground-color;
-
-    background-image: none !important;
-}
-
-%kanji-foreground {
-    color: $symbol-text-color !important;
+%kanji-inverted {
+    @include character('kanji', $inverted: true);
 }
 
 // vocabulary
-%vocabulary-background-color {
-    background-color: $vocabulary-color !important;
+%vocabulary {
+    @include character('vocabulary');
 }
 
-%vocabulary-background {
-    @extend %vocabulary-background-color;
-    @extend %character-foreground-color;
-
-    background-image: none !important;
-}
-
-%vocabulary-foreground {
-    color: $symbol-text-color !important;
+%vocabulary-inverted {
+    @include character('vocabulary', $inverted: true);
 }
 
 // srs levels
@@ -107,23 +75,62 @@
     background-repeat: repeat !important;
 }
 
+
 %input-element {
-    background-color: $button-background-color !important;
-    background-image: none !important;
-    border: 1px solid !important;
-    border-color: $button-border-color !important;
     border-radius: 5px !important;
+}
+
+%text-input-element {
+    @extend %input-element;
+
+    background-color: darken($input-color, 2%) !important;
+    border: none !important;
+    box-shadow: $shadow inset !important;
+    transition: box-shadow linear 0.2s !important;
+
+    &:focus {
+        box-shadow: 1px 1px 1px darken($shadow-color, 10%) inset !important;
+        outline: none !important;
+    }
+}
+
+%click-input-element {
+    @extend %input-element;
+
+    background-color: darken($input-color, 2%) !important;
+    border: none !important;
+    box-shadow: $shadow !important;
+    transition: box-shadow linear 0.2s, border linear 0.2s !important;
+
+    &:hover {
+        box-shadow: 1px 1px 1px darken($shadow-color, 10%) !important;
+    }
+
+    &:focus {
+        box-shadow: $focus-shadow !important;
+        outline: none !important;
+    }
 }
 
 %button {
-    @extend %input-element;
+    @extend %click-input-element;
+
+    background-image: none !important;
 }
 
+%textarea {
+    @extend %text-input-element;
+
+    color: $text-color !important;
+    -webkit-text-fill-color: $text-color !important;
+}
+
+
 %section {
-    background-color: $subsection-color !important;
+    background-color: $section-color !important;
     border: none !important;
     border-radius: 5px !important;
-    box-shadow: $subsection-shadow !important;
+    box-shadow: $section-shadow !important;
     margin-bottom: 20px !important;
     margin-top: 20px !important;
 }
@@ -142,6 +149,13 @@
     box-shadow: $popover-shadow !important;
 }
 
+%popup {
+    background-color: $charcoal-grey !important;
+    border: none !important;
+    border-radius: 5px !important;
+    box-shadow: $shadow !important;
+}
+
 %list {
     tr {
         background-color: transparent !important;
@@ -153,24 +167,9 @@
     }
 }
 
-%textfield {
-    background-color: $textform-color !important;
-    border-radius: 5px !important;
-    box-shadow: $textform-shadow !important;
-
-    textarea {
-        color: $text-color !important;
-        -webkit-text-fill-color: $text-color !important;
-    }
-
-    button {
-        background-color: transparent !important;
-    }
-}
-
 %icon {
     background-image: none !important;
-    box-shadow: $default-shadow !important;
+    box-shadow: $shadow !important;
 }
 
 // lattice

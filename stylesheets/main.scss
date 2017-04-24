@@ -8,24 +8,25 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     @import 'helpers/variables';
     @import 'helpers/colors';
     @import 'helpers/functions';
-    @import 'helpers/placeholders';
     @import 'helpers/mixins';
+    @import 'helpers/placeholders';
 
     // scss-lint:disable Comment
     /* ### HTML Elements ### */
     @import 'components/blockquote';
     @import 'components/button';
     @import 'components/input';
-    @import 'components/section';
     @import 'components/select';
     @import 'components/table';
     @import 'components/textarea';
 
     // scss-lint:disable Comment
     /* ### WaniKani Site Components ### */
+    @import 'components/alert';
     @import 'components/character_grid';
     @import 'components/dropdown';
     @import 'components/lattice';
+    @import 'components/legend';
     @import 'components/navbar';
     @import 'components/page_list';
     @import 'components/popover';
@@ -34,6 +35,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     @import 'components/user_note';
     @import 'components/user_synonyms';
     @import 'components/icon';
+    @import 'components/highlight';
 
     // scss-lint:disable Comment
     /* ### Layout Changes### */
@@ -41,16 +43,19 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
 
     // scss-lint:disable Comment
     /* ### Pages ### */
+    @import 'pages/account';
     @import 'pages/api';
     @import 'pages/dashboard';
     @import 'pages/item_info';
-    @import 'pages/lesson';
     @import 'pages/level_info';
     @import 'pages/login';
     @import 'pages/settings';
     @import 'pages/session';
-    @import 'pages/summary';
     @import 'pages/profile';
+
+    // scss-lint:disable Comment
+    /* Replacements for userstyles.org, defaults to the dark version */
+    /*[[REVIEW_CHAR_BG]]*/
 
     // scss-lint:disable Comment
     /* ### Main ### */
@@ -63,33 +68,13 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
         @extend %main-background;
     }
 
-    .alert {
-        background-color: $alert-color !important;
-        border: none !important;
-    }
-
-    [class$=alert] {
-        @extend %section;
-
-        background-color: $alert-color !important;
-        background-image: none !important;
-
-        > h3 {
-            color: $alert-text-color !important;
-        }
-    }
-
-    #loading,
-    #loading-screen {
-        background-color: $loading-background-color !important;
-    }
-
     // scss-lint:disable Comment
     /* ### Userscripts ### */
-    //@import 'userscripts/lesson_reorder';
-    //@import 'userscripts/wk_improves';
-    //@import 'userscripts/wk_reorder_ultimate_2';
-    //@import 'userscripts/ultimate_timeline';
-    //@import 'userscripts/wk_dashboard_progress_plus';
-    //@import 'userscripts/srs_grid';
+    @import 'userscripts/lesson_reorder';
+    @import 'userscripts/wk_improve';
+    @import 'userscripts/wk_reorder_ultimate_2';
+    @import 'userscripts/ultimate_timeline';
+    @import 'userscripts/wk_dashboard_progress_plus';
+    @import 'userscripts/srs_grid';
+    @import 'userscripts/wk_override';
 }

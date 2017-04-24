@@ -1,7 +1,7 @@
 $timeline-burned-color: $charcoal-grey;
 $timeline-bar-color:    $iron-grey;
 
-$timeline-shadow: $default-shadow;
+$timeline-shadow: $shadow;
 
 
 #timeln {
@@ -24,6 +24,7 @@ $timeline-shadow: $default-shadow;
 
         #range_input {
             border: none !important;
+            box-shadow: none !important;
         }
     }
 
@@ -65,16 +66,16 @@ $timeline-shadow: $default-shadow;
 
 // settings popover
 #timeln-settings {
-    @extend %popover;
+    @extend %popup;
+
+    padding: 25px !important;
 
     > h4 {
         background-color: transparent !important;
     }
 
-    form > select,
-    form > input,
-    button {
-        @extend %input-element;
+    .buttons {
+        background-color: transparent !important;
     }
 }
 
@@ -88,20 +89,19 @@ $timeline-shadow: $default-shadow;
     }
 
     .rad {
-        @extend %radical-background;
+        @extend %radical;
+
         border-radius: 5px 5px 0 0;
-        color: $background-color !important;
     }
 
     .kan {
-        @extend %kanji-background;
-        color: $background-color !important;
+        @extend %kanji;
     }
 
     .voc {
-        @extend %vocabulary-background;
+        @extend %vocabulary;
+
         border-radius: 0 0 5px 5px;
-        color: $background-color !important;
     }
 
     .cur {

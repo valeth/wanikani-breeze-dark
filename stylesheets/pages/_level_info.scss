@@ -1,5 +1,6 @@
-[id|=level] {
-    margin-bottom: 1vh !important;
+section[id|=level] {
+    @extend %section;
+
     padding: 10px;
 
     h2, header {

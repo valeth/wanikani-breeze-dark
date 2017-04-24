@@ -1,106 +1,25 @@
-#reviews {
-    @each $item in radical, kanji, vocabulary {
-        #character.#{$item} {
-            @extend %#{$item}-background;
-        }
+@import 'sesson/summary';
+@import 'sesson/lesson';
+@import 'sesson/review';
 
-        #related-items {
-            a > [class^=#{$item}] {
-                @extend %#{$item}-background;
-                @extend %icon;
-            }
-        }
+// shared between lesson and sesson
+#loading,
+#loading-screen {
+    background-color: $background-color !important;
+}
 
-        [class^="highlight-#{$item}"] {
-            @extend %#{$item}-background;
-        }
-    }
+#stats {
+    z-index: 100 !important;
+}
 
-    #character {
-        @include sheet(10)
-    }
+#summary-button i,
+#stats i,
+#stats span {
+    background-color: transparent !important;
+    color: $text-color !important;
+}
 
-    #question-type {
-        @include sheet(9);
-
-        border: none !important;
-        display: flex !important;
-        height: 82px !important;
-        justify-content: center !important;
-        z-index: 9 !important;
-    }
-
-    #answer-form {
-        @include sheet(8);
-
-        fieldset {
-            padding: 0 !important;
-        }
-
-        .incorrect {
-            background-color: $incorrect-color !important;
-        }
-
-        .correct {
-            background-color: $correct-color !important;
-        }
-
-        input {
-            background-color: $textfield-color !important;
-            border: none !important;
-            border-radius: 0 !important;
-            box-shadow: none !important;
-        }
-
-        input:disabled,
-        button {
-            background-color: transparent !important;
-            border: none !important;
-        }
-
-        button {
-            height: 2.3em !important;
-        }
-    }
-
-    #additional-content {
-        @include sheet(6, $charcoal-grey);
-
-        height: 50px !important;
-        margin: 0 !important;
-
-        ul {
-            align-items: center !important;
-            display: flex !important;
-            height: 100% !important;
-            margin: 0 !important;
-        }
-
-        li::before {
-            border-bottom-color: $shade-black !important;
-            bottom: -25px;
-            color: $shade-black !important;
-        }
-
-        li > span {
-            background-color: transparent !important;
-            box-shadow: none !important;
-            z-index: 7 !important;
-
-            &:hover::before {
-                background-color: $iron-grey !important;
-                box-shadow: none !important;
-            }
-        }
-    }
-
-    #information {
-        @extend %section;
-
-        z-index: 8 !important;
-
-        section {
-            @extend %subsection;
-        }
-    }
+#hotkeys {
+    background-color: $charcoal-grey !important;
+    border-radius: 5px !important;
 }

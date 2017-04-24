@@ -1,6 +1,6 @@
 .nav-load > li:last-child a,
 .button {
-    @extend %input-element;
+    @extend %button;
 }
 
 #explanation .bg-angled {

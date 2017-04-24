@@ -1,0 +1,206 @@
+#reviews {
+    @each $item in radical, kanji, vocabulary {
+        // header item background and foreground
+        #character.#{$item} {
+            @extend %#{$item}-inverted;
+        }
+
+        #last-items .#{$item} [lang="ja"]:first-child {
+            @extend %#{$item};
+        }
+
+        #related-items {
+            a > [class^=#{$item}] {
+                @extend %#{$item};
+                @extend %icon;
+            }
+        }
+    }
+
+    // session header
+    #character {
+        @include sheet(10)
+    }
+}
+
+// question type, reading or meaning
+#question-type {
+    @include sheet(9);
+
+    border: none !important;
+    display: flex !important;
+    height: 82px !important;
+    justify-content: center !important;
+    z-index: 9 !important;
+
+    &.reading {
+        background-color: $reading-color !important;
+    }
+
+    &.meaning {
+        background-color: $meaning-color !important;
+    }
+}
+
+// input field for answer
+#answer-form {
+    @include sheet(8);
+
+    fieldset {
+        padding: 0 !important;
+
+        &.incorrect {
+            // scss-lint:disable QualifyingElement NestingDepth
+            input[type=text]:disabled, button {
+                background-color: $incorrect-color !important;
+            }
+        }
+
+        &.correct {
+            // scss-lint:disable QualifyingElement NestingDepth
+            input[type=text]:disabled, button {
+                background-color: $correct-color !important;
+            }
+        }
+    }
+
+    input {
+        background-color: $textfield-color !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+
+    }
+
+    button {
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 2.3em !important;
+    }
+}
+
+// lesson wrapup, last items, item info, kana chart and pronounciation
+#additional-content {
+    @include sheet(6, $charcoal-grey);
+
+    height: 50px !important;
+    margin: 0 !important;
+
+    // make sure the list items are aligned nicely
+    ul {
+        align-items: center !important;
+        display: flex !important;
+        height: 100% !important;
+        margin: 0 !important;
+
+        // indicate that the wrapup function is active
+        // scss-lint:disable NestingDepth
+        .wrap-up-selected {
+            span, span:hover::before, span::before {
+                background-color: $charcoal-grey !important;
+            }
+
+            strong, i {
+                text-shadow: 0 0 10px $icon-orange !important;
+            }
+        }
+    }
+
+    // up arrow
+    li::before {
+        border-bottom-color: $shade-black !important;
+        bottom: -25px !important;
+        color: $shade-black !important;
+    }
+
+    // options
+    li > span {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        z-index: 7 !important;
+
+        // list item hover overlay
+        &:hover::before {
+            background-color: $charcoal-grey !important;
+            box-shadow: none !important;
+            color: $text-color !important;
+        }
+    }
+
+}
+
+// answer exception popup
+#answer-exception span {
+    background-color: $popover-background-color !important;
+    border-radius: 5px;
+    box-shadow: $answer-exception-shadow !important;
+
+    &::before {
+        border-color: transparent transparent $popover-border-color !important;
+    }
+}
+
+// last ten items in the review queue
+#last-items li ul {
+    background-color: $charcoal-grey !important;
+
+    [title*=meaning],
+    [title*=reading] {
+        color: $text-color !important;
+    }
+}
+
+// information about the current item
+#information {
+    @extend %section;
+
+    z-index: 8 !important;
+}
+
+// show more button
+#all-info {
+    background-color: transparent !important;
+}
+
+#item-info {
+    h2 {
+        border-bottom-color: $separator-color !important;
+    }
+}
+
+// hiragana chart
+#kana-chart {
+    ol {
+        border-bottom-color: $separator-color !important;
+    }
+
+    .active {
+        border: {
+            bottom: none !important;
+            left: 1px solid $separator-color !important;
+            right: 1px solid $separator-color !important;
+        }
+    }
+
+    li {
+        border-right-color: $separator-color !important;
+
+        &:hover {
+            background-color: $section-color !important;
+            box-shadow: none !important;
+            filter: brightness(0.8) !important;
+        }
+    }
+}
+
+// srs indicators
+.srs-up,
+.srs-down {
+    background-color: transparent !important;
+    color: $charcoal-grey !important;
+}
+
+#additional-content-load {
+    background-color: $section-color !important;
+}

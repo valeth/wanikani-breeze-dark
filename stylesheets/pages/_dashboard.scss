@@ -19,24 +19,10 @@
         box-shadow: none !important;
     }
 
-    ul > #burned span {
-        @extend %burned-text;
-    }
-
-    ul > #enlightened span {
-        @extend %enlightened-text;
-    }
-
-    ul > #master span {
-        @extend %master-text;
-    }
-
-    ul > #guru span {
-        @extend %guru-text;
-    }
-
-    ul > #apprentice span {
-        @extend %apprentice-text;
+    @each $level in $srs-levels {
+        ul > ##{$level} span {
+            @extend %#{$level}-text;
+        }
     }
 
     li:first-child {
@@ -53,8 +39,6 @@
 section.progression {
     @extend %section;
 
-    // @extend %subsection;
-
     hr {
         border-bottom: 1px solid $background-color !important;
         border-top: 1px solid $background-color !important;
@@ -69,14 +53,18 @@ section.progression {
     .lattice-single-character {
         background-image: none !important;
 
-        ul > li {
+        li {
             background-color: transparent !important;
             padding: 2px !important;
         }
 
+        a {
+            box-shadow: none !important;
+        }
+
         @each $type in radical, kanji {
             li[id^=#{$type}] > a {
-                @extend %#{$type}-background-color;
+                @extend %#{$type};
                 filter: brightness(0.7);
             }
         }
@@ -99,24 +87,17 @@ section.progression {
 
     min-height: 100%;
 
-    tr {
-        background-color: transparent !important;
-        background-image: none !important;
-
-        td {
-            border-bottom: 1px solid $list-separator-color !important;
-        }
+    td {
+        border-bottom: 1px solid $separator-color !important;
     }
 
     .none-available > td {
         border-bottom: none !important;
     }
 
-    @each $type in radical, kanji, vocabulary {
+    @each $type in $character-types {
         tr[id^=#{$type}] {
-            span, time, i {
-                color: symbol-color($type) !important;
-            }
+            @extend %#{$type}-inverted;
         }
     }
 
@@ -152,8 +133,12 @@ section.progression {
     min-height: 100% !important;
 
     hr {
-        border-color: $list-separator-color !important;
-        color: $list-separator-color !important;
+        border-color: $separator-color !important;
+        color: $separator-color !important;
+    }
+
+    tr {
+        background-color: $list-background-color !important;
     }
 }
 

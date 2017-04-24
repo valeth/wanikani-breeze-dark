@@ -18,46 +18,50 @@ $verdant-green:    rgb(17, 209, 22);   // #11d116
 $icon-blue:        rgb(29, 153, 243);  // #1d99f3
 
 // main colors and shadows
-$text-color:               $paper-white;
-$background-color:         $charcoal-grey;
-$alert-color:              $beware-orange;
-$alert-text-color:         $iron-grey;
-$loading-background-color: $background-color;
+$text-color:          $paper-white;
+$background-color:    $charcoal-grey;
+$inverted-text-color: invert($text-color);
+$shadow-color:        rgba(0, 0, 0, 0.5);
+$focus-shadow-color:  fade-out($plasma-blue, 0.5);
 
-$default-shadow-color:       rgba(0, 0, 0, 0.5);
-$default-focus-shadow-color: rgba(61, 174, 233, 0.5);
-$default-shadow:             3px 3px 3px $default-shadow-color;
-$default-shadow-v:           0 3px 3px $default-shadow-color;
-$default-focus-shadow:       0 0 5px $default-focus-shadow-color;
+$shadow:       3px 3px 3px $shadow-color;
+$shadow-v:     0   3px 3px $shadow-color;
+$focus-shadow: 0   0   5px $focus-shadow-color;
 
-// radical, kanji and vocab colors
-$radical-color:    '/*[[RADICALS_COLOR]]*/'; // $plasma-blue
-$kanji-color:      '/*[[KANJI_COLOR]]*/'; // $icon-yellow
-$vocabulary-color: '/*[[VOCAB_COLOR]]*/'; // $icon-green
-$symbol-text-color: $shade-black;
+// hr, borders etc.
+$separator-color: $charcoal-grey;
+$alert-color: $beware-orange;
 
-// character grid on item page and search
-$grid-background-color: $iron-grey;
-$grid-shadow:           $default-shadow;
-$grid-inset-shadow:     $default-shadow inset;
+// sections (dashboard, item info, ...)
+$section-color:  $shade-black;
+$section-shadow: $shadow;
 
 // navigation bar (most pages, except lessons/reviews)
-$navbar-color: $shade-black;
-$navbar-shadow: $default-shadow-v;
+$navbar-color:  $shade-black;
+$navbar-shadow: $shadow-v;
 
 // dropdown for navbar
 $dropdown-color:       $iron-grey;
-$dropdown-hover-color: rgba(0, 0, 0, 0.2);
-$dropdown-shadow:      $default-shadow;
+$dropdown-shadow:      $shadow;
+$dropdown-hover-color: fade-out($shade-black, 0.2);
+
+// radical, kanji and vocab
+$radical-color:        '/*[[RADICALS_COLOR]]*/'; // $plasma-blue
+$kanji-color:          '/*[[KANJI_COLOR]]*/';    // $icon-yellow
+$vocabulary-color:     '/*[[VOCAB_COLOR]]*/';    // $icon-green
+$character-text-color: $shade-black;
+
+// character grid on item page and search
+$grid-background-color: $iron-grey;
+$grid-shadow:           $shadow;
+$grid-inset-shadow:     $shadow inset;
 
 // input elements (input, textarea, select, ...)
-$input-shadow:            0 -3px 3px -3px $default-shadow-color inset;
+$input-color:             $shade-black;
+$input-shadow:            0 -3px 3px -3px $shadow-color inset;
+
 $button-background-color: $shade-black;
 $button-border-color:     $plasma-blue;
-
-// subsections (dashboard, item info, ...)
-$subsection-color:  $shade-black;
-$subsection-shadow: $default-shadow;
 
 // page list (item info, level info, settings)
 $page-list-background-color: $shade-black;
@@ -65,18 +69,14 @@ $page-list-item-color:       $plasma-blue;
 $page-list-text-color:       $shade-black;
 $page-list-separator-color:  $charcoal-grey;
 $page-list-hover-color:      rgba(0, 0, 0, 0.2);
-$page-list-shadow:           $default-shadow;
-$page-list-focus-shadow:     $default-focus-shadow;
+$page-list-shadow:           $shadow;
+$page-list-focus-shadow:     $focus-shadow;
 
 // popover (dashboard, profile)
 $popover-background-color: $iron-grey;
 $popover-border-color:     $iron-grey;
 $popover-progress-color:   $plasma-blue;
-$popover-shadow:           $default-shadow;
-
-// correct/incorrect
-$incorrect-color: $danger-red;
-$correct-color:   $icon-green;
+$popover-shadow:           $shadow;
 
 // srs levels
 $apprentice-color:  $icon-blue;
@@ -86,25 +86,25 @@ $enlightened-color: $beware-orange;
 $burned-color:      $shade-black;
 
 // list
-$list-background-color: $iron-grey;
+$list-background-color: $shade-black;
 $list-head-color:       $icon-blue;
 $list-item-color:       $plasma-blue;
 $list-separator-color:  $charcoal-grey;
 $list-hover-color:      rgba(0, 0, 0, 0.2);
-$list-head-shadow:      0 -5px 10px $default-shadow-color inset;
+$list-head-shadow:      0 -5px 10px $shadow-color inset;
 
 // progressbar
 $progress-background-color:    $charcoal-grey;
 $progressbar-background-color: $icon-blue;
 $progressbar-indicator-color:  $iron-grey;
 $progressbar-threshold-color:  $iron-grey;
-$progressbar-shadow:           $default-shadow;
+$progressbar-shadow:           $shadow;
 $progressbar-threshold-shadow: 1px 0 0 $progressbar-threshold-color;
 
 // textfield
 $textfield-color: $shade-black;
 $textform-color:  $iron-grey;
-$textform-shadow: $default-shadow inset;
+$textform-shadow: $shadow inset;
 
 // lattice
 $lattice-locked-color:  $charcoal-grey;
@@ -113,56 +113,58 @@ $lattice-21-40-color:   $sunbeam-yellow;
 $lattice-41-60-color:   $plasma-blue;
 $lattice-61-80-color:   $icon-blue;
 $lattice-81-100-color:  $mellow-turquoise;
-$lattice-legend-shadow: $default-shadow inset;
+$lattice-legend-shadow: $shadow inset;
 
 // searchbar
 $search-query-color:  $shade-black;
-$search-query-shadow: $default-shadow inset;
-$searchbar-in-shadow: 0 -3px 3px -3px $default-shadow-color inset;
+$search-query-shadow: $shadow inset;
+$searchbar-in-shadow: 0 -3px 3px -3px $shadow-color inset;
 
 // item info
 $correct-progress-color: $shade-black;
 $user-synonym-color:     $iron-grey;
-$icon-shadow:            $default-shadow;
+$icon-shadow:            $shadow;
 
 // user profile
 $user-info-background-color: $shade-black;
 $user-progressbar-color:     $shade-black;
 $user-wos-header-color:      $shade-black;
-$wall-of-shame-shadow:       $default-shadow inset;
-$user-avatar-shadow:         $default-shadow;
-$user-info-shadow:           $default-shadow-v inset, $default-shadow-v;
+$wall-of-shame-shadow:       $shadow inset;
+$user-avatar-shadow:         $shadow;
+$user-info-shadow:           $shadow-v inset, $shadow-v;
 
-// session
-$lesson-color:           $shade-black;
-$lessons-header-shadow:  $default-shadow-v;
-$supplement-info-shadow: $default-shadow;
-$note-shadow:            $default-shadow inset;
-$meaning-color:          $icon-red;
-$reading-color:          $icon-blue;
+// session (review, lesson quiz)
+$incorrect-color:        $danger-red;
+$correct-color:          $icon-green;
+$reading-color:          '/*[[REVIEW_READING_BG]]*/';
+$meaning-color:          '/*[[REVIEW_MEANING_BG]]*/';
+$supplement-info-shadow: $shadow;
+$note-shadow:            $shadow inset;
 $addcon-sep-color:       $shade-black;
-$reading-background-color: '/*[[REVIEW_READING_BG]]*/';
-$meaning-background-color: '/*[[REVIEW_MEANING_BG]]*/';
-$question-type-shadow:    $default-shadow-v inset;
-$answer-form-shadow:      $default-shadow-v inset, $default-shadow-v;
-$answer-exception-shadow: $default-shadow;
-$review-character-shadow: $default-shadow-v;
+$question-type-shadow:    $shadow-v inset;
+$answer-form-shadow:      $shadow-v inset, $shadow-v;
+$answer-exception-shadow: $shadow;
+$review-character-shadow: $shadow-v;
 $text-meaning-shadow:     0 0 10px $meaning-color;
 $text-reading-shadow:     0 0 10px $reading-color;
+
+// lesson
+$lesson-color:           $shade-black;
+$lessons-header-shadow:  $shadow-v;
 
 // settings/account
 $sub-active-color:         $beware-orange;
 $action-destructive-color: $beware-orange;
 $sub-active-shadow-color:  rgba(246, 116, 0, 0.5);
-$payment-submit-shadow:    5px 5px 5px $default-shadow-color;
+$payment-submit-shadow:    5px 5px 5px $shadow-color;
 $sub-active-shadow:        0 0 5px $sub-active-shadow-color;
-$coupon-focus-shadow:      $default-focus-shadow;
-$sub-focus-shadow:         $default-focus-shadow;
+$coupon-focus-shadow:      $focus-shadow;
+$sub-focus-shadow:         $focus-shadow;
 
 // summary
 $reviews-button-color: $shade-black;
 $review-stats-color:   $shade-black;
 $summary-h2-color:     $shade-black;
 $summary-h3-color:     $iron-grey;
-$review-stats-shadow:  $default-shadow;
-$summary-shadow:       $default-shadow;
+$review-stats-shadow:  $shadow;
+$summary-shadow:       $shadow;

@@ -1,17 +1,3 @@
-// characters
-@mixin symbol-background-color($type) {
-    background-color: symbol-color($type) !important;
-}
-
-@mixin symbol-background($type) {
-    @include symbol-background-color($type);
-    background-image: none !important;
-}
-
-@mixin symbol-foreground($type) {
-    color: symbol-color($type) !important;
-}
-
 // lattice
 // TODO: maybe convert mixins to placeholders, if possible
 @mixin lattice-percent-text($p) {
@@ -79,10 +65,60 @@
 
 @mixin sheet($zindex, $bgcolor: $shade-black, $img: none) {
     background-color: $bgcolor !important;
-    box-shadow: $default-shadow-v !important;
+    box-shadow: $shadow-v !important;
     z-index: $zindex !important;
 
     @if ($img != true) {
         background-image: $img !important;
+    }
+}
+
+@mixin character($type, $inverted: false, $img: false) {
+    @if $inverted {
+        background-color: $character-text-color !important;
+        color: character-color($type) !important;
+    } @else {
+        background-color: character-color($type) !important;
+        color: $character-text-color !important;
+    }
+
+    @if $img == false {
+        background-image: none !important;
+    }
+
+    //li, time, span, a, i {
+    [lang="ja"], [lang="ja"] i, li, .japanese-font-styling-correction {
+        background-color: transparent !important;
+
+        @if $inverted {
+            color: character-color($type) !important;
+        } @else {
+            color: $character-text-color !important;
+        }
+    }
+}
+
+@mixin dropdown-menu($type) {
+    .open.#{$type} {
+        .dropdown-menu,
+        .dropdown-toggle {
+            @extend %#{$type};
+        }
+
+        .dropdown-menu::before,
+        .dropdown-menu::after {
+            border-bottom: 9px solid character-color($type) !important;
+            color: character-color($type) !important;
+        }
+
+        .dropdown-toggle:hover span {
+            border-color: $navbar-color !important;
+        }
+    }
+
+    .#{$type} {
+        .dropdown-toggle:hover span {
+            border-color: character-color($type) !important;
+        }
     }
 }

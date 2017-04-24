@@ -1,17 +1,18 @@
 .api {
+    section {
+        @extend %section;
+    }
+
+    h3 {
+        font-weight: bold !important;
+    }
+
     pre {
-        @extend %subsection;
+        background-color: $charcoal-grey !important;
     }
 
     code {
-        background-color: transparent !important;
-    }
-
-    [id$=list] {
-        background-color: transparent !important;
-
-        h2 {
-            background-color: inherit !important;
-        }
+        background-color: $charcoal-grey !important;
+        border: none !important;
     }
 }

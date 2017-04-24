@@ -1,16 +1,6 @@
-[id^=note-] form fieldset {
-    @extend %textfield;
-}
-
 .note-meaning,
 .note-reading {
     fieldset {
-        background-color: $background-color !important;
-        border-radius: 5px !important;
-        box-shadow: $note-shadow !important;
-
-        button {
-            background-color: transparent !important;
-        }
+        background-color: transparent !important;
     }
 }

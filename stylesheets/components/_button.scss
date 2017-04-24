@@ -1,12 +1,18 @@
 button, .btn {
-    @extend %input-element;
+    @extend %button;
 }
 
 .btn-danger {
     background-color: $danger-red !important;
+    color: $inverted-text-color !important;
 }
 
 .audio-btn {
     background-color: transparent !important;
     border: none !important;
+    box-shadow: none !important;
+
+    &:hover, &:focus {
+        box-shadow: none !important;
+    }
 }

@@ -38,9 +38,9 @@
     }
 }
 
-@each $type in radical, kanji, vocabulary {
+@each $type in $character-types {
     [class*=#{$type}] .progress > .bar {
-        @extend %#{$type}-background-color;
+        background-color: character-color($type) !important;
     }
 }
 

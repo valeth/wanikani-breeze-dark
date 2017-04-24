@@ -32,18 +32,15 @@
         // scss-lint:disable NestingDepth
         .popover-content {
             li:nth-child(1) {
-                @extend %radical-background;
-                @extend %radical-foreground;
+                @extend %radical;
             }
 
             li:nth-child(2) {
-                @extend %kanji-background;
-                @extend %kanji-foreground;
+                @extend %kanji;
             }
 
             li:nth-child(3) {
-                @extend %vocabulary-background;
-                @extend %vocabulary-foreground;
+                @extend %vocabulary;
             }
         }
     }

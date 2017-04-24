@@ -1,46 +1,5 @@
-REVIEW_CHAR_BG: |-
-  #character {
-      background-color: #232629 !important;
-  }
-
-  #main-info {
-      background-color: #232629 !important;
-  }
-
-  #meaning,
-  #lessons #character {
-      color: #fcfcfc !important;
-  }
-
-  #main-info.vocabulary #character,
-  #character.vocabulary span {
-      color: /*[[VOCAB_COLOR]]*/ !important
-  }
-
-  #main-info.kanji #character,
-  #character.kanji span {
-      color: /*[[KANJI_COLOR]]*/ !important
-  }
-
-  #main-info.radical #character,
-  #main-info.radical #character i,
-  #character.radical span {
-      color: /*[[RADICALS_COLOR]]*/ !important
-  }
-
-  #header-buttons li a,
-  #header-buttons li i,
-  #stats li,
-  #stats li span,
-  #stats i,
-  #stats span,
-  #summary-button i {
-      background-color: transparent !important;
-      color: #fcfcfc !important;
-  }
-
 RADICALS_COLOR:    '#3daee9'
 KANJI_COLOR:       '#fdbc4b'
 VOCAB_COLOR:       '#2ecc71'
-REVIEW_READING_BG: 'transparent'
-REVIEW_MEANING_BG: 'transparent'
+REVIEW_READING_BG: '#31363b'
+REVIEW_MEANING_BG: '#4d4d4d'

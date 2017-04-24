@@ -1,0 +1,60 @@
+[class|=account-subscription],
+[class|=account-billing] {
+    @extend %list;
+}
+
+// scss-lint:disable QualifyingElement
+.account-subscription .account-subscription-plan,
+#account-subscription-coupon-form #coupon,
+.account-subscription-payment-processor-info,
+.account-subscription form .control-group input[type="text"] {
+    @extend %section;
+}
+
+.account #user_lesson_batch_size {
+    background-color: $button-background-color !important;
+    border-color: $button-border-color !important;
+}
+
+.account-subscription {
+    .account-subscription-plan {
+        @extend %section;
+
+        [type="button"] {
+            border-radius: 0 0 5px 5px !important;
+        }
+    }
+
+    .account-subscription-plan-active {
+        border-color: $sub-active-color !important;
+        box-shadow: $sub-active-shadow !important;
+
+        [type="button"] {
+            background: $sub-active-color !important;
+        }
+    }
+
+    form .control-group [type="text"]:focus {
+        border: none !important;
+        box-shadow: $sub-focus-shadow !important;
+    }
+}
+
+.account-subscription-payment-submit {
+    button {
+        background-color: $action-destructive-color !important;
+        border-radius: 5px !important;
+        box-shadow: $payment-submit-shadow;
+    }
+
+    [type=submit]:disabled {
+        background-color: $sub-active-color !important;
+        border-radius: 5px !important;
+        box-shadow: $sub-active-shadow;
+    }
+}
+
+#account-subscription-coupon-form #coupon:focus {
+    border: none !important;
+    box-shadow: $coupon-focus-shadow !important;
+}

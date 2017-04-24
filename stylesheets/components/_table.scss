@@ -1,14 +1,14 @@
 table {
-    background-color: transparent !important;
+    background-color: inherit !important;
     border-collapse: separate !important;
 
-    tbody > tr {
-        background-color: transparent !important;
+    tr {
+        background-color: inherit !important;
         border: 5px solid transparent !important;
         border-radius: 5px !important;
     }
 
     tbody > tr:hover {
-        background-color: $list-hover-color !important;
+        filter: brightness(0.8) !important;
     }
 }

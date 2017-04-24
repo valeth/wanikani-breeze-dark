@@ -1,3 +1,21 @@
 input {
-    @extend %input-element;
+    @extend %text-input-element;
+}
+
+#user_password {
+    &:focus {
+        border: {
+            left: 2px solid $danger-red !important;
+            right: 2px solid $danger-red !important;
+        }
+    }
+}
+
+#user_current_password {
+    &:focus {
+        border: {
+            left: 2px solid $beware-orange !important;
+            right: 2px solid $beware-orange !important;
+        }
+    }
 }

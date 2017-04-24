@@ -19,7 +19,7 @@
 
     @each $type in radical, kanji, vocabulary {
         [id|="#{$type}"] {
-            @extend %#{$type}-background;
+            @extend %#{$type};
         }
     }
 }

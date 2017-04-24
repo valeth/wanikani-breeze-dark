@@ -2,13 +2,6 @@
     &.in {
         box-shadow: $searchbar-in-shadow !important;
     }
-
-    #query {
-        background-color: $search-query-color !important;
-        background-image: none !important;
-        border: 0 !important;
-        box-shadow: $search-query-shadow !important;
-    }
 }
 
 .search-list {
