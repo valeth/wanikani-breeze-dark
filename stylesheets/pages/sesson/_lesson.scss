@@ -1,5 +1,6 @@
 // Lesson Layout:
 //
+//    #stats
 //    #main-info
 //      #character
 //      #meaning
@@ -77,6 +78,11 @@
 // lesson batch list
 #batch-items {
     position: relative !important;
+
+    // quiz start button
+    [data-index="quiz"] > span {
+        @extend %button;
+    }
 }
 
 // icons for batch list, breakdown and examples
@@ -87,54 +93,23 @@
     }
 }
 
-[id*="ready-continue"] {
-    background-color: $lesson-color !important;
-
-    @each $type in $character-types {
-        [id$=#{$type}] {
-            // FIXME: move out of loop
-            @extend %no-background-color;
-
-            span {
-                @include character($type);
-            }
-
-            // FIXME: move out of loop
-            h2 {
-                @extend %no-background-color;
-
-                color: $text-color !important;
-            }
-
-        }
-    }
-}
-
-// quiz start button
-[data-index="quiz"] > span {
-    @extend %button;
-}
-
 // continue screen after quiz
 #screen-lesson-ready {
     @extend %main-background;
 
     z-index: 110 !important;
-
-    .btn-set {
-        li {
-            @extend %button;
-        }
-    }
 }
 
+// quiz ready screen after lesson
 #screen-quiz-ready {
     @extend %main-background;
 
     z-index: 110 !important;
 }
 
-// quiz ready buttons
-// [id^="quiz"] {
-//     @extend %button;
-// }
+// buttons on lesson/quiz ready screen
+.btn-set {
+    li {
+        @extend %button;
+    }
+}
