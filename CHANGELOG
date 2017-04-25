@@ -1,3 +1,10 @@
+2017-04-25 | Add support for override script
+2017-04-25 | Give some character items a more "iconic" look
+2017-04-25 | Make sure "dangerous" buttons are marked
+2017-04-25 | Make background for progress bar darker
+2017-04-25 | Add darker header to item lists and forums on dashboard and in review/lesson summary
+2017-04-25 | Change button and input field shadows and animations
+2017-04-24 | Fix styling for textarea
 2017-04-09 | Fix coloring for user synonym input
 2017-04-09 | Adjust spacing and coloring for Ultimate Timeline graph
 2017-04-09 | Fix position for batch items in lessons (bottom list)
