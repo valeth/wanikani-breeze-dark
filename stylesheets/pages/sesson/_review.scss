@@ -2,43 +2,52 @@
     @each $item in radical, kanji, vocabulary {
         // header item background and foreground
         #character.#{$item} {
-            @extend %#{$item}-inverted;
+            @include character($item, $inverted: true);
         }
 
         #last-items .#{$item} [lang="ja"]:first-child {
-            @extend %#{$item};
+            @include character($item);
         }
 
         #related-items {
             a > [class^=#{$item}] {
-                @extend %#{$item};
-                @extend %icon;
+                @include character($item);
             }
         }
     }
 
     // session header
     #character {
-        @include sheet(10)
+        @extend %no-background-image;
+        @include sheet(10);
+
+        * {
+            @extend %inherited-color;
+        }
+    }
+}
+
+#related-items {
+    span {
+        @extend %icon;
     }
 }
 
 // question type, reading or meaning
 #question-type {
+    @extend %borderless;
     @include sheet(9);
 
-    border: none !important;
     display: flex !important;
     height: 82px !important;
     justify-content: center !important;
-    z-index: 9 !important;
 
     &.reading {
-        background-color: $reading-color !important;
+        @extend %reading;
     }
 
     &.meaning {
-        background-color: $meaning-color !important;
+        @extend %meaning;
     }
 }
 
@@ -65,17 +74,18 @@
     }
 
     input {
-        background-color: $textfield-color !important;
-        border: none !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
+        @extend %borderless;
+        @extend %shadowless;
 
+        background-color: $textfield-color !important;
+        border-radius: 0 !important;
     }
 
     button {
-        background-color: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
+        @extend %no-background-color;
+        @extend %borderless;
+        @extend %shadowless;
+
         height: 2.3em !important;
     }
 }
@@ -116,14 +126,16 @@
 
     // options
     li > span {
-        background-color: transparent !important;
-        box-shadow: none !important;
+        @extend %no-background-color;
+        @extend %shadowless;
+
         z-index: 7 !important;
 
         // list item hover overlay
         &:hover::before {
+            @extend %shadowless;
+
             background-color: $charcoal-grey !important;
-            box-shadow: none !important;
             color: $text-color !important;
         }
     }
@@ -160,7 +172,7 @@
 
 // show more button
 #all-info {
-    background-color: transparent !important;
+    @extend %no-background-color;
 }
 
 #item-info {
@@ -187,8 +199,9 @@
         border-right-color: $separator-color !important;
 
         &:hover {
+            @extend %shadowless;
+
             background-color: $section-color !important;
-            box-shadow: none !important;
             filter: brightness(0.8) !important;
         }
     }
@@ -197,7 +210,8 @@
 // srs indicators
 .srs-up,
 .srs-down {
-    background-color: transparent !important;
+    @extend %no-background-color;
+
     color: $charcoal-grey !important;
 }
 

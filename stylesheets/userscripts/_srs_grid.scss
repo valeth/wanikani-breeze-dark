@@ -3,20 +3,20 @@
     @extend %section;
 
     .ui-widget-header {
-        border: none !important;
+        @extend %borderless;
 
         button,
         .ui-button-icon {
-            background-color: transparent !important;
-            border: none !important;
-            box-shadow: none !important;
+            @extend %no-background-color;
+            @extend %borderless;
+            @extend %shadowless;
         }
     }
 
     .ui-dialog-buttonpane,
     .ui-dialog-titlebar,
     .ui-dialog-content tr:hover {
-        background-color: transparent !important;
+        @extend %no-background-color;
     }
 
     .ui-dialog-content {

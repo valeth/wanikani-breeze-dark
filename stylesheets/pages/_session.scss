@@ -3,23 +3,22 @@
 @import 'sesson/review';
 
 // shared between lesson and sesson
-#loading,
-#loading-screen {
+[id^="loading"] {
     background-color: $background-color !important;
 }
 
-#stats {
-    z-index: 100 !important;
-}
-
-#summary-button i,
-#stats i,
-#stats span {
-    background-color: transparent !important;
+#stats,
+#summary-button,
+#header-buttons {
     color: $text-color !important;
+    z-index: 100 !important;
+
+    * {
+        @extend %no-background-color;
+        @extend %inherited-color;
+    }
 }
 
 #hotkeys {
-    background-color: $charcoal-grey !important;
-    border-radius: 5px !important;
+    @extend %button;
 }

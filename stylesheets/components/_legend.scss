@@ -1,36 +1,38 @@
 .legend {
     @extend %section;
 
+    @each $range in ('0-20', '21-40', '41-60', '61-80', '81-100') {
+        .percentage-#{$range} {
+            @include percent($range, $text-only: false);
+        }
+    }
+
+    @each $level in (apprentice, guru, master, enlighten, burned) {
+        .#{$level}-lattice {
+            @include srs-level($level);
+        }
+    }
+
     ul {
         span {
-            box-shadow: $lattice-legend-shadow !important;
-            color: $background-color !important;
+            @extend %shadowless;
+
             margin-left: 1vh;
             margin-right: 1vh;
         }
 
-        .locked,
-        .burned-lattice {
-            background-color: $background-color !important;
-            color: $text-color !important;
-        }
-
         .locked {
-            background-color: transparent !important;
-            box-shadow: none !important;
-            color: $lattice-locked-color !important;
+            @extend %locked;
+            @extend %no-background-color;
         }
     }
 
-    @each $p in '0-20', '21-40', '41-60', '61-80', '81-100' {
-        .percentage-#{$p} {
-            @include lattice-percent-background($p);
-        }
+    [class*="percentage"],
+    [class*="lattice"] {
+        filter: brightness(0.8) !important;
     }
 
-    @each $l in apprentice, guru, master, enlighten {
-        .#{$l}-lattice {
-            @include lattice-level-background($l);
-        }
+    [class*="lattice"] {
+        @extend %no-background-color;
     }
 }

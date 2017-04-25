@@ -1,17 +1,20 @@
 .dropdown-menu {
+    @extend %borderless;
+
     background-color: $dropdown-color !important;
-    border: none !important;
     border-radius: 5px !important;
     box-shadow: $dropdown-shadow !important;
 
     .nav-header,
     li a {
         color: $text-color !important;
+
+        &:hover,
+        &:focus {
+            background-color: $dropdown-hover-color !important;
+        }
     }
 
-    li a:hover {
-        background-color: $dropdown-hover-color !important;
-    }
 }
 
 .dropdown-menu::before,

@@ -12,6 +12,8 @@ SCSSLint::RakeTask.new
 CLEAN.include('tmp', '.sass_cache')
 CLOBBER.include('out.css')
 
+configfile = ENV['CONFIGFILE'] || 'default.yml'
+
 task default: :build
 
 task test: [:rubocop, :scss_lint]
@@ -45,9 +47,10 @@ end
 
 desc 'Replace Stylish option keys with default values'
 task replace: :build do
-    configfile = 'defaults.yml'
     abort("cannot find #{configfile}") unless File.exist?(configfile)
     config = YAML.safe_load(open(configfile))
+
+    puts "Building CSS file with #{configfile}"
 
     open('out.css') do |cssfile|
         tmp = cssfile.read

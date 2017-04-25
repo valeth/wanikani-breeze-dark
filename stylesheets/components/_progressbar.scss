@@ -1,36 +1,35 @@
 .progress {
+    @extend %no-background-image;
+
     align-items: center !important;
-    background-color: $background-color !important;
-    background-image: none !important;
+    background-color: darken($shade-black, 2%) !important;
     border-radius: 10px !important;
-    box-shadow: $progressbar-shadow inset !important;
+    box-shadow: $shadow inset !important;
     display: flex !important;
 
     .bar {
-        background-color: $progressbar-background-color !important;
-        background-image: none !important;
+        @extend %no-background-image;
+
+        background-color: $icon-blue !important;
         border-radius: 10px !important;
-        box-shadow: $progressbar-shadow !important;
+        box-shadow: $shadow !important;
         height: 60% !important;
-        margin-left: 5px !important;
-        margin-right: 5px !important;
+        margin: 5px !important;
 
         span {
-            background-color: $progressbar-indicator-color !important;
+            background-color: darken($iron-grey, 2%) !important;
             border-radius: 5px !important;
-            box-shadow: $progressbar-shadow !important;
+            box-shadow: $shadow !important;
             color: $text-color !important;
-            opacity: 0.8 !important;
-        }
 
-        span::after {
-            border-top-color: $progressbar-indicator-color !important;
-            opacity: inherit !important;
+            &::after {
+                border-top-color: darken($iron-grey, 2%) !important;
+            }
         }
 
         .threshold {
-            box-shadow: $progressbar-threshold-shadow !important;
-            color: $progressbar-threshold-color !important;
+            box-shadow: 1px 0 0 $iron-grey !important;
+            color: $iron-grey !important;
             height: 60% !important;
             line-height: 110% !important;
             opacity: 0.50 !important;
@@ -40,7 +39,7 @@
 
 @each $type in $character-types {
     [class*=#{$type}] .progress > .bar {
-        background-color: character-color($type) !important;
+        @include character($type);
     }
 }
 

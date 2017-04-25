@@ -5,13 +5,13 @@
 }
 
 .search-list {
-    background-color: transparent !important;
-    border: none !important;
+    @extend %no-background-color;
+    @extend %borderless;
 
     .btn {
-        background-color: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
+        @extend %no-background-color;
+        @extend %borderless;
+        @extend %shadowless;
     }
 
     .multi-character-grid {
@@ -22,7 +22,7 @@
         }
 
         .character-item:last-child {
-            border: none !important;
+            @extend %borderless;
         }
     }
 }

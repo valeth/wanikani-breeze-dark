@@ -1,9 +1,11 @@
 @function character-color($type) {
-    @if $type == vocabulary {
-        @return $vocabulary-color;
-    } @else if $type == kanji {
-        @return $kanji-color;
-    } @else {
-        @return $radical-color;
-    }
+    @return map-get($character-colors, str-slice($type, 1, 3));
+}
+
+@function srs-color($level) {
+    @return map-get($srs-colors, str-slice($level, 1, 3));
+}
+
+@function percent-color($range) {
+    @return map-get($percent-colors, $range);
 }

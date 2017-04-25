@@ -4,15 +4,9 @@ section[id|=level] {
 
     padding: 10px;
 
-    h2, header {
-        background-color: transparent !important;
-    }
+    header {
+        @extend %no-background-color;
 
-    h2 {
-        color: $text-color !important;
-    }
-
-    [class*=character-grid] {
-        margin: 5px;
+        margin-bottom: 5px;
     }
 }

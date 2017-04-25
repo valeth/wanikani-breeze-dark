@@ -1,9 +1,14 @@
+#enlarge-hover,
 [class$="icon"] {
     @extend %icon;
 }
 
 @each $item in radical, kanji, vocabulary {
     .#{$item}-icon {
-        @extend %#{$item};
+        @include character($item);
     }
+}
+
+.japanese-font-styling-correction {
+    @extend %inherited-color;
 }

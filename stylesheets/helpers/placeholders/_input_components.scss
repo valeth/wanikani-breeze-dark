@@ -1,0 +1,50 @@
+%input-element {
+    border-radius: 5px !important;
+    color: $text-color !important;
+
+    &:focus {
+        outline: none !important;
+    }
+}
+
+%text-input-element {
+    @extend %input-element;
+    @extend %borderless;
+
+    background-color: darken($input-color, 2%) !important;
+    box-shadow: $shadow inset !important;
+    transition: box-shadow linear 0.2s !important;
+
+    &:focus {
+        box-shadow: 1px 1px 1px darken($shadow-color, 10%) inset !important;
+    }
+}
+
+%click-input-element {
+    @extend %input-element;
+    @extend %borderless;
+
+    background-color: darken($input-color, 2%) !important;
+    box-shadow: $shadow !important;
+    transition: box-shadow linear 0.2s, border linear 0.2s !important;
+
+    &:hover {
+        box-shadow: 1px 1px 1px darken($shadow-color, 10%) !important;
+    }
+
+    &:focus {
+        box-shadow: $focus-shadow !important;
+    }
+}
+
+%button {
+    @extend %click-input-element;
+    @extend %no-background-image;
+}
+
+%textarea {
+    @extend %text-input-element;
+
+    color: $text-color !important;
+    -webkit-text-fill-color: $text-color !important;
+}

@@ -1,0 +1,87 @@
+%section {
+    @extend %borderless;
+
+    background-color: $section-color !important;
+    border-radius: 5px !important;
+    box-shadow: $section-shadow !important;
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+}
+
+%popover {
+    background-color: $popover-background-color !important;
+    border-color: $popover-border-color !important;
+    border-radius: 5px !important;
+    box-shadow: $popover-shadow !important;
+}
+
+%popup {
+    @extend %borderless;
+
+    background-color: $charcoal-grey !important;
+    border-radius: 5px !important;
+    box-shadow: $shadow !important;
+}
+
+%list {
+    h3 {
+        @extend %no-background-image;
+
+        align-items: center !important;
+        background-color: darken($section-color, 3%) !important;
+        box-shadow: $shadow-v !important;
+        color: $text-color !important;
+        display: flex !important;
+        margin-bottom: 3px !important;
+        max-height: 60px !important;
+        padding-bottom: 3px !important;
+        padding-top: 3px !important;
+        text-align: left !important;
+
+        .heading-symbol {
+            @extend %borderless;
+            @extend %shadowless;
+
+            display: inline !important;
+            margin-left: 0 !important;
+            margin-right: 5px !important;
+        }
+
+        i::before {
+            color: $text-color !important;
+        }
+    }
+
+    td {
+        border-bottom: 1px solid $separator-color !important;
+    }
+
+    tr {
+        @extend %no-background-image;
+
+        background-color: $list-background-color !important;
+
+        &:last-child td {
+            @extend %borderless;
+        }
+    }
+
+    th, td {
+        @extend %no-background-color;
+    }
+
+    hr {
+        display: none;
+        // border-color: $separator-color !important;
+        // color: $separator-color !important;
+    }
+
+}
+
+%icon {
+    @extend %no-background-image;
+    @extend %borderless;
+
+    border-radius: 5px !important;
+    box-shadow: $shadow !important;
+}

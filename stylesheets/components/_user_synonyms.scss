@@ -1,5 +1,6 @@
 .user-synonyms {
-    background-color: transparent !important;
+    @extend %no-background-color;
+
     margin-left: 5px;
 
     li, i {
@@ -7,27 +8,21 @@
     }
 
     li::after {
-        background-color: transparent !important;
+        @extend %no-background-color;
     }
 }
 
 .user-synonyms-add-btn::before {
-    background-color: transparent !important;
+    @extend %no-background-color;
 }
 
 .user-synonyms-add-form {
     input {
-        background-color: transparent !important;
-        border: none !important;
-        border-bottom: 1px solid $user-synonym-color !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
+        padding-left: 5px !important;
     }
 
     button {
-        @extend %button;
-
-        height: 2em !important;
-        min-width: 2em !important;
+        height: 1.8em !important;
+        min-width: 1.8em !important;
     }
 }

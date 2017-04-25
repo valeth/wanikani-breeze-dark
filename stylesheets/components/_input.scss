@@ -2,6 +2,10 @@ input {
     @extend %text-input-element;
 }
 
+input[type="checkbox"] {
+    @extend %shadowless;
+}
+
 #user_password {
     &:focus {
         border: {

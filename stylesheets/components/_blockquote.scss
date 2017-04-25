@@ -1,3 +1,3 @@
 blockquote {
-    background-color: transparent !important;
+    @extend %no-background-color;
 }

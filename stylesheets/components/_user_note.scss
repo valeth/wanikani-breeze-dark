@@ -1,6 +1,6 @@
 .note-meaning,
 .note-reading {
     fieldset {
-        background-color: transparent !important;
+        @extend %no-background-color;
     }
 }

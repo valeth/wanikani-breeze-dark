@@ -1,37 +1,38 @@
-@each $item in radical, kanji, vocabulary {
-    [id$="summary"] {
+[id*="summary"] {
+    @each $item in radical, kanji, vocabulary {
         // 3 lesson summary sections
         [id^=#{$item}] {
             @extend %section;
 
             // header for lesson summary
             h2 {
-                @extend %#{$item};
+                color: character-color($item) !important;
             }
 
+            // always show the box on the lesson summary
             div {
                 display: block !important;
             }
         }
 
         ul > .#{$item} {
-            @extend %#{$item};
+            @include character($item);
         }
     }
-}
 
-[id$="summary"] {
+    // back button and start session
     nav {
-        border: none !important;
+        @extend %borderless;
     }
 
     h2 {
+        // @extend %clear-background;
+        background-color: darken($section-color, 3%) !important;
         border-radius: 5px 5px 0 0 !important;
         box-shadow: $shadow-v !important;
-        color: $summary-h2-color !important;
 
         strong {
-            color: $summary-h2-color !important;
+            color: inherit !important;
         }
     }
 
@@ -44,27 +45,31 @@
         }
     }
 
-    ul > li {
+    li {
         @extend %icon;
-
         margin-left: 5px !important;
         margin-right: 5px !important;
+
+        * {
+            @extend %inherited-color;
+        }
     }
 
     #correct, #incorrect {
         @extend %section;
 
+        // hover text for character items
         .hover li {
             color: $text-color !important;
         }
     }
 
     #correct h2 {
-        background-color: $correct-color !important;
+        color: $correct-color !important;
     }
 
     #incorrect h2 {
-        background-color: $incorrect-color !important;
+        color: $incorrect-color !important;
     }
 }
 

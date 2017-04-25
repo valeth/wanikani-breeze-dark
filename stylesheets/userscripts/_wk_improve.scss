@@ -9,40 +9,44 @@ $wki-qtip-color: $icon-blue;
     #wki_mimic_button,
     .wki_item_wrapper,
     .wki_button_item_label {
-        background-color: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
+        @extend %no-background-color;
+        @extend %borderless;
+        @extend %shadowless;
     }
 }
 
 [id|=qtip] {
+    @extend %borderless;
+
     background-color: $wki-color !important;
-    border: none !important;
 }
 
 [id|=qtip] .qtip-titlebar,
 [id|=qtip] .qtip-title {
+    @extend %borderless;
+
     background-color: $wki-qtip-color !important;
-    border: none !important;
 }
 
 
 #wki_settings_cancel,
 #wki_settings_save {
+    @extend %no-background-image;
+
     background-color: $wki-color !important;
-    background-image: none !important;
 }
 
 #wki_settings_button_label_bgcolor,
 #wki_settings_button_label_textcolor,
 #wki_settings_timer_show_next_item {
+    @extend %no-background-image;
+
     background-color: $wki-color !important;
-    background-image: none !important;
 }
 
 #wki_srs_popup_wrapper .wki_srs_popup_icon,
 #wki_srs_popup_wrapper #wki_srs_popup_message {
-    background-color: transparent !important;
+    @extend %no-background-color;
 }
 
 [id|=qtip] .qtip-tip,

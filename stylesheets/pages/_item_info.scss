@@ -13,12 +13,11 @@
         border-bottom: 1px solid $iron-grey !important;
     }
 
-
-    h2, [id|=radical], .additional-info {
-        background-color: transparent !important;
+    h2, .additional-info {
+        @extend %no-background-color;
     }
 
-    h2, [id|=radical] a {
+    h2 {
         color: $text-color !important;
     }
 }

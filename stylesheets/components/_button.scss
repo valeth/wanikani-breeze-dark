@@ -8,11 +8,10 @@ button, .btn {
 }
 
 .audio-btn {
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+    @extend %no-background-color;
+    @extend %shadowless;
 
     &:hover, &:focus {
-        box-shadow: none !important;
+        @extend %shadowless;
     }
 }

@@ -13,6 +13,7 @@
 .explanation-item-vocabulary,
 .explanation-item-lessons-reviews,
 .explanation-item-srs {
-    background-color: transparent !important;
+    @extend %no-background-color;
+
     color: $text-color !important;
 }

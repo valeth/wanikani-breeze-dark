@@ -1,25 +1,40 @@
+.character-item * {
+    @extend %inherited-color;
+}
+
 [class*=character-grid] {
-    align-items: stretch;
-    background-color: $grid-background-color !important;
-    border-radius: 5px;
+    background-color: darken($section-color, 2%) !important;
+    border-radius: 5px !important;
     box-shadow: $grid-inset-shadow !important;
-    display: flex;
-    flex-wrap: wrap;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    padding: 5px !important;
 
     > li {
-        border: none !important;
-        border-radius: 5px;
+        @extend %no-background-image;
+        @extend %borderless;
+
+        border-radius: 5px !important;
         box-shadow: $grid-shadow !important;
-        margin: 5px;
+        margin: 5px !important;
 
         > a {
-            background-color: transparent !important;
+            @extend %no-background-color;
+        }
+
+        &.burned {
+            filter: brightness(0.50) !important;
+        }
+
+        &.locked {
+            filter: brightness(0.70) !important;
         }
     }
 
     @each $type in radical, kanji, vocabulary {
         [id|="#{$type}"] {
-            @extend %#{$type};
+            @include character($type);
         }
     }
 }

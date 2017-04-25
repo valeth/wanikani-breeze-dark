@@ -2,25 +2,26 @@
     z-index: 1030 !important;
 
     .navbar-inner {
+        @extend %borderless;
         @include sheet(auto, $navbar-color);
-        border: none !important;
     }
 
     .title span,
     .additional span:first-child {
-        box-shadow: none !important;
+        @extend %shadowless;
     }
 
     .dropdown {
-        background: transparent !important;
+        @extend %no-background-color;
 
         a, i, span {
             color: $text-color !important;
         }
 
         span {
+            @extend %shadowless;
+
             border-color: $background-color !important;
-            box-shadow: none !important;
         }
     }
 
@@ -45,8 +46,9 @@
 
             // scss-lint:disable NestingDepth
             span {
+                @extend %shadowless;
+
                 border-color: $background-color !important;
-                box-shadow: none !important;
             }
         }
     }
@@ -59,8 +61,9 @@
     .lessons,
     .reviews {
         span {
+            @extend %no-background-image;
+
             background-color: $navbar-color !important;
-            background-image: none !important;
             border-color: $background-color !important;
         }
     }

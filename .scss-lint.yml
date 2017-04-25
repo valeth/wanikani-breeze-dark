@@ -12,6 +12,9 @@ linters:
   SelectorDepth:
     max_depth: 4
 
+  NestingDepth:
+    max_depth: 4
+
   # because .5 looks ugly
   LeadingZero:
     enabled: false
@@ -27,4 +30,7 @@ linters:
     enabled: false
 
   SelectorFormat:
+    enabled: false
+
+  QualifyingElement:
     enabled: false

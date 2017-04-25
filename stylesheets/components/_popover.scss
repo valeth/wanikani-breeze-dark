@@ -2,14 +2,17 @@
     @extend %popover;
 
     .popover-title {
-        background-color: transparent !important;
-        box-shadow: none !important;
+        @extend %no-background-color;
+        @extend %shadowless;
+
         opacity: inherit;
     }
 
     .popover-content {
         li {
-            border: none !important;
+            @extend %no-background-image;
+            @extend %borderless;
+
             border-radius: 5px !important;
             box-shadow: $popover-shadow !important;
             margin-bottom: 3px !important;
@@ -23,24 +26,20 @@
     }
 
     .bar {
+        @extend %no-background-image;
+
         background-color: $popover-progress-color !important;
-        background-image: none !important;
         line-height: 100% !important;
     }
 
+    // scss-lint:disable NestingDepth
     &.srs {
-        // scss-lint:disable NestingDepth
         .popover-content {
-            li:nth-child(1) {
-                @extend %radical;
-            }
+            @each $type in $character-types {
+                li:nth-child(#{index($character-types, $type)}) {
+                    @include character($type);
+                }
 
-            li:nth-child(2) {
-                @extend %kanji;
-            }
-
-            li:nth-child(3) {
-                @extend %vocabulary;
             }
         }
     }

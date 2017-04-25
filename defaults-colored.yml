@@ -1,31 +1,20 @@
 REVIEW_CHAR_BG: |-
-  #character.vocabulary {
+  #main-info.vocabulary, #character.vocabulary {
       background-color: /*[[VOCAB_COLOR]]*/ !important
   }
 
-  #character.kanji {
+  #main-info.kanji, #character.kanji {
       background-color: /*[[KANJI_COLOR]]*/ !important
   }
 
-  #character.radical {
+  #main-info.radical, #character.radical {
       background-color: /*[[RADICALS_COLOR]]*/ !important
   }
 
-  #meaning,
-  #main-info #character,
-  #character span {
+  #main-info.vocabulary #character, #main-info.kanji #character,
+  #main-info.radical #character, #main-info #meaning,
+  #character, #stats, #summary-button, #header-buttons {
       color: #232629 !important
-  }
-
-  #header-buttons li a,
-  #header-buttons li i,
-  #stats li,
-  #stats li span,
-  #stats i,
-  #stats span,
-  #summary-button i {
-      background-color: transparent !important;
-      color: #232629 !important;
   }
 
 RADICALS_COLOR:    '#3daee9'

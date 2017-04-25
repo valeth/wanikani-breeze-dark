@@ -1,94 +1,107 @@
-#lessons {
-    @each $item in radical, kanji, vocabulary {
-        // lesson header background and foreground color
-        #main-info.#{$item} {
-            @extend %#{$item}-inverted;
+@each $item in radical, kanji, vocabulary {
+    // lesson header background and foreground color
+    #main-info.#{$item} {
+        @include character($item, $inverted: true);
 
-            #character {
-                color: character-color($item) !important;
-            }
-        }
-
-        #supplement-info,
-        #batch-items {
-            [class^=#{$item}] {
-                @extend %#{$item};
-            }
+        #character {
+            color: character-color($item) !important;
         }
     }
 
+    #supplement-info,
+    #batch-items {
+        [class^=#{$item}] {
+            @include character($item);
+        }
+    }
+}
+
+#lessons {
     // lesson header
     header {
         @include sheet(11);
 
         position: relative !important;
     }
+}
 
-    #main-info {
-        box-shadow: none !important;
-    }
+#main-info {
+    @extend %shadowless;
+    @extend %no-background-image;
+}
 
-    // lesson navigation
-    #supplement-nav {
-        @include sheet(9);
+// lesson navigation
+#supplement-nav {
+    @include sheet(9);
 
-        background-color: $charcoal-grey !important;
+    background-color: $charcoal-grey !important;
 
-        li::before {
-            border-bottom-color: $lesson-color !important;
-            bottom: -50px !important;
-            color: $shade-black !important;
-        }
-    }
-
-    #next-btn:hover,
-    #prev-btn:hover {
-        background-color: $section-color !important;
-        border-radius: 5px !important;
-        filter: brightness(0.8) !important;
-    }
-
-    // lesson content
-    #supplement-info {
-        @extend %section;
-
-        margin-top: 30px !important;
-    }
-
-    // lesson batch list
-    #batch-items {
-        position: relative !important;
-    }
-
-    // icons for batch list, breakdown and examples
-    #supplement-info,
-    #batch-items {
-        li span {
-            @extend %icon;
-        }
+    li::before {
+        border-bottom-color: $lesson-color !important;
+        bottom: -50px !important;
+        color: $shade-black !important;
     }
 }
 
-#lesson-ready-continue,
-#quiz-ready-continue {
+#next-btn:hover,
+#prev-btn:hover {
+    background-color: $section-color !important;
+    border-radius: 5px !important;
+    filter: brightness(0.8) !important;
+}
+
+// lesson content
+#supplement-info {
+    @extend %section;
+
+    margin-top: 30px !important;
+
+    h2 {
+        border-bottom-color: $separator-color !important;
+    }
+}
+
+// lesson batch list
+#batch-items {
+    position: relative !important;
+}
+
+// icons for batch list, breakdown and examples
+#supplement-info,
+#batch-items {
+    li span {
+        @extend %icon;
+    }
+}
+
+[id*="ready-continue"] {
     background-color: $lesson-color !important;
 
-    @each $type in radical, kanji, vocabulary {
+    @each $type in $character-types {
         [id$=#{$type}] {
-            background-color: transparent !important;
+            // FIXME: move out of loop
+            @extend %no-background-color;
 
+            span {
+                @include character($type);
+            }
+
+            // FIXME: move out of loop
             h2 {
-                background-color: transparent !important;
+                @extend %no-background-color;
+
                 color: $text-color !important;
             }
 
-            span {
-                @extend %#{$type};
-            }
         }
     }
 }
 
-#screen-lesson-ready #lesson-ready-continue {
+// #screen-lesson-ready #lesson-ready-continue
+[id*="lesson-ready"] {
     background-color: $section-color !important;
+}
+
+[data-index="quiz"] > span {
+    @extend %button;
 }

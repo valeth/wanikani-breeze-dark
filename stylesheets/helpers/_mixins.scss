@@ -1,68 +1,3 @@
-// lattice
-// TODO: maybe convert mixins to placeholders, if possible
-@mixin lattice-percent-text($p) {
-    @if $p == '0-20' {
-        color: $lattice-0-20-color !important;
-        text-shadow: 1px 1px 2px $lattice-0-20-color !important;
-    } @else if $p == '21-40' {
-        color: $lattice-21-40-color !important;
-        text-shadow: 1px 1px 2px $lattice-21-40-color !important;
-    } @else if $p == '41-60' {
-        color: $lattice-41-60-color !important;
-        text-shadow: 1px 1px 2px $lattice-41-60-color !important;
-    } @else if $p == '61-81' {
-        color: $lattice-61-80-color !important;
-        text-shadow: 1px 1px 2px $lattice-61-80-color !important;
-    } @else {
-        color: $lattice-81-100-color !important;
-        text-shadow: 1px 1px 2px $lattice-81-100-color !important;
-    }
-}
-
-@mixin lattice-percent-background($p) {
-    @if $p == '0-20' {
-        background-color: $lattice-0-20-color !important;
-    } @else if $p == '21-40' {
-        background-color: $lattice-21-40-color !important;
-    } @else if $p == '41-60' {
-        background-color: $lattice-41-60-color !important;
-    } @else if $p == '61-81' {
-        background-color: $lattice-61-80-color !important;
-        text-shadow: 1px 1px 2px $lattice-61-80-color !important;
-    } @else {
-        background-color: $lattice-81-100-color !important;
-        text-shadow: 1px 1px 2px $lattice-81-100-color !important;
-    }
-}
-
-@mixin lattice-level-text($l) {
-    @if $l == 'apprentice' {
-        @extend %apprentice-text;
-    } @else if $l == 'guru' {
-        @extend %guru-text;
-    } @else if $l == 'master' {
-        @extend %master-text;
-    } @else if $l == 'enlighten' {
-        @extend %enlightened-text;
-    } @else {
-        @extend %burned-text;
-    }
-}
-
-@mixin lattice-level-background($l) {
-    @if $l == 'apprentice' {
-        @extend %apprentice-background;
-    } @else if $l == 'guru' {
-        @extend %guru-background;
-    } @else if $l == 'master' {
-        @extend %master-background;
-    } @else if $l == 'enlighten' {
-        @extend %enlightened-background;
-    } @else {
-        @extend %burned-text;
-    }
-}
-
 @mixin sheet($zindex, $bgcolor: $shade-black, $img: none) {
     background-color: $bgcolor !important;
     box-shadow: $shadow-v !important;
@@ -73,28 +8,27 @@
     }
 }
 
-@mixin character($type, $inverted: false, $img: false) {
-    @if $inverted {
-        background-color: $character-text-color !important;
-        color: character-color($type) !important;
+@mixin srs-level($level, $text-only: true) {
+    @if $text-only {
+        color: srs-color($level) !important;
     } @else {
-        background-color: character-color($type) !important;
-        color: $character-text-color !important;
+        background-color: srs-color($level) !important;
     }
+}
 
-    @if $img == false {
-        background-image: none !important;
+@mixin percent($range, $text-only: true) {
+    @if $text-only {
+        color: percent-color($range) !important;
+    } @else {
+        background-color: percent-color($range) !important;
     }
+}
 
-    //li, time, span, a, i {
-    [lang="ja"], [lang="ja"] i, li, .japanese-font-styling-correction {
-        background-color: transparent !important;
-
-        @if $inverted {
-            color: character-color($type) !important;
-        } @else {
-            color: $character-text-color !important;
-        }
+@mixin character($type, $inverted: false) {
+    @if $inverted {
+        @extend %#{$type}-inverted;
+    } @else {
+        @extend %#{$type};
     }
 }
 
@@ -102,7 +36,7 @@
     .open.#{$type} {
         .dropdown-menu,
         .dropdown-toggle {
-            @extend %#{$type};
+            @include character($type);
         }
 
         .dropdown-menu::before,

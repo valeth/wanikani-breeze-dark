@@ -1,5 +1,13 @@
 #WKO_button {
+    @extend %button;
+
     background-color: $danger-red !important;
-    border-radius: 5px !important;
     color: $inverted-text-color !important;
+}
+
+#answer-form fieldset.WKO_ignored {
+    input[type="text"]:disabled,
+    button {
+        background-color: $beware-orange !important;
+    }
 }

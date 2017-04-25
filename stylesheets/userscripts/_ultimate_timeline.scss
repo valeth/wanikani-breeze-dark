@@ -23,21 +23,15 @@ $timeline-shadow: $shadow;
         margin-right: 10px !important;
 
         #range_input {
-            border: none !important;
-            box-shadow: none !important;
+            @extend %borderless;
+            @extend %shadowless;
         }
     }
 
-    .rad {
-        fill: $radical-color !important;
-    }
-
-    .kan {
-        fill: $kanji-color !important;
-    }
-
-    .voc {
-        fill: $vocabulary-color !important;
+    @each $type in (rad, kan, voc) {
+        .#{$type} {
+            fill: character-color($type) !important;
+        }
     }
 }
 
@@ -71,11 +65,11 @@ $timeline-shadow: $shadow;
     padding: 25px !important;
 
     > h4 {
-        background-color: transparent !important;
+        @extend %no-background-color;
     }
 
     .buttons {
-        background-color: transparent !important;
+        @extend %no-background-color;
     }
 }
 
@@ -83,35 +77,44 @@ $timeline-shadow: $shadow;
 #graph-bar-info {
     @extend %popover;
 
+    .summary > div > div,
+    .detail li {
+        @extend %no-background-image;
+    }
+
     .tot {
-        background-color: transparent !important;
-        background-image: none !important;
+        @extend %clear-background;
     }
 
     .rad {
-        @extend %radical;
+        @include character('radical');
 
         border-radius: 5px 5px 0 0;
+
+        // workaround for radicals represented as images
+        img {
+            filter: brightness(0.1) !important;
+        }
     }
 
     .kan {
-        @extend %kanji;
+        @include character('kanji');
     }
 
     .voc {
-        @extend %vocabulary;
+        @include character('vocabulary');
 
         border-radius: 0 0 5px 5px;
     }
 
     .cur {
-        background-color: transparent !important;
-        background-image: none !important;
+        @extend %clear-background;
     }
 
     .bur {
+        @extend %no-background-image;
+
         background-color: $timeline-burned-color !important;
-        background-image: none !important;
         border-radius: 5px !important;
     }
 }

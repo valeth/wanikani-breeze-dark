@@ -3,17 +3,17 @@
 }
 
 .avatar {
-    background-color: $background-color !important;
-    box-shadow: $user-avatar-shadow inset !important;
+    @extend %main-background;
+
+    box-shadow: $shadow inset !important;
 
     img {
-        box-shadow: $user-avatar-shadow !important;
+        box-shadow: $shadow !important;
     }
 }
 
 .user-info {
     @include sheet(10, $user-info-background-color);
-    background-blend-mode: overlay;
 }
 
 .user-info::after {
@@ -21,17 +21,13 @@
 }
 
 .srs-levels li span {
-    background-color: transparent !important;
-    box-shadow: none !important;
+    @extend %no-background-color;
+    @extend %shadowless;
 }
 
 .knowledge-distribution {
     [class$=-progress] {
-        background-color: transparent !important;
-
-        .progress {
-            background-color: $user-progressbar-color !important;
-        }
+        @extend %no-background-color;
     }
 
     div > span {
@@ -40,25 +36,19 @@
 }
 
 .wall-of-shame {
-    background-color: transparent !important;
+    @extend %no-background-color;
 
     h3 > span {
         background-color: $user-wos-header-color !important;
         box-shadow: $wall-of-shame-shadow !important;
     }
 
-    li > span,
-    div > span {
+    li > span {
         color: $text-color !important;
     }
 
     [class$=-progress],
     [class^=worst-] {
-        background-color: transparent !important;
-
-        .progress {
-            background-color: $user-progressbar-color !important;
-        }
+        @extend %no-background-color;
     }
-
 }

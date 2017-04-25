@@ -1,73 +1,7 @@
-// radicals
-%radical, %radicals {
-    @include character('radical');
-}
+@import 'placeholders/characters';
+@import 'placeholders/input_components';
+@import 'placeholders/components';
 
-%radical-inverted, %radicals-inverted {
-    @include character('radical', $inverted: true);
-}
-
-// kanji
-%kanji {
-    @include character('kanji');
-}
-
-%kanji-inverted {
-    @include character('kanji', $inverted: true);
-}
-
-// vocabulary
-%vocabulary {
-    @include character('vocabulary');
-}
-
-%vocabulary-inverted {
-    @include character('vocabulary', $inverted: true);
-}
-
-// srs levels
-%burned-text {
-    color: $text-color !important;
-}
-
-%enlightened-text {
-    color: $enlightened-color !important;
-}
-
-%master-text {
-    color: $master-color !important;
-}
-
-%guru-text {
-    color: $guru-color !important;
-}
-
-%apprentice-text {
-    color: $apprentice-color !important;
-}
-
-%burned-background {
-    background-color: $burned-color !important;
-    color: $text-color !important;
-}
-
-%enlightened-background {
-    background-color: $enlightened-color !important;
-}
-
-%master-background {
-    background-color: $master-color !important;
-}
-
-%guru-background {
-    background-color: $guru-color !important;
-}
-
-%apprentice-background {
-    background-color: $apprentice-color !important;
-}
-
-// components
 %main-background {
     background-blend-mode: color-burn !important;
     background-color: $background-color !important;
@@ -75,104 +9,47 @@
     background-repeat: repeat !important;
 }
 
-
-%input-element {
-    border-radius: 5px !important;
+// force white background before applying the filter
+// makes the lattice page look more consistent
+%locked {
+    // scss-lint:disable ColorVariable
+    color: #fff !important;
+    filter: brightness(0.2) !important;
 }
 
-%text-input-element {
-    @extend %input-element;
-
-    background-color: darken($input-color, 2%) !important;
-    border: none !important;
-    box-shadow: $shadow inset !important;
-    transition: box-shadow linear 0.2s !important;
-
-    &:focus {
-        box-shadow: 1px 1px 1px darken($shadow-color, 10%) inset !important;
-        outline: none !important;
-    }
-}
-
-%click-input-element {
-    @extend %input-element;
-
-    background-color: darken($input-color, 2%) !important;
-    border: none !important;
-    box-shadow: $shadow !important;
-    transition: box-shadow linear 0.2s, border linear 0.2s !important;
-
-    &:hover {
-        box-shadow: 1px 1px 1px darken($shadow-color, 10%) !important;
-    }
-
-    &:focus {
-        box-shadow: $focus-shadow !important;
-        outline: none !important;
-    }
-}
-
-%button {
-    @extend %click-input-element;
-
-    background-image: none !important;
-}
-
-%textarea {
-    @extend %text-input-element;
-
-    color: $text-color !important;
-    -webkit-text-fill-color: $text-color !important;
-}
-
-
-%section {
-    background-color: $section-color !important;
-    border: none !important;
-    border-radius: 5px !important;
-    box-shadow: $section-shadow !important;
-    margin-bottom: 20px !important;
-    margin-top: 20px !important;
-}
-
-%subsection {
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    margin: 0 !important;
-}
-
-%popover {
-    background-color: $popover-background-color !important;
-    border-color: $popover-border-color !important;
-    border-radius: 5px !important;
-    box-shadow: $popover-shadow !important;
-}
-
-%popup {
-    background-color: $charcoal-grey !important;
-    border: none !important;
-    border-radius: 5px !important;
-    box-shadow: $shadow !important;
-}
-
-%list {
-    tr {
-        background-color: transparent !important;
-
-        th,
-        td {
-            background-color: transparent !important;
-        }
-    }
-}
-
-%icon {
-    background-image: none !important;
-    box-shadow: $shadow !important;
-}
-
-// lattice
 %locked-background {
     background-image: $locked-image-url !important;
+}
+
+%no-background-image {
+    background-image: none !important;
+}
+
+%no-background-color {
+    background-color: transparent !important;
+}
+
+%clear-background {
+    @extend %no-background-color;
+    @extend %no-background-image;
+}
+
+%shadowless {
+    box-shadow: none !important;
+}
+
+%borderless {
+    border: none !important;
+}
+
+%inherited-color {
+    color: inherit !important;
+}
+
+%reading {
+    background-color: $reading-color !important;
+}
+
+%meaning {
+    background-color: $meaning-color !important;
 }

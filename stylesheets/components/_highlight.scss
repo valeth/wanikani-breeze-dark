@@ -1,12 +1,21 @@
 @each $item in radical, kanji, vocabulary {
-    [class^="highlight-#{$item}"],
-    [class$="#{$item}-highlight"] {
-        @extend %#{$item};
+    [class*="highlight-#{$item}"],
+    [class*="#{$item}-highlight"] {
+        @include character($item);
     }
 }
 
-[class^="highlight"],
-[class$=-highlight] {
+[class*="highlight"] {
+    @extend %no-background-image;
+    @extend %shadowless;
+
     border-radius: 3px !important;
-    box-shadow: none !important;
+}
+
+.highlight-reading {
+    @extend %reading;
+}
+
+.highlight-meaning {
+    @extend %meaning;
 }

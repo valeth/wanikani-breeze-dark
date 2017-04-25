@@ -18,14 +18,14 @@ $verdant-green:    rgb(17, 209, 22);   // #11d116
 $icon-blue:        rgb(29, 153, 243);  // #1d99f3
 
 // main colors and shadows
-$text-color:          $paper-white;
+$text-color:          darken($paper-white, 25%);
 $background-color:    $charcoal-grey;
 $inverted-text-color: invert($text-color);
-$shadow-color:        rgba(0, 0, 0, 0.5);
+$shadow-color:        rgba(0, 0, 0, 0.7);
 $focus-shadow-color:  fade-out($plasma-blue, 0.5);
 
-$shadow:       3px 3px 3px $shadow-color;
-$shadow-v:     0   3px 3px $shadow-color;
+$shadow:       2px 2px 2px $shadow-color;
+$shadow-v:     0   2px 2px $shadow-color;
 $focus-shadow: 0   0   5px $focus-shadow-color;
 
 // hr, borders etc.
@@ -43,13 +43,34 @@ $navbar-shadow: $shadow-v;
 // dropdown for navbar
 $dropdown-color:       $iron-grey;
 $dropdown-shadow:      $shadow;
-$dropdown-hover-color: fade-out($shade-black, 0.2);
+$dropdown-hover-color: fade-out($shade-black, 0.5);
 
-// radical, kanji and vocab
-$radical-color:        '/*[[RADICALS_COLOR]]*/'; // $plasma-blue
-$kanji-color:          '/*[[KANJI_COLOR]]*/';    // $icon-yellow
-$vocabulary-color:     '/*[[VOCAB_COLOR]]*/';    // $icon-green
+// character colors
+$character-colors: (
+    'rad': '/*[[RADICALS_COLOR]]*/', // $plasma-blue
+    'kan': '/*[[KANJI_COLOR]]*/',    // $icon-yellow
+    'voc': '/*[[VOCAB_COLOR]]*/'     // $icon-green
+);
+
 $character-text-color: $shade-black;
+
+// srs levels
+$srs-colors: (
+    'app': $icon-blue,
+    'gur': $mellow-turquoise,
+    'mas': $sunbeam-yellow,
+    'enl': $beware-orange,
+    'bur': $iron-grey
+);
+
+// lattice
+$percent-colors: (
+    '0-20':    $icon-orange,
+    '21-40':   $sunbeam-yellow,
+    '41-60':   $plasma-blue,
+    '61-80':   $icon-blue,
+    '81-100':  $mellow-turquoise
+);
 
 // character grid on item page and search
 $grid-background-color: $iron-grey;
@@ -78,13 +99,6 @@ $popover-border-color:     $iron-grey;
 $popover-progress-color:   $plasma-blue;
 $popover-shadow:           $shadow;
 
-// srs levels
-$apprentice-color:  $icon-blue;
-$guru-color:        $mellow-turquoise;
-$master-color:      $sunbeam-yellow;
-$enlightened-color: $beware-orange;
-$burned-color:      $shade-black;
-
 // list
 $list-background-color: $shade-black;
 $list-head-color:       $icon-blue;
@@ -93,27 +107,10 @@ $list-separator-color:  $charcoal-grey;
 $list-hover-color:      rgba(0, 0, 0, 0.2);
 $list-head-shadow:      0 -5px 10px $shadow-color inset;
 
-// progressbar
-$progress-background-color:    $charcoal-grey;
-$progressbar-background-color: $icon-blue;
-$progressbar-indicator-color:  $iron-grey;
-$progressbar-threshold-color:  $iron-grey;
-$progressbar-shadow:           $shadow;
-$progressbar-threshold-shadow: 1px 0 0 $progressbar-threshold-color;
-
 // textfield
 $textfield-color: $shade-black;
 $textform-color:  $iron-grey;
 $textform-shadow: $shadow inset;
-
-// lattice
-$lattice-locked-color:  $charcoal-grey;
-$lattice-0-20-color:    $icon-orange;
-$lattice-21-40-color:   $sunbeam-yellow;
-$lattice-41-60-color:   $plasma-blue;
-$lattice-61-80-color:   $icon-blue;
-$lattice-81-100-color:  $mellow-turquoise;
-$lattice-legend-shadow: $shadow inset;
 
 // searchbar
 $search-query-color:  $shade-black;
@@ -127,7 +124,6 @@ $icon-shadow:            $shadow;
 
 // user profile
 $user-info-background-color: $shade-black;
-$user-progressbar-color:     $shade-black;
 $user-wos-header-color:      $shade-black;
 $wall-of-shame-shadow:       $shadow inset;
 $user-avatar-shadow:         $shadow;

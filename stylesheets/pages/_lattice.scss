@@ -3,41 +3,44 @@
 }
 
 // scss-lint:disable QualifyingElement
-section[class|=lattice] {
+section[class^=lattice-] {
     @extend %section;
 
-    ul > li {
-        background-color: transparent !important;
-        margin-bottom: 1vh;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-top: 1vh;
+    padding: 10px;
+
+    ul {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    li {
+        @extend %no-background-color;
+
+        margin: 1vh 10px !important;
 
         > a {
-            background-color: transparent !important;
-            box-shadow: none;
+            @extend %no-background-color;
+            @extend %shadowless;
+
+            filter: brightness(0.8) !important;
         }
     }
-}
 
-[class^=lattice-][class$=-character] {
-    li > a,
-    li > a > i {
-        color: $lattice-locked-color !important;
+    li:not([data-sorted]) > a {
+        @extend %locked;
     }
 
     [data-sorted] {
-        @each $p in '0-20', '21-40', '41-60', '61-80', '81-100' {
-            .percentage-#{$p},
-            .percentage-#{$p} > i {
-                @include lattice-percent-text($p);
+        @each $range in ('0-20', '21-40', '41-60', '61-80', '81-100') {
+            .percentage-#{$range} {
+                @include percent($range);
             }
         }
 
-        @each $l in apprentice, guru, master, enlighten, burned {
-            .#{$l}-lattice,
-            .#{$l}-lattice i {
-                @include lattice-level-text($l);
+        @each $level in apprentice, guru, master, enlighten, burned {
+            .#{$level}-lattice {
+                @include srs-level($level);
             }
         }
     }

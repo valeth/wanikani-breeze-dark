@@ -4,8 +4,8 @@
     border: 1px hidden !important;
 
     li {
-        background-color: transparent !important;
-        border: none !important;
+        @extend %no-background-color;
+        @extend %borderless;
     }
 }
 
@@ -13,15 +13,15 @@
     @extend %section;
 
     ul > li {
-        background-color: transparent !important;
-        background-image: none !important;
+        @extend %clear-background;
+        @extend %shadowless;
+
         border-right: 1px solid $list-separator-color;
-        box-shadow: none !important;
     }
 
     @each $level in $srs-levels {
         ul > ##{$level} span {
-            @extend %#{$level}-text;
+            @include srs-level($level);
         }
     }
 
@@ -50,28 +50,32 @@ section.progression {
         color: $text-color !important;
     }
 
+    a[lang="ja"] * {
+        @extend %inherited-color;
+    }
+
     .lattice-single-character {
-        background-image: none !important;
+        @extend %no-background-image;
 
         li {
-            background-color: transparent !important;
+            @extend %no-background-color;
             padding: 2px !important;
         }
 
         a {
-            box-shadow: none !important;
+            @extend %shadowless;
+            filter: brightness(0.7);
         }
 
         @each $type in radical, kanji {
-            li[id^=#{$type}] > a {
-                @extend %#{$type};
-                filter: brightness(0.7);
+            li[id^="#{$type}"] > a {
+                @include character($type);
             }
         }
     }
 
-    [class$=-progress] {
-        background-color: transparent !important;
+    [class$="-progress"] {
+        @extend %no-background-color;
     }
 }
 
@@ -84,83 +88,55 @@ section.progression {
 
 .kotoba-table-list {
     @extend %section;
+    @extend %list;
 
     min-height: 100%;
 
-    td {
-        border-bottom: 1px solid $separator-color !important;
+    tr a * {
+        @extend %inherited-color;
     }
 
-    .none-available > td {
-        border-bottom: none !important;
-    }
+    .none-available {
+        @extend %clear-background;
+        @extend %shadowless;
 
-    @each $type in $character-types {
-        tr[id^=#{$type}] {
-            @extend %#{$type}-inverted;
+        > td {
+            @extend %borderless;
+        }
+
+        &:hover {
+            @extend %no-background-color;
         }
     }
 
-    tr:last-child {
-        border: none !important;
+    @each $type in $character-types {
+        tr[id^="#{$type}"] a {
+            @include character($type, $inverted: true);
+        }
     }
-}
-
-.none-available,
-.see-more {
-    background-color: transparent !important;
-    background-image: none !important;
-    box-shadow: none !important;
-
-    div {
-        border: none !important;
-        box-shadow: none !important;
-    }
-}
-
-.none-available:hover {
-    background-color: transparent !important;
-}
-
-.see-more a {
-    background-image: none !important;
 }
 
 .forum-topics-list,
 .blog {
     @extend %section;
-
-    min-height: 100% !important;
-
-    hr {
-        border-color: $separator-color !important;
-        color: $separator-color !important;
-    }
-
-    tr {
-        background-color: $list-background-color !important;
-    }
+    @extend %list;
 }
 
-.dashboard-sub-section h3 {
-    background-color: transparent !important;
-    background-image: none !important;
-    border-bottom: 2px solid $list-separator-color !important;
-    box-shadow: none !important;
-    color: $text-color !important;
-    padding-bottom: 3px !important;
-    padding-top: 3px !important;
-    text-align: left !important;
+.see-more {
+    @extend %clear-background;
+    @extend %shadowless;
 
-    .heading-symbol {
-        border: none !important;
-        box-shadow: none !important;
-        display: inline !important;
-        margin-left: 0 !important;
-        margin-right: 5px !important;
+    div {
+        @extend %borderless;
+        @extend %shadowless;
     }
 
-    i::before {
-        color: $text-color !important;
+    a {
+        @extend %no-background-image;
+
+        background-color: darken($section-color, 3%) !important;
+        border-radius: 0 0 5px 5px !important;
+        box-shadow: 0 -1px 1px $shadow-color !important;
+        margin-top: 3px !important;
     }
 }

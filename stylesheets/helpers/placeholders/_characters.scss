@@ -1,0 +1,32 @@
+// radicals
+%radical, %radicals {
+    background-color: character-color('radical') !important;
+    color: $character-text-color !important;
+}
+
+%radical-inverted, %radicals-inverted {
+    background-color: $character-text-color !important;
+    color: character-color('radical') !important;
+}
+
+// kanji
+%kanji {
+    background-color: character-color('kanji') !important;
+    color: $character-text-color !important;
+}
+
+%kanji-inverted {
+    background-color: $character-text-color !important;
+    color: character-color('kanji') !important;
+}
+
+// vocabulary
+%vocabulary {
+    background-color: character-color('vocabulary') !important;
+    color: $character-text-color !important;
+}
+
+%vocabulary-inverted {
+    background-color: $character-text-color !important;
+    color: character-color('vocabulary') !important;
+}
