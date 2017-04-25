@@ -13,11 +13,15 @@
 //   #additional-content
 //   #information
 
-@each $item in radical, kanji, vocabulary {
-    #related-items {
+#related-items {
+    @each $item in radical, kanji, vocabulary {
         a > [class^=#{$item}] {
             @include character($item);
         }
+    }
+
+    span > i {
+        @extend %inherited-color;
     }
 }
 
