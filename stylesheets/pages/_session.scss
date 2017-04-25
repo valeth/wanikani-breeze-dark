@@ -101,15 +101,23 @@
 
         &.incorrect {
             // scss-lint:disable QualifyingElement NestingDepth
-            input[type=text]:disabled, button {
+            input[type=text]:disabled {
                 background-color: $incorrect-color !important;
+            }
+
+            button {
+                @extend %no-background-color;
             }
         }
 
         &.correct {
             // scss-lint:disable QualifyingElement NestingDepth
-            input[type=text]:disabled, button {
+            input[type=text]:disabled {
                 background-color: $correct-color !important;
+            }
+
+            button {
+                @extend %no-background-color;
             }
         }
     }
