@@ -66,6 +66,14 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
         color: $text-color !important;
     }
 
+    // catch all i elements inside radical items
+    [class*="rad"],
+    [id*="rad"] {
+        i {
+            @extend %inherited-color;
+        }
+    }
+
     // ### Userscripts ###
     @import 'userscripts/lesson_reorder';
     @import 'userscripts/wk_improve';
