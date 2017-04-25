@@ -20,8 +20,12 @@
         }
     }
 
-    span > i {
-        @extend %inherited-color;
+    span {
+        @extend %icon;
+
+        > i {
+            @extend %inherited-color;
+        }
     }
 }
 
@@ -188,12 +192,6 @@
 
     &::before {
         border-color: transparent transparent $popover-border-color !important;
-    }
-}
-
-#related-items {
-    span {
-        @extend %icon;
     }
 }
 
