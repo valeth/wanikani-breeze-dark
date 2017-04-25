@@ -24,6 +24,10 @@ section[class^=lattice-] {
             @extend %shadowless;
 
             filter: brightness(0.8) !important;
+
+            * {
+                @extend %inherited-color;
+            }
         }
     }
 
