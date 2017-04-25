@@ -38,6 +38,7 @@
     @extend %borderless;
     @include sheet(9);
 
+    align-items: center !important;
     display: flex !important;
     height: 82px !important;
     justify-content: center !important;
@@ -48,6 +49,29 @@
 
     &.meaning {
         @extend %meaning;
+    }
+
+    > .srs {
+        left: 70px !important;
+        position: relative !important;
+        top: initial !important;
+        width: initial !important;
+    }
+}
+
+.srs-up {
+    @extend %no-background-color;
+
+    &::before {
+        color: $correct-color !important;
+    }
+}
+
+.srs-down {
+    @extend %no-background-color;
+
+    &::before {
+        color: $incorrect-color !important;
     }
 }
 
@@ -205,14 +229,6 @@
             filter: brightness(0.8) !important;
         }
     }
-}
-
-// srs indicators
-.srs-up,
-.srs-down {
-    @extend %no-background-color;
-
-    color: $charcoal-grey !important;
 }
 
 #additional-content-load {
