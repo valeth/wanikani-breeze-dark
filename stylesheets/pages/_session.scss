@@ -13,6 +13,14 @@
 //   #additional-content
 //   #information
 
+@each $item in radical, kanji, vocabulary {
+    #related-items {
+        a > [class^=#{$item}] {
+            @include character($item);
+        }
+    }
+}
+
 [id^="loading"] {
     background-color: $background-color !important;
 }

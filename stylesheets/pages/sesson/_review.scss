@@ -8,12 +8,6 @@
         #last-items .#{$item} [lang="ja"]:first-child {
             @include character($item);
         }
-
-        #related-items {
-            a > [class^=#{$item}] {
-                @include character($item);
-            }
-        }
     }
 
     // session header
