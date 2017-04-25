@@ -1,3 +1,18 @@
+// Lesson Layout:
+//
+//    #main-info
+//      #character
+//      #meaning
+//    #lesson
+//      #supplement-nav
+//      #supplement-info
+//      #batch-items
+//    #quiz
+//      #question-type
+//      #answer-form
+//      #additional-content
+//      #information
+
 @each $item in radical, kanji, vocabulary {
     // lesson header background and foreground color
     #main-info.#{$item} {
@@ -20,8 +35,6 @@
     // lesson header
     header {
         @include sheet(11);
-
-        position: relative !important;
     }
 }
 
@@ -97,11 +110,31 @@
     }
 }
 
-// #screen-lesson-ready #lesson-ready-continue
-[id*="lesson-ready"] {
-    background-color: $section-color !important;
-}
-
+// quiz start button
 [data-index="quiz"] > span {
     @extend %button;
 }
+
+// continue screen after quiz
+#screen-lesson-ready {
+    @extend %main-background;
+
+    z-index: 110 !important;
+
+    .btn-set {
+        li {
+            @extend %button;
+        }
+    }
+}
+
+#screen-quiz-ready {
+    @extend %main-background;
+
+    z-index: 110 !important;
+}
+
+// quiz ready buttons
+// [id^="quiz"] {
+//     @extend %button;
+// }
