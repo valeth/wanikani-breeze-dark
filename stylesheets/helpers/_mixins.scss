@@ -1,6 +1,7 @@
 @mixin sheet($zindex, $bgcolor: $shade-black, $img: none) {
     background-color: $bgcolor !important;
     box-shadow: $shadow-v !important;
+    position: relative !important;
     z-index: $zindex !important;
 
     @if ($img != true) {
