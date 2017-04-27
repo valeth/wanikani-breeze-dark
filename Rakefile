@@ -46,9 +46,10 @@ task :build do
 end
 
 desc 'Replace Stylish option keys with default values'
-task replace: :build do
+task :replace, [:configfile] => :build do |_t, args|
+    configfile = args[:configfile]
     abort("cannot find #{configfile}") unless File.exist?(configfile)
-    config = YAML.safe_load(open(configfile))
+    config = YAML.safe_load(open(args[:configfile]))
 
     puts "Building CSS file with #{configfile}"
 
@@ -66,15 +67,14 @@ task replace: :build do
 end
 
 desc 'Copy the generated out.css to the clipboard (requires xsel)'
-task copy: :build do
-    puts 'copying to clipboard...'
-    sh 'cat out.css | xsel --input --primary'
-    sh 'cat out.css | xsel --input --clipboard'
-end
-
-desc 'Copy the generated out-replaced.css to the clipboard (requires xsel)'
-task copy_replaced: :replace do
-    puts 'copying to clipboard...'
-    sh 'cat out-replaced.css | xsel --input --primary'
-    sh 'cat out-replaced.css | xsel --input --clipboard'
+task :copy, [:replace, :configfile] => :build do |_t, args|
+    if args[:replace]
+        configfile = args[:configfile] || 'defaults.yml'
+        Rake::Task[:replace].invoke(configfile)
+        sh 'xclip -selection clipboard out-replaced.css'
+        puts 'Copied out-replaced.css to clipboard.'
+    else
+        sh 'xclip -selection clipboard out.css'
+        puts 'Copied out.css to clipboard.'
+    end
 end
