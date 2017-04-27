@@ -4,10 +4,11 @@ This file was compiled with SCSS.
 To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze-dark
  */
 
+@import 'helpers/variables';
+@import 'helpers/colors';
+@import 'helpers/functions';
+
 @-moz-document domain(www.wanikani.com) {
-    @import 'helpers/variables';
-    @import 'helpers/colors';
-    @import 'helpers/functions';
     @import 'helpers/mixins';
     @import 'helpers/placeholders';
 
@@ -82,4 +83,14 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     @import 'userscripts/wk_dashboard_progress_plus';
     @import 'userscripts/srs_grid';
     @import 'userscripts/wk_override';
+}
+
+@-moz-document regexp('https://www.wanikani.com/(faq|api|about).*') {
+    a {
+        color: $plasma-blue !important;
+    }
+
+    .nav > li > a {
+        color: $text-color !important;
+    }
 }
