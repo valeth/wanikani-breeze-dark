@@ -27,6 +27,8 @@ STYLISH_OPTIONS = %w(
     REVIEW_MEANING_BG
 ).freeze
 
+DEFAULT_CONFIG = 'config/dark.yml'
+
 desc 'Build the CSS files from SCSS sources'
 task :build do
     Sass::Plugin.options[:template_location] = 'stylesheets'
@@ -69,7 +71,7 @@ end
 desc 'Copy the generated out.css to the clipboard (requires xsel)'
 task :copy, [:replace, :configfile] => :build do |_t, args|
     if args[:replace]
-        configfile = args[:configfile] || 'defaults.yml'
+        configfile = args[:configfile] || DEFAULT_CONFIG
         Rake::Task[:replace].invoke(configfile)
         sh 'xclip -selection clipboard out-replaced.css'
         puts 'Copied out-replaced.css to clipboard.'
