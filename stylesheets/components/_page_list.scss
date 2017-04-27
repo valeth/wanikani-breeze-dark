@@ -4,23 +4,22 @@
     ul {
         align-items: center !important;
         display: flex !important;
-        height: 45px !important;
-        margin-left: 10px !important;
+        flex-wrap: wrap !important;
+        padding: 5px !important;
     }
 
-    li > a {
-        @extend %button;
-        @extend %no-background-image;
-        @extend %borderless;
+    li {
+        margin: 2px !important;
 
-        background-color: $page-list-item-color !important;
-        color: $inverted-text-color !important;
-        margin-right: 10px !important;
+        > a {
+            @extend %button;
+            @extend %no-background-image;
+            @extend %borderless;
+
+            background-color: $page-list-item-color !important;
+            color: $inverted-text-color !important;
+        }
     }
-
-    // .disabled span {
-    //     @extend %borderless;
-    // }
 }
 
 .page-list-header {
