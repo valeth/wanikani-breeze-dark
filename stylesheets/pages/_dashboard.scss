@@ -90,6 +90,10 @@ section.progression {
     @extend %section;
     @extend %list;
 
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+
     min-height: 100%;
 
     tr a * {
