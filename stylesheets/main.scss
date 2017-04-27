@@ -69,7 +69,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     // catch all i elements inside radical items
     [class*="rad"],
     [id*="rad"] {
-        i {
+        * {
             @extend %inherited-color;
         }
     }
