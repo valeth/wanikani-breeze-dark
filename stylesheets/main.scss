@@ -63,13 +63,17 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
         @extend %main-background;
     }
 
-    div, p, pre, strong, small, span, li, a, time, h1, h2, h3, h4, td, label, i {
+    div, p, pre, strong, small, span, li, time, h1, h2, h3, h4, td, label, i {
         color: $text-color !important;
     }
 
+    a {
+        color: $plasma-blue !important;
+    }
+
     // catch all i elements inside radical items
-    [class*="rad"],
-    [id*="rad"] {
+    [class*="rad"] {
+    // [id*="rad"] {
         * {
             @extend %inherited-color;
         }
@@ -83,14 +87,4 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     @import 'userscripts/wk_dashboard_progress_plus';
     @import 'userscripts/srs_grid';
     @import 'userscripts/wk_override';
-}
-
-@-moz-document regexp('https://www.wanikani.com/(faq|api|about).*') {
-    a {
-        color: $plasma-blue !important;
-    }
-
-    .nav > li > a {
-        color: $text-color !important;
-    }
 }

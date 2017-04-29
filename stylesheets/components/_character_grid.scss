@@ -2,6 +2,10 @@
     @extend %inherited-color;
 }
 
+.burned {
+    filter: brightness(0.50) !important;
+}
+
 [class*=character-grid] {
     background-color: darken($section-color, 2%) !important;
     border-radius: 5px !important;
@@ -23,9 +27,9 @@
             @extend %no-background-color;
         }
 
-        &.burned {
-            filter: brightness(0.50) !important;
-        }
+        // &.burned {
+        //     filter: brightness(0.50) !important;
+        // }
 
         &.locked {
             filter: brightness(0.70) !important;

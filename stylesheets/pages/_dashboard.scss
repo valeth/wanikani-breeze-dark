@@ -124,6 +124,10 @@ section.progression {
 .blog {
     @extend %section;
     @extend %list;
+
+    a {
+        color: $text-color !important;
+    }
 }
 
 .see-more {
@@ -141,6 +145,7 @@ section.progression {
         background-color: darken($section-color, 3%) !important;
         border-radius: 0 0 5px 5px !important;
         box-shadow: 0 -1px 1px $shadow-color !important;
+        color: $text-color !important;
         margin-top: 3px !important;
     }
 }

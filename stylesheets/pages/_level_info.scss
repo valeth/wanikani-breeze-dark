@@ -1,3 +1,19 @@
+.level-icon {
+    color: $text-color !important;
+}
+
+.next, .previous {
+    a {
+        color: $text-color !important;
+    }
+}
+
+.alt-character-list {
+    a {
+        color: $text-color !important;
+    }
+}
+
 // scss-lint:disable QualifyingElement
 section[id|=level] {
     @extend %section;
