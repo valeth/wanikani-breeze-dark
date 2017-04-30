@@ -1,7 +1,12 @@
+.dashboard {
+    a {
+        @extend %inherited-color;
+    }
+}
+
 .review-status {
     @extend %section;
-
-    border: 1px hidden !important;
+    @extend %borderless;
 
     li {
         @extend %no-background-color;
@@ -12,26 +17,19 @@
 .srs-progress {
     @extend %section;
 
-    ul > li {
-        @extend %clear-background;
-        @extend %shadowless;
+    ul {
+        > li {
+            @extend %clear-background;
+            @extend %shadowless;
 
-        border-right: 1px solid $list-separator-color;
-    }
-
-    @each $level in $srs-levels {
-        ul > ##{$level} span {
-            @include srs-level($level);
+            border-right: 1px solid $list-separator-color;
         }
-    }
 
-    li:first-child {
-        border-radius: 5px 0 0 5px !important;
-    }
-
-    li:last-child {
-        border: 0;
-        border-radius: 0 5px 5px 0 !important;
+        @each $level in $srs-levels {
+            > ##{$level} > span {
+                @include srs-level($level);
+            }
+        }
     }
 }
 
@@ -40,25 +38,14 @@ section.progression {
     @extend %section;
 
     hr {
-        border-bottom: 1px solid $background-color !important;
-        border-top: 1px solid $background-color !important;
-        color: $background-color !important;
-    }
-
-    span,
-    span > i {
-        color: $text-color !important;
-    }
-
-    a[lang="ja"] * {
-        @extend %inherited-color;
+        border-bottom-color: $separator-color !important;
+        border-top: 0 !important;
     }
 
     .lattice-single-character {
         @extend %no-background-image;
 
         li {
-            @extend %no-background-color;
             padding: 2px !important;
         }
 
@@ -67,23 +54,12 @@ section.progression {
             filter: brightness(0.7);
         }
 
-        @each $type in radical, kanji {
-            li[id^="#{$type}"] > a {
+        @each $type in 'radical', 'kanji' {
+            [id^="#{$type}"] > a {
                 @include character($type);
             }
         }
     }
-
-    [class$="-progress"] {
-        @extend %no-background-color;
-    }
-}
-
-.recent-unlocks,
-.low-percentage,
-.recent-retired {
-    margin-bottom: 0 !important;
-    margin-top: 0 !important;
 }
 
 .kotoba-table-list {
@@ -93,11 +69,21 @@ section.progression {
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
-
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
     min-height: 100%;
 
-    tr a * {
+    span,
+    time {
         @extend %inherited-color;
+    }
+
+    table {
+        @each $type in $character-types {
+            [id^="#{$type}"] {
+                @include character($type, $inverted: true);
+            }
+        }
     }
 
     .none-available {
@@ -112,22 +98,12 @@ section.progression {
             @extend %no-background-color;
         }
     }
-
-    @each $type in $character-types {
-        tr[id^="#{$type}"] a {
-            @include character($type, $inverted: true);
-        }
-    }
 }
 
 .forum-topics-list,
 .blog {
     @extend %section;
     @extend %list;
-
-    a {
-        color: $text-color !important;
-    }
 }
 
 .see-more {
@@ -145,7 +121,6 @@ section.progression {
         background-color: darken($section-color, 3%) !important;
         border-radius: 0 0 5px 5px !important;
         box-shadow: 0 -1px 1px $shadow-color !important;
-        color: $text-color !important;
         margin-top: 3px !important;
     }
 }
