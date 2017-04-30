@@ -7,10 +7,34 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
 @import 'helpers/variables';
 @import 'helpers/colors';
 @import 'helpers/functions';
+@import 'helpers/mixins';
 
 @-moz-document domain(www.wanikani.com) {
-    @import 'helpers/mixins';
     @import 'helpers/placeholders';
+
+    // ### Main ###
+    * {
+        text-shadow: none !important;
+    }
+
+    body {
+        @extend %main-background;
+    }
+
+    div, p, pre, strong, small, span, li, time, h1, h2, h3, h4, label, i {
+        color: $text-color !important;
+    }
+
+    a {
+        color: $plasma-blue !important;
+        text-shadow: none !important;
+    }
+
+    footer {
+        a {
+            color: $text-color !important;
+        }
+    }
 
     // ### HTML Elements ###
     @import 'components/blockquote';
@@ -34,6 +58,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     @import 'components/user_synonyms';
     @import 'components/icon';
     @import 'components/highlight';
+    @import 'components/characters';
 
     // ### Layout Changes###
     @import 'layout/grid';
@@ -53,31 +78,6 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     // Replacements for userstyles.org, defaults to the dark version
     // scss-lint:disable Comment
     /*[[REVIEW_CHAR_BG]]*/
-
-    // ### Main ###
-    * {
-        text-shadow: none !important;
-    }
-
-    body {
-        @extend %main-background;
-    }
-
-    div, p, pre, strong, small, span, li, time, h1, h2, h3, h4, td, label, i {
-        color: $text-color !important;
-    }
-
-    a {
-        color: $plasma-blue !important;
-    }
-
-    // catch all i elements inside radical items
-    [class*="rad"] {
-    // [id*="rad"] {
-        * {
-            @extend %inherited-color;
-        }
-    }
 
     // ### Userscripts ###
     @import 'userscripts/lesson_reorder';

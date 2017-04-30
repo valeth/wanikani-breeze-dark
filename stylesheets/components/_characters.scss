@@ -1,0 +1,6 @@
+// catch all i elements inside radical items
+[class*="rad"] {
+    * {
+        @extend %inherited-color;
+    }
+}
