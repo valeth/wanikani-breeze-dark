@@ -1,8 +1,8 @@
-.level-icon {
-    background-color: $shade-black !important;
-}
-
 .individual-item {
+    .level-icon {
+        background-color: $shade-black !important;
+    }
+
     .span12 > section {
         @extend %section;
 
@@ -20,19 +20,28 @@
     h2 {
         color: $text-color !important;
     }
-}
 
-#progress {
-    @extend %section;
+    + section {
+        @extend %section;
 
-    @media (min-width: 1200px) {
+        margin-left: auto !important;
+        margin-right: auto !important;
         width: 1170px !important;
-    }
 
-    margin-left: auto !important;
-    margin-right: auto !important;
+        @media (min-width: 979px) and (max-width: 1199px) {
+            width: 940px !important;
+        }
 
-    [class$=-streak] span {
-        background-color: $correct-progress-color !important;
+        @media (min-width: 767px) and (max-width: 979px) {
+            width: 724px !important;
+        }
+
+        @media (max-width: 767px) {
+            width: calc(100% - 40px) !important;
+        }
+
+        [class$=-streak] span {
+            background-color: inherit !important;
+        }
     }
 }
