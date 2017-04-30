@@ -1,111 +1,52 @@
-.navbar {
-    z-index: 1030 !important;
-
-    .navbar-inner {
-        @extend %borderless;
-        @include sheet(auto, $navbar-color);
-    }
-
-    .title span,
-    .additional span:first-child {
-        @extend %shadowless;
-    }
-
-    .dropdown {
-        @extend %no-background-color;
-
-        a, i, span {
-            color: $text-color !important;
-        }
-
-        span {
-            @extend %shadowless;
-
-            border-color: $background-color !important;
-        }
-    }
-
-    .dropdown-menu {
-        border-radius: 0 5px 5px !important;
-    }
-
-    .open.dropdown {
-        .nav-header,
-        li > a {
-            color: $background-color !important;
-        }
-
-        .dropdown-toggle {
-            color: $background-color !important;
-            opacity: 0.80;
-
-            // scss-lint:disable NestingDepth
-            a, i, span {
-                color: $background-color !important;
-            }
-
-            // scss-lint:disable NestingDepth
-            span {
-                @extend %shadowless;
-
-                border-color: $background-color !important;
-            }
-        }
-    }
-
-    @each $type in (radicals, kanji, vocabulary) {
-        @include dropdown-menu($type);
-    }
-
-    // lessons + reviews + account
-    .lessons,
-    .reviews {
-        span {
-            @extend %no-background-image;
-
-            background-color: $navbar-color !important;
-            border-color: $background-color !important;
-        }
-    }
-
-    .account {
-        .dropdown-toggle {
-            // scss-lint:disable NestingDepth
-            span {
-                border: 5px solid !important;
-                border-color: $background-color !important;
-            }
-        }
-
-    }
-
-    .open.account {
-        .dropdown-menu {
-            border-radius: 5px 0 5px 5px !important;
-        }
-    }
-
-    .open.account,
-    .open.levels {
-        .dropdown-toggle {
-            background-color: $dropdown-color !important;
-            color: $text-color !important;
-
-            // scss-lint:disable NestingDepth
-            a, i, span {
-                color: $text-color !important;
-            }
-        }
-
-        .dropdown-menu {
-            // scss-lint:disable NestingDepth
-            a, li {
-                color: $text-color !important;
-            }
-        }
-    }
+.navbar-inner {
+    @extend %borderless;
+    @include sheet(1030, $navbar-color);
 }
 
-.nav > li > a {
-    color: $text-color !important;
+// scss-lint:disable NestingDepth SelectorDepth
+.nav {
+    a {
+        @extend %inherited-color;
+    }
+
+    // crabigator logo and avatar
+    .title {
+        span:first-child {
+            @extend %no-background-color;
+
+            box-sizing: border-box !important;
+        }
+    }
+
+    // be careful to not override stuff in opened dropdown menus
+    li:not(.open) {
+        span:first-child {
+            @extend %shadowless;
+
+            border: 0.3em solid lighten($navbar-color, 3%) !important;
+        }
+
+        > a:hover {
+            > span:first-child {
+                border-color: lighten($navbar-color, 7%) !important;
+            }
+        }
+    }
+
+    > .dropdown.account {
+        > .dropdown-toggle {
+            span {
+                @extend %borderless;
+            }
+        }
+    }
+
+    > .lessons,
+    > .reviews {
+        a {
+            > span {
+                @extend %clear-background;
+            }
+        }
+    }
 }

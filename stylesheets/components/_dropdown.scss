@@ -1,26 +1,86 @@
-.dropdown-menu {
-    @extend %borderless;
+$dropdown-color: $shade-black;
+$open-color: lighten($dropdown-color, 7%);
+$open-shadow: 1px 0 2px $shadow-color inset,
+             -1px 0 2px $shadow-color inset;
 
-    background-color: $dropdown-color !important;
-    border-radius: 5px !important;
-    box-shadow: $dropdown-shadow !important;
+// scss-lint:disable NestingDepth SelectorDepth
+.dropdown {
+    a, i, span, li {
+        @extend %inherited-color;
+    }
 
-    .nav-header,
-    li a {
-        color: $text-color !important;
-
-        &:hover,
-        &:focus {
-            background-color: $dropdown-hover-color !important;
+    // remove "glow" from toggle
+    [class*="toggle"] {
+        > span {
+            @extend %shadowless;
         }
     }
 
-}
+    // hover effect for character toggles
+    &:not(.open) {
+        @each $type in 'radicals', 'kanji', 'vocabulary' {
+            &.#{$type} {
+                > [class*="toggle"] {
+                    &:hover {
+                        > span {
+                            border-color: character-color($type) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-.dropdown-menu::before,
-.dropdown-menu::after {
-    border-bottom-color: $dropdown-color !important;
-    border-left: 9px solid transparent !important;
-    border-right: 9px solid transparent !important;
-    color: $dropdown-color !important;
+    &.open {
+        background-color: $open-color !important;
+
+        @each $type in 'radicals', 'kanji', 'vocabulary' {
+            &.#{$type} {
+                @include character($type);
+
+                [class*="menu"] {
+                    &::before,
+                    &::after {
+                        border-bottom-color: character-color($type) !important;
+                        color: character-color($type) !important;
+                    }
+                }
+            }
+        }
+
+        // make sure the toggle stays transparent
+        [class*="toggle"] {
+            @extend %no-background-color;
+
+            box-shadow: $open-shadow !important;
+
+            > span {
+                border: 0.3em solid $dropdown-color !important;
+            }
+        }
+
+        [class*="menu"] {
+            @extend %borderless;
+
+            background-color: inherit !important;
+            border-radius: 5px !important;
+            box-shadow: $shadow !important;
+            top: 112% !important;
+
+            li:not(.nav-header) {
+                background-color: inherit !important;
+
+                > a:hover {
+                    background-color: inherit !important;
+                    filter: brightness(0.8) !important;
+                }
+            }
+
+            &::before,
+            &::after {
+                border-bottom-color: $open-color !important;
+                color: $open-color !important;
+            }
+        }
+    }
 }
