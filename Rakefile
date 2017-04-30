@@ -6,6 +6,30 @@ require 'rubocop/rake_task'
 require 'sass/plugin'
 require 'yaml'
 
+begin
+    require 'dbus'
+
+    DBUS_SESSION_BUS = DBus.session_bus
+
+    def dbus_notify(message)
+        notify_service   = DBUS_SESSION_BUS['org.freedesktop.Notifications']
+        notify_object    = notify_service['/org/freedesktop/Notifications']
+        notify_interface = notify_object['org.freedesktop.Notifications']
+        notify_interface.Notify('rake', 0, 'application-x-ruby',
+                                'Rake (WaniKani Breeze Dark)',
+                                message, [], [], 2000)
+    end
+rescue LoadError
+    nil
+rescue DBus::Error
+    nil
+end
+
+def notify(message)
+    puts message
+    dbus_notify(message) if defined? dbus_notify
+end
+
 RuboCop::RakeTask.new
 SCSSLint::RakeTask.new
 
@@ -49,11 +73,11 @@ end
 
 desc 'Replace Stylish option keys with default values'
 task :replace, [:configfile] => :build do |_t, args|
-    configfile = args[:configfile]
+    configfile = args[:configfile] || DEFAULT_CONFIG
     abort("cannot find #{configfile}") unless File.exist?(configfile)
     config = YAML.safe_load(open(args[:configfile]))
 
-    puts "Building CSS file with #{configfile}"
+    notify("Building CSS file with #{configfile}")
 
     open('out.css') do |cssfile|
         tmp = cssfile.read
@@ -71,12 +95,12 @@ end
 desc 'Copy the generated out.css to the clipboard (requires xsel)'
 task :copy, [:replace, :configfile] => :build do |_t, args|
     if args[:replace]
-        configfile = args[:configfile] || DEFAULT_CONFIG
+        configfile = args[:configfile]
         Rake::Task[:replace].invoke(configfile)
         sh 'xclip -selection clipboard out-replaced.css'
-        puts 'Copied out-replaced.css to clipboard.'
+        notify('Copied out-replaced.css to clipboard.')
     else
         sh 'xclip -selection clipboard out.css'
-        puts 'Copied out.css to clipboard.'
+        notify('Copied out.css to clipboard.')
     end
 end
