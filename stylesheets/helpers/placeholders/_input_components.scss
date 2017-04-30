@@ -12,7 +12,7 @@
     @extend %borderless;
 
     background-color: darken($input-color, 2%) !important;
-    box-shadow: $shadow inset !important;
+    box-shadow: $shadow-i !important;
     transition: box-shadow linear 0.2s !important;
 
     &:focus {
