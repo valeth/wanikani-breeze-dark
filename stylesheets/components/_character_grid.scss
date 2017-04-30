@@ -9,7 +9,7 @@
 [class*=character-grid] {
     background-color: darken($section-color, 2%) !important;
     border-radius: 5px !important;
-    box-shadow: $grid-inset-shadow !important;
+    box-shadow: $shadow-i !important;
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
@@ -20,7 +20,7 @@
         @extend %borderless;
 
         border-radius: 5px !important;
-        box-shadow: $grid-shadow !important;
+        box-shadow: $shadow !important;
         margin: 5px !important;
 
         > a {
