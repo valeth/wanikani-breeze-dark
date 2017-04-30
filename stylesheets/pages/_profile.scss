@@ -1,54 +1,34 @@
-#public-profile header {
-    @include sheet(auto, $img: true);
-}
-
 .avatar {
     @extend %main-background;
 
-    box-shadow: $shadow inset !important;
+    box-shadow: $shadow-i !important;
 
     img {
         box-shadow: $shadow !important;
     }
 }
 
+// user info section below avatar
 .user-info {
     @include sheet(10, $user-info-background-color);
+
+    &::after {
+        border-bottom-color: $user-info-background-color !important;
+    }
 }
 
-.user-info::after {
-    border-bottom-color: transparent !important;
-}
-
+// count under srs badges below user info
 .srs-levels li span {
     @extend %no-background-color;
     @extend %shadowless;
 }
 
-.knowledge-distribution {
-    [class$=-progress] {
-        @extend %no-background-color;
-    }
-
-    div > span {
-        color: $text-color !important;
-    }
-}
-
+// the wall of shame...
 .wall-of-shame {
     @extend %no-background-color;
 
     h3 > span {
-        background-color: $user-wos-header-color !important;
-        box-shadow: $wall-of-shame-shadow !important;
-    }
-
-    li > span {
-        color: $text-color !important;
-    }
-
-    [class$=-progress],
-    [class^=worst-] {
-        @extend %no-background-color;
+        background-color: $shade-black !important;
+        box-shadow: $shadow-i !important;
     }
 }
