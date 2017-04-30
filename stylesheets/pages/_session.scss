@@ -1,6 +1,6 @@
-@import 'sesson/summary';
-@import 'sesson/lesson';
-@import 'sesson/review';
+@import 'session/summary';
+@import 'session/lesson';
+@import 'session/review';
 
 // Session Layout:
 //
@@ -76,19 +76,13 @@
     }
 }
 
-.srs-up {
-    @extend %no-background-color;
+@each $x in 'up', 'down' {
+    .srs-#{$x} {
+        @extend %no-background-color;
 
-    &::before {
-        color: $correct-color !important;
-    }
-}
-
-.srs-down {
-    @extend %no-background-color;
-
-    &::before {
-        color: $incorrect-color !important;
+        &::before {
+            color: progress-color($x) !important;
+        }
     }
 }
 
@@ -99,25 +93,16 @@
     fieldset {
         padding: 0 !important;
 
-        &.incorrect {
-            // scss-lint:disable QualifyingElement NestingDepth
-            input[type=text]:disabled {
-                background-color: $incorrect-color !important;
-            }
+        @each $x in 'correct', 'incorrect' {
+            &.#{$x} {
+                // scss-lint:disable QualifyingElement NestingDepth
+                input[type=text]:disabled {
+                    background-color: progress-color($x) !important;
+                }
 
-            button {
-                @extend %no-background-color;
-            }
-        }
-
-        &.correct {
-            // scss-lint:disable QualifyingElement NestingDepth
-            input[type=text]:disabled {
-                background-color: $correct-color !important;
-            }
-
-            button {
-                @extend %no-background-color;
+                button {
+                    @extend %no-background-color;
+                }
             }
         }
     }
@@ -126,7 +111,6 @@
         @extend %borderless;
         @extend %shadowless;
 
-        background-color: $textfield-color !important;
         border-radius: 0 !important;
     }
 

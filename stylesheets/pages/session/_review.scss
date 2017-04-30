@@ -1,5 +1,5 @@
 #reviews {
-    @each $item in radical, kanji, vocabulary {
+    @each $item in 'radicals', 'kanji', 'vocabulary' {
         // header item background and foreground
         #character.#{$item} {
             @include character($item, $inverted: true);

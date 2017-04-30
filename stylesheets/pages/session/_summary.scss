@@ -1,7 +1,7 @@
 [id*="summary"] {
-    @each $item in radical, kanji, vocabulary {
+    @each $item in 'radical', 'kanji', 'vocabulary' {
         // 3 lesson summary sections
-        [id^=#{$item}] {
+        [id^="#{$item}"] {
             @extend %section;
 
             // header for lesson summary
@@ -15,18 +15,27 @@
             }
         }
 
-        ul > .#{$item} {
+        ul > [class^="#{$item}"] {
             @include character($item);
         }
     }
 
-    // back button and start session
+    @each $x in 'correct', 'incorrect' {
+        [id^="#{$x}"] {
+            @extend %section;
+
+            h2 {
+                color: progress-color($x) !important;
+            }
+        }
+    }
+
+    // back button and start session (container)
     nav {
         @extend %borderless;
     }
 
     h2 {
-        // @extend %clear-background;
         background-color: darken($section-color, 3%) !important;
         border-radius: 5px 5px 0 0 !important;
         box-shadow: $shadow-v !important;
@@ -55,23 +64,13 @@
         }
     }
 
-    #correct, #incorrect {
-        @extend %section;
-    }
-
-    #correct h2 {
-        color: $correct-color !important;
-    }
-
-    #incorrect h2 {
-        color: $incorrect-color !important;
-    }
 }
 
 #back-dashboard {
     @extend %click-input-element;
 }
 
+// top right start session button
 #start-session {
     @extend %button;
 
@@ -86,28 +85,18 @@
     }
 }
 
-#review-stats-answered-correctly {
-    border-radius: 5px !important;
-    box-shadow: $review-stats-shadow !important;
-}
+// review stats on top of page
+#review-stats {
+    @extend %section;
 
-#review-stats-radicals,
-#review-stats-kanji,
-#review-stats-vocabulary {
-    background-color: $review-stats-color !important;
-    box-shadow: $review-stats-shadow !important;
+    [id^="review-stats"] {
+        @extend %clear-background;
+        @extend %shadowless;
 
-    .review-stats-total span {
-        color: $text-color !important;
+        &::after {
+            display: none !important;
+        }
     }
-}
-
-#review-stats-radicals {
-    border-radius: 5px 0 0 5px;
-}
-
-#review-stats-vocabulary {
-    border-radius: 0 5px 5px 0;
 }
 
 // hover text for character items
