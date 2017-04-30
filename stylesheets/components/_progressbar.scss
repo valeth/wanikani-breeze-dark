@@ -4,19 +4,20 @@
     align-items: center !important;
     background-color: darken($shade-black, 2%) !important;
     border-radius: 10px !important;
-    box-shadow: $shadow inset !important;
+    box-shadow: $shadow-i !important;
     display: flex !important;
 
-    .bar {
+    > .bar {
         @extend %no-background-image;
 
         background-color: $icon-blue !important;
         border-radius: 10px !important;
         box-shadow: $shadow !important;
-        height: 60% !important;
+        height: 50% !important;
         margin: 5px !important;
+        opacity: 0.75 !important;
 
-        span {
+        > span {
             background-color: darken($iron-grey, 2%) !important;
             border-radius: 5px !important;
             box-shadow: $shadow !important;
@@ -27,25 +28,24 @@
             }
         }
 
-        .threshold {
+        > .threshold {
             box-shadow: 1px 0 0 $iron-grey !important;
             color: $iron-grey !important;
             height: 60% !important;
             line-height: 110% !important;
             opacity: 0.50 !important;
         }
-    }
-}
 
-@each $type in $character-types {
-    [class*=#{$type}] .progress > .bar {
-        @include character($type);
+        @each $type in $character-types {
+            [class*=#{$type}] & {
+                @include character($type);
+            }
+        }
     }
 }
 
 // scss-lint:disable QualifyingElement
-#progress section,
-section[id|=level] .progress {
+#progress section {
     margin-left: 2vw !important;
     margin-right: 2vw !important;
 }
