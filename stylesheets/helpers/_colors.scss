@@ -17,20 +17,25 @@ $icon-green:       rgb(46, 204, 113);  // #2ecc71
 $verdant-green:    rgb(17, 209, 22);   // #11d116
 $icon-blue:        rgb(29, 153, 243);  // #1d99f3
 
-// main colors and shadows
+// colors
 $text-color:          darken($paper-white, 25%);
-$background-color:    $charcoal-grey;
 $inverted-text-color: invert($text-color);
-$shadow-color:        rgba(0, 0, 0, 0.7);
-$focus-shadow-color:  fade-out($plasma-blue, 0.5);
+$background-color:    $charcoal-grey;
+$separator-color:     $charcoal-grey;
+$input-color:         $shade-black;
+$alert-color:         $beware-orange;
 
-$shadow:       2px 2px 2px $shadow-color;
-$shadow-v:     0   2px 2px $shadow-color;
+// shadows
+$shadow-color:       rgba(0, 0, 0, 0.7);
+$focus-shadow-color: fade-out($plasma-blue, 0.5);
+
+$shadow:       1px 1px 1px $shadow-color,
+               2px 2px 2px $shadow-color;
+$shadow-i:     1px 1px 1px $shadow-color inset,
+               2px 2px 2px $shadow-color inset;
+$shadow-v:     0   1px 1px $shadow-color,
+               0   2px 2px $shadow-color;
 $focus-shadow: 0   0   5px $focus-shadow-color;
-
-// hr, borders etc.
-$separator-color: $charcoal-grey;
-$alert-color: $beware-orange;
 
 // sections (dashboard, item info, ...)
 $section-color:  $shade-black;
@@ -72,14 +77,12 @@ $percent-colors: (
     '81-100':  $mellow-turquoise
 );
 
-// character grid on item page and search
-$grid-background-color: $iron-grey;
-$grid-shadow:           $shadow;
-$grid-inset-shadow:     $shadow inset;
-
-// input elements (input, textarea, select, ...)
-$input-color:             $shade-black;
-$input-shadow:            0 -3px 3px -3px $shadow-color inset;
+$progress-colors: (
+    'incorrect': $danger-red,
+    'down':      $danger-red,
+    'correct':   $icon-green,
+    'up':        $icon-green
+);
 
 $button-background-color: $shade-black;
 $button-border-color:     $plasma-blue;
@@ -107,21 +110,6 @@ $list-separator-color:  $charcoal-grey;
 $list-hover-color:      rgba(0, 0, 0, 0.2);
 $list-head-shadow:      0 -5px 10px $shadow-color inset;
 
-// textfield
-$textfield-color: $shade-black;
-$textform-color:  $iron-grey;
-$textform-shadow: $shadow inset;
-
-// searchbar
-$search-query-color:  $shade-black;
-$search-query-shadow: $shadow inset;
-$searchbar-in-shadow: 0 -3px 3px -3px $shadow-color inset;
-
-// item info
-$correct-progress-color: $shade-black;
-$user-synonym-color:     $iron-grey;
-$icon-shadow:            $shadow;
-
 // user profile
 $user-info-background-color: $shade-black;
 $user-wos-header-color:      $shade-black;
@@ -130,8 +118,6 @@ $user-avatar-shadow:         $shadow;
 $user-info-shadow:           $shadow-v inset, $shadow-v;
 
 // session (review, lesson quiz)
-$incorrect-color:        $danger-red;
-$correct-color:          $icon-green;
 $reading-color:          '/*[[REVIEW_READING_BG]]*/';
 $meaning-color:          '/*[[REVIEW_MEANING_BG]]*/';
 $supplement-info-shadow: $shadow;

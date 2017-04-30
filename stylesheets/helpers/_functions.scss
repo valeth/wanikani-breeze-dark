@@ -9,3 +9,7 @@
 @function percent-color($range) {
     @return map-get($percent-colors, $range);
 }
+
+@function progress-color($x) {
+    @return map-get($progress-colors, $x);
+}
