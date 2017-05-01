@@ -182,7 +182,7 @@
     box-shadow: $answer-exception-shadow !important;
 
     &::before {
-        border-color: transparent transparent $popover-border-color !important;
+        display: none !important;
     }
 }
 
