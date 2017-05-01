@@ -3,7 +3,6 @@
     @include sheet(1030, $navbar-color);
 }
 
-// scss-lint:disable NestingDepth SelectorDepth
 .nav {
     a {
         @extend %inherited-color;

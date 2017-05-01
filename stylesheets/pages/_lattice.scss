@@ -2,7 +2,6 @@
     @extend %locked-background;
 }
 
-// scss-lint:disable QualifyingElement
 section[class^=lattice-] {
     @extend %section;
 

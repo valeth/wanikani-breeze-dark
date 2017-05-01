@@ -95,7 +95,6 @@
 
         @each $x in 'correct', 'incorrect' {
             &.#{$x} {
-                // scss-lint:disable QualifyingElement NestingDepth
                 input[type=text]:disabled {
                     background-color: progress-color($x) !important;
                 }
@@ -138,7 +137,6 @@
         margin: 0 !important;
 
         // indicate that the wrapup function is active
-        // scss-lint:disable NestingDepth
         .wrap-up-selected {
             span, span:hover::before, span::before {
                 background-color: $charcoal-grey !important;
