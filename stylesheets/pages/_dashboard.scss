@@ -69,10 +69,10 @@ section.progression {
 
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important;
     margin-bottom: 0 !important;
     margin-top: 0 !important;
     min-height: 100%;
+    position: relative !important;
 
     span,
     time {
@@ -80,6 +80,8 @@ section.progression {
     }
 
     table {
+        margin-bottom: 38px !important;
+
         @each $type in $character-types {
             [id^="#{$type}"] {
                 @include character($type, $inverted: true);
@@ -98,6 +100,12 @@ section.progression {
         &:hover {
             @extend %no-background-color;
         }
+    }
+
+    .see-more {
+        bottom: 0 !important;
+        position: absolute !important;
+        width: 100% !important;
     }
 }
 
