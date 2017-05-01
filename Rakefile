@@ -7,6 +7,8 @@ require 'sass/plugin'
 require 'yaml'
 
 begin
+    raise LoadError if ENV['CI']
+
     require 'dbus'
 
     DBUS_SESSION_BUS = DBus.session_bus
