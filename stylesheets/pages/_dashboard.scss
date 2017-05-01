@@ -21,7 +21,9 @@
         > li {
             @extend %clear-background;
             @extend %shadowless;
+        }
 
+        > li:not(:last-child) {
             border-right: 1px solid $list-separator-color;
         }
 
@@ -104,6 +106,9 @@ section.progression {
 .blog {
     @extend %section;
     @extend %list;
+
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
 }
 
 .see-more {
