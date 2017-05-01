@@ -1,0 +1,36 @@
+#item_marker_body {
+    @extend %section;
+
+    h3 {
+        color: $inverted-text-color !important;
+    }
+
+    #item_marker_settings {
+        padding: 5px !important;
+    }
+}
+
+#marked_items {
+    @extend %section;
+
+    padding: 10px !important;
+
+    #marked_items_buttons {
+        > button {
+            margin-right: 10px !important;
+        }
+    }
+
+    #marked_items_list {
+        display: flex !important;
+        flex-wrap: wrap !important;
+
+        > a {
+            margin: 5px 5px 0 0 !important;
+
+            &:hover {
+                text-decoration: none !important;
+            }
+        }
+    }
+}
