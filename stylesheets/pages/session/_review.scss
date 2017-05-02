@@ -1,11 +1,11 @@
 #reviews {
-    @each $item in 'radicals', 'kanji', 'vocabulary' {
+    @each $item in 'radical', 'kanji', 'vocabulary' {
         // header item background and foreground
         #character.#{$item} {
             @include character($item, $inverted: true);
         }
 
-        #last-items .#{$item} [lang="ja"]:first-child {
+        #last-items [class*="#{$item}"] [lang="ja"]:first-child {
             @include character($item);
         }
     }
