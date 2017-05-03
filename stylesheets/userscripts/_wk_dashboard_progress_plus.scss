@@ -1,5 +1,19 @@
 $wpp-background-color: $charcoal-grey;
 
-.progression .lattice-single-character ul > .pct90 {
-    background-color: $wpp-background-color !important;
+%wpp-filter {
+    filter: brightness(0.5) !important;
+}
+
+.progression {
+    .lattice-single-character {
+        ul > .pct90 {
+            background-color: $wpp-background-color !important;
+        }
+
+        @for $i from 5 through 10 {
+            li > a[data-srs-lvl="#{$i}"] {
+                @extend %wpp-filter;
+            }
+        }
+    }
 }
