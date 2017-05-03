@@ -13,12 +13,23 @@
         }
     }
 
+
     ul {
         span {
             @extend %shadowless;
 
-            margin-left: 1vh;
-            margin-right: 1vh;
+            margin-left: 1vh !important;
+            margin-right: 1vh !important;
+
+            &.all {
+                @include character('radical');
+            }
+
+            @each $type in ('radicals', 'kanji', 'vocabulary') {
+                &.#{$type} {
+                    @include character($type);
+                }
+            }
         }
 
         .locked {
