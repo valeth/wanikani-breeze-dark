@@ -1,7 +1,4 @@
 engines:
-  rubocop:
-    enabled: true
-
   scss-lint:
     enabled: true
 

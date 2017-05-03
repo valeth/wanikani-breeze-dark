@@ -11,15 +11,6 @@ cache:
   paths:
     - vendor/bundle
 
-rubocop:
-  type: test
-  stage: testing
-  environment: testing
-  script:
-    - bundle exec rake rubocop
-  only:
-    - dev
-
 scss-lint:
   type: test
   stage: testing

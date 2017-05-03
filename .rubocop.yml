@@ -1,6 +1,0 @@
-AllCops:
-  TargetRubyVersion: 2.3
-
-# Because only 2 spaces indent is insane
-Style/IndentationWidth:
-  Width: 4

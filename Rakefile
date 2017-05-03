@@ -2,7 +2,6 @@
 
 require 'rake/clean'
 require 'scss_lint/rake_task'
-require 'rubocop/rake_task'
 require 'sass/plugin'
 require 'yaml'
 
@@ -32,18 +31,12 @@ def notify(message)
     dbus_notify(message) if defined? dbus_notify
 end
 
-RuboCop::RakeTask.new
 SCSSLint::RakeTask.new
 
 CLEAN.include('tmp', '.sass_cache')
 CLOBBER.include('out.css')
 
-configfile = ENV['CONFIGFILE'] || 'default.yml'
-
-task default: :build
-
-task test: [:rubocop, :scss_lint]
-
+# Constants
 STYLISH_OPTIONS = %w(
     REVIEW_CHAR_BG
     RADICALS_COLOR
@@ -55,6 +48,7 @@ STYLISH_OPTIONS = %w(
 
 DEFAULT_CONFIG = 'config/dark.yml'
 
+# Tasks
 desc 'Build the CSS files from SCSS sources'
 task :build do
     Sass::Plugin.options[:template_location] = 'stylesheets'
@@ -77,7 +71,7 @@ desc 'Replace Stylish option keys with default values'
 task :replace, [:configfile] => :build do |_t, args|
     configfile = args[:configfile] || DEFAULT_CONFIG
     abort("cannot find #{configfile}") unless File.exist?(configfile)
-    config = YAML.safe_load(open(args[:configfile]))
+    config = YAML.safe_load(open(configfile))
 
     notify("Building CSS file with #{configfile}")
 
@@ -106,3 +100,7 @@ task :copy, [:replace, :configfile] => :build do |_t, args|
         notify('Copied out.css to clipboard.')
     end
 end
+
+task test: :scss_lint
+
+task default: :build
