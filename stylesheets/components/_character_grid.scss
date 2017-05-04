@@ -2,7 +2,7 @@
     @extend %inherited-color;
 }
 
-.burned {
+li.burned {
     filter: brightness(0.50) !important;
 }
 
