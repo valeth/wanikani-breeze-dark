@@ -95,10 +95,22 @@ section.progression {
 
         > td {
             @extend %borderless;
+
+            div {
+                @extend %shadowless;
+
+                border-color: $separator-color !important;
+            }
+
+            i::before {
+                color: $separator-color !important;
+            }
         }
 
         &:hover {
             @extend %no-background-color;
+
+            filter: none !important;
         }
     }
 
