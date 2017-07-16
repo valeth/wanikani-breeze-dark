@@ -75,7 +75,8 @@ section.progression {
     position: relative !important;
 
     span,
-    time {
+    time,
+    i {
         @extend %inherited-color;
     }
 
