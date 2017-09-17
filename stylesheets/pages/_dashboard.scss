@@ -4,6 +4,16 @@
     }
 }
 
+.newbie {
+    @extend %section;
+    @extend %no-background-image;
+
+    hr {
+        border-bottom-color: $separator-color !important;
+        border-top-color: $separator-color !important;
+    }
+}
+
 .review-status {
     @extend %section;
     @extend %borderless;
