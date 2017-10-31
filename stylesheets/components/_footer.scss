@@ -1,0 +1,37 @@
+footer {
+    // scss-lint:disable UrlFormat
+    background-image: url('/*[[FOOTER_IMAGE_URL]]*/') !important;
+
+    ul {
+        @extend %section;
+    }
+
+    li {
+        @extend %no-background-color;
+    }
+
+    li:last-child {
+        background-color: $icon-red !important;
+        border: {
+            bottom-right-radius: 5px !important;
+            top-right-radius: 5px !important;
+        }
+        color: $inverted-text-color !important;
+
+        span {
+            color: $inverted-text-color !important;
+        }
+    }
+
+    a,
+    a:hover {
+        @extend %no-background-color;
+
+        padding-top: 10px !important;
+        transition: none !important;
+    }
+
+    a:hover {
+        text-decoration: underline !important;
+    }
+}
