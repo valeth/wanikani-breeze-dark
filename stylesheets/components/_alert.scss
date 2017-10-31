@@ -16,5 +16,10 @@
 
     > h3 {
         color: $inverted-text-color !important;
+
+        > [class^=icon],
+        > time {
+            color: $inverted-text-color !important;
+        }
     }
 }
