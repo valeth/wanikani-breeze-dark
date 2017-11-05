@@ -1,25 +1,21 @@
-.alert {
-    @extend %borderless;
-
-    background-color: $alert-color !important;
-
-    * {
-        color: $inverted-text-color !important;
-    }
-}
-
-[class$=alert] {
+[class*=alert] {
     @extend %section;
+    @extend %borderless;
     @extend %no-background-image;
 
     background-color: $alert-color !important;
+    color: $inverted-text-color !important;
 
-    > h3 {
-        color: $inverted-text-color !important;
-
-        > [class^=icon],
-        > time {
-            color: $inverted-text-color !important;
-        }
+    h3, a, p, span, i, time {
+        color: inherit !important;
     }
+}
+
+// alert message under navbar
+.alert {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    width: 92vw;
 }
