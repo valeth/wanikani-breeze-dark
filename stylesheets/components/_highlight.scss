@@ -10,6 +10,10 @@
     @extend %shadowless;
 
     border-radius: 3px !important;
+
+    > span {
+        color: $inverted-text-color !important;
+    }
 }
 
 .highlight-reading {
@@ -18,4 +22,11 @@
 
 .highlight-meaning {
     @extend %meaning;
+}
+
+.highlight-reading,
+.highlight-meaning {
+    > span {
+        color: $text-color !important;
+    }
 }
