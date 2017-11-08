@@ -1,8 +1,4 @@
-// NOTE:
-//   only works with https://github.com/valeth/wk_anti_burnout
-//   the original script doesn't have any CSS classes associated to it's elements
-
-.wk-anti-burnout {
+.wklc {
     @extend %section;
 
     align-items: center !important;
@@ -38,7 +34,7 @@
         color: $text-color !important;
     }
 
-    .btn-settings {
+    .wklc-btn-settings {
         background-color: $iron-grey !important;
     }
 }
