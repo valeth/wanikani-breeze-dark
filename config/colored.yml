@@ -20,5 +20,6 @@ REVIEW_CHAR_BG: |-
 RADICALS_COLOR:    '#3daee9'
 KANJI_COLOR:       '#fdbc4b'
 VOCAB_COLOR:       '#2ecc71'
+BURNED_COLOR:      '#da4453'
 REVIEW_READING_BG: 'transparent'
 REVIEW_MEANING_BG: 'transparent'

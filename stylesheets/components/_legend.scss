@@ -25,6 +25,12 @@
                 @include character('radical');
             }
 
+            &.burned {
+                @include srs-level('burned', $text-only: false);
+
+                color: $inverted-text-color !important;
+            }
+
             @each $type in ('radicals', 'kanji', 'vocabulary') {
                 &.#{$type} {
                     @include character($type);
