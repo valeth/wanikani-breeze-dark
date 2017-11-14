@@ -1,40 +1,32 @@
 .wklc {
     @extend %section;
 
-    align-items: center !important;
-    display: flex !important;
     justify-content: space-around !important;
-    margin: 0.5em 1em 0 !important;
-    min-height: 2em !important;
-    padding: 0 0.5em !important;
+    margin: 1em 1.3em !important;
 
-    .item {
+    .wklc-items {
+        margin: 0 !important;
+    }
+
+    .wklc-item {
         @extend %shadowless;
+        @extend %no-background-color;
 
-        color: $inverted-text-color !important;
+        color: $text-color !important;
+        min-width: 2em !important;
+        padding: 0 0.2em;
     }
 
     @each $lvl in ('apprentice' 'guru' 'master' 'enlightened') {
         [class*=#{$lvl}] {
-            @extend %no-background-color;
             @include srs-level('#{$lvl}');
         }
     }
 
     @for $i from 1 through 4 {
-        .apprentice#{$i},
-        .guru#{$i} {
+        .wklc-apprentice#{$i},
+        .wklc-guru#{$i} {
             filter: saturate((100 / $i) / 100) !important;
         }
-    }
-
-    .last {
-        @extend %no-background-color;
-
-        color: $text-color !important;
-    }
-
-    .wklc-btn-settings {
-        background-color: $iron-grey !important;
     }
 }
