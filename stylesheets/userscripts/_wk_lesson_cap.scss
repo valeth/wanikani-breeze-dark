@@ -29,4 +29,10 @@
             filter: saturate((100 / $i) / 100) !important;
         }
     }
+
+    .wklc-max-score-edit {
+        label {
+            @extend %no-background-color;
+        }
+    }
 }
