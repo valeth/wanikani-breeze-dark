@@ -107,7 +107,7 @@ task test: :scss_lint
 task :changes do
     changes = `git log --format="%ad | %s" --date=short`.split("\n")
     changes.reject! { |x| /(changelog|gitignore|readme|^merge)/i =~ x }
-    puts changes
+    puts changes.reverse
 end
 
 task default: :build
