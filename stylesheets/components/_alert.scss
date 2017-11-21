@@ -1,21 +1,36 @@
-[class*=alert] {
+$alert-info-color: $beware-orange;
+
+
+// alert message under navbar
+// reviews alert on summary page
+.alert {
     @extend %section;
     @extend %borderless;
     @extend %no-background-image;
 
-    background-color: $alert-color !important;
-    color: $inverted-text-color !important;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+
+    max-width: 92vw;
 
     h3, a, p, span, i, time {
         color: inherit !important;
     }
 }
 
-// alert message under navbar
-.alert {
-    margin: {
-        left: auto;
-        right: auto;
+.alert-info {
+    background-color: $alert-info-color !important;
+    color: $inverted-text-color !important;
+}
+
+.reviews-alert {
+    // arrow below review alert
+    &::before {
+        background-color: $alert-info-color !important;
+        bottom: 17px !important;
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%) !important;
+        z-index: 3 !important;
     }
-    width: 92vw;
 }
