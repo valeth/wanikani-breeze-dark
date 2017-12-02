@@ -6,3 +6,6 @@
 /.sass-cache
 /tmp
 /*.css
+
+# Compiled CSS
+/compiled/wanikani_breeze_dark-*.user.css
