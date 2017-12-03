@@ -31,3 +31,6 @@ linters:
 
   QualifyingElement:
     enabled: false
+
+  StringQuotes:
+    enabled: false
