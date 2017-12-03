@@ -51,9 +51,9 @@ $dropdown-hover-color: fade-out($shade-black, 0.5);
 
 // character colors
 $character-colors: (
-    'rad': '/*[[RADICALS_COLOR]]*/', // $plasma-blue
-    'kan': '/*[[KANJI_COLOR]]*/',    // $icon-yellow
-    'voc': '/*[[VOCAB_COLOR]]*/'     // $icon-green
+    'rad': "/*[[radicals-color]]*/", // $plasma-blue
+    'kan': "/*[[kanji-color]]*/",    // $icon-yellow
+    'voc': "/*[[vocab-color]]*/"     // $icon-green
 );
 
 $character-text-color: $shade-black;
@@ -64,7 +64,7 @@ $srs-colors: (
     'gur': $mellow-turquoise,
     'mas': $sunbeam-yellow,
     'enl': $beware-orange,
-    'bur': '/*[[BURNED_COLOR]]*/'
+    'bur': "/*[[burned-color]]*/"
 );
 
 // lattice
@@ -117,8 +117,8 @@ $user-avatar-shadow:         $shadow;
 $user-info-shadow:           $shadow-v inset, $shadow-v;
 
 // session (review, lesson quiz)
-$reading-color:          '/*[[REVIEW_READING_BG]]*/';
-$meaning-color:          '/*[[REVIEW_MEANING_BG]]*/';
+$reading-color:          "/*[[review-reading-bg]]*/";
+$meaning-color:          "/*[[review-meaning-bg]]*/";
 $supplement-info-shadow: $shadow;
 $note-shadow:            $shadow inset;
 $addcon-sep-color:       $shade-black;

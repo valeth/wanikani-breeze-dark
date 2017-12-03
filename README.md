@@ -24,9 +24,5 @@ Run `gem install bundler` to install the bundler program.
 
 Run `bundle install` from within the project directory.
 
-Then run `rake` from within the project directory and copy
-the content of the generated `compiled/wanikani_breeze_dark.user.css` into a new Stylish theme.
-
-If you are using a Linux OS and have `xclip` installed
-you can simply run `rake copy` to build the project and copy the
-file content to your clipboard.
+Then run `rake` from within the project directory and install
+the generated `compiled/wanikani_breeze_dark.user.css` with Stylus.

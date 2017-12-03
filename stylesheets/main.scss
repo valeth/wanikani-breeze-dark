@@ -1,15 +1,4 @@
 // scss-lint:disable Comment
-/* ==UserStyle==
-@name WaniKani Breeze Dark
-@version     1.0.0
-@namespace   valeth.info
-@license     GPL-3.0
-@author      Valeth
-@homepageURL https://valeth.info
-@supportURL  https://gitlab.com/valeth/wanikani-breeze-dark/issues
-==/UserStyle== */
-
-// scss-lint:disable Comment
 /*
 This file was compiled with SCSS.
 To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze-dark
@@ -89,7 +78,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
 
     // Replacements for userstyles.org, defaults to the dark version
     // scss-lint:disable Comment
-    /*[[REVIEW_CHAR_BG]]*/
+    /*[[review-char-bg]]*/
 
     // ### Userscripts ###
     @import 'userscripts/lesson_reorder';

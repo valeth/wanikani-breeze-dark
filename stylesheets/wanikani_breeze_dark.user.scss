@@ -1,0 +1,47 @@
+// scss-lint:disable Comment
+/* ==UserStyle==
+@name         WaniKani Breeze Dark
+@version      1.0.0
+@namespace    valeth.info
+@license      GPL-3.0
+@description  Dark theme for the WaniKani kanji learning website.
+@author       Valeth
+@homepageURL  https://valeth.info
+@supportURL   https://gitlab.com/valeth/wanikani-breeze-dark/issues
+
+@var color radicals-color    "Radicals Color"            #3DAEE9
+@var color kanji-color       "Kanji Color"               #FDBC4B
+@var color vocab-color       "Vocabulary Color"          #2ECC71
+@var color burned-color      "Burned Color"              #DA4453
+@var color review-reading-bg "Review Reading Background" #4D4D4D
+@var color review-meaning-bg "Review Meaning Background" #31363B
+@advanced image footer-image-url  "Footer Image" {
+    footer-image-dark    "Dark"     "https://i.imgur.com/MRVqVnw.png"
+    footer-image-default "Original" "https://cdn-staging.wanikani.com/assets/default-v2/footer-bg-615f5af6597739a9fb5ee5e60c69e58065f99060cfbfd43157b32337eded61dd.gif"
+}
+@advanced dropdown review-char-bg "Review Character Background" {
+    review-char-bg-dark "Dark, like my soul" <<<EOT
+    EOT;
+    review-char-bg-colored "Colorful, Rainbows, Rainbows EVERYWHERE!" <<<EOT
+        #main-info.vocabulary, #reviews #character.vocabulary {
+            background-color: /*[[vocab-color]]*\/ !important;
+            color: #232629 !important;
+        }
+        #main-info.kanji, #reviews #character.kanji {
+            background-color: /*[[kanji-color]]*\/ !important;
+            color: #232629 !important;
+        }
+        #main-info.radical, #reviews #character.radical {
+            background-color: /*[[radicals-color]]*\/ !important;
+            color: #232629 !important;
+        }
+        #main-info.vocabulary #character, #main-info.kanji #character,
+        #main-info.radical #character, #main-info #meaning,
+        #reviews #character, #stats, #summary-button, #header-buttons {
+            color: #232629 !important;
+        }
+    EOT;
+}
+==/UserStyle== */
+
+@import 'main';
