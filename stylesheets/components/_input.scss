@@ -6,6 +6,10 @@ input[type="checkbox"] {
     @extend %shadowless;
 }
 
+input[type="range"] {
+    @extend %clear-background;
+}
+
 #user_password {
     &:focus {
         border: {

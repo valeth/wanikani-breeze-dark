@@ -7,6 +7,8 @@ $timeline-shadow: $shadow;
 #timeln {
     @extend %section;
 
+    padding: 0 1rem !important;
+
     // header, icons and day slider
     > h4,
     > i::before,
@@ -38,6 +40,7 @@ $timeline-shadow: $shadow;
 // the graph container
 #timeln-graph {
     margin: 0 !important;
+    overflow: hidden !important;
     padding: 10px !important;
 }
 

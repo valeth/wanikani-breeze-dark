@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         WaniKani Breeze Dark
-@version      1.0.0
+@version      1.0.1
 @namespace    valeth.info
 @license      GPL-3.0
 @description  Dark theme for the WaniKani kanji learning website.
@@ -211,7 +211,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   .blog tr, #enlarge-hover,
   [class*="-icon"], [id*="summary"] li, #supplement-info li span,
   #batch-items li span, #related-items span, #lessons .ui ul item,
-  #reviews .ui ul item, .nav > .lessons a > span,
+  #reviews .ui ul item, input[type="range"], .nav > .lessons a > span,
   .nav > .reviews a > span, .srs-progress ul > li, .kotoba-table-list .none-available, .see-more, #review-stats [id^="review-stats"], #graph-bar-info .tot, #graph-bar-info .cur, .alert, [class*=character-grid] > li, .popover .popover-content li, .popover .bar, .progress, .progress > .bar, [class*="highlight"], .newbie, section.progression .lattice-single-character, .see-more a, #main-info, #reviews #character, #wki_settings_cancel,
   #wki_settings_save, #wki_settings_button_label_bgcolor,
   #wki_settings_button_label_textcolor,
@@ -223,7 +223,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   [class|=account-billing] th, .kotoba-table-list th, .forum-topics-list th,
   .blog th, [class|=account-subscription] td,
   [class|=account-billing] td, .kotoba-table-list td, .forum-topics-list td,
-  .blog td, .nav > .lessons a > span,
+  .blog td, input[type="range"], .nav > .lessons a > span,
   .nav > .reviews a > span, .srs-progress ul > li, .kotoba-table-list .none-available, .see-more, #review-stats [id^="review-stats"], #graph-bar-info .tot, #graph-bar-info .cur, blockquote, .audio-btn, [class*=character-grid] > li > a, .dropdown.open [class*="toggle"], .legend ul .locked, .legend [class*="lattice"], .nav .title span:first-child, .popover .popover-title, .note-meaning fieldset,
   .note-reading fieldset, .user-synonyms, .user-synonyms li::after, .user-synonyms-add-btn::before, #main footer li, #main footer a,
   #main footer a:hover, .review-status li, .kotoba-table-list .none-available:hover, .individual-item h2, .individual-item .additional-info, section[class^=lattice-] li, section[class^=lattice-] li > a, section[id|=level] header, .explanation-item-mnemonics,
@@ -1025,24 +1025,27 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     #reviews .ui ul item {
       background-color: #31363b !important; }
 
-  #timeln > h4,
-  #timeln > i::before,
-  #timeln > #range_form {
-    margin-top: 10px !important; }
-  #timeln > h4 {
-    line-height: 0.70em !important;
-    margin-left: 10px !important; }
-  #timeln > #range_form {
-    margin-right: 10px !important; }
-  #timeln .rad {
-    fill: /*[[radicals-color]]*/ !important; }
-  #timeln .kan {
-    fill: /*[[kanji-color]]*/ !important; }
-  #timeln .voc {
-    fill: /*[[vocab-color]]*/ !important; }
+  #timeln {
+    padding: 0 1rem !important; }
+    #timeln > h4,
+    #timeln > i::before,
+    #timeln > #range_form {
+      margin-top: 10px !important; }
+    #timeln > h4 {
+      line-height: 0.70em !important;
+      margin-left: 10px !important; }
+    #timeln > #range_form {
+      margin-right: 10px !important; }
+    #timeln .rad {
+      fill: /*[[radicals-color]]*/ !important; }
+    #timeln .kan {
+      fill: /*[[kanji-color]]*/ !important; }
+    #timeln .voc {
+      fill: /*[[vocab-color]]*/ !important; }
 
   #timeln-graph {
     margin: 0 !important;
+    overflow: hidden !important;
     padding: 10px !important; }
 
   #timeline .label-x > text,
