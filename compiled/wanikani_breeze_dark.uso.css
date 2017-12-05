@@ -238,7 +238,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   .blog tr:last-child td, #enlarge-hover,
   [class*="-icon"], [id*="summary"] li, #supplement-info li span,
   #batch-items li span, #related-items span, #lessons .ui ul item,
-  #reviews .ui ul item, [class*=character-grid] > li, .dropdown.open [class*="menu"], .navbar-inner, .nav > .dropdown.account > .dropdown-toggle span, .page-list-header span, .popover .popover-content li, .review-status li, .kotoba-table-list .none-available > td, .see-more div, [id*="summary"] nav, #question-type, #answer-form input, #answer-form button, #wki_button #wki_mimic_button,
+  #reviews .ui ul item, [class*=character-grid] > li, .dropdown.open [class$="menu"], .navbar-inner, .nav > .dropdown.account > .dropdown-toggle span, .page-list-header span, .popover .popover-content li, .review-status li, .kotoba-table-list .none-available > td, .see-more div, [id*="summary"] nav, #question-type, #answer-form input, #answer-form button, #wki_button #wki_mimic_button,
   #wki_button .wki_item_wrapper,
   #wki_button .wki_button_item_label, [id|=qtip], [id|=qtip] .qtip-titlebar,
   [id|=qtip] .qtip-title, #lessons .ui-small .icon-minus,
@@ -342,30 +342,30 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     border-color: /*[[vocab-color]]*/ !important; }
   .dropdown.open {
     background-color: #33383c !important; }
-    .dropdown.open.radicals [class*="menu"]::before, .dropdown.open.radicals [class*="menu"]::after {
+    .dropdown.open.radicals [class$="menu"]::before, .dropdown.open.radicals [class$="menu"]::after {
       border-bottom-color: /*[[radicals-color]]*/ !important;
       color: /*[[radicals-color]]*/ !important; }
-    .dropdown.open.kanji [class*="menu"]::before, .dropdown.open.kanji [class*="menu"]::after {
+    .dropdown.open.kanji [class$="menu"]::before, .dropdown.open.kanji [class$="menu"]::after {
       border-bottom-color: /*[[kanji-color]]*/ !important;
       color: /*[[kanji-color]]*/ !important; }
-    .dropdown.open.vocabulary [class*="menu"]::before, .dropdown.open.vocabulary [class*="menu"]::after {
+    .dropdown.open.vocabulary [class$="menu"]::before, .dropdown.open.vocabulary [class$="menu"]::after {
       border-bottom-color: /*[[vocab-color]]*/ !important;
       color: /*[[vocab-color]]*/ !important; }
     .dropdown.open [class*="toggle"] {
       box-shadow: 1px 0 2px rgba(0, 0, 0, 0.7) inset, -1px 0 2px rgba(0, 0, 0, 0.7) inset !important; }
       .dropdown.open [class*="toggle"] > span {
         border: 0.3em solid #232629 !important; }
-    .dropdown.open [class*="menu"] {
+    .dropdown.open [class$="menu"] {
       background-color: inherit !important;
       border-radius: 5px !important;
       box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 2px 2px 2px rgba(0, 0, 0, 0.7) !important;
       top: 112% !important; }
-      .dropdown.open [class*="menu"] li:not(.nav-header) {
+      .dropdown.open [class$="menu"] li:not(.nav-header) {
         background-color: inherit !important; }
-        .dropdown.open [class*="menu"] li:not(.nav-header) > a:hover {
+        .dropdown.open [class$="menu"] li:not(.nav-header) > a:hover {
           background-color: inherit !important;
           filter: brightness(0.8) !important; }
-      .dropdown.open [class*="menu"]::before, .dropdown.open [class*="menu"]::after {
+      .dropdown.open [class$="menu"]::before, .dropdown.open [class$="menu"]::after {
         border-bottom-color: #33383c !important;
         color: #33383c !important; }
 

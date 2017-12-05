@@ -38,7 +38,7 @@ $open-shadow: 1px 0 2px $shadow-color inset,
             &.#{$type} {
                 @include character($type);
 
-                [class*="menu"] {
+                [class$="menu"] {
                     &::before,
                     &::after {
                         border-bottom-color: character-color($type) !important;
@@ -59,7 +59,7 @@ $open-shadow: 1px 0 2px $shadow-color inset,
             }
         }
 
-        [class*="menu"] {
+        [class$="menu"] {
             @extend %borderless;
 
             background-color: inherit !important;
