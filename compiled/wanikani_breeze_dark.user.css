@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         WaniKani Breeze Dark
-@version      1.0.2
+@version      1.0.3
 @namespace    valeth.info
 @license      GPL-3.0
 @description  Dark theme for the WaniKani kanji learning website.
@@ -42,6 +42,7 @@
     EOT;
 }
 ==/UserStyle== */
+
 /*
 This file was compiled with SCSS.
 To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze-dark
@@ -121,7 +122,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     color: #bcbcbc !important;
     -webkit-text-fill-color: #bcbcbc !important; }
 
-  .alert, .legend, .page-list, #main footer ul, .account-subscription .account-subscription-plan,
+  .alert, .system-alert, .legend, .page-list, #main footer ul, .account-subscription .account-subscription-plan,
   #account-subscription-coupon-form #coupon,
   .account-subscription-payment-processor-info,
   .account-subscription form .control-group input[type="text"], .api section, .newbie, .review-status, .srs-progress, section.progression, .kotoba-table-list, .forum-topics-list,
@@ -212,7 +213,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   [class*="-icon"], [id*="summary"] li, #supplement-info li span,
   #batch-items li span, #related-items span, #lessons .ui ul item,
   #reviews .ui ul item, input[type="range"], .nav > .lessons a > span,
-  .nav > .reviews a > span, .srs-progress ul > li, .kotoba-table-list .none-available, .see-more, #review-stats [id^="review-stats"], #graph-bar-info .tot, #graph-bar-info .cur, .alert, [class*=character-grid] > li, .popover .popover-content li, .popover .bar, .progress, .progress > .bar, [class*="highlight"], .newbie, section.progression .lattice-single-character, .see-more a, #main-info, #reviews #character, #wki_settings_cancel,
+  .nav > .reviews a > span, .srs-progress ul > li, .kotoba-table-list .none-available, .see-more, #review-stats [id^="review-stats"], #graph-bar-info .tot, #graph-bar-info .cur, .alert, .system-alert, [class*=character-grid] > li, .popover .popover-content li, .popover .bar, .progress, .progress > .bar, [class*="highlight"], .newbie, section.progression .lattice-single-character, .see-more a, #main-info, #reviews #character, #wki_settings_cancel,
   #wki_settings_save, #wki_settings_button_label_bgcolor,
   #wki_settings_button_label_textcolor,
   #wki_settings_timer_show_next_item, #graph-bar-info .summary > div > div,
@@ -269,7 +270,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   textarea, input, button, .btn, .page-list li > a, .nav-load > li:last-child a,
   .button, #start-session, #batch-items [data-index="quiz"] > span, .btn-set li, #hotkeys, #lessons .ui #reorder,
   #reviews .ui #reorder, [aria-describedby=divSRSGridSettings] .ui-dialog-buttonset button,
-  [aria-describedby=ui-id-2] .ui-dialog-buttonset button, #WKO_button, select, #back-dashboard, .alert, .legend, .page-list, #main footer ul, .account-subscription .account-subscription-plan,
+  [aria-describedby=ui-id-2] .ui-dialog-buttonset button, #WKO_button, select, #back-dashboard, .alert, .system-alert, .legend, .page-list, #main footer ul, .account-subscription .account-subscription-plan,
   #account-subscription-coupon-form #coupon,
   .account-subscription-payment-processor-info,
   .account-subscription form .control-group input[type="text"], .api section, .newbie, .review-status, .srs-progress, section.progression, .kotoba-table-list, .forum-topics-list,
@@ -353,6 +354,12 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   .alert-info {
     background-color: #f67400 !important;
     color: #434343 !important; }
+
+  .system-alert {
+    background-color: #f67400 !important;
+    color: #434343 !important; }
+    .system-alert h3, .system-alert i, .system-alert time {
+      color: inherit !important; }
 
   .reviews-alert::before {
     background-color: #f67400 !important;
@@ -1140,4 +1147,6 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     filter: invert(80%) !important;
     opacity: 0.5 !important; } }
 
-/*# sourceMappingURL=wanikani_breeze_dark.user.css.map */
+/*# sourceMappingURL=main.css.map */
+
+

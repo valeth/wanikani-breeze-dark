@@ -25,6 +25,19 @@ $alert-info-color: $beware-orange;
     color: $inverted-text-color !important;
 }
 
+// alert message on top of dashboard (below search bar)
+.system-alert {
+    @extend %section;
+    @extend %no-background-image;
+
+    background-color: $alert-info-color !important;
+    color: $inverted-text-color !important;
+
+    h3, i, time {
+        color: inherit !important;
+    }
+}
+
 .reviews-alert {
     // arrow below review alert
     &::before {
