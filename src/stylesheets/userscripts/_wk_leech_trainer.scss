@@ -1,0 +1,76 @@
+#ss_quiz {
+    @extend %section;
+
+    padding: 0.5rem !important;
+
+    // TODO: move progress bar code into mixin
+    .quiz-progress {
+        @extend %no-background-image;
+
+        align-items: center !important;
+        background-color: darken($shade-black, 2%) !important;
+        border-radius: 10px !important;
+        box-shadow: $shadow-i !important;
+        display: flex !important;
+        height: 1rem !important;
+
+        .quiz-progress-bar {
+            @extend %no-background-image;
+
+            background-color: $icon-blue !important;
+            border-radius: 10px !important;
+            box-shadow: $shadow !important;
+            height: 50% !important;
+            margin: 5px !important;
+        }
+    }
+
+    .qwrap {
+        @extend %no-background-color;
+    }
+
+    .help {
+        @extend %no-background-color;
+        @extend %borderless;
+
+        color: $plasma-blue !important;
+    }
+
+    @each $item in radical, kanji, vocabulary {
+        &.#{$item} {
+            .question {
+                @include character($item, true);
+            }
+        }
+    }
+
+    .qtype {
+        @extend %no-background-image;
+        @extend %borderless;
+
+        border-radius: 5px !important;
+        box-shadow: $shadow-i !important;
+    }
+
+    .reading {
+        background-color: $reading-color !important;
+    }
+
+    .meaning {
+        background-color: $meaning-color !important;
+    }
+
+    .answer {
+        @extend %no-background-color;
+
+        margin-top: 0.5rem !important;
+        padding: 0 !important;
+
+        @each $item in correct, incorrect {
+            .#{$item} {
+                background-color: progress-color($item) !important;
+                color: $inverted-text-color !important;
+            }
+        }
+    }
+}
