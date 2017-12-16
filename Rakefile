@@ -62,6 +62,14 @@ task :build_usercss, [:env] => :build do |_task, args|
   end
 end
 
+task :build_uso => :build do
+  css_source = File.read(File.join('tmp', 'main.css'))
+  open('compiled/wanikani_breeze_dark.uso.css', 'w') do |outfile|
+    outfile.truncate(0)
+    outfile.write(replace_options(css_source))
+  end
+end
+
 desc 'Build the CSS files from SCSS sources'
 task :build do
   Sass::Plugin.options[:template_location] = File.join(SRC_DIR, 'stylesheets')
