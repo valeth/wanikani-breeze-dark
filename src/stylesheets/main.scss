@@ -81,6 +81,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     /*[[review-char-bg]]*/
 
     // ### Userscripts ###
+    @import 'userscripts/wanikani_open_framework';
     @import 'userscripts/lesson_reorder';
     @import 'userscripts/wk_improve';
     @import 'userscripts/wk_reorder_ultimate_2';

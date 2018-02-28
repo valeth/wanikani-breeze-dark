@@ -1,0 +1,48 @@
+// TODO: style rest of dialog components and groups
+
+#wkof_ds {
+    .ui {
+        &-dialog {
+            @extend %no-background-image;
+            @extend %popup;
+
+            &-titlebar {
+                @extend %no-background-color;
+                @extend %borderless;
+
+                border-bottom: 1px solid $shade-black !important;
+                border-radius: 0;
+            }
+
+            &-buttonpane {
+                @extend %no-background-image;
+                @extend %no-background-color;
+
+                border-top: 1px solid $shade-black !important;
+            }
+        }
+
+        &-icon {
+            // scss-lint:disable UrlFormat
+            // TODO: fix ".icon" styles to not affect this
+            background-image: url('https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/images/ui-icons_888888_256x240.png') !important;
+            box-shadow: none !important;
+        }
+
+        &-tabs {
+            &-nav {
+                border-bottom: 1px solid $shade-black !important;
+            }
+
+            &-tab {
+                @extend %no-background-image;
+                @extend %no-background-color;
+                @extend %borderless;
+            }
+
+            &-anchor {
+                color: $text-color !important;
+            }
+        }
+    }
+}

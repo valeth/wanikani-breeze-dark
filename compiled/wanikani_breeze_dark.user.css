@@ -141,7 +141,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     border-radius: 5px !important;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 2px 2px 2px rgba(0, 0, 0, 0.7) !important; }
 
-  #timeln-settings {
+  #wkof_ds .ui-dialog, #timeln-settings {
     background-color: #31363b !important;
     border-radius: 5px !important;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 2px 2px 2px rgba(0, 0, 0, 0.7) !important; }
@@ -213,7 +213,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   [class*="-icon"], [id*="summary"] li, #supplement-info li span,
   #batch-items li span, #related-items span, #lessons .ui ul item,
   #reviews .ui ul item, input[type="range"], .nav > .lessons a > span,
-  .nav > .reviews a > span, .srs-progress ul > li, .kotoba-table-list .none-available, .see-more, #review-stats [id^="review-stats"], #graph-bar-info .tot, #graph-bar-info .cur, .alert, .system-alert, [class*=character-grid] > li, .popover .popover-content li, .popover .bar, .progress, .progress > .bar, [class*="highlight"], .newbie, section.progression .lattice-single-character, .see-more a, #main-info, #reviews #character, #wki_settings_cancel,
+  .nav > .reviews a > span, .srs-progress ul > li, .kotoba-table-list .none-available, .see-more, #review-stats [id^="review-stats"], #graph-bar-info .tot, #graph-bar-info .cur, .alert, .system-alert, [class*=character-grid] > li, .popover .popover-content li, .popover .bar, .progress, .progress > .bar, [class*="highlight"], .newbie, section.progression .lattice-single-character, .see-more a, #main-info, #reviews #character, #wkof_ds .ui-dialog, #wkof_ds .ui-dialog-buttonpane, #wkof_ds .ui-tabs-tab, #wki_settings_cancel,
   #wki_settings_save, #wki_settings_button_label_bgcolor,
   #wki_settings_button_label_textcolor,
   #wki_settings_timer_show_next_item, #graph-bar-info .summary > div > div,
@@ -234,7 +234,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   .explanation-item-lessons-reviews,
   .explanation-item-srs, #stats *,
   #summary-button *,
-  #header-buttons *, .srs-up, .srs-down, #answer-form fieldset.correct button, #answer-form fieldset.incorrect button, #answer-form button, #additional-content li > span, #all-info, .srs-levels li span, .wall-of-shame, #wki_button #wki_mimic_button,
+  #header-buttons *, .srs-up, .srs-down, #answer-form fieldset.correct button, #answer-form fieldset.incorrect button, #answer-form button, #additional-content li > span, #all-info, .srs-levels li span, .wall-of-shame, #wkof_ds .ui-dialog-titlebar, #wkof_ds .ui-dialog-buttonpane, #wkof_ds .ui-tabs-tab, #wki_button #wki_mimic_button,
   #wki_button .wki_item_wrapper,
   #wki_button .wki_button_item_label, #wki_srs_popup_wrapper .wki_srs_popup_icon,
   #wki_srs_popup_wrapper #wki_srs_popup_message, #lessons .ui-small .icon-minus,
@@ -276,14 +276,14 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   .account-subscription form .control-group input[type="text"], .api section, .newbie, .review-status, .srs-progress, section.progression, .kotoba-table-list, .forum-topics-list,
   .blog, .individual-item .span12 > section, .individual-item + section, section[class^=lattice-], section[id|=level], .settings-section, [id*="summary"] [id^="radical"], [id*="summary"] [id^="kanji"], [id*="summary"] [id^="vocabulary"], [id*="summary"] [id^="correct"], [id*="summary"] [id^="incorrect"], #review-stats, #supplement-info, #information, #lessons .ui,
   #reviews .ui, #timeln, [aria-describedby=divSRSGridSettings],
-  [aria-describedby=ui-id-2], #item_marker_body, #marked_items, .wklc, #ss_quiz, #timeln-settings, [class|=account-subscription] h3 .heading-symbol,
+  [aria-describedby=ui-id-2], #item_marker_body, #marked_items, .wklc, #ss_quiz, #wkof_ds .ui-dialog, #timeln-settings, [class|=account-subscription] h3 .heading-symbol,
   [class|=account-billing] h3 .heading-symbol, .kotoba-table-list h3 .heading-symbol, .forum-topics-list h3 .heading-symbol,
   .blog h3 .heading-symbol, [class|=account-subscription] tr:last-child td,
   [class|=account-billing] tr:last-child td, .kotoba-table-list tr:last-child td, .forum-topics-list tr:last-child td,
   .blog tr:last-child td, #enlarge-hover,
   [class*="-icon"], [id*="summary"] li, #supplement-info li span,
   #batch-items li span, #related-items span, #lessons .ui ul item,
-  #reviews .ui ul item, [class*=character-grid] > li, .dropdown.open [class$="menu"], .navbar-inner, .nav > .dropdown.account > .dropdown-toggle span, .page-list-header span, .popover .popover-content li, .review-status li, .kotoba-table-list .none-available > td, .see-more div, [id*="summary"] nav, #question-type, #answer-form input, #answer-form button, #wki_button #wki_mimic_button,
+  #reviews .ui ul item, [class*=character-grid] > li, .dropdown.open [class$="menu"], .navbar-inner, .nav > .dropdown.account > .dropdown-toggle span, .page-list-header span, .popover .popover-content li, .review-status li, .kotoba-table-list .none-available > td, .see-more div, [id*="summary"] nav, #question-type, #answer-form input, #answer-form button, #wkof_ds .ui-dialog-titlebar, #wkof_ds .ui-tabs-tab, #wki_button #wki_mimic_button,
   #wki_button .wki_item_wrapper,
   #wki_button .wki_button_item_label, [id|=qtip], [id|=qtip] .qtip-titlebar,
   [id|=qtip] .qtip-title, #lessons .ui-small .icon-minus,
@@ -979,6 +979,19 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7) inset, 2px 2px 2px rgba(0, 0, 0, 0.7) inset !important; }
 
   /*[[review-char-bg]]*/
+  #wkof_ds .ui-dialog-titlebar {
+    border-bottom: 1px solid #232629 !important;
+    border-radius: 0; }
+  #wkof_ds .ui-dialog-buttonpane {
+    border-top: 1px solid #232629 !important; }
+  #wkof_ds .ui-icon {
+    background-image: url("https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/images/ui-icons_888888_256x240.png") !important;
+    box-shadow: none !important; }
+  #wkof_ds .ui-tabs-nav {
+    border-bottom: 1px solid #232629 !important; }
+  #wkof_ds .ui-tabs-anchor {
+    color: #bcbcbc !important; }
+
   #divSt {
     color: #31363b !important;
     margin-top: 2vh; }
