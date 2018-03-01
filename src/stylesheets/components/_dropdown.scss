@@ -59,7 +59,7 @@ $open-shadow: 1px 0 2px $shadow-color inset,
             }
         }
 
-        [class$="menu"] {
+        .dropdown-menu {
             @extend %borderless;
 
             background-color: inherit !important;
