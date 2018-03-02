@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         WaniKani Breeze Dark
-@version      1.0.4
+@version      1.0.5
 @namespace    valeth.info
 @license      GPL-3.0
 @description  Dark theme for the WaniKani kanji learning website.
@@ -283,7 +283,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   .blog tr:last-child td, #enlarge-hover,
   [class*="-icon"], [id*="summary"] li, #supplement-info li span,
   #batch-items li span, #related-items span, #lessons .ui ul item,
-  #reviews .ui ul item, [class*=character-grid] > li, .dropdown.open [class$="menu"], .navbar-inner, .nav > .dropdown.account > .dropdown-toggle span, .page-list-header span, .popover .popover-content li, .review-status li, .kotoba-table-list .none-available > td, .see-more div, [id*="summary"] nav, #question-type, #answer-form input, #answer-form button, #wkof_ds .ui-dialog-titlebar, #wkof_ds .ui-tabs-tab, #wki_button #wki_mimic_button,
+  #reviews .ui ul item, [class*=character-grid] > li, .dropdown-menu, .navbar-inner, .nav > .dropdown.account > .dropdown-toggle span, .page-list-header span, .popover .popover-content li, .review-status li, .kotoba-table-list .none-available > td, .see-more div, [id*="summary"] nav, #question-type, #answer-form input, #answer-form button, #wkof_ds .ui-dialog-titlebar, #wkof_ds .ui-tabs-tab, #wki_button #wki_mimic_button,
   #wki_button .wki_item_wrapper,
   #wki_button .wki_button_item_label, [id|=qtip], [id|=qtip] .qtip-titlebar,
   [id|=qtip] .qtip-title, #lessons .ui-small .icon-minus,
@@ -406,19 +406,21 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
       box-shadow: 1px 0 2px rgba(0, 0, 0, 0.7) inset, -1px 0 2px rgba(0, 0, 0, 0.7) inset !important; }
       .dropdown.open [class*="toggle"] > span {
         border: 0.3em solid #232629 !important; }
-    .dropdown.open [class$="menu"] {
-      background-color: inherit !important;
-      border-radius: 5px !important;
-      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 2px 2px 2px rgba(0, 0, 0, 0.7) !important;
+    .dropdown.open > .dropdown-menu {
       top: 112% !important; }
-      .dropdown.open [class$="menu"] li:not(.nav-header) {
+      .dropdown.open > .dropdown-menu li:not(.nav-header) {
         background-color: inherit !important; }
-        .dropdown.open [class$="menu"] li:not(.nav-header) > a:hover {
+        .dropdown.open > .dropdown-menu li:not(.nav-header) > a:hover {
           background-color: inherit !important;
           filter: brightness(0.8) !important; }
-      .dropdown.open [class$="menu"]::before, .dropdown.open [class$="menu"]::after {
+      .dropdown.open > .dropdown-menu::before, .dropdown.open > .dropdown-menu::after {
         border-bottom-color: #33383c !important;
         color: #33383c !important; }
+
+  .dropdown-menu {
+    background-color: inherit !important;
+    border-radius: 5px !important;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 2px 2px 2px rgba(0, 0, 0, 0.7) !important; }
 
   .legend .percentage-0-20 {
     background-color: #f47750 !important; }
