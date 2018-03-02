@@ -59,12 +59,7 @@ $open-shadow: 1px 0 2px $shadow-color inset,
             }
         }
 
-        .dropdown-menu {
-            @extend %borderless;
-
-            background-color: inherit !important;
-            border-radius: 5px !important;
-            box-shadow: $shadow !important;
+        > .dropdown-menu {
             top: 112% !important;
 
             li:not(.nav-header) {
@@ -83,4 +78,12 @@ $open-shadow: 1px 0 2px $shadow-color inset,
             }
         }
     }
+}
+
+.dropdown-menu {
+    @extend %borderless;
+
+    background-color: inherit !important;
+    border-radius: 5px !important;
+    box-shadow: $shadow !important;
 }
