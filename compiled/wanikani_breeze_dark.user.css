@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         WaniKani Breeze Dark
-@version      1.0.6
+@version      1.0.7
 @namespace    valeth.info
 @license      GPL-3.0
 @description  Dark theme for the WaniKani kanji learning website.
@@ -1169,15 +1169,15 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
       background-color: #1e2123 !important;
       border-radius: 10px !important;
       box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7) inset, 2px 2px 2px rgba(0, 0, 0, 0.7) inset !important;
-      height: 1rem !important;
-      position: relative;
-      top: 25%; }
+      height: 1rem !important; }
       #ss_quiz .quiz-progress .quiz-progress-bar {
         background-color: #1d99f3 !important;
         border-radius: 10px !important;
         box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 2px 2px 2px rgba(0, 0, 0, 0.7) !important;
         height: 50% !important;
-        margin: 5px !important; }
+        margin: 5px !important;
+        position: relative;
+        top: 25%; }
     #ss_quiz .help {
       color: #3daee9 !important; }
     #ss_quiz .qtype {

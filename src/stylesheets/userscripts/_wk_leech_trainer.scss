@@ -12,8 +12,6 @@
         border-radius: 10px !important;
         box-shadow: $shadow-i !important;
         height: 1rem !important;
-        position: relative;
-        top: 25%;
 
         .quiz-progress-bar {
             @extend %no-background-image;
@@ -23,6 +21,8 @@
             box-shadow: $shadow !important;
             height: 50% !important;
             margin: 5px !important;
+            position: relative;
+            top: 25%;
         }
     }
 
