@@ -11,8 +11,9 @@
         background-color: darken($shade-black, 2%) !important;
         border-radius: 10px !important;
         box-shadow: $shadow-i !important;
-        display: flex !important;
         height: 1rem !important;
+        position: relative;
+        top: 25%;
 
         .quiz-progress-bar {
             @extend %no-background-image;

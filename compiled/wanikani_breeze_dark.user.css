@@ -1153,7 +1153,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
       filter: saturate(0.5) !important; }
     .wklc .wklc-apprentice3,
     .wklc .wklc-guru3 {
-      filter: saturate(0.33333) !important; }
+      filter: saturate(0.3333333333) !important; }
     .wklc .wklc-apprentice4,
     .wklc .wklc-guru4 {
       filter: saturate(0.25) !important; }
@@ -1169,8 +1169,9 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
       background-color: #1e2123 !important;
       border-radius: 10px !important;
       box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7) inset, 2px 2px 2px rgba(0, 0, 0, 0.7) inset !important;
-      display: flex !important;
-      height: 1rem !important; }
+      height: 1rem !important;
+      position: relative;
+      top: 25%; }
       #ss_quiz .quiz-progress .quiz-progress-bar {
         background-color: #1d99f3 !important;
         border-radius: 10px !important;
