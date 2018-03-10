@@ -32,7 +32,7 @@ SRC_DIR = 'src'
 @css_source = nil
 
 def project_version
-  format('1.0.5%{dev}', dev: (@development ? "-dev#{Time.now.to_i}" : nil))
+  format('1.0.6%{dev}', dev: (@development ? "-dev#{Time.now.to_i}" : nil))
 end
 
 def project_name
