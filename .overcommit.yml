@@ -1,0 +1,3 @@
+PreCommit:
+  ScssLint:
+    enabled: true
