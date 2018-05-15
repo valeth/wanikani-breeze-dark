@@ -4,120 +4,81 @@ $timeline-bar-color:    $iron-grey;
 $timeline-shadow: $shadow;
 
 
-#timeln {
+#timeline {
     @extend %section;
 
-    padding: 0 1rem !important;
+    padding: 0.5rem !important;
 
-    // header, icons and day slider
-    > h4,
-    > i::before,
-    > #range_form {
-        margin-top: 10px !important;
-    }
-
-    > h4 {
-        line-height: 0.70em !important;
-        margin-left: 10px !important;
-    }
-
-    > #range_form {
-        margin-right: 10px !important;
-
-        #range_input {
-            @extend %borderless;
+    .bar_style {
+        select {
             @extend %shadowless;
+            @extend %no-background-color;
         }
     }
 
-    @each $type in (rad, kan, voc) {
-        .#{$type} {
-            fill: character-color($type) !important;
+    .range_input {
+        @extend %shadowless;
+    }
+
+    .graph_panel {
+        overflow: hidden !important;
+    }
+
+    .graph {
+        .bkgd {
+            @extend %no-background-color;
+            fill: transparent;
         }
-    }
-}
 
-// the graph container
-#timeln-graph {
-    margin: 0 !important;
-    overflow: hidden !important;
-    padding: 10px !important;
-}
+        .label-x > text,
+        .label-y > text,
+        .markers > path {
+            fill: $text-color;
+        }
 
-// the actual graph
-#timeline {
-    .label-x > text,
-    .label-y > text,
-    .arrows > polygon {
-        fill: $text-color !important;
-    }
+        .markers > .bur {
+            fill: $timeline-burned-color !important;
+        }
 
-    .bars > .clr {
-        fill: $timeline-bar-color !important;
-    }
-
-    .bars > .bur {
-        fill: $timeline-burned-color !important;
-    }
-}
-
-// settings popover
-#timeln-settings {
-    @extend %popup;
-
-    padding: 25px !important;
-
-    > h4 {
-        @extend %no-background-color;
-    }
-
-    .buttons {
-        @extend %no-background-color;
-    }
-}
-
-// info popover
-#graph-bar-info {
-    @extend %popover;
-
-    .summary > div > div,
-    .detail li {
-        @extend %no-background-image;
-    }
-
-    .tot {
-        @extend %clear-background;
-    }
-
-    .rad {
-        @include character('radical');
-
-        border-radius: 5px 5px 0 0;
-
-        // workaround for radicals represented as images
-        img {
-            filter: brightness(0.1) !important;
+        @each $type in (rad, kan, voc) {
+            .#{$type} {
+                fill: character-color($type) !important;
+            }
         }
     }
 
-    .kan {
-        @include character('kanji');
-    }
+    .review_info {
+        @extend %popup;
 
-    .voc {
-        @include character('vocabulary');
+        .tot {
+            @extend %clear-background;
+        }
 
-        border-radius: 0 0 5px 5px;
-    }
+        .bur {
+            background: $timeline-burned-color !important;
+        }
 
-    .cur {
-        @extend %clear-background;
-    }
+        .item_type > span {
+            color: $shade-black !important;
+        }
 
-    .bur {
-        @extend %no-background-image;
+        .rad {
+            @extend %no-background-image;
+            @include character('radical');
 
-        background-color: $timeline-burned-color !important;
-        border-radius: 5px !important;
+            svg {
+                stroke: $shade-black;
+            }
+        }
+
+        .kan {
+            @extend %no-background-image;
+            @include character('kanji');
+        }
+
+        .voc {
+            @extend %no-background-image;
+            @include character('vocabulary');
+        }
     }
 }
