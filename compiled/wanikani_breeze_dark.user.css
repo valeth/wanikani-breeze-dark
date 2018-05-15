@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         WaniKani Breeze Dark
-@version      1.0.7
+@version      1.2.0
 @namespace    valeth.info
 @license      GPL-3.0
 @description  Dark theme for the WaniKani kanji learning website.
@@ -51,7 +51,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   [class*=character-grid] [id|="radical"], .legend ul span.all, .popover.srs .popover-content li:nth-child(1), [class*=radical] .progress > .bar, .radical-icon, [class*="highlight-radical"],
   [class*="radical-highlight"], section.progression .lattice-single-character [id^="radical"] > a, [id*="summary"] ul > [class^="radical"], #supplement-info [class^=radical],
   #batch-items [class^=radical], #reviews #last-items [class*="radical"] [lang="ja"]:first-child, #related-items a > [class^=radical], #lessons .ui ul item.radical,
-  #reviews .ui ul item.radical, #graph-bar-info .rad, .dropdown.open.radicals, .legend ul span.radicals {
+  #reviews .ui ul item.radical, #timeline .review_info .rad, .dropdown.open.radicals, .legend ul span.radicals {
     background-color: /*[[radicals-color]]*/ !important;
     color: #232629 !important; }
 
@@ -62,7 +62,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   [class*=character-grid] [id|="kanji"], .dropdown.open.kanji, .legend ul span.kanji, .popover.srs .popover-content li:nth-child(2), [class*=kanji] .progress > .bar, .kanji-icon, [class*="highlight-kanji"],
   [class*="kanji-highlight"], section.progression .lattice-single-character [id^="kanji"] > a, [id*="summary"] ul > [class^="kanji"], #supplement-info [class^=kanji],
   #batch-items [class^=kanji], #reviews #last-items [class*="kanji"] [lang="ja"]:first-child, #related-items a > [class^=kanji], #lessons .ui ul item.kanji,
-  #reviews .ui ul item.kanji, #graph-bar-info .kan {
+  #reviews .ui ul item.kanji, #timeline .review_info .kan {
     background-color: /*[[kanji-color]]*/ !important;
     color: #232629 !important; }
 
@@ -73,7 +73,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   [class*=character-grid] [id|="vocabulary"], .dropdown.open.vocabulary, .legend ul span.vocabulary, .popover.srs .popover-content li:nth-child(3), [class*=vocabulary] .progress > .bar, .vocabulary-icon, [class*="highlight-vocabulary"],
   [class*="vocabulary-highlight"], [id*="summary"] ul > [class^="vocabulary"], #supplement-info [class^=vocabulary],
   #batch-items [class^=vocabulary], #reviews #last-items [class*="vocabulary"] [lang="ja"]:first-child, #related-items a > [class^=vocabulary], #lessons .ui ul item.vocabulary,
-  #reviews .ui ul item.vocabulary, #graph-bar-info .voc {
+  #reviews .ui ul item.vocabulary, #timeline .review_info .voc {
     background-color: /*[[vocab-color]]*/ !important;
     color: #232629 !important; }
 
@@ -127,7 +127,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   .account-subscription-payment-processor-info,
   .account-subscription form .control-group input[type="text"], .api section, .newbie, .review-status, .srs-progress, section.progression, .kotoba-table-list, .forum-topics-list,
   .blog, .individual-item .span12 > section, .individual-item + section, section[class^=lattice-], section[id|=level], .settings-section, [id*="summary"] [id^="radical"], [id*="summary"] [id^="kanji"], [id*="summary"] [id^="vocabulary"], [id*="summary"] [id^="correct"], [id*="summary"] [id^="incorrect"], #review-stats, #supplement-info, #information, #lessons .ui,
-  #reviews .ui, #timeln, [aria-describedby=divSRSGridSettings],
+  #reviews .ui, #timeline, [aria-describedby=divSRSGridSettings],
   [aria-describedby=ui-id-2], #item_marker_body, #marked_items, .wklc, #ss_quiz {
     background-color: #232629 !important;
     border-radius: 5px !important;
@@ -135,13 +135,13 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     margin-bottom: 20px !important;
     margin-top: 20px !important; }
 
-  .popover, #graph-bar-info {
+  .popover {
     background-color: #4d4d4d !important;
     border-color: #4d4d4d !important;
     border-radius: 5px !important;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 2px 2px 2px rgba(0, 0, 0, 0.7) !important; }
 
-  #wkof_ds .ui-dialog, #timeln-settings {
+  #wkof_ds .ui-dialog, #timeline .review_info {
     background-color: #31363b !important;
     border-radius: 5px !important;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 2px 2px 2px rgba(0, 0, 0, 0.7) !important; }
@@ -213,11 +213,10 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   [class*="-icon"], [id*="summary"] li, #supplement-info li span,
   #batch-items li span, #related-items span, #lessons .ui ul item,
   #reviews .ui ul item, input[type="range"], .nav > .lessons a > span,
-  .nav > .reviews a > span, .srs-progress ul > li, .kotoba-table-list .none-available, .see-more, #review-stats [id^="review-stats"], #graph-bar-info .tot, #graph-bar-info .cur, .alert, .system-alert, [class*=character-grid] > li, .popover .popover-content li, .popover .bar, .progress, .progress > .bar, [class*="highlight"], .newbie, section.progression .lattice-single-character, .see-more a, #main-info, #reviews #character, #wkof_ds .ui-dialog, #wkof_ds .ui-dialog-buttonpane, #wkof_ds .ui-tabs-tab, #wki_settings_cancel,
+  .nav > .reviews a > span, .srs-progress ul > li, .kotoba-table-list .none-available, .see-more, #review-stats [id^="review-stats"], #timeline .review_info .tot, .alert, .system-alert, [class*=character-grid] > li, .popover .popover-content li, .popover .bar, .progress, .progress > .bar, [class*="highlight"], .newbie, section.progression .lattice-single-character, .see-more a, #main-info, #reviews #character, #wkof_ds .ui-dialog, #wkof_ds .ui-dialog-buttonpane, #wkof_ds .ui-tabs-tab, #wki_settings_cancel,
   #wki_settings_save, #wki_settings_button_label_bgcolor,
   #wki_settings_button_label_textcolor,
-  #wki_settings_timer_show_next_item, #graph-bar-info .summary > div > div,
-  #graph-bar-info .detail li, #graph-bar-info .bur, #ss_quiz .quiz-progress, #ss_quiz .quiz-progress .quiz-progress-bar, #ss_quiz .qtype {
+  #wki_settings_timer_show_next_item, #timeline .review_info .rad, #timeline .review_info .kan, #timeline .review_info .voc, #ss_quiz .quiz-progress, #ss_quiz .quiz-progress .quiz-progress-bar, #ss_quiz .qtype {
     background-image: none !important; }
 
   [class|=account-subscription] th,
@@ -225,7 +224,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   .blog th, [class|=account-subscription] td,
   [class|=account-billing] td, .kotoba-table-list td, .forum-topics-list td,
   .blog td, input[type="range"], .nav > .lessons a > span,
-  .nav > .reviews a > span, .srs-progress ul > li, .kotoba-table-list .none-available, .see-more, #review-stats [id^="review-stats"], #graph-bar-info .tot, #graph-bar-info .cur, blockquote, .audio-btn, [class*=character-grid] > li > a, .dropdown.open [class*="toggle"], .legend ul .locked, .legend [class*="lattice"], .nav .title span:first-child, .popover .popover-title, .note-meaning fieldset,
+  .nav > .reviews a > span, .srs-progress ul > li, .kotoba-table-list .none-available, .see-more, #review-stats [id^="review-stats"], #timeline .review_info .tot, blockquote, .audio-btn, [class*=character-grid] > li > a, .dropdown.open [class*="toggle"], .legend ul .locked, .legend [class*="lattice"], .nav .title span:first-child, .popover .popover-title, .note-meaning fieldset,
   .note-reading fieldset, .user-synonyms, .user-synonyms li::after, .user-synonyms-add-btn::before, #main footer li, #main footer a,
   #main footer a:hover, .review-status li, .kotoba-table-list .none-available:hover, .individual-item h2, .individual-item .additional-info, section[class^=lattice-] li, section[class^=lattice-] li > a, section[id|=level] header, .explanation-item-mnemonics,
   .explanation-item-radicals,
@@ -242,7 +241,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   #reviews .ui .icon-minus, #lessons .ui-small .icon-plus,
   #reviews .ui-small .icon-plus, #lessons .ui .icon-plus,
   #reviews .ui .icon-plus, #lessons .ui-small,
-  #reviews .ui-small, #timeln-settings > h4, #timeln-settings .buttons, [aria-describedby=divSRSGridSettings] .ui-widget-header button,
+  #reviews .ui-small, #timeline .bar_style select, #timeline .graph .bkgd, [aria-describedby=divSRSGridSettings] .ui-widget-header button,
   [aria-describedby=divSRSGridSettings] .ui-widget-header .ui-button-icon,
   [aria-describedby=ui-id-2] .ui-widget-header button,
   [aria-describedby=ui-id-2] .ui-widget-header .ui-button-icon, [aria-describedby=divSRSGridSettings] .ui-dialog-buttonpane,
@@ -261,7 +260,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   #reviews .ui-small .icon-minus, #lessons .ui .icon-minus,
   #reviews .ui .icon-minus, #lessons .ui-small .icon-plus,
   #reviews .ui-small .icon-plus, #lessons .ui .icon-plus,
-  #reviews .ui .icon-plus, #timeln > #range_form #range_input, [aria-describedby=divSRSGridSettings] .ui-widget-header button,
+  #reviews .ui .icon-plus, #timeline .bar_style select, #timeline .range_input, [aria-describedby=divSRSGridSettings] .ui-widget-header button,
   [aria-describedby=divSRSGridSettings] .ui-widget-header .ui-button-icon,
   [aria-describedby=ui-id-2] .ui-widget-header button,
   [aria-describedby=ui-id-2] .ui-widget-header .ui-button-icon, .wklc .wklc-item {
@@ -275,8 +274,8 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   .account-subscription-payment-processor-info,
   .account-subscription form .control-group input[type="text"], .api section, .newbie, .review-status, .srs-progress, section.progression, .kotoba-table-list, .forum-topics-list,
   .blog, .individual-item .span12 > section, .individual-item + section, section[class^=lattice-], section[id|=level], .settings-section, [id*="summary"] [id^="radical"], [id*="summary"] [id^="kanji"], [id*="summary"] [id^="vocabulary"], [id*="summary"] [id^="correct"], [id*="summary"] [id^="incorrect"], #review-stats, #supplement-info, #information, #lessons .ui,
-  #reviews .ui, #timeln, [aria-describedby=divSRSGridSettings],
-  [aria-describedby=ui-id-2], #item_marker_body, #marked_items, .wklc, #ss_quiz, #wkof_ds .ui-dialog, #timeln-settings, [class|=account-subscription] h3 .heading-symbol,
+  #reviews .ui, #timeline, [aria-describedby=divSRSGridSettings],
+  [aria-describedby=ui-id-2], #item_marker_body, #marked_items, .wklc, #ss_quiz, #wkof_ds .ui-dialog, #timeline .review_info, [class|=account-subscription] h3 .heading-symbol,
   [class|=account-billing] h3 .heading-symbol, .kotoba-table-list h3 .heading-symbol, .forum-topics-list h3 .heading-symbol,
   .blog h3 .heading-symbol, [class|=account-subscription] tr:last-child td,
   [class|=account-billing] tr:last-child td, .kotoba-table-list tr:last-child td, .forum-topics-list tr:last-child td,
@@ -290,7 +289,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   #reviews .ui-small .icon-minus, #lessons .ui .icon-minus,
   #reviews .ui .icon-minus, #lessons .ui-small .icon-plus,
   #reviews .ui-small .icon-plus, #lessons .ui .icon-plus,
-  #reviews .ui .icon-plus, #timeln > #range_form #range_input, [aria-describedby=divSRSGridSettings] .ui-widget-header,
+  #reviews .ui .icon-plus, [aria-describedby=divSRSGridSettings] .ui-widget-header,
   [aria-describedby=ui-id-2] .ui-widget-header, [aria-describedby=divSRSGridSettings] .ui-widget-header button,
   [aria-describedby=divSRSGridSettings] .ui-widget-header .ui-button-icon,
   [aria-describedby=ui-id-2] .ui-widget-header button,
@@ -1047,50 +1046,30 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     #reviews .ui ul item {
       background-color: #31363b !important; }
 
-  #timeln {
-    padding: 0 1rem !important; }
-    #timeln > h4,
-    #timeln > i::before,
-    #timeln > #range_form {
-      margin-top: 10px !important; }
-    #timeln > h4 {
-      line-height: 0.70em !important;
-      margin-left: 10px !important; }
-    #timeln > #range_form {
-      margin-right: 10px !important; }
-    #timeln .rad {
+  #timeline {
+    padding: 0.5rem !important; }
+    #timeline .graph_panel {
+      overflow: hidden !important; }
+    #timeline .graph .bkgd {
+      fill: transparent; }
+    #timeline .graph .label-x > text,
+    #timeline .graph .label-y > text,
+    #timeline .graph .markers > path {
+      fill: #bcbcbc; }
+    #timeline .graph .markers > .bur {
+      fill: #31363b !important; }
+    #timeline .graph .rad {
       fill: /*[[radicals-color]]*/ !important; }
-    #timeln .kan {
+    #timeline .graph .kan {
       fill: /*[[kanji-color]]*/ !important; }
-    #timeln .voc {
+    #timeline .graph .voc {
       fill: /*[[vocab-color]]*/ !important; }
-
-  #timeln-graph {
-    margin: 0 !important;
-    overflow: hidden !important;
-    padding: 10px !important; }
-
-  #timeline .label-x > text,
-  #timeline .label-y > text,
-  #timeline .arrows > polygon {
-    fill: #bcbcbc !important; }
-  #timeline .bars > .clr {
-    fill: #4d4d4d !important; }
-  #timeline .bars > .bur {
-    fill: #31363b !important; }
-
-  #timeln-settings {
-    padding: 25px !important; }
-
-  #graph-bar-info .rad {
-    border-radius: 5px 5px 0 0; }
-    #graph-bar-info .rad img {
-      filter: brightness(0.1) !important; }
-  #graph-bar-info .voc {
-    border-radius: 0 0 5px 5px; }
-  #graph-bar-info .bur {
-    background-color: #31363b !important;
-    border-radius: 5px !important; }
+    #timeline .review_info .bur {
+      background: #31363b !important; }
+    #timeline .review_info .item_type > span {
+      color: #232629 !important; }
+    #timeline .review_info .rad svg {
+      stroke: #232629; }
 
   .progression .lattice-single-character li > a[data-srs-lvl="5"], .progression .lattice-single-character li > a[data-srs-lvl="6"], .progression .lattice-single-character li > a[data-srs-lvl="7"], .progression .lattice-single-character li > a[data-srs-lvl="8"], .progression .lattice-single-character li > a[data-srs-lvl="9"], .progression .lattice-single-character li > a[data-srs-lvl="10"] {
     filter: brightness(0.5) !important; }
@@ -1153,7 +1132,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
       filter: saturate(0.5) !important; }
     .wklc .wklc-apprentice3,
     .wklc .wklc-guru3 {
-      filter: saturate(0.3333333333) !important; }
+      filter: saturate(0.33333) !important; }
     .wklc .wklc-apprentice4,
     .wklc .wklc-guru4 {
       filter: saturate(0.25) !important; }
