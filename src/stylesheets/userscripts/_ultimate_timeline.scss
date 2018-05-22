@@ -48,7 +48,9 @@ $timeline-shadow: $shadow;
     }
 
     .review_info {
-        @extend %popup;
+        .inner {
+            @extend %popup;
+        }
 
         .tot {
             @extend %clear-background;
