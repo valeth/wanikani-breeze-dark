@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         WaniKani Breeze Dark
-@version      1.2.0
+@version      1.2.1
 @namespace    valeth.info
 @license      GPL-3.0
 @description  Dark theme for the WaniKani kanji learning website.
@@ -141,7 +141,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     border-radius: 5px !important;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 2px 2px 2px rgba(0, 0, 0, 0.7) !important; }
 
-  #wkof_ds .ui-dialog, #timeline .review_info {
+  #wkof_ds .ui-dialog, #timeline .review_info .inner {
     background-color: #31363b !important;
     border-radius: 5px !important;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 2px 2px 2px rgba(0, 0, 0, 0.7) !important; }
@@ -275,7 +275,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   .account-subscription form .control-group input[type="text"], .api section, .newbie, .review-status, .srs-progress, section.progression, .kotoba-table-list, .forum-topics-list,
   .blog, .individual-item .span12 > section, .individual-item + section, section[class^=lattice-], section[id|=level], .settings-section, [id*="summary"] [id^="radical"], [id*="summary"] [id^="kanji"], [id*="summary"] [id^="vocabulary"], [id*="summary"] [id^="correct"], [id*="summary"] [id^="incorrect"], #review-stats, #supplement-info, #information, #lessons .ui,
   #reviews .ui, #timeline, [aria-describedby=divSRSGridSettings],
-  [aria-describedby=ui-id-2], #item_marker_body, #marked_items, .wklc, #ss_quiz, #wkof_ds .ui-dialog, #timeline .review_info, [class|=account-subscription] h3 .heading-symbol,
+  [aria-describedby=ui-id-2], #item_marker_body, #marked_items, .wklc, #ss_quiz, #wkof_ds .ui-dialog, #timeline .review_info .inner, [class|=account-subscription] h3 .heading-symbol,
   [class|=account-billing] h3 .heading-symbol, .kotoba-table-list h3 .heading-symbol, .forum-topics-list h3 .heading-symbol,
   .blog h3 .heading-symbol, [class|=account-subscription] tr:last-child td,
   [class|=account-billing] tr:last-child td, .kotoba-table-list tr:last-child td, .forum-topics-list tr:last-child td,
