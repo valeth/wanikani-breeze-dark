@@ -52,6 +52,30 @@ $timeline-shadow: $shadow;
             @extend %popup;
         }
 
+        .detail_buttons > button {
+            margin-bottom: 0.3em;
+        }
+
+        .summary {
+            .item_type:first-child,
+            .srs_stage:nth-child(4),
+            .level:nth-child(8) {
+                border-top: {
+                    left-radius: 0.3em;
+                    right-radius: 0.3em;
+                }
+            }
+
+            .item_type:nth-child(3),
+            .srs_stage:nth-child(7),
+            .level:nth-child(13) {
+                border-bottom: {
+                    left-radius: 0.3em;
+                    right-radius: 0.3em;
+                }
+            }
+        }
+
         .tot {
             @extend %clear-background;
         }
