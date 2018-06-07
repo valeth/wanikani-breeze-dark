@@ -9,6 +9,7 @@
     }
 }
 
-.japanese-font-styling-correction {
-    @extend %inherited-color;
+.japanese-font-styling-correction,
+.enlarge-hover {
+    color: $shade-black !important;
 }

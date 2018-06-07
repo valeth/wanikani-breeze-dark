@@ -37,7 +37,7 @@ li.burned {
     }
 
     @each $type in radical, kanji, vocabulary {
-        [id|="#{$type}"] {
+        [class|="#{$type}"]:not(i) {
             @include character($type);
         }
     }
