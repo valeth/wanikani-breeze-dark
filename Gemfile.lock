@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    childprocess (0.9.0)
+      ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.2)
     ffi (1.9.18)
     formatador (0.2.5)
@@ -16,6 +18,7 @@ GEM
     guard-rake (1.0.0)
       guard
       rake
+    iniparse (1.4.4)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -26,6 +29,9 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    overcommit (0.45.0)
+      childprocess (~> 0.6, >= 0.6.3)
+      iniparse (~> 1.4)
     pry (0.11.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -47,8 +53,9 @@ PLATFORMS
 DEPENDENCIES
   guard
   guard-rake
+  overcommit
   sass (>= 3.4.22)
   scss_lint (~> 0.51.0)
 
 BUNDLED WITH
-   1.15.4
+   1.16.1
