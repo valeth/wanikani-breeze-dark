@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         WaniKani Breeze Dark
-@version      1.3.0
+@version      1.3.1
 @namespace    valeth.info
 @license      GPL-3.0
 @description  Dark theme for the WaniKani kanji learning website.
@@ -1207,7 +1207,8 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     color: #bcbcbc !important; }
 
   #keisei_section table {
-    box-sizing: border-box !important; }
+    box-sizing: border-box !important;
+    width: 100% !important; }
     #keisei_section table li {
       box-sizing: inherit !important; }
   #keisei_section .single-character-grid {

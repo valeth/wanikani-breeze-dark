@@ -1162,7 +1162,8 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     color: #bcbcbc !important; }
 
   #keisei_section table {
-    box-sizing: border-box !important; }
+    box-sizing: border-box !important;
+    width: 100% !important; }
     #keisei_section table li {
       box-sizing: inherit !important; }
   #keisei_section .single-character-grid {
