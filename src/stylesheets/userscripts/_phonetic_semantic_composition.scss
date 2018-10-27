@@ -1,0 +1,93 @@
+#keisei_section {
+    table {
+        box-sizing: border-box !important;
+
+        li {
+            box-sizing: inherit !important;
+        }
+    }
+
+    .single-character-grid {
+        border: 0 !important;
+    }
+
+    .keisei_chargrid_header,
+    .keisei_chargrid_compounds {
+        width: auto !important;
+
+        .character-item {
+            width: 116px !important;
+        }
+
+        @media (max-width: 767px) {
+            .character-item {
+                width: auto !important;
+            }
+        }
+    }
+
+    #keisei_phonetic_grid {
+        td {
+            > li {
+                margin: {
+                    bottom: 10px !important;
+                    left: 5px !important;
+                    right: 5px !important;
+                    top: 5px !important;
+                }
+
+                // scss-lint:disable NestingDepth
+                &:last-child {
+                    margin-bottom: 5px !important;
+                }
+            }
+        }
+    }
+
+    .character-item {
+        @extend %no-background-image;
+        @extend %borderless;
+
+        border-radius: 5px !important;
+        box-shadow: $shadow !important;
+    }
+
+    [id^=radical] {
+        @include character(radical);
+    }
+
+    [id^=kanji] {
+        @include character(kanji);
+    }
+
+    [id^=phonetic] {
+        background-color: $verdant-green !important;
+        color: $character-text-color !important;
+    }
+
+    [id^=nonphonetic] {
+        background-color: $icon-red !important;
+        color: $character-text-color !important;
+    }
+
+    .keisei_style_reading_notInWK {
+        color: lighten($inverted-text-color, 15%) !important;
+    }
+}
+
+
+#keisei_modal_settings,
+#keisei_modal_info {
+    @extend %section;
+
+    .modal-header {
+        @extend %shadowless;
+        border-bottom: 1px solid $separator-color !important;
+    }
+
+    .modal-footer {
+        @extend %shadowless;
+        background-color: inherit !important;
+        border-top: 1px solid $separator-color !important;
+    }
+}
