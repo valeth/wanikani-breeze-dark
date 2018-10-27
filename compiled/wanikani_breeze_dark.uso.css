@@ -797,7 +797,8 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
       border-bottom-color: #31363b !important; }
 
   #batch-items {
-    position: relative !important; }
+    position: relative !important;
+    width: auto !important; }
 
   #screen-lesson-ready {
     z-index: 110 !important; }
