@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         WaniKani Breeze Dark
-@version      1.2.4
+@version      1.3.0
 @namespace    valeth.info
 @license      GPL-3.0
 @description  Dark theme for the WaniKani kanji learning website.
@@ -51,7 +51,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   [class*=character-grid] [class|="radical"]:not(i), .legend ul span.all, .popover.srs .popover-content li:nth-child(1), [class*=radical] .progress > .bar, .radical-icon, [class*="highlight-radical"],
   [class*="radical-highlight"], section.progression .lattice-single-character [id^="radical"] > a, [id*="summary"] ul > [class^="radical"], #supplement-info [class^=radical],
   #batch-items [class^=radical], #reviews #last-items [class*="radical"] [lang="ja"]:first-child, #related-items a > [class^=radical], #lessons .ui ul item.radical,
-  #reviews .ui ul item.radical, #timeline .review_info .rad, .dropdown.open.radicals, .legend ul span.radicals {
+  #reviews .ui ul item.radical, #timeline .review_info .rad, #keisei_section [id^=radical], .dropdown.open.radicals, .legend ul span.radicals {
     background-color: /*[[radicals-color]]*/ !important;
     color: #232629 !important; }
 
@@ -62,7 +62,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   [class*=character-grid] [class|="kanji"]:not(i), .dropdown.open.kanji, .legend ul span.kanji, .popover.srs .popover-content li:nth-child(2), [class*=kanji] .progress > .bar, .kanji-icon, [class*="highlight-kanji"],
   [class*="kanji-highlight"], section.progression .lattice-single-character [id^="kanji"] > a, [id*="summary"] ul > [class^="kanji"], #supplement-info [class^=kanji],
   #batch-items [class^=kanji], #reviews #last-items [class*="kanji"] [lang="ja"]:first-child, #related-items a > [class^=kanji], #lessons .ui ul item.kanji,
-  #reviews .ui ul item.kanji, #timeline .review_info .kan {
+  #reviews .ui ul item.kanji, #timeline .review_info .kan, #keisei_section [id^=kanji] {
     background-color: /*[[kanji-color]]*/ !important;
     color: #232629 !important; }
 
@@ -128,7 +128,8 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   .account-subscription form .control-group input[type="text"], .api section, .newbie, .review-status, .srs-progress, section.progression, .kotoba-table-list, .forum-topics-list,
   .blog, .individual-item .span12 > section, .individual-item + section, section[class^=lattice-], section[id|=level], .settings-section, [id*="summary"] [id^="radical"], [id*="summary"] [id^="kanji"], [id*="summary"] [id^="vocabulary"], [id*="summary"] [id^="correct"], [id*="summary"] [id^="incorrect"], #review-stats, #supplement-info, #information, #lessons .ui,
   #reviews .ui, #timeline, [aria-describedby=divSRSGridSettings],
-  [aria-describedby=ui-id-2], #item_marker_body, #marked_items, .wklc, #ss_quiz {
+  [aria-describedby=ui-id-2], #item_marker_body, #marked_items, .wklc, #ss_quiz, #keisei_modal_settings,
+  #keisei_modal_info {
     background-color: #232629 !important;
     border-radius: 5px !important;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 2px 2px 2px rgba(0, 0, 0, 0.7) !important;
@@ -216,7 +217,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   .nav > .reviews a > span, .srs-progress ul > li, .kotoba-table-list .none-available, .see-more, #review-stats [id^="review-stats"], #timeline .review_info .tot, .alert, .system-alert, [class*=character-grid] > li, .popover .popover-content li, .popover .bar, .progress, .progress > .bar, [class*="highlight"], .newbie, section.progression .lattice-single-character, .see-more a, #main-info, #reviews #character, #wkof_ds .ui-dialog, #wkof_ds .ui-dialog-buttonpane, #wkof_ds .ui-tabs-tab, #wki_settings_cancel,
   #wki_settings_save, #wki_settings_button_label_bgcolor,
   #wki_settings_button_label_textcolor,
-  #wki_settings_timer_show_next_item, #timeline .review_info .rad, #timeline .review_info .kan, #timeline .review_info .voc, #ss_quiz .quiz-progress, #ss_quiz .quiz-progress .quiz-progress-bar, #ss_quiz .qtype {
+  #wki_settings_timer_show_next_item, #timeline .review_info .rad, #timeline .review_info .kan, #timeline .review_info .voc, #ss_quiz .quiz-progress, #ss_quiz .quiz-progress .quiz-progress-bar, #ss_quiz .qtype, #keisei_section .character-item {
     background-image: none !important; }
 
   [class|=account-subscription] th,
@@ -263,7 +264,9 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   #reviews .ui .icon-plus, #timeline .bar_style select, #timeline .range_input, [aria-describedby=divSRSGridSettings] .ui-widget-header button,
   [aria-describedby=divSRSGridSettings] .ui-widget-header .ui-button-icon,
   [aria-describedby=ui-id-2] .ui-widget-header button,
-  [aria-describedby=ui-id-2] .ui-widget-header .ui-button-icon, .wklc .wklc-item {
+  [aria-describedby=ui-id-2] .ui-widget-header .ui-button-icon, .wklc .wklc-item, #keisei_modal_settings .modal-header,
+  #keisei_modal_info .modal-header, #keisei_modal_settings .modal-footer,
+  #keisei_modal_info .modal-footer {
     box-shadow: none !important; }
 
   textarea, input, button, .btn, .page-list li > a, .nav-load > li:last-child a,
@@ -275,7 +278,8 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   .account-subscription form .control-group input[type="text"], .api section, .newbie, .review-status, .srs-progress, section.progression, .kotoba-table-list, .forum-topics-list,
   .blog, .individual-item .span12 > section, .individual-item + section, section[class^=lattice-], section[id|=level], .settings-section, [id*="summary"] [id^="radical"], [id*="summary"] [id^="kanji"], [id*="summary"] [id^="vocabulary"], [id*="summary"] [id^="correct"], [id*="summary"] [id^="incorrect"], #review-stats, #supplement-info, #information, #lessons .ui,
   #reviews .ui, #timeline, [aria-describedby=divSRSGridSettings],
-  [aria-describedby=ui-id-2], #item_marker_body, #marked_items, .wklc, #ss_quiz, #wkof_ds .ui-dialog, #timeline .review_info .inner, [class|=account-subscription] h3 .heading-symbol,
+  [aria-describedby=ui-id-2], #item_marker_body, #marked_items, .wklc, #ss_quiz, #keisei_modal_settings,
+  #keisei_modal_info, #wkof_ds .ui-dialog, #timeline .review_info .inner, [class|=account-subscription] h3 .heading-symbol,
   [class|=account-billing] h3 .heading-symbol, .kotoba-table-list h3 .heading-symbol, .forum-topics-list h3 .heading-symbol,
   .blog h3 .heading-symbol, [class|=account-subscription] tr:last-child td,
   [class|=account-billing] tr:last-child td, .kotoba-table-list tr:last-child td, .forum-topics-list tr:last-child td,
@@ -293,7 +297,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   [aria-describedby=ui-id-2] .ui-widget-header, [aria-describedby=divSRSGridSettings] .ui-widget-header button,
   [aria-describedby=divSRSGridSettings] .ui-widget-header .ui-button-icon,
   [aria-describedby=ui-id-2] .ui-widget-header button,
-  [aria-describedby=ui-id-2] .ui-widget-header .ui-button-icon, #ss_quiz .help, #ss_quiz .qtype {
+  [aria-describedby=ui-id-2] .ui-widget-header .ui-button-icon, #ss_quiz .help, #ss_quiz .qtype, #keisei_section .character-item {
     border: none !important; }
 
   .character-item *, .dropdown a, .dropdown i, .dropdown span, .dropdown li, .nav a, [class*="rad"] *, .dashboard a, .kotoba-table-list span,
@@ -1200,7 +1204,50 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     border-color: transparent !important; }
   .vocabulary-progress ul li:nth-child(2) a, .vocabulary-progress ul li:nth-child(2) div {
     background-color: #17191b !important;
-    color: #bcbcbc !important; } }
+    color: #bcbcbc !important; }
+
+  #keisei_section table {
+    box-sizing: border-box !important; }
+    #keisei_section table li {
+      box-sizing: inherit !important; }
+  #keisei_section .single-character-grid {
+    border: 0 !important; }
+  #keisei_section .keisei_chargrid_header,
+  #keisei_section .keisei_chargrid_compounds {
+    width: auto !important; }
+    #keisei_section .keisei_chargrid_header .character-item,
+    #keisei_section .keisei_chargrid_compounds .character-item {
+      width: 116px !important; }
+    @media (max-width: 767px) {
+      #keisei_section .keisei_chargrid_header .character-item,
+      #keisei_section .keisei_chargrid_compounds .character-item {
+        width: auto !important; } }
+  #keisei_section #keisei_phonetic_grid td > li {
+    margin-bottom: 10px !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    margin-top: 5px !important; }
+    #keisei_section #keisei_phonetic_grid td > li:last-child {
+      margin-bottom: 5px !important; }
+  #keisei_section .character-item {
+    border-radius: 5px !important;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 2px 2px 2px rgba(0, 0, 0, 0.7) !important; }
+  #keisei_section [id^=phonetic] {
+    background-color: #11d116 !important;
+    color: #232629 !important; }
+  #keisei_section [id^=nonphonetic] {
+    background-color: #da4453 !important;
+    color: #232629 !important; }
+  #keisei_section .keisei_style_reading_notInWK {
+    color: dimgray !important; }
+
+  #keisei_modal_settings .modal-header,
+  #keisei_modal_info .modal-header {
+    border-bottom: 1px solid #31363b !important; }
+  #keisei_modal_settings .modal-footer,
+  #keisei_modal_info .modal-footer {
+    background-color: inherit !important;
+    border-top: 1px solid #31363b !important; } }
 
 /*# sourceMappingURL=main.css.map */
 
