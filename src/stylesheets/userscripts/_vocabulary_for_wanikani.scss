@@ -1,0 +1,25 @@
+$level-indicator-color: darken($shade-black, 5%);
+$progress-indicator-color: darken($plasma-blue, 20%);
+
+.vocabulary-progress {
+    li {
+        > a, > div {
+            @include character('vocabulary');
+            font-size: 1.1em !important;
+        }
+
+        > li {
+            background-color: $progress-indicator-color !important;
+            border-color: transparent !important;
+        }
+    }
+
+    ul {
+        li:nth-child(2) {
+            a, div {
+                background-color: $level-indicator-color !important;
+                color: $text-color !important;
+            }
+        }
+    }
+}
