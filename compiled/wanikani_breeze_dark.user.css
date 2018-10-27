@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         WaniKani Breeze Dark
-@version      1.2.2
+@version      1.2.3
 @namespace    valeth.info
 @license      GPL-3.0
 @description  Dark theme for the WaniKani kanji learning website.
@@ -73,7 +73,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   [class*=character-grid] [class|="vocabulary"]:not(i), .dropdown.open.vocabulary, .legend ul span.vocabulary, .popover.srs .popover-content li:nth-child(3), [class*=vocabulary] .progress > .bar, .vocabulary-icon, [class*="highlight-vocabulary"],
   [class*="vocabulary-highlight"], [id*="summary"] ul > [class^="vocabulary"], #supplement-info [class^=vocabulary],
   #batch-items [class^=vocabulary], #reviews #last-items [class*="vocabulary"] [lang="ja"]:first-child, #related-items a > [class^=vocabulary], #lessons .ui ul item.vocabulary,
-  #reviews .ui ul item.vocabulary, #timeline .review_info .voc {
+  #reviews .ui ul item.vocabulary, #timeline .review_info .voc, .vocabulary-progress li > a, .vocabulary-progress li > div {
     background-color: /*[[vocab-color]]*/ !important;
     color: #232629 !important; }
 
@@ -1068,6 +1068,18 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
       fill: /*[[kanji-color]]*/ !important; }
     #timeline .graph .voc {
       fill: /*[[vocab-color]]*/ !important; }
+    #timeline .review_info .detail_buttons > button {
+      margin-bottom: 0.3em; }
+    #timeline .review_info .summary .item_type:first-child,
+    #timeline .review_info .summary .srs_stage:nth-child(4),
+    #timeline .review_info .summary .level:nth-child(8) {
+      border-top-left-radius: 0.3em;
+      border-top-right-radius: 0.3em; }
+    #timeline .review_info .summary .item_type:nth-child(3),
+    #timeline .review_info .summary .srs_stage:nth-child(7),
+    #timeline .review_info .summary .level:nth-child(13) {
+      border-bottom-left-radius: 0.3em;
+      border-bottom-right-radius: 0.3em; }
     #timeline .review_info .bur {
       background: #31363b !important; }
     #timeline .review_info .item_type > span {
@@ -1178,7 +1190,16 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
         color: #434343 !important; }
       #ss_quiz .answer .incorrect {
         background-color: #ed1515 !important;
-        color: #434343 !important; } }
+        color: #434343 !important; }
+
+  .vocabulary-progress li > a, .vocabulary-progress li > div {
+    font-size: 1.1em !important; }
+  .vocabulary-progress li > li {
+    background-color: #1478ac !important;
+    border-color: transparent !important; }
+  .vocabulary-progress ul li:nth-child(2) a, .vocabulary-progress ul li:nth-child(2) div {
+    background-color: #17191b !important;
+    color: #bcbcbc !important; } }
 
 /*# sourceMappingURL=main.css.map */
 

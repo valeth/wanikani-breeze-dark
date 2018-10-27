@@ -3,7 +3,7 @@ This file was compiled with SCSS.
 To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze-dark
 */
 @-moz-document domain(www.wanikani.com) {
-  [class*=character-grid] [id|="radical"], .legend ul span.all, .popover.srs .popover-content li:nth-child(1), [class*=radical] .progress > .bar, .radical-icon, [class*="highlight-radical"],
+  [class*=character-grid] [class|="radical"]:not(i), .legend ul span.all, .popover.srs .popover-content li:nth-child(1), [class*=radical] .progress > .bar, .radical-icon, [class*="highlight-radical"],
   [class*="radical-highlight"], section.progression .lattice-single-character [id^="radical"] > a, [id*="summary"] ul > [class^="radical"], #supplement-info [class^=radical],
   #batch-items [class^=radical], #reviews #last-items [class*="radical"] [lang="ja"]:first-child, #related-items a > [class^=radical], #lessons .ui ul item.radical,
   #reviews .ui ul item.radical, #timeline .review_info .rad, .dropdown.open.radicals, .legend ul span.radicals {
@@ -14,7 +14,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     background-color: #232629 !important;
     color: /*[[radicals-color]]*/ !important; }
 
-  [class*=character-grid] [id|="kanji"], .dropdown.open.kanji, .legend ul span.kanji, .popover.srs .popover-content li:nth-child(2), [class*=kanji] .progress > .bar, .kanji-icon, [class*="highlight-kanji"],
+  [class*=character-grid] [class|="kanji"]:not(i), .dropdown.open.kanji, .legend ul span.kanji, .popover.srs .popover-content li:nth-child(2), [class*=kanji] .progress > .bar, .kanji-icon, [class*="highlight-kanji"],
   [class*="kanji-highlight"], section.progression .lattice-single-character [id^="kanji"] > a, [id*="summary"] ul > [class^="kanji"], #supplement-info [class^=kanji],
   #batch-items [class^=kanji], #reviews #last-items [class*="kanji"] [lang="ja"]:first-child, #related-items a > [class^=kanji], #lessons .ui ul item.kanji,
   #reviews .ui ul item.kanji, #timeline .review_info .kan {
@@ -25,10 +25,10 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     background-color: #232629 !important;
     color: /*[[kanji-color]]*/ !important; }
 
-  [class*=character-grid] [id|="vocabulary"], .dropdown.open.vocabulary, .legend ul span.vocabulary, .popover.srs .popover-content li:nth-child(3), [class*=vocabulary] .progress > .bar, .vocabulary-icon, [class*="highlight-vocabulary"],
+  [class*=character-grid] [class|="vocabulary"]:not(i), .dropdown.open.vocabulary, .legend ul span.vocabulary, .popover.srs .popover-content li:nth-child(3), [class*=vocabulary] .progress > .bar, .vocabulary-icon, [class*="highlight-vocabulary"],
   [class*="vocabulary-highlight"], [id*="summary"] ul > [class^="vocabulary"], #supplement-info [class^=vocabulary],
   #batch-items [class^=vocabulary], #reviews #last-items [class*="vocabulary"] [lang="ja"]:first-child, #related-items a > [class^=vocabulary], #lessons .ui ul item.vocabulary,
-  #reviews .ui ul item.vocabulary, #timeline .review_info .voc {
+  #reviews .ui ul item.vocabulary, #timeline .review_info .voc, .vocabulary-progress li > a, .vocabulary-progress li > div {
     background-color: /*[[vocab-color]]*/ !important;
     color: #232629 !important; }
 
@@ -251,7 +251,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   [aria-describedby=ui-id-2] .ui-widget-header .ui-button-icon, #ss_quiz .help, #ss_quiz .qtype {
     border: none !important; }
 
-  .character-item *, .dropdown a, .dropdown i, .dropdown span, .dropdown li, .nav a, .japanese-font-styling-correction, [class*="rad"] *, .dashboard a, .kotoba-table-list span,
+  .character-item *, .dropdown a, .dropdown i, .dropdown span, .dropdown li, .nav a, [class*="rad"] *, .dashboard a, .kotoba-table-list span,
   .kotoba-table-list time,
   .kotoba-table-list i, section[class^=lattice-] li > a *, [id*="summary"] li *, #reviews #character *, #related-items span > i, #stats *,
   #summary-button *,
@@ -493,6 +493,10 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   .user-synonyms-add-form button {
     height: 1.8em !important;
     min-width: 1.8em !important; }
+
+  .japanese-font-styling-correction,
+  .enlarge-hover {
+    color: #232629 !important; }
 
   [class*="highlight"] {
     border-radius: 3px !important; }
@@ -1019,6 +1023,18 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
       fill: /*[[kanji-color]]*/ !important; }
     #timeline .graph .voc {
       fill: /*[[vocab-color]]*/ !important; }
+    #timeline .review_info .detail_buttons > button {
+      margin-bottom: 0.3em; }
+    #timeline .review_info .summary .item_type:first-child,
+    #timeline .review_info .summary .srs_stage:nth-child(4),
+    #timeline .review_info .summary .level:nth-child(8) {
+      border-top-left-radius: 0.3em;
+      border-top-right-radius: 0.3em; }
+    #timeline .review_info .summary .item_type:nth-child(3),
+    #timeline .review_info .summary .srs_stage:nth-child(7),
+    #timeline .review_info .summary .level:nth-child(13) {
+      border-bottom-left-radius: 0.3em;
+      border-bottom-right-radius: 0.3em; }
     #timeline .review_info .bur {
       background: #31363b !important; }
     #timeline .review_info .item_type > span {
@@ -1129,6 +1145,15 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
         color: #434343 !important; }
       #ss_quiz .answer .incorrect {
         background-color: #ed1515 !important;
-        color: #434343 !important; } }
+        color: #434343 !important; }
+
+  .vocabulary-progress li > a, .vocabulary-progress li > div {
+    font-size: 1.1em !important; }
+  .vocabulary-progress li > li {
+    background-color: #1478ac !important;
+    border-color: transparent !important; }
+  .vocabulary-progress ul li:nth-child(2) a, .vocabulary-progress ul li:nth-child(2) div {
+    background-color: #17191b !important;
+    color: #bcbcbc !important; } }
 
 /*# sourceMappingURL=main.css.map */

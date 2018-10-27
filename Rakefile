@@ -9,6 +9,8 @@ SCSSLint::RakeTask.new
 
 CLEAN.include('tmp', '.sass_cache')
 
+VERSION = '1.2.3'
+
 STYLISH_OPTIONS = %w[
   review-char-bg
   radicals-color
@@ -32,7 +34,7 @@ SRC_DIR = 'src'
 @css_source = nil
 
 def project_version
-  format('1.2.2%{dev}', dev: (@development ? "-dev#{Time.now.to_i}" : nil))
+  format("#{VERSION}%{dev}", dev: (@development ? "-dev#{Time.now.to_i}" : nil))
 end
 
 def project_name
