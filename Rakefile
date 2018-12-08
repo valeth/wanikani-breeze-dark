@@ -9,7 +9,7 @@ SCSSLint::RakeTask.new
 
 CLEAN.include('tmp', '.sass_cache')
 
-VERSION = '1.3.1'
+VERSION = '1.3.2'
 
 STYLISH_OPTIONS = %w[
   review-char-bg

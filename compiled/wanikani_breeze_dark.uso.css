@@ -77,7 +77,8 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     color: #bcbcbc !important;
     -webkit-text-fill-color: #bcbcbc !important; }
 
-  .alert, .system-alert, .legend, .page-list, #main footer ul, .account-subscription .account-subscription-plan,
+  .alert, .system-alert,
+  .alert-where-user-scripts-cant-ignore, .legend, .page-list, #main footer ul, .account-subscription .account-subscription-plan,
   #account-subscription-coupon-form #coupon,
   .account-subscription-payment-processor-info,
   .account-subscription form .control-group input[type="text"], .api section, .newbie, .review-status, .srs-progress, section.progression, .kotoba-table-list, .forum-topics-list,
@@ -169,7 +170,8 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   [class*="-icon"], [id*="summary"] li, #supplement-info li span,
   #batch-items li span, #related-items span, #lessons .ui ul item,
   #reviews .ui ul item, input[type="range"], .nav > .lessons a > span,
-  .nav > .reviews a > span, .srs-progress ul > li, .kotoba-table-list .none-available, .see-more, #review-stats [id^="review-stats"], #timeline .review_info .tot, .alert, .system-alert, [class*=character-grid] > li, .popover .popover-content li, .popover .bar, .progress, .progress > .bar, [class*="highlight"], .newbie, section.progression .lattice-single-character, .see-more a, #main-info, #reviews #character, #wkof_ds .ui-dialog, #wkof_ds .ui-dialog-buttonpane, #wkof_ds .ui-tabs-tab, #wki_settings_cancel,
+  .nav > .reviews a > span, .srs-progress ul > li, .kotoba-table-list .none-available, .see-more, #review-stats [id^="review-stats"], #timeline .review_info .tot, .alert, .system-alert,
+  .alert-where-user-scripts-cant-ignore, [class*=character-grid] > li, .popover .popover-content li, .popover .bar, .progress, .progress > .bar, [class*="highlight"], .newbie, section.progression .lattice-single-character, .see-more a, #main-info, #reviews #character, #wkof_ds .ui-dialog, #wkof_ds .ui-dialog-buttonpane, #wkof_ds .ui-tabs-tab, #wki_settings_cancel,
   #wki_settings_save, #wki_settings_button_label_bgcolor,
   #wki_settings_button_label_textcolor,
   #wki_settings_timer_show_next_item, #timeline .review_info .rad, #timeline .review_info .kan, #timeline .review_info .voc, #ss_quiz .quiz-progress, #ss_quiz .quiz-progress .quiz-progress-bar, #ss_quiz .qtype, #keisei_section .character-item {
@@ -227,7 +229,8 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
   textarea, input, button, .btn, .page-list li > a, .nav-load > li:last-child a,
   .button, #start-session, #batch-items [data-index="quiz"] > span, .btn-set li, #hotkeys, #lessons .ui #reorder,
   #reviews .ui #reorder, [aria-describedby=divSRSGridSettings] .ui-dialog-buttonset button,
-  [aria-describedby=ui-id-2] .ui-dialog-buttonset button, #WKO_button, select, #back-dashboard, .alert, .system-alert, .legend, .page-list, #main footer ul, .account-subscription .account-subscription-plan,
+  [aria-describedby=ui-id-2] .ui-dialog-buttonset button, #WKO_button, select, #back-dashboard, .alert, .system-alert,
+  .alert-where-user-scripts-cant-ignore, .legend, .page-list, #main footer ul, .account-subscription .account-subscription-plan,
   #account-subscription-coupon-form #coupon,
   .account-subscription-payment-processor-info,
   .account-subscription form .control-group input[type="text"], .api section, .newbie, .review-status, .srs-progress, section.progression, .kotoba-table-list, .forum-topics-list,
@@ -310,17 +313,27 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
       color: inherit !important; }
 
   .alert-info {
-    background-color: #f67400 !important;
+    background-color: #ff8e2a !important;
     color: #434343 !important; }
 
-  .system-alert {
-    background-color: #f67400 !important;
+  .system-alert,
+  .alert-where-user-scripts-cant-ignore {
+    background-color: #ff8e2a !important;
     color: #434343 !important; }
-    .system-alert h3, .system-alert i, .system-alert time {
+    .system-alert h2, .system-alert h3, .system-alert i, .system-alert p, .system-alert time,
+    .alert-where-user-scripts-cant-ignore h2,
+    .alert-where-user-scripts-cant-ignore h3,
+    .alert-where-user-scripts-cant-ignore i,
+    .alert-where-user-scripts-cant-ignore p,
+    .alert-where-user-scripts-cant-ignore time {
       color: inherit !important; }
+    .system-alert h2, .system-alert h3,
+    .alert-where-user-scripts-cant-ignore h2,
+    .alert-where-user-scripts-cant-ignore h3 {
+      border-bottom: 1px solid #31363b !important; }
 
   .reviews-alert::before {
-    background-color: #f67400 !important;
+    background-color: #ff8e2a !important;
     bottom: 17px !important;
     clip-path: polygon(100% 0%, 100% 100%, 0% 100%) !important;
     z-index: 3 !important; }
