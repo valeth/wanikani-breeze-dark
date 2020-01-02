@@ -41,6 +41,14 @@ def project_name
   format('WaniKani Breeze Dark%{dev}', dev: (@development ? ' (Dev)' : nil))
 end
 
+def write_to_compiled(filename)
+  mkdir_p 'compiled'
+  open(File.join('compiled', filename), 'w') do |outfile|
+    outfile.truncate(0)
+    outfile.write(replace_options(yield))
+  end
+end
+
 def replace_options(css)
   tmp = css
   STYLISH_OPTIONS.each do |opt|
@@ -55,20 +63,16 @@ task :build_usercss, [:env] => :build do |_task, args|
   compiled = format(filename, dev: (@development ? '-dev' : nil))
 
   @css_source = File.read(File.join('tmp', 'main.css'))
-  erb_file = File.read(File.join(SRC_DIR, "#{format(filename, dev: nil)}.erb"))
-  erb_result = ERB.new(erb_file).result
 
-  open(File.join('compiled', compiled), 'w') do |outfile|
-    outfile.truncate(0)
-    outfile.write(replace_options(erb_result))
+  write_to_compiled(compiled) do
+    erb_file = File.read(File.join(SRC_DIR, "#{format(filename, dev: nil)}.erb"))
+    ERB.new(erb_file).result
   end
 end
 
 task :build_uso => :build do
-  css_source = File.read(File.join('tmp', 'main.css'))
-  open('compiled/wanikani_breeze_dark.uso.css', 'w') do |outfile|
-    outfile.truncate(0)
-    outfile.write(replace_options(css_source))
+  write_to_compiled('wanikani_breeze_dark.uso.css') do
+    File.read(File.join('tmp', 'main.css'))
   end
 end
 

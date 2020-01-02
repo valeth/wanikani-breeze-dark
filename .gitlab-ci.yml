@@ -1,10 +1,12 @@
-image: 'ruby:2.3.3'
+image: 'ruby:2.6'
 
 stages:
   - testing
+  - build
+  - deploy
 
 before_script:
-  - gem install bundler --no-ri --no-rdoc
+  - gem install bundler
   - bundle install --path vendor/bundle
 
 cache:
@@ -17,3 +19,28 @@ scss-lint:
   environment: testing
   script:
     - bundle exec rake 'scss_lint[--format, Stats]'
+
+build:
+  stage: build
+  script:
+    - bundle exec rake build_usercss
+  artifacts:
+    paths:
+      - compiled/
+    expire_in: 30 days
+  tags:
+    - ruby
+  only:
+    - tags@valeth/wanikani-breeze-dark
+
+pages:
+  stage: deploy
+  dependencies:
+    - build
+  script:
+    - mv compiled/ public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - tags@valeth/wanikani-breeze-dark
