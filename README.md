@@ -1,10 +1,7 @@
 # WaniKani Breeze Dark Theme
 
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://gitlab.com/valeth/wanikani-breeze-dark/raw/master/compiled/wanikani_breeze_dark.user.css)
-<!-- [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/) -->
-[![Code Climate](https://codeclimate.com/github/valeth/wanikani-breeze-dark/badges/gpa.svg)](https://codeclimate.com/github/valeth/wanikani-breeze-dark)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9fdf475b02f64278a000ece7cfb48edb)](https://www.codacy.com/app/valeth/wanikani-breeze-dark?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=valeth/wanikani-breeze-dark&amp;utm_campaign=Badge_Grade)
-[![build status](https://gitlab.com/valeth/wanikani-breeze-dark/badges/master/build.svg)](https://gitlab.com/valeth/wanikani-breeze-dark/commits/master)
+[![Install directly with Stylus][stylus_badge]][usercss]
+[![pipeline status][pipeline_badge]][commits]
 
 A theme for the WaniKani website using the [KDE Breeze](https://community.kde.org/KDE_Visual_Design_Group/HIG/Color) theme color palette.
 
@@ -27,3 +24,11 @@ Run `bundle install` from within the project directory.
 
 Then run `rake` from within the project directory and install
 the generated `compiled/wanikani_breeze_dark.user.css` with Stylus.
+
+<!-- links -->
+
+[stylus_badge]: https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg
+[pipeline_badge]: https://gitlab.com/valeth/wanikani-breeze-dark/badges/master/pipeline.svg
+
+[usercss]: https://valeth.gitlab.io/wanikani-breeze-dark/wanikani_breeze_dark.user.css
+[commits]: https://gitlab.com/valeth/wanikani-breeze-dark/commits/master
