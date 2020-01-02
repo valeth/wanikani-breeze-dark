@@ -1,4 +1,8 @@
 #search {
+    // search icon is offset from the top
+    #main-ico-search {
+        top: unset;
+    }
     // shadow on bottom of search query
     &.in {
         @extend %shadowless;
