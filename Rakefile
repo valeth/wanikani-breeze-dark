@@ -4,12 +4,15 @@ require 'rake/clean'
 require 'scss_lint/rake_task'
 require 'sass/plugin'
 require 'erb'
+require 'json'
 
 SCSSLint::RakeTask.new
 
 CLEAN.include('tmp', '.sass_cache')
 
-VERSION = '1.3.3'
+project_info = JSON.load(File.read('./project.json'))
+PROJECT_VERSION = project_info["version"]
+PROJECT_NAME = project_info["name"]
 
 STYLISH_OPTIONS = %w[
   review-char-bg
@@ -30,19 +33,20 @@ CSS_FILES = %w[
 
 SRC_DIR = 'src'
 
+# Template variables
 @development = false
 @css_source = nil
 
 def project_version
-  format("#{VERSION}%{dev}", dev: (@development ? "-dev#{Time.now.to_i}" : nil))
+  format("#{PROJECT_VERSION}%{dev}", dev: (@development ? "-dev#{Time.now.to_i}" : nil))
 end
 
 def project_name
-  format('WaniKani Breeze Dark%{dev}', dev: (@development ? ' (Dev)' : nil))
+  format("#{PROJECT_NAME}%{dev}", dev: (@development ? ' (Dev)' : nil))
 end
 
 def write_to_compiled(filename)
-  mkdir_p 'compiled'
+  mkdir_p 'compiled', verbose: false
   open(File.join('compiled', filename), 'w') do |outfile|
     outfile.truncate(0)
     outfile.write(replace_options(yield))
@@ -57,30 +61,21 @@ def replace_options(css)
   tmp
 end
 
-task :build_usercss, [:env] => :build do |_task, args|
+desc 'Build the CSS files from SCSS sources'
+task :build, [:env] do |_task, args|
   @development = args[:env]&.match?(/dev.*/) || false
-  filename = 'wanikani_breeze_dark%{dev}.user.css'
-  compiled = format(filename, dev: (@development ? '-dev' : nil))
-
   @css_source = File.read(File.join('tmp', 'main.css'))
 
-  write_to_compiled(compiled) do
-    erb_file = File.read(File.join(SRC_DIR, "#{format(filename, dev: nil)}.erb"))
-    ERB.new(erb_file).result
-  end
-end
-
-task :build_uso => :build do
-  write_to_compiled('wanikani_breeze_dark.uso.css') do
-    File.read(File.join('tmp', 'main.css'))
-  end
-end
-
-desc 'Build the CSS files from SCSS sources'
-task :build do
   Sass::Plugin.options[:template_location] = File.join(SRC_DIR, 'stylesheets')
   Sass::Plugin.options[:css_location] = 'tmp'
   Sass::Plugin.update_stylesheets
+
+  filename = 'wanikani_breeze_dark.user.css'
+
+  write_to_compiled(filename) do
+    erb_file = File.read(File.join(SRC_DIR, "#{filename}.erb"))
+    ERB.new(erb_file).result
+  end
 end
 
 task :changes do
@@ -91,4 +86,4 @@ end
 
 task test: :scss_lint
 
-task default: :build_usercss
+task default: :build
