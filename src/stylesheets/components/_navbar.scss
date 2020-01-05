@@ -53,10 +53,11 @@
 // the navigation bar seems to have been entirely replaced
 // now known as the "global header"
 .global-header {
+    @extend %borderless;
+
     background: none;
     background-color: $navbar-color;
-    background-image: none;
-    border-bottom: 1px solid $separator-color;
+    box-shadow: $shadow-v;
 }
 
 .navigation-shortcut[data-count="0"] span {
