@@ -23,7 +23,7 @@ scss-lint:
 build:
   stage: build
   script:
-    - bundle exec rake build_usercss
+    - bundle exec rake build
   artifacts:
     paths:
       - compiled/

@@ -63,8 +63,6 @@ end
 
 desc 'Build the CSS files from SCSS sources'
 task :build, [:env] do |_task, args|
-  @development = args[:env]&.match?(/dev.*/) || false
-  @css_source = File.read(File.join('tmp', 'main.css'))
 
   Sass::Plugin.options[:template_location] = File.join(SRC_DIR, 'stylesheets')
   Sass::Plugin.options[:css_location] = 'tmp'
@@ -74,6 +72,8 @@ task :build, [:env] do |_task, args|
 
   write_to_compiled(filename) do
     erb_file = File.read(File.join(SRC_DIR, "#{filename}.erb"))
+    @development = args[:env]&.match?(/dev.*/) || false
+    @css_source = File.read(File.join('tmp', 'main.css'))
     ERB.new(erb_file).result
   end
 end
