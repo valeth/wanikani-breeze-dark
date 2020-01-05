@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 *no notable changes*
 
 
+## [1.3.4] - 2020-01-05
+
+### Added
+- Styling for new progress bar
+
+### Changed
+- Navbar now has its old shadow back
+
+### Fixed
+- Progress entries now have correct text color
+
+
 ## [1.3.3] - 2020-01-02
 
 ### Changed
@@ -155,6 +167,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <!-- links -->
 
 [Unreleased]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/master
+[1.3.4]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.4
 [1.3.3]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.3
 [1.3.2]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.2
 [1.3.1]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.1
