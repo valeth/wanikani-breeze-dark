@@ -2,10 +2,13 @@
     a {
         @extend %inherited-color;
     }
+
+    section {
+        @extend %section;
+    }
 }
 
 .newbie {
-    @extend %section;
     @extend %no-background-image;
 
     hr {
@@ -15,7 +18,6 @@
 }
 
 .review-status {
-    @extend %section;
     @extend %borderless;
 
     li {
@@ -25,8 +27,6 @@
 }
 
 .srs-progress {
-    @extend %section;
-
     ul {
         > li {
             @extend %clear-background;
@@ -45,36 +45,34 @@
     }
 }
 
-section.progression {
-    @extend %section;
+.progression {
+    .progress-bar {
+        background-color: darken($shade-black, 2%);
+        box-shadow: $shadow-i;
+        height: 1.5rem;
 
-    hr {
-        border-bottom-color: $separator-color !important;
-        border-top: 0 !important;
+        &__progress {
+            @include character('kanji');
+        }
+
+        &__progress, &__label {
+            height: 1rem;
+            margin: 0.25rem;
+        }
+
+        &__label, &__extra-label {
+            color: $inverted-text-color !important;
+            font-size: 0.8rem;
+            line-height: 1.2;
+        }
     }
 
-    .lattice-single-character {
-        @extend %no-background-image;
-
-        li {
-            padding: 2px !important;
-        }
-
-        a {
-            @extend %shadowless;
-            filter: brightness(0.7);
-        }
-
-        @each $type in 'radical', 'kanji' {
-            [id^="#{$type}"] > a {
-                @include character($type);
-            }
-        }
+    .progress-entries {
+        color: $inverted-text-color !important;
     }
 }
 
 .kotoba-table-list {
-    @extend %section;
     @extend %list;
 
     display: flex !important;
@@ -84,9 +82,7 @@ section.progression {
     min-height: 100%;
     position: relative !important;
 
-    span,
-    time,
-    i {
+    span, time, i {
         @extend %inherited-color;
     }
 
@@ -134,7 +130,6 @@ section.progression {
 
 .forum-topics-list,
 .blog {
-    @extend %section;
     @extend %list;
 
     margin-bottom: 0 !important;
