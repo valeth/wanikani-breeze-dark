@@ -89,6 +89,8 @@
 #review-stats {
     @extend %section;
 
+    color: $text-color;
+
     [id^="review-stats"] {
         @extend %clear-background;
         @extend %shadowless;

@@ -68,6 +68,8 @@
 #supplement-info {
     @extend %section;
 
+    color: $text-color;
+
     margin-top: 30px !important;
 
     h2 {
