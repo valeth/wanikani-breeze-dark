@@ -8,7 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-*no notable changes*
+### Fixed
+- Sitemap background color is now dark
 
 
 ## [1.3.4] - 2020-01-05
