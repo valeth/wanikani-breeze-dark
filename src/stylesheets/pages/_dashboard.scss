@@ -6,6 +6,35 @@
     section {
         @extend %section;
     }
+
+    .dashboard-sub-section {
+        margin: 0 !important;
+    }
+
+    // scss-lint:disable NestingDepth SelectorDepth
+    .row {
+        .span12 {
+            // unlocks, critical, burned
+            .row {
+                align-items: stretch;
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 20px !important;
+
+                @media (max-width: 767px) {
+                    .span4:nth-child(2) {
+                        margin-bottom: 20px !important;
+                        margin-top: 20px !important;
+                    }
+                }
+            }
+
+            + .span12 {
+                margin-bottom: 20px !important;
+                margin-top: 0 !important;
+            }
+        }
+    }
 }
 
 .newbie {
