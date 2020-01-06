@@ -3,53 +3,6 @@
     @include sheet(1030, $navbar-color);
 }
 
-.nav {
-    a {
-        @extend %inherited-color;
-    }
-
-    // crabigator logo and avatar
-    .title {
-        span:first-child {
-            @extend %no-background-color;
-
-            box-sizing: border-box !important;
-        }
-    }
-
-    // be careful to not override stuff in opened dropdown menus
-    li:not(.open) {
-        span:first-child {
-            @extend %shadowless;
-
-            border: 0.3em solid lighten($navbar-color, 3%) !important;
-        }
-
-        > a:hover {
-            > span:first-child {
-                border-color: lighten($navbar-color, 7%) !important;
-            }
-        }
-    }
-
-    > .dropdown.account {
-        > .dropdown-toggle {
-            span {
-                @extend %borderless;
-            }
-        }
-    }
-
-    > .lessons,
-    > .reviews {
-        a {
-            > span {
-                @extend %clear-background;
-            }
-        }
-    }
-}
-
 // the navigation bar seems to have been entirely replaced
 // now known as the "global header"
 .global-header {
@@ -58,12 +11,34 @@
     background: none;
     background-color: $navbar-color;
     box-shadow: $shadow-v;
+
+    .logo {
+        filter: brightness(80%) hue-rotate(226deg);
+    }
+}
+
+.navigation {
+    &__toggle[data-expanded="true"] {
+        background-color: transparent;
+    }
 }
 
 .navigation-shortcut[data-count="0"] span {
-    background: $separator-color;
+    background: $charcoal-grey;
 }
 
-.sitemap__grouped-pages, .sitemap__pages {
+.sitemap {
     background: $navbar-color;
+
+    &--divider {
+        border-top-color: $separator-color;
+    }
+
+    &__grouped-pages, &__pages {
+        background: $navbar-color;
+    }
+
+    &__expandable-chunk {
+        background: transparent;
+    }
 }
