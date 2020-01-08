@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Sitemap background color is now dark
+- Text color on settings pages are now lighter
+- Links in nav menu no longer use default link styling
 
 
 ## [1.3.4] - 2020-01-05

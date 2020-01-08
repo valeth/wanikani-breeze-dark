@@ -23,8 +23,14 @@
     }
 }
 
-.navigation-shortcut[data-count="0"] span {
-    background: $charcoal-grey;
+.navigation-shortcut {
+    a {
+        color: $text-color;
+    }
+
+    &[data-count="0"] span {
+        background: $charcoal-grey;
+    }
 }
 
 .sitemap {
@@ -40,5 +46,9 @@
 
     &__expandable-chunk {
         background: transparent;
+    }
+
+    &__page a {
+        color: $text-color !important;
     }
 }

@@ -19,6 +19,8 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
 
     body {
         @extend %main-background;
+
+        color: $text-color;
     }
 
     p, pre, strong, small, span, li, time, h1, h2, h3, h4, label, i {
@@ -26,8 +28,12 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
     }
 
     a {
-        color: $plasma-blue !important;
+        color: $plasma-blue;
         text-shadow: none !important;
+    }
+
+    hr {
+        border-color: $separator-color !important;
     }
 
     footer {
