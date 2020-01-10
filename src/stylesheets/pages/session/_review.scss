@@ -24,3 +24,17 @@
 #information {
     color: $text-color;
 }
+
+#item-info {
+    #all-info {
+        &:hover {
+            color: $text-color;
+        }
+    }
+
+    #related-items {
+        a, a:visited, a:hover {
+            color: $text-color;
+        }
+    }
+}
