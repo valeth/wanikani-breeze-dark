@@ -88,11 +88,24 @@
     }
 }
 
-// icons for batch list, breakdown and examples
-#supplement-info,
-#batch-items {
-    li span {
-        @extend %icon;
+#lesson {
+    #supplement-info {
+        // scss-lint:disable SelectorDepth
+        #supplement-kan-breakdown,
+        #supplement-voc-breakdown,
+        #supplement-kan-related-vocabulary {
+            ul li a {
+                color: $text-color;
+            }
+        }
+    }
+
+    // icons for batch list, breakdown and examples
+    #supplement-info,
+    #batch-items {
+        li span {
+            @extend %icon;
+        }
     }
 }
 
