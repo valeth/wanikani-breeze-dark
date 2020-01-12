@@ -26,10 +26,16 @@
 .navigation-shortcut {
     a {
         color: $text-color;
+
+        span {
+            background: transparent;
+            color: $sunbeam-yellow;
+        }
     }
 
     &[data-count="0"] span {
-        background: $charcoal-grey;
+        background: transparent;
+        color: $text-color;
     }
 }
 
