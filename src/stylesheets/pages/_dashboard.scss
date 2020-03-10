@@ -7,6 +7,17 @@
         @extend %section;
     }
 
+    .progress-and-forecast {
+        grid: {
+            gap: 1rem 1.5rem;
+            template-rows: max-content auto;
+        }
+
+        section {
+            margin: 0;
+        }
+    }
+
     .dashboard-sub-section {
         margin: 0 !important;
     }
@@ -46,6 +57,71 @@
     }
 }
 
+.lessons-and-reviews {
+    &__button {
+        @extend %no-background-color;
+        @extend %shadowless;
+
+        background-size: auto 135px;
+
+        span {
+            background-color: transparent;
+        }
+
+    }
+
+    &__lessons-button, &__reviews-button {
+        &--1, &--100 {
+            span {
+                color: $sunbeam-yellow;
+            }
+        }
+    }
+}
+
+.review-forecast {
+    &__day {
+        border-bottom: 1px solid $separator-color;
+        border-radius: 0;
+
+        &-header {
+            // why...
+            &::before, &::after {
+                display: none;
+            }
+        }
+
+        &-label {
+            // background-color: $charcoal-grey;
+            border-bottom: 1px solid $separator-color;
+            border-radius: 0;
+            padding-bottom: 0.5rem;
+        }
+
+        &.is-collapsed {
+            .review-forecast__day-label {
+                background-color: transparent;
+                border-bottom-width: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    &__hour {
+        background-color: $charcoal-grey !important;
+        border-radius: 0 !important;
+        padding-bottom: 0;
+
+        th, td {
+            border-color: $separator-color;
+        }
+    }
+
+    &__change {
+        border-right-color: $separator-color;
+    }
+}
+
 .review-status {
     @extend %borderless;
 
@@ -74,7 +150,7 @@
     }
 }
 
-.progression {
+.dashboard-progress {
     .progress-bar {
         background-color: darken($shade-black, 2%);
         box-shadow: $shadow-i;
@@ -123,6 +199,10 @@
                 @include character($type, $inverted: true);
             }
         }
+
+        tr:hover {
+            filter: brightness(0.8) !important;
+        }
     }
 
     .none-available {
@@ -163,6 +243,10 @@
 
     margin-bottom: 0 !important;
     margin-top: 0 !important;
+
+    tr:hover {
+        filter: brightness(0.8) !important;
+    }
 }
 
 .see-more {

@@ -34,3 +34,7 @@ linters:
 
   StringQuotes:
     enabled: false
+
+  # fails on unkown properties
+  PropertySpelling:
+    enabled: false

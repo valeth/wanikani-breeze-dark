@@ -42,6 +42,15 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
         }
     }
 
+    // removes some white blobs
+    .bg-white {
+        background-color: inherit;
+    }
+
+    [class^="border-gray"] {
+        border-color: $separator-color;
+    }
+
     // ### HTML Elements ###
     @import 'components/blockquote';
     @import 'components/button';
