@@ -56,11 +56,6 @@
     @extend %borderless;
     @include sheet(9);
 
-    align-items: center !important;
-    display: flex !important;
-    height: 82px !important;
-    justify-content: center !important;
-
     &.reading {
         @extend %reading;
     }
@@ -74,6 +69,18 @@
         top: initial !important;
         width: initial !important;
     }
+}
+
+// #question-type can be a label or a div, of course
+div#question-type, #quiz > div:first-child {
+    height: 5rem;
+    padding: 0;
+}
+
+div#question-type {
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 @each $x in 'up', 'down' {
