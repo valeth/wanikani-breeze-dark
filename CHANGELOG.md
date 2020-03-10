@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+*no notable changes*
+
+
+## [1.3.6] - 2020-03-10
+
 ### Fixed
 - Word spacing in lesson quiz
 
@@ -177,6 +182,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <!-- links -->
 
 [Unreleased]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/master
+[1.3.6]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.6
 [1.3.5]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.5
 [1.3.4]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.4
 [1.3.3]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.3
