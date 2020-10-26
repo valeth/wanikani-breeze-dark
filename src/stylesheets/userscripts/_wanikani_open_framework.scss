@@ -60,6 +60,11 @@
                 @extend %borderless;
             }
 
+            &-active {
+                background-color: $shade-black !important;
+                border-radius: 5px 5px 0 0;
+            }
+
             &-anchor {
                 color: $text-color !important;
             }
