@@ -40,5 +40,9 @@ li.burned {
         [class|="#{$type}"]:not(i) {
             @include character($type);
         }
+
+        img.#{$type}-image {
+            filter: unset !important;
+        }
     }
 }

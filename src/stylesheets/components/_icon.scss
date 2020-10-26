@@ -7,6 +7,10 @@
     .#{$item}-icon {
         @include character($item);
     }
+
+    .#{$item}-icon--locked {
+        filter: brightness(0.7);
+    }
 }
 
 .japanese-font-styling-correction,

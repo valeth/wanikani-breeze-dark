@@ -11,6 +11,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 *no notable changes*
 
 
+## [1.3.8] - 2020-10-26
+
+### Fixed
+- Position of lessons progress below lesson content
+- Titlebar of WKOF's setting dialog
+- Locked item indication on dashboard
+- Shadow issues with radical images
+
+
+## [1.3.7] - 2020-10-06
+
+### Fixed
+- Captions below kanji examples in radical lessons
+
+
 ## [1.3.6] - 2020-03-10
 
 ### Fixed
