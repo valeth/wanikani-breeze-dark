@@ -11,6 +11,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 *no notable changes*
 
 
+## [1.3.9] - 2020-10-26
+
+### Added
+- styled fieldsets in WKOF settings dialogs
+- styled tab headers in WKOF settings dialogs
+
+### Fixed
+- support for stroke order script
+- colors in Dashboard Progress Plus popovers
+
+### Removed
+- support for old (and broken at this point) lesson reorder script - this fixes styles for Reorder Ultimate 2
+
+
 ## [1.3.8] - 2020-10-26
 
 ### Fixed
