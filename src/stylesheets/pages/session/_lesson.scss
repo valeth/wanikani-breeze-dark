@@ -79,9 +79,9 @@
 
 // lesson batch list
 #batch-items {
+    bottom: unset !important;
     position: relative !important;
     width: auto !important;
-    bottom: unset !important;
 
     // quiz start button
     [data-index="quiz"] > span {
