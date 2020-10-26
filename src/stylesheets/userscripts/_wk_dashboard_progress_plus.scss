@@ -1,3 +1,5 @@
+// https://community.wanikani.com/t/userscript-dashboard-progress-plus/8309
+
 $wpp-background-color: $charcoal-grey;
 
 %wpp-filter {
@@ -13,6 +15,26 @@ $wpp-background-color: $charcoal-grey;
         @for $i from 5 through 10 {
             li > a[data-srs-lvl="#{$i}"] {
                 @extend %wpp-filter;
+            }
+        }
+    }
+}
+
+.progress-entries {
+    .popover {
+        @extend %borderless;
+
+        color: $text-color;
+
+        &.left {
+            .arrow, .arrow::after {
+                border-left-color: $popover-background-color;
+            }
+        }
+
+        &.right {
+            .arrow, .arrow::after {
+                border-right-color: $popover-background-color;
             }
         }
     }
