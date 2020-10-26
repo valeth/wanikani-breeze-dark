@@ -1,4 +1,6 @@
-#stroke_order > img {
+// https://community.wanikani.com/t/userscript-stroke-order-diagram/46724
+
+svg#stroke_order {
     filter: invert(80%) !important;
     opacity: 0.5 !important;
 }
