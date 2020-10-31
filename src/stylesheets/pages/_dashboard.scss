@@ -195,7 +195,7 @@
         margin-bottom: 38px !important;
 
         @each $type in $character-types {
-            [id^="#{$type}"] {
+            [class^="#{$type}"] {
                 @include character($type, $inverted: true);
             }
         }
