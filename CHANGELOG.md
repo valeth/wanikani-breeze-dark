@@ -11,18 +11,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 *no notable changes*
 
 
+## [1.3.10] - 2020-10-31
+
+### Added
+
+- Styled lines in WKOF settings dialogs
+
+### Fixed
+- Spacing of the WKOF fieldset title - other view elements shouldn't ovelap with it anymore
+- Coloring of WKOF settings sections
+- Colors of radicals, kanji and vocabulary in the dashboard sections for unlocked, critical and burned items
+
+
 ## [1.3.9] - 2020-10-26
 
 ### Added
-- styled fieldsets in WKOF settings dialogs
-- styled tab headers in WKOF settings dialogs
+- Styled fieldsets in WKOF settings dialogs
+- Styled tab headers in WKOF settings dialogs
 
 ### Fixed
-- support for stroke order script
-- colors in Dashboard Progress Plus popovers
+- Support for stroke order script
+- Colors in Dashboard Progress Plus popovers
 
 ### Removed
-- support for old (and broken at this point) lesson reorder script - this fixes styles for Reorder Ultimate 2
+- Support for old (and broken at this point) lesson reorder script - this fixes styles for Reorder Ultimate 2
 
 
 ## [1.3.8] - 2020-10-26
