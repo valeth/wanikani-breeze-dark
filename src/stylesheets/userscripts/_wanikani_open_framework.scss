@@ -48,6 +48,11 @@
                 section {
                     color: $popover-text-color;
                 }
+
+                hr {
+                    border-bottom-width: 0;
+                    border-top-color: $shade-black !important;
+                }
             }
         }
 
