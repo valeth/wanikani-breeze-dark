@@ -22,6 +22,10 @@ $alert-info-color: lighten($beware-orange, 10%);
 .alert-info {
     background-color: $alert-info-color !important;
     color: $inverted-text-color !important;
+
+    h4 {
+        color: $inverted-text-color !important;
+    }
 }
 
 // alert message on top of dashboard (below search bar)

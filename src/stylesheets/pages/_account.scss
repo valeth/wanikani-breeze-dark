@@ -44,6 +44,7 @@
         background-color: $action-destructive-color !important;
         border-radius: 5px !important;
         box-shadow: $payment-submit-shadow;
+        color: $inverted-text-color !important;
     }
 
     [type=submit]:disabled {
@@ -56,4 +57,32 @@
 #account-subscription-coupon-form #coupon:focus {
     border: none !important;
     box-shadow: $coupon-focus-shadow !important;
+}
+
+.account-subscription-details-total {
+    color: $text-color !important;
+
+    sup {
+        color: $text-color !important;
+    }
+}
+
+.account-subscription-details {
+    table {
+        tr.account-subscription-details-total {
+            th, td, td.account-subscription-details-plan-edit {
+                border-color: $text-color !important;
+            }
+
+            td {
+                border-bottom: 2px solid !important;
+            }
+        }
+    }
+}
+
+.account-billing {
+    div.bg-default {
+        @extend %section;
+    }
 }
