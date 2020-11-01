@@ -53,6 +53,16 @@
                     border-bottom-width: 0;
                     border-top-color: $shade-black !important;
                 }
+
+                .row {
+                    .left {
+                        line-height: 2em;
+                    }
+
+                    .right {
+                        line-height: 2em;
+                    }
+                }
             }
         }
 
