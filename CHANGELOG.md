@@ -11,6 +11,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 *no notable changes*
 
 
+## [1.3.11] - 2020-11-01
+
+### Added
+- Styles for checkboxes - they now follow screenshots from KDE Breeze guidelines
+
+### Fixed
+- Footer styling on 'Profile' and 'Subscription' pages
+- Red buttons have a color that's a little easier on the eyes on 'API tokens' and 'Danger zone' pages
+- Colors in tables on 'Subscription' page
+- Text color in orange elements on 'Subscription' page
+- 'Summary' and 'Payment details' sections on 'Billing' page changed to dark
+
+
 ## [1.3.10] - 2020-10-31
 
 ### Added
