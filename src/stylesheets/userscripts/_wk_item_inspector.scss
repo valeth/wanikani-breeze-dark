@@ -1,0 +1,23 @@
+// https://community.wanikani.com/t/userscript-wanikani-item-inspector/44564
+// https://community.wanikani.com/t/userscript-wanikani-open-framework-additional-filters-recent-lessons-leech-training-related-items-and-more/30512
+// https://community.wanikani.com/t/userscript-self-study-quiz/13191
+
+#Item_Inspector_grp_wk_items_filters, #ss_quiz_grp_wk_items_filters {
+    .row {
+        // border: 0 !important;
+        border-color: $shade-black !important;
+
+        &.checked {
+            background-color: $shade-black !important;
+            // border-left: 2px solid $icon-blue !important;
+        }
+
+        .enable {
+            line-height: 30px;
+
+            input {
+                vertical-align: text-bottom;
+            }
+        }
+    }
+}
