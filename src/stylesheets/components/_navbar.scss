@@ -51,7 +51,11 @@
     }
 
     &__expandable-chunk {
-        background: transparent;
+        background-color: $navbar-color !important;
+
+        &::before {
+            background: $navbar-color;
+        }
     }
 
     &__page a {
