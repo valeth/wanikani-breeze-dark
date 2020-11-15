@@ -1,0 +1,9 @@
+:root {
+    --inverted-text-color: #{$inverted-text-color};
+    --kanji-color: #{character-color('kanji')};
+    --page-background: #{$background-color};
+    --radical-color: #{character-color('radical')};
+    --section-background: #{$section-color};
+    --text-color: #{$text-color};
+    --vocabulary-color: #{character-color('vocabulary')};
+}

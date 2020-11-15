@@ -11,6 +11,7 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
 
 @-moz-document domain(www.wanikani.com) {
     @import 'helpers/placeholders';
+    @import 'helpers/public_variables';
 
     // ### Main ###
     * {
