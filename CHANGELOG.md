@@ -5,24 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-
 ## [Unreleased]
 
 *no notable changes*
 
+## [1.3.12] - 2020-11-15
+
+### Added
+
+- CSS variables for commonly used colors
+- styles for Item Inspector's filters settings
+- styles for WKOF's script menu on review an lesson pages
+
+### Fixed
+
+- background colors of menu's, submenus and their arrows
 
 ## [1.3.11] - 2020-11-01
 
 ### Added
+
 - Styles for checkboxes - they now follow screenshots from KDE Breeze guidelines
 
 ### Fixed
+
 - Footer styling on 'Profile' and 'Subscription' pages
 - Red buttons have a color that's a little easier on the eyes on 'API tokens' and 'Danger zone' pages
 - Colors in tables on 'Subscription' page
 - Text color in orange elements on 'Subscription' page
 - 'Summary' and 'Payment details' sections on 'Billing' page changed to dark
-
 
 ## [1.3.10] - 2020-10-31
 
@@ -31,39 +42,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Styled lines in WKOF settings dialogs
 
 ### Fixed
+
 - Spacing of the WKOF fieldset title - other view elements shouldn't ovelap with it anymore
 - Coloring of WKOF settings sections
 - Colors of radicals, kanji and vocabulary in the dashboard sections for unlocked, critical and burned items
 
-
 ## [1.3.9] - 2020-10-26
 
 ### Added
+
 - Styled fieldsets in WKOF settings dialogs
 - Styled tab headers in WKOF settings dialogs
 
 ### Fixed
+
 - Support for stroke order script
 - Colors in Dashboard Progress Plus popovers
 
 ### Removed
-- Support for old (and broken at this point) lesson reorder script - this fixes styles for Reorder Ultimate 2
 
+- Support for old (and broken at this point) lesson reorder script - this fixes styles for Reorder Ultimate 2
 
 ## [1.3.8] - 2020-10-26
 
 ### Fixed
+
 - Position of lessons progress below lesson content
 - Titlebar of WKOF's setting dialog
 - Locked item indication on dashboard
 - Shadow issues with radical images
 
-
 ## [1.3.7] - 2020-10-06
 
 ### Fixed
-- Captions below kanji examples in radical lessons
 
+- Captions below kanji examples in radical lessons
 
 ## [1.3.6] - 2020-03-10
 
@@ -236,6 +249,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <!-- links -->
 
 [Unreleased]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/master
+[1.3.12]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.12
+[1.3.11]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.11
+[1.3.10]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.10
+[1.3.9]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.9
+[1.3.8]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.8
+[1.3.7]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.7
 [1.3.6]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.6
 [1.3.5]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.5
 [1.3.4]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.4
