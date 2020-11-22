@@ -80,6 +80,8 @@ $timeline-shadow: $shadow;
 
         .tot {
             @extend %clear-background;
+
+            color: $text-color !important;
         }
 
         .bur {
