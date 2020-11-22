@@ -93,101 +93,108 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.3.6] - 2020-03-10
 
 ### Fixed
-- Word spacing in lesson quiz
 
+- Word spacing in lesson quiz
 
 ## [1.3.5] - 2020-03-10
 
 ### Fixed
+
 - Sitemap background color is now dark
 - Text color on settings pages are now lighter
 - Links in nav menu no longer use default link styling
 - Adjusted dashboard style for new layout
 
-
 ## [1.3.4] - 2020-01-05
 
 ### Added
+
 - Styling for new progress bar
 
 ### Changed
+
 - Navbar now has its old shadow back
 
 ### Fixed
-- Progress entries now have correct text color
 
+- Progress entries now have correct text color
 
 ## [1.3.3] - 2020-01-02
 
 ### Changed
+
 - Use GitLab pages for automatic CSS build
 
 ### Fixed
-- Global header background color
 
+- Global header background color
 
 ## [1.3.2] - 2018-12-08
 
 ### Fixed
-- Alert message styling
 
+- Alert message styling
 
 ## [1.3.1] - 2018-10-27
 
 ### Fixed
-- Table width for PSC userscript
 
+- Table width for PSC userscript
 
 ## [1.3.0] - 2018-10-27
 
 ### Added
-- Support for Phon. Sem. Composition userscript
 
+- Support for Phon. Sem. Composition userscript
 
 ## [1.2.4] - 2018-10-27
 
 ### Fixed
-- Batch item tab within lessons
 
+- Batch item tab within lessons
 
 ## [1.2.3] - 2018-10-27
 
 ### Added
-- Support for "Vocabulary for Wanikani" userscript
 
+- Support for "Vocabulary for Wanikani" userscript
 
 ## [1.2.2] - 2018-06-07
 
 ### Changed
+
 - Tweak style for Ultimate Timeline userscript
 
 ### Fixed
-- Character list and grid styling
 
+- Character list and grid styling
 
 ## [1.2.1] - 2018-05-22
 
 ### Changed
+
 - Update style for Ultimate Timeline UserScript
 
 ### Fixed
-- WaniKani Ultimate Timeline popup background
 
+- WaniKani Ultimate Timeline popup background
 
 ## [1.2.0] - 2018-05-15
 
 ### Added
+
 - Partial styling for WKOF
 - Support for WakiKani Leech Training userscript
 
 ### Fixed
+
 - Position progress bar for leech trainer
 - Make some dropdown-menu styles more specific
-
 
 ## [1.1.0] - 2017-12-03
 
 ### Added
+
 - Usercss for Stylus
 - Support for Stroke Order Diagram userscript
 - Config option for burned color
@@ -196,21 +203,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Styling for newbie checklist
 
 ### Changed
+
 - Update WaniKani lesson cap userscript style
 - Update lesson cap userscript styles
 - Update alert style
 - Update dashboard footer
 
 ### Fixed
+
 - Only display footer image on dashboard
 - Alert message on reviews page
 - Footer image positioning
 - Highlight text color on lessons
 
-
 ## [1.0.0] - 2017-07-16
 
 ### Added
+
 - Apply link styling
 - Support for override script
 - Styling for login/signup page
@@ -220,10 +229,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support for the WaniKani Reorder Ultimate 2 userscript
 
 ### Removed
+
 - General radical id selector
 - Text shadows from tables on dashboard
 
 ### Changed
+
 - Make the character background in reviews changeable
 - Give some character items a more "iconic" look
 - Make sure "dangerous" buttons are marked
@@ -234,6 +245,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Make info popups on reviews summary page better readable
 
 ### Fixed
+
 - Settings page styling to work with new layout
 - Styling for related items in lesson quiz
 - Layering for lesson quiz sheets
@@ -247,16 +259,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Styling for Reorder Ultimate userscript in lessons
 - Correct/incorrect highlighting in reviews
 
-
 ## [0.6.0] - 2016-12-24
 
 *no notable changes*
 
-
 ## [0.1.0] - 2016-11-24
 
 *no notable changes*
-
 
 <!-- links -->
 
@@ -284,4 +293,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.0.0]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.0.0
 [0.6.0]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/0.6.0
 [0.1.0]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/0.1.0
-
