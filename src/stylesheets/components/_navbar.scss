@@ -56,6 +56,24 @@
         &::before {
             background: $navbar-color;
         }
+
+        @each $type in $character-types {
+            &[class*="#{$type}"] {
+                @include character($type);
+
+                &::before {
+                    background: character-color($type);
+                }
+
+                * {
+                    color: inherit !important;
+                }
+
+                ul {
+                    background: transparent !important;
+                }
+            }
+        }
     }
 
     &__page a {
