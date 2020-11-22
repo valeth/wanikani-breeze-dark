@@ -196,7 +196,7 @@
 
         @each $type in $character-types {
             [class^="#{$type}"] {
-                @include character($type, $inverted: true);
+                @include character($type);
             }
         }
 
