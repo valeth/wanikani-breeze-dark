@@ -2,7 +2,7 @@
 // https://community.wanikani.com/t/userscript-wanikani-open-framework-additional-filters-recent-lessons-leech-training-related-items-and-more/30512
 // https://community.wanikani.com/t/userscript-self-study-quiz/13191
 
-#Item_Inspector_grp_wk_items_filters, #ss_quiz_grp_wk_items_filters {
+.wkof_group.filters {
     .row {
         // border: 0 !important;
         border-color: $shade-black !important;
