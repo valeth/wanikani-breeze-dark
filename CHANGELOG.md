@@ -9,6 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *no notable changes*
 
+## [1.3.13] - 2020-11-22
+
+### Changed
+
+- dashboard item tables now use item color coding as their background to make it more prominent
+- colorcoded background of radical/kanji/vocab navbar menus - just like WK does now
+
+### Fixed
+
+- scoping of Item Inspector's filter settings' styles to make them work with previous and latest version
+- text color of the total number of reviews in ultimate timeline
+
 ## [1.3.12] - 2020-11-15
 
 ### Added
@@ -249,6 +261,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <!-- links -->
 
 [Unreleased]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/master
+[1.3.13]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.13
 [1.3.12]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.12
 [1.3.11]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.11
 [1.3.10]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.10
