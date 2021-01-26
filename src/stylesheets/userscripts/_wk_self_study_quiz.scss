@@ -1,3 +1,5 @@
+// https://community.wanikani.com/t/userscript-self-study-quiz/13191
+
 #ss_quiz {
     @extend %section;
 
@@ -26,8 +28,12 @@
         }
     }
 
-    .qwrap {
-        @extend %no-background-color;
+    @each $type in $character-types {
+        &[data-itype="#{$type}"] {
+            .qwrap {
+                @include character($type);
+            }
+        }
     }
 
     .help {
