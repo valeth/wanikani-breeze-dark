@@ -9,6 +9,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *no notable changes*
 
+## [1.3.14] - 2021-01-26
+
+### Added
+
+- basic support for Level Duration 2.0 script
+- proper item coloring for self-study quiz sessions
+
+### Changed
+
+- improved highlighter items' border and background in Dashboard Progress Plus script (thanks [@meme8383](https://community.wanikani.com/u/meme8383))
+
+### Fixed
+
+- button-like styling for download links in item inspector's settings
+
 ## [1.3.13] - 2020-11-22
 
 ### Changed
@@ -270,6 +285,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <!-- links -->
 
 [Unreleased]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/master
+[1.3.14]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.14
 [1.3.13]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.13
 [1.3.12]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.12
 [1.3.11]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.11
