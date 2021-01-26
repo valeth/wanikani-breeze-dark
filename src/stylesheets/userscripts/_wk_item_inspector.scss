@@ -20,3 +20,13 @@
         }
     }
 }
+
+#wkofs_advSearchFilters {
+    button {
+        height: 1.8em;
+
+        > a {
+            color: $text-color !important;
+        }
+    }
+}
