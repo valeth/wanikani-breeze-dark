@@ -14,9 +14,15 @@
 @var color burned-color      "Burned Color"              #DA4453
 @var color review-reading-bg "Review Reading Background" #4D4D4D
 @var color review-meaning-bg "Review Meaning Background" #31363B
-@advanced image footer-image-url  "Footer Image" {
-    footer-image-dark    "Dark"     "https://i.imgur.com/MRVqVnw.png"
-    footer-image-default "Original" "https://cdn-staging.wanikani.com/assets/default-v2/footer-bg-615f5af6597739a9fb5ee5e60c69e58065f99060cfbfd43157b32337eded61dd.gif"
+@advanced dropdown footer-image  "Footer Image" {
+    footer-image-dark    "Dark" <<<EOT
+        background-image: url("https://i.imgur.com/MRVqVnw.png") !important;
+    EOT;
+    footer-image-default "Original" <<<EOT
+    EOT;
+    footer-image-none "None" <<<EOT
+        background-image: unset !important;
+    EOT;
 }
 @advanced dropdown review-char-bg "Review Character Background" {
     review-char-bg-dark "Dark, like my soul" <<<EOT

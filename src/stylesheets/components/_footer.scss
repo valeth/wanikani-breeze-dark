@@ -1,6 +1,5 @@
 #main footer, #subscriptions footer, #public-profile footer {
-    // scss-lint:disable UrlFormat
-    background-image: url("/*[[footer-image-url]]*/") !important;
+    /*[[footer-image]]*/
     background-position: top !important;
 
     ul {
