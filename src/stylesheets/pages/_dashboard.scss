@@ -251,6 +251,10 @@
     tr:hover {
         filter: brightness(0.8) !important;
     }
+
+    h3.invert {
+        filter: none;
+    }
 }
 
 .see-more {
