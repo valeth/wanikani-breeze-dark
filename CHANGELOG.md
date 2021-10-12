@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *no notable changes*
 
+## [1.3.15] - 2021-10-12
+
+### Fixed
+
+- sections on subscription page have the correct background and text color again
+- inverted colors of image showing no upcoming reviews
+- background and text color of forum section header
+- restored avatar on profile page
+- minus button visibility in reorder ultimate 2
+
 ## [1.3.14] - 2021-01-26
 
 ### Added
@@ -285,6 +295,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <!-- links -->
 
 [Unreleased]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/master
+[1.3.15]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.15
 [1.3.14]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.14
 [1.3.13]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.13
 [1.3.12]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.12
