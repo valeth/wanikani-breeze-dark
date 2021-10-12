@@ -2,9 +2,9 @@
 
 %minimise-button {
     .icon-minus, .icon-plus {
-        @extend %no-background-color;
         @extend %borderless;
         @extend %shadowless;
+        background-color: $text-color !important;
     }
 }
 
