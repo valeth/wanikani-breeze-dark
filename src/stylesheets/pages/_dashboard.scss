@@ -16,6 +16,10 @@
         section {
             margin: 0;
         }
+
+        .review-forecast__empty-image {
+            filter: invert(0.85) !important;
+        }
     }
 
     .dashboard-sub-section {
