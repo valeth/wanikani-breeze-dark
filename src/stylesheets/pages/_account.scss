@@ -82,7 +82,11 @@
 }
 
 .account-billing {
-    div.bg-default {
+    div.bg-default, div.bg-gray-100 {
         @extend %section;
+
+        .text-gray-900 {
+            color: $text-color;
+        }
     }
 }
