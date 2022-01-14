@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *no notable changes*
 
+## [1.3.16] - 2022-01-14
+
+### Fixed
+
+- fixed styling of user synonyms
+- decluttered style for "patterns of use" tabs
+- fixed answer field background in self-study quiz
+
 ## [1.3.15] - 2021-10-12
 
 ### Fixed
@@ -295,6 +303,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <!-- links -->
 
 [Unreleased]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/master
+[1.3.16]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.16
 [1.3.15]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.15
 [1.3.14]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.14
 [1.3.13]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.13
