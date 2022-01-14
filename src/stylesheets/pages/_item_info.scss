@@ -21,6 +21,14 @@
         color: $text-color !important;
     }
 
+    .new-synonyms li {
+        @extend %button;
+
+        button {
+            @extend %no-background-color;
+        }
+    }
+
     + section {
         @extend %section;
 
