@@ -29,6 +29,27 @@
         }
     }
 
+    section.collocation {
+        .word-type__button {
+            @extend %shadowless;
+
+            border-radius: 0 !important;
+        }
+
+        .word-type__button--selected::after {
+            @extend %no-background-color;
+            @extend %no-background-image;
+        }
+
+        :not(.word-type__button--selected) {
+            @extend %no-background-color;
+        }
+
+        .word-types--with-collocations::after {
+            box-shadow: $shadow-color 0 0 5px 0;
+        }
+    }
+
     + section {
         @extend %section;
 
