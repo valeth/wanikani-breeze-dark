@@ -72,12 +72,12 @@
 
         margin-top: 0.5rem !important;
         padding: 0 !important;
+    }
 
-        @each $item in correct, incorrect {
-            .#{$item} {
-                background-color: progress-color($item) !important;
-                color: $inverted-text-color !important;
-            }
+    @each $item in correct, incorrect {
+        &[data-result="#{$item}"] .answer input {
+            background-color: progress-color($item) !important;
+            color: $paper-white !important;
         }
     }
 }
