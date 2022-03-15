@@ -243,6 +243,10 @@ div#question-type {
             background-color: $section-color !important;
             filter: brightness(0.8) !important;
         }
+
+        span {
+            color: $text-color !important;
+        }
     }
 }
 

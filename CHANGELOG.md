@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - audio buttons in review and extra study now show up properly (color and visibility fix)
 - top bar with title and buttons is now visible in extra study
+- hiragana now has a readable text color in kana chart in extra study and review
 
 ## [1.3.16] - 2022-01-14
 
