@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+*no notable changes*
+
+## [1.3.17] - 2022-03-15
+
 ### Fixed
 
 - audio buttons in review and extra study now show up properly (color and visibility fix)
@@ -309,6 +313,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <!-- links -->
 
 [Unreleased]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/master
+[1.3.17]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.17
 [1.3.16]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.16
 [1.3.15]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.15
 [1.3.14]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.14
