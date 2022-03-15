@@ -275,3 +275,10 @@
         margin-top: 3px !important;
     }
 }
+
+.extra-study {
+    .rounded-full {
+        // this matches the question marks in circles
+        color: $text-color;
+    }
+}
