@@ -281,4 +281,8 @@
         // this matches the question marks in circles
         color: $text-color;
     }
+
+    img {
+        filter: invert(0.85) !important;
+    }
 }

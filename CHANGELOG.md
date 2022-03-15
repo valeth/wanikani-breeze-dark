@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - top bar with title and buttons is now visible in extra study
 - hiragana now has a readable text color in kana chart in extra study and review
 - improved visibility of the question marks of the 2 new buttos starting extra study sessions
+- inverted the colors of the extra study image on the dashboard
 
 ## [1.3.16] - 2022-01-14
 
