@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-*no notable changes*
+### Fixed
+
+- audio buttons in review and extra study now show up properly (color and visibility fix)
 
 ## [1.3.16] - 2022-01-14
 

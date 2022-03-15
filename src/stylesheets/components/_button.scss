@@ -14,4 +14,13 @@ button, .btn {
     &:hover, &:focus {
         @extend %shadowless;
     }
+
+    &.audio-play::before {
+        color: $text-color;
+    }
+
+    &.audio-unavailable::before {
+        content: '⃠';
+        font-weight: bold;
+    }
 }
