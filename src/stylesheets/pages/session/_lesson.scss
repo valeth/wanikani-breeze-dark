@@ -131,3 +131,7 @@
         @extend %button;
     }
 }
+
+#supplement-voc-collocations-container {
+    @extend %collocation;
+}
