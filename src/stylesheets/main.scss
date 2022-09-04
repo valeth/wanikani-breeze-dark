@@ -52,6 +52,10 @@ To view the sources of this file visit https://gitlab.com/valeth/wanikani-breeze
         border-color: $separator-color;
     }
 
+    .text-black {
+        color: $text-color !important;
+    }
+
     // ### HTML Elements ###
     @import 'components/blockquote';
     @import 'components/button';

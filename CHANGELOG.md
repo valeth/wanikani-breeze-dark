@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - styling of vocab's practical use tabs to match item info
 - scoping of the kanji/radical/vocab icon in lessons (no longer applies shadow to audio buttons)
+- global `text-black` style (this should fix something for radical lessons; thanks [Rrwrex](https://community.wanikani.com/u/Rrwrex))
 
 ## [1.3.17] - 2022-03-15
 
