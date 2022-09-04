@@ -106,7 +106,12 @@
     #supplement-info,
     #batch-items {
         li span {
-            @extend %icon;
+            // scss-lint:disable SelectorDepth
+            @each $item in radical, kanji, vocabulary {
+                &.#{$item} {
+                    @extend %icon;
+                }
+            }
         }
     }
 }

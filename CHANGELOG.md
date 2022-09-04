@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - styling of vocab's practical use tabs to match item info
+- scoping of the kanji/radical/vocab icon in lessons (no longer applies shadow to audio buttons)
 
 ## [1.3.17] - 2022-03-15
 
