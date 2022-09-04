@@ -14,7 +14,6 @@ cache:
     - vendor/bundle
 
 scss-lint:
-  type: test
   stage: testing
   environment: testing
   script:
