@@ -30,7 +30,7 @@ the generated `compiled/wanikani_breeze_dark.user.css` with Stylus.
 
 ### The docker way
 
-It's possible to build (and develop) the project without having the environment on your machine. Simply run `./scripts/compile.sh` from repository root - this will build the CSS styles using a docker container. To continuously work on the style and automatically recompile while making changes run `./scripts/watch.sh`.
+It's possible to build (and develop) the project without having the environment on your machine. Simply run `make compile` from repository root - this will build the CSS styles using a docker container. To continuously work on the style and automatically recompile while making changes run `make watch`. To check for code style errors before commiting run `make lint`.
 
 ## Info for user script creators
 

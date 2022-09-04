@@ -1,0 +1,27 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "make compile",
+            "group": "build"
+        },
+        {
+            "label": "watch",
+            "type": "shell",
+            "command": "make watch",
+            "problemMatcher": [
+                "$node-sass"
+            ]
+        },
+        {
+            "label": "test",
+            "type": "shell",
+            "command": "make lint",
+            "problemMatcher": "$node-sass"
+        }
+    ]
+}
