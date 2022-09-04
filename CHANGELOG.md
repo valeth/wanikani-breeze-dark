@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+*no notable changes*
+
+## [1.3.18] - 2022-09-04
+
 ### Added
 
 - basic support for [CIDWWA](https://community.wanikani.com/t/for-userscript-authors-cidwwa-code-i-dont-want-to-write-again/56288)
@@ -322,6 +326,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <!-- links -->
 
 [Unreleased]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/master
+[1.3.18]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.18
 [1.3.17]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.17
 [1.3.16]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.16
 [1.3.15]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.15
