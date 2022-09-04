@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - basic support for [CIDWWA](https://community.wanikani.com/t/for-userscript-authors-cidwwa-code-i-dont-want-to-write-again/56288)
+- configured color scheme to dark (for browsers to better understand and adjust themselves; thanks [@Hubbit200](https://community.wanikani.com/u/Hubbit200))
 
 ## [1.3.17] - 2022-03-15
 
