@@ -236,11 +236,22 @@
 //     @extend %no-background-color;
 // }
 
-// #item-info {
-//     h2 {
-//         border-bottom-color: $separator-color !important;
-//     }
-// }
+    h2 {
+        border-bottom-color: $separator-color !important;
+
+        a {
+            color: $text-color !important;
+        }
+    }
+
+    aside {
+        @extend %popup;
+    }
+
+    a.user-synonyms__button {
+        @extend %button;
+    }
+}
 
 // hiragana chart
 // TODO: this doesn't look great, don't remember how it looked before
