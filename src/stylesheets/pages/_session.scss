@@ -142,6 +142,7 @@ div#question-type {
 
     height: 50px !important;
     margin: 0 !important;
+    padding: 0 !important;
 
     // make sure the list items are aligned nicely
     ul {
@@ -151,7 +152,7 @@ div#question-type {
         margin: 0 !important;
 
         // indicate that the wrapup function is active
-        .wrap-up-selected {
+        .additional-content__item--wrap-up.additional-content__item--active {
             span, span:hover::before, span::before {
                 background-color: $charcoal-grey !important;
             }
@@ -170,9 +171,10 @@ div#question-type {
     }
 
     // options
-    li > span {
+    li > a {
         @extend %no-background-color;
         @extend %shadowless;
+        @extend %borderless;
 
         z-index: 7 !important;
 
