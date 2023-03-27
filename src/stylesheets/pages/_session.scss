@@ -99,15 +99,19 @@
 //     justify-content: center;
 // }
 
-// @each $x in 'up', 'down' {
-//     .srs-#{$x} {
-//         @extend %no-background-color;
-//
-//         &::before {
-//             color: progress-color($x) !important;
-//         }
-//     }
-// }
+@each $x in 'true', 'false' {
+    .character-header__srs-container[data-went-up="#{$x}"] {
+        .character-header__srs-content {
+            @extend %no-background-color;
+            color: progress-color($x) !important;
+
+            i, div {
+                @extend %shadowless;
+                color: inherit !important;
+            }
+        }
+    }
+}
 
 // input field for answer
 .quiz-input__input-wrapper {
