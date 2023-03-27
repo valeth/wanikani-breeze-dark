@@ -199,16 +199,16 @@
     }
 }
 
-// // answer exception popup
-// #answer-exception span {
-//     background-color: $popover-background-color !important;
-//     border-radius: 5px;
-//     box-shadow: $answer-exception-shadow !important;
-//
-//     &::before {
-//         display: none !important;
-//     }
-// }
+// answer exception popup
+.answer-exception {
+    background-color: $popover-background-color !important;
+    border-radius: 5px;
+    box-shadow: $answer-exception-shadow !important;
+
+    &::before {
+        display: none !important;
+    }
+}
 
 // // last ten items in the review queue
 // #last-items li ul {
