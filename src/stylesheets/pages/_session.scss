@@ -163,13 +163,6 @@
         }
     }
 
-    // up arrow
-    li::before {
-        border-bottom-color: $shade-black !important;
-        bottom: -25px !important;
-        color: $shade-black !important;
-    }
-
     // options
     li > a {
         @extend %no-background-color;
@@ -178,12 +171,11 @@
 
         z-index: 7 !important;
 
-        // list item hover overlay
-        &:hover::before {
-            @extend %shadowless;
-
-            background-color: $charcoal-grey !important;
-            color: $text-color !important;
+        // up arrow
+        &::after {
+            border-bottom-color: $shade-black !important;
+            bottom: -25px !important;
+            color: $shade-black !important;
         }
 
         [class*="-icon"] {
