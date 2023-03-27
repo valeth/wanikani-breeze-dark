@@ -58,6 +58,10 @@ input[type="range"] {
     @extend %clear-background;
 }
 
+input[type="submit"] {
+    @extend %button;
+}
+
 #user_password {
     &:focus {
         border: {
