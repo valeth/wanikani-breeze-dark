@@ -54,6 +54,19 @@
     }
 }
 
+form.user-note__form {
+    @extend %no-background-color;
+
+    a.user-note__button {
+        color: $text-color;
+    }
+}
+
+button.reading-with-audio__control {
+    @extend %shadowless;
+    @extend %no-background-color;
+}
+
 // [id^="loading"] {
 //     background-color: $background-color !important;
 // }
@@ -111,7 +124,7 @@
 
             i, div {
                 @extend %shadowless;
-                color: inherit !important;
+                @extend %inherited-color;
             }
         }
     }
@@ -168,7 +181,7 @@
     padding: 0 !important;
 
     // make sure the list items are aligned nicely
-    ul {
+    ul.additional-content__menu {
         align-items: center !important;
         display: flex !important;
         height: 100% !important;
@@ -232,13 +245,14 @@
 #information {
     @extend %section;
 
+    color: $text-color;
     z-index: 8 !important;
 }
 
-// // show more button
-// #all-info {
-//     @extend %no-background-color;
-// }
+#subject-info {
+    i {
+        @extend %shadowless;
+    }
 
     h2 {
         border-bottom-color: $separator-color !important;
