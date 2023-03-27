@@ -9,6 +9,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *no notable changes*
 
+## [1.3.19] - 2023-03-27
+
+## Fixed
+
+- restored styles of reading/meaning on review page
+- restored styling of input field on review page
+- restored styling of tool buttons under input on review page
+- restored styling of the kana chart on review page
+- fixed arrow pointing to additional info on review page
+- restored styling of character view and header on review page
+- restored styling of hint popup on review page
+- reapplied SRS style on the new elements
+- improved styling of submit inputs
+- improved styling of hint sections in item info
+- restored styling of radicals composing a kanji
+- minor color/shadow improvements in item info sections
+
 ## [1.3.18] - 2022-09-04
 
 ### Added
@@ -326,6 +343,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <!-- links -->
 
 [Unreleased]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/master
+[1.3.19]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.19
 [1.3.18]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.18
 [1.3.17]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.17
 [1.3.16]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.16
