@@ -13,6 +13,27 @@
 //   #additional-content
 //   #information
 
+.character-header {
+    @extend %no-background-image;
+    @include sheet(10);
+
+    @each $item in 'radical', 'kanji', 'vocabulary' {
+        // header item background and foreground
+        &.character-header--#{$item} {
+            @include character($item, $inverted: true);
+
+            // session header
+            .character-header__characters {
+                @include character($item, $inverted: true);
+            }
+        }
+
+        // #last-items [class*="#{$item}"] [lang="ja"]:first-child {
+        //     @include character($item);
+        // }
+    }
+}
+
 // #related-items {
 //     @each $item in radical, kanji, vocabulary {
 //         a > [class^=#{$item}] {
@@ -33,19 +54,12 @@
 //     background-color: $background-color !important;
 // }
 
-// // session status header
-// #stats,
-// #summary-button,
-// #header-buttons,
-// .menu-bar {
-//     color: $text-color !important;
-//     z-index: 100 !important;
-//
-//     * {
-//         @extend %no-background-color;
-//         @extend %inherited-color;
-//     }
-// }
+// session status header
+.character-header__menu {
+    div, i {
+        @extend %shadowless;
+    }
+}
 
 // hotkeys in lower right corner
 // TODO: not getting applied, even though browser says it is
