@@ -34,21 +34,25 @@
     }
 }
 
-// #related-items {
-//     @each $item in radical, kanji, vocabulary {
-//         a > [class^=#{$item}] {
-//             @include character($item);
-//         }
-//     }
-//
-//     span {
-//         @extend %icon;
-//
-//         > i {
-//             @extend %inherited-color;
-//         }
-//     }
-// }
+.components-list {
+    @each $item in radical, kanji, vocabulary {
+        a[class$=#{$item}] {
+            @include character($item);
+        }
+    }
+
+    .component-character__characters {
+        @extend %shadowless;
+    }
+
+    .component-character__meaning {
+        color: $text-color !important;
+    }
+
+    li::after {
+        text-shadow: none !important;
+    }
+}
 
 // [id^="loading"] {
 //     background-color: $background-color !important;
