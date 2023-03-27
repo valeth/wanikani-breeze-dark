@@ -53,23 +53,23 @@
 }
 
 // question type, reading or meaning
-#question-type {
+.quiz-input__question-type-container {
     @extend %borderless;
     @include sheet(9);
 
-    &.reading {
+    &[data-question-type="reading"] {
         @extend %reading;
     }
 
-    &.meaning {
+    &[data-question-type="meaning"] {
         @extend %meaning;
     }
 
-    > .srs {
-        left: 70% !important;
-        top: initial !important;
-        width: initial !important;
-    }
+    // > .srs {
+    //     left: 70% !important;
+    //     top: initial !important;
+    //     width: initial !important;
+    // }
 }
 
 // #question-type can be a label or a div, of course
