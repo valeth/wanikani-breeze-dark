@@ -95,15 +95,15 @@ div#question-type {
 }
 
 // input field for answer
-#answer-form {
+.quiz-input__input-wrapper {
     @include sheet(8);
 
-    fieldset {
+    .quiz-input__input-container {
         padding: 0 !important;
 
-        @each $x in 'correct', 'incorrect' {
-            &.#{$x} {
-                input[type=text]:disabled {
+        @each $x in 'true', 'false' {
+            &[correct="#{$x}"] {
+                input[type=text][enabled=false] {
                     background-color: progress-color($x) !important;
                 }
 
@@ -117,8 +117,10 @@ div#question-type {
     input {
         @extend %borderless;
         @extend %shadowless;
+        @extend %no-background-color;
 
         border-radius: 0 !important;
+        color: $answer-text-color !important;
     }
 
     button {
@@ -126,7 +128,11 @@ div#question-type {
         @extend %borderless;
         @extend %shadowless;
 
-        height: 2.3em !important;
+        //height: 2.3em !important;
+
+        i {
+            color: $answer-text-color !important;
+        }
     }
 }
 

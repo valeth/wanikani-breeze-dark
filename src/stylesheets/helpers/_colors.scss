@@ -80,8 +80,10 @@ $percent-colors: (
 $progress-colors: (
     'incorrect': $danger-red,
     'down':      $danger-red,
+    'false':     $danger-red,
     'correct':   $icon-green,
-    'up':        $icon-green
+    'up':        $icon-green,
+    'true':      $icon-green,
 );
 
 $button-background-color: $shade-black;
@@ -127,6 +129,7 @@ $addcon-sep-color:       $shade-black;
 $question-type-shadow:    $shadow-v inset;
 $answer-form-shadow:      $shadow-v inset, $shadow-v;
 $answer-exception-shadow: $shadow;
+$answer-text-color:       $paper-white;
 $review-character-shadow: $shadow-v;
 $text-meaning-shadow:     0 0 10px $meaning-color;
 $text-reading-shadow:     0 0 10px $reading-color;
