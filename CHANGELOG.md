@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *no notable changes*
 
-## [1.3.19] - 2023-03-27
+## [1.4.0] - 2023-03-27
 
 ## Fixed
 
@@ -343,7 +343,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <!-- links -->
 
 [Unreleased]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/master
-[1.3.19]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.19
+[1.4.0]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.4.0
 [1.3.18]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.18
 [1.3.17]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.17
 [1.3.16]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.16
