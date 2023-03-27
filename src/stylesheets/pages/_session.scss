@@ -229,31 +229,30 @@ div#question-type {
 }
 
 // hiragana chart
+// TODO: this doesn't look great, don't remember how it looked before
 #kana-chart {
-    ol {
-        border-bottom-color: $separator-color !important;
+    .kana-chart__tabs {
+        border-bottom: 1px solid $separator-color !important;
     }
 
-    .active {
+    .kana-chart__tab--selected {
         border: {
             bottom: none !important;
             left: 1px solid $separator-color !important;
             right: 1px solid $separator-color !important;
+            top: 1px solid $separator-color !important;
         }
     }
 
-    li {
-        border-right-color: $separator-color !important;
+    .kana-chart__tab {
+        @extend %no-background-color;
+        @extend %shadowless;
+
+        border-radius: 0 !important;
 
         &:hover {
-            @extend %shadowless;
-
             background-color: $section-color !important;
             filter: brightness(0.8) !important;
-        }
-
-        span {
-            color: $text-color !important;
         }
     }
 }
