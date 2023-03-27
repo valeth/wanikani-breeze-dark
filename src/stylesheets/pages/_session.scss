@@ -47,10 +47,11 @@
 //     }
 // }
 
-// // hotkeys in lower right corner
-// #hotkeys {
-//     @extend %button;
-// }
+// hotkeys in lower right corner
+// TODO: not getting applied, even though browser says it is
+.hotkeys-menu {
+    @extend %button;
+}
 
 // question type, reading or meaning
 .quiz-input__question-type-container {
