@@ -1,6 +1,6 @@
-@import 'session/summary';
-@import 'session/lesson';
-@import 'session/review';
+// @import 'session/summary';
+// @import 'session/lesson';
+// @import 'session/review';
 
 // Session Layout:
 //
@@ -13,44 +13,44 @@
 //   #additional-content
 //   #information
 
-#related-items {
-    @each $item in radical, kanji, vocabulary {
-        a > [class^=#{$item}] {
-            @include character($item);
-        }
-    }
+// #related-items {
+//     @each $item in radical, kanji, vocabulary {
+//         a > [class^=#{$item}] {
+//             @include character($item);
+//         }
+//     }
+//
+//     span {
+//         @extend %icon;
+//
+//         > i {
+//             @extend %inherited-color;
+//         }
+//     }
+// }
 
-    span {
-        @extend %icon;
+// [id^="loading"] {
+//     background-color: $background-color !important;
+// }
 
-        > i {
-            @extend %inherited-color;
-        }
-    }
-}
+// // session status header
+// #stats,
+// #summary-button,
+// #header-buttons,
+// .menu-bar {
+//     color: $text-color !important;
+//     z-index: 100 !important;
+//
+//     * {
+//         @extend %no-background-color;
+//         @extend %inherited-color;
+//     }
+// }
 
-[id^="loading"] {
-    background-color: $background-color !important;
-}
-
-// session status header
-#stats,
-#summary-button,
-#header-buttons,
-.menu-bar {
-    color: $text-color !important;
-    z-index: 100 !important;
-
-    * {
-        @extend %no-background-color;
-        @extend %inherited-color;
-    }
-}
-
-// hotkeys in lower right corner
-#hotkeys {
-    @extend %button;
-}
+// // hotkeys in lower right corner
+// #hotkeys {
+//     @extend %button;
+// }
 
 // question type, reading or meaning
 .quiz-input__question-type-container {
@@ -72,27 +72,27 @@
     // }
 }
 
-// #question-type can be a label or a div, of course
-div#question-type, #quiz > div:first-child {
-    height: 5rem;
-    padding: 0;
-}
+// // #question-type can be a label or a div, of course
+// div#question-type, #quiz > div:first-child {
+//     height: 5rem;
+//     padding: 0;
+// }
 
-div#question-type {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
+// div#question-type {
+//     align-items: center;
+//     display: flex;
+//     justify-content: center;
+// }
 
-@each $x in 'up', 'down' {
-    .srs-#{$x} {
-        @extend %no-background-color;
-
-        &::before {
-            color: progress-color($x) !important;
-        }
-    }
-}
+// @each $x in 'up', 'down' {
+//     .srs-#{$x} {
+//         @extend %no-background-color;
+//
+//         &::before {
+//             color: progress-color($x) !important;
+//         }
+//     }
+// }
 
 // input field for answer
 .quiz-input__input-wrapper {
@@ -185,30 +185,33 @@ div#question-type {
             background-color: $charcoal-grey !important;
             color: $text-color !important;
         }
-    }
 
-}
-
-// answer exception popup
-#answer-exception span {
-    background-color: $popover-background-color !important;
-    border-radius: 5px;
-    box-shadow: $answer-exception-shadow !important;
-
-    &::before {
-        display: none !important;
+        [class*="-icon"] {
+            box-shadow: none !important;
+        }
     }
 }
 
-// last ten items in the review queue
-#last-items li ul {
-    background-color: $charcoal-grey !important;
+// // answer exception popup
+// #answer-exception span {
+//     background-color: $popover-background-color !important;
+//     border-radius: 5px;
+//     box-shadow: $answer-exception-shadow !important;
+//
+//     &::before {
+//         display: none !important;
+//     }
+// }
 
-    [title*=meaning],
-    [title*=reading] {
-        color: $text-color !important;
-    }
-}
+// // last ten items in the review queue
+// #last-items li ul {
+//     background-color: $charcoal-grey !important;
+//
+//     [title*=meaning],
+//     [title*=reading] {
+//         color: $text-color !important;
+//     }
+// }
 
 // information about the current item
 #information {
@@ -217,16 +220,16 @@ div#question-type {
     z-index: 8 !important;
 }
 
-// show more button
-#all-info {
-    @extend %no-background-color;
-}
+// // show more button
+// #all-info {
+//     @extend %no-background-color;
+// }
 
-#item-info {
-    h2 {
-        border-bottom-color: $separator-color !important;
-    }
-}
+// #item-info {
+//     h2 {
+//         border-bottom-color: $separator-color !important;
+//     }
+// }
 
 // hiragana chart
 // TODO: this doesn't look great, don't remember how it looked before
@@ -257,6 +260,6 @@ div#question-type {
     }
 }
 
-#additional-content-load {
-    background-color: $section-color !important;
-}
+// #additional-content-load {
+//     background-color: $section-color !important;
+// }
