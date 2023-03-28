@@ -113,6 +113,10 @@
 //     }
 // }
 
-// #supplement-voc-collocations-container {
-//     @extend %collocation;
-// }
+.subject-collocations {
+    @extend %collocation;
+
+    .subject-collocations__pattern-name[aria-selected="true"] {
+        background-color: darken($button-background-color, 3%) !important;
+    }
+}

@@ -1,20 +1,21 @@
 %collocation {
-    .word-type__button {
+    .subject-collocations__pattern-name {
         @extend %shadowless;
+        @extend %no-background-color;
 
         border-radius: 0 !important;
     }
 
-    .word-type__button--selected::after {
+    .subject-collocations__pattern-name::after {
         @extend %no-background-color;
         @extend %no-background-image;
     }
 
-    :not(.word-type__button--selected) {
-        @extend %no-background-color;
+    .subject-collocations__pattern-name[aria-selected="true"] {
+        background-color: $button-background-color !important;
     }
 
-    .word-types--with-collocations::after {
+    .subject-collocations__patterns::after {
         box-shadow: $shadow-color 0 0 5px 0;
     }
 }
