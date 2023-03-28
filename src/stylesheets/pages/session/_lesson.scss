@@ -15,15 +15,6 @@
 //      #information
 
 // @each $item in radical, kanji, vocabulary {
-//     // lesson header background and foreground color
-//     #main-info.#{$item} {
-//         @include character($item, $inverted: true);
-//
-//         #character {
-//             color: character-color($item) !important;
-//         }
-//     }
-//
 //     #supplement-info,
 //     #batch-items {
 //         [class^=#{$item}] {
@@ -32,17 +23,7 @@
 //     }
 // }
 
-// #lessons {
-//     // lesson header
-//     header {
-//         @include sheet(11);
-//     }
-// }
 
-// #main-info {
-//     @extend %shadowless;
-//     @extend %no-background-image;
-// }
 
 // // lesson navigation
 // #supplement-nav {
