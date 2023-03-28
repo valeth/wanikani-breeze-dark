@@ -2,11 +2,7 @@
     @extend %inherited-color;
 }
 
-li.burned {
-    filter: brightness(0.50) !important;
-}
-
-[class*=character-grid] {
+.character-grid__items {
     background-color: darken($section-color, 2%) !important;
     border-radius: 5px !important;
     box-shadow: $shadow-i !important;
@@ -23,26 +19,24 @@ li.burned {
         box-shadow: $shadow !important;
         margin: 5px !important;
 
-        > a {
-            @extend %no-background-color;
-        }
-
-        // &.burned {
-        //     filter: brightness(0.50) !important;
-        // }
-
-        &.locked {
-            filter: brightness(0.70) !important;
-        }
-    }
-
-    @each $type in radical, kanji, vocabulary {
-        [class|="#{$type}"]:not(i) {
-            @include character($type);
-        }
-
-        img.#{$type}-image {
+        img {
             filter: unset !important;
+            opacity: unset !important;
+        }
+
+        @each $item in radical, kanji, vocabulary {
+            .character-item--#{$item} {
+                @extend %icon;
+                @include character($item);
+            }
+        }
+
+        .character-item--burned {
+            filter: brightness(0.50) !important;
+        }
+
+        .character-item--locked {
+            filter: brightness(0.70) !important;
         }
     }
 }
