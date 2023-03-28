@@ -23,8 +23,14 @@
             @include character($item, $inverted: true);
 
             // session header
-            .character-header__characters {
-                @include character($item, $inverted: true);
+            .character-header__content {
+                background-color: inherit !important;
+                color: inherit !important;
+
+                .character-header__characters {
+                    background-color: inherit !important;
+                    color: inherit !important;
+                }
             }
         }
 
@@ -73,8 +79,11 @@ button.reading-with-audio__control {
 
 // session status header
 .character-header__menu {
-    div, i {
+    color: $paper-white !important;
+
+    div, i, .summary-button {
         @extend %shadowless;
+        color: inherit !important;
     }
 }
 
