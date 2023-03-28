@@ -317,6 +317,6 @@ li.user-synonyms__item a {
     }
 }
 
-// #additional-content-load {
-//     background-color: $section-color !important;
-// }
+#last-items[busy]::after, #subject-info[busy]::after {
+    background-color: $section-color !important;
+}
