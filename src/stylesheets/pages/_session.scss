@@ -73,10 +73,6 @@ button.reading-with-audio__control {
     @extend %no-background-color;
 }
 
-// [id^="loading"] {
-//     background-color: $background-color !important;
-// }
-
 // session status header
 .character-header__menu {
     color: $paper-white !important;
@@ -112,18 +108,6 @@ button.reading-with-audio__control {
     //     width: initial !important;
     // }
 }
-
-// // #question-type can be a label or a div, of course
-// div#question-type, #quiz > div:first-child {
-//     height: 5rem;
-//     padding: 0;
-// }
-
-// div#question-type {
-//     align-items: center;
-//     display: flex;
-//     justify-content: center;
-// }
 
 @each $x in 'true', 'false' {
     .character-header__srs-container[data-went-up="#{$x}"] {
