@@ -14,15 +14,6 @@
 //      #additional-content
 //      #information
 
-// @each $item in radical, kanji, vocabulary {
-//     #supplement-info,
-//     #batch-items {
-//         [class^=#{$item}] {
-//             @include character($item);
-//         }
-//     }
-// }
-
 // lesson navigation
 #slide-navigation {
     @include sheet(9);
@@ -67,10 +58,6 @@
     // quiz start button
     .wk-button--quiz {
         @extend %button;
-
-        i {
-            @extend %shadowless;
-        }
     }
 }
 

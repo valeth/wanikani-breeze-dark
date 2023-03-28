@@ -206,25 +206,25 @@ button.reading-with-audio__control {
                 text-shadow: 0 0 10px $icon-orange !important;
             }
         }
-    }
 
-    // options
-    li > a {
-        @extend %no-background-color;
-        @extend %shadowless;
-        @extend %borderless;
+        // options
+        li > a {
+            @extend %no-background-color;
+            @extend %shadowless;
+            @extend %borderless;
 
-        z-index: 7 !important;
+            z-index: 7 !important;
 
-        // up arrow
-        &::after {
-            border-bottom-color: $shade-black !important;
-            bottom: -25px !important;
-            color: $shade-black !important;
-        }
+            // up arrow
+            &::after {
+                border-bottom-color: $shade-black !important;
+                bottom: -25px !important;
+                color: $shade-black !important;
+            }
 
-        [class*="-icon"] {
-            box-shadow: none !important;
+            [class*="-icon"] {
+                box-shadow: none !important;
+            }
         }
     }
 }
@@ -274,9 +274,17 @@ button.reading-with-audio__control {
     aside {
         @extend %popup;
     }
+}
 
-    a.user-synonyms__button {
-        @extend %button;
+a.user-synonyms__button {
+    @extend %button;
+}
+
+li.user-synonyms__item a {
+    @extend %button;
+
+    &:not(:hover) i {
+        @extend %no-background-color;
     }
 }
 

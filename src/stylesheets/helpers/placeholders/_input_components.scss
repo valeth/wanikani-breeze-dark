@@ -40,6 +40,10 @@
 %button {
     @extend %click-input-element;
     @extend %no-background-image;
+
+    i {
+        @extend %shadowless;
+    }
 }
 
 %textarea {
