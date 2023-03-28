@@ -64,18 +64,18 @@
 //     filter: brightness(0.8) !important;
 // }
 
-// // lesson content
-// #supplement-info {
-//     @extend %section;
-//
-//     color: $text-color;
-//
-//     margin-top: 30px !important;
-//
-//     h2 {
-//         border-bottom-color: $separator-color !important;
-//     }
-// }
+// lesson content
+.subject-slide {
+    @extend %section;
+
+    color: $text-color;
+
+    margin-top: 30px !important;
+
+    h2 {
+        border-bottom-color: $separator-color !important;
+    }
+}
 
 // // lesson batch list
 // #batch-items {
