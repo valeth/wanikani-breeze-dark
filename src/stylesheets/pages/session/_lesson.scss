@@ -23,27 +23,29 @@
 //     }
 // }
 
+// lesson navigation
+#slide-navigation {
+    @include sheet(9);
 
+    background-color: $charcoal-grey !important;
 
-// // lesson navigation
-// #supplement-nav {
-//     @include sheet(9);
-//
-//     background-color: $charcoal-grey !important;
-//
-//     li::before {
-//         border-bottom-color: $lesson-color !important;
-//         bottom: -50px !important;
-//         color: $shade-black !important;
-//     }
-// }
+    li a::after {
+        border-bottom-color: $lesson-color !important;
+        bottom: -20px !important;
+        color: $shade-black !important;
+    }
+}
 
-// #next-btn:hover,
-// #prev-btn:hover {
-//     background-color: $section-color !important;
-//     border-radius: 5px !important;
-//     filter: brightness(0.8) !important;
-// }
+.subject-slide__navigation {
+    &:hover {
+        filter: brightness(0.8) !important;
+    }
+
+    div, i {
+        @extend %shadowless;
+        background-color: $section-color !important;
+    }
+}
 
 // lesson content
 .subject-slide {
@@ -51,7 +53,7 @@
 
     color: $text-color;
 
-    margin-top: 30px !important;
+    margin-top: 20px !important;
 
     h2 {
         border-bottom-color: $separator-color !important;
