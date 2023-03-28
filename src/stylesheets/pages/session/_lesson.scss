@@ -14,129 +14,129 @@
 //      #additional-content
 //      #information
 
-@each $item in radical, kanji, vocabulary {
-    // lesson header background and foreground color
-    #main-info.#{$item} {
-        @include character($item, $inverted: true);
+// @each $item in radical, kanji, vocabulary {
+//     // lesson header background and foreground color
+//     #main-info.#{$item} {
+//         @include character($item, $inverted: true);
+//
+//         #character {
+//             color: character-color($item) !important;
+//         }
+//     }
+//
+//     #supplement-info,
+//     #batch-items {
+//         [class^=#{$item}] {
+//             @include character($item);
+//         }
+//     }
+// }
 
-        #character {
-            color: character-color($item) !important;
-        }
-    }
+// #lessons {
+//     // lesson header
+//     header {
+//         @include sheet(11);
+//     }
+// }
 
-    #supplement-info,
-    #batch-items {
-        [class^=#{$item}] {
-            @include character($item);
-        }
-    }
-}
+// #main-info {
+//     @extend %shadowless;
+//     @extend %no-background-image;
+// }
 
-#lessons {
-    // lesson header
-    header {
-        @include sheet(11);
-    }
-}
+// // lesson navigation
+// #supplement-nav {
+//     @include sheet(9);
+//
+//     background-color: $charcoal-grey !important;
+//
+//     li::before {
+//         border-bottom-color: $lesson-color !important;
+//         bottom: -50px !important;
+//         color: $shade-black !important;
+//     }
+// }
 
-#main-info {
-    @extend %shadowless;
-    @extend %no-background-image;
-}
+// #next-btn:hover,
+// #prev-btn:hover {
+//     background-color: $section-color !important;
+//     border-radius: 5px !important;
+//     filter: brightness(0.8) !important;
+// }
 
-// lesson navigation
-#supplement-nav {
-    @include sheet(9);
+// // lesson content
+// #supplement-info {
+//     @extend %section;
+//
+//     color: $text-color;
+//
+//     margin-top: 30px !important;
+//
+//     h2 {
+//         border-bottom-color: $separator-color !important;
+//     }
+// }
 
-    background-color: $charcoal-grey !important;
+// // lesson batch list
+// #batch-items {
+//     bottom: unset !important;
+//     position: relative !important;
+//     width: auto !important;
+//
+//     // quiz start button
+//     [data-index="quiz"] > span {
+//         @extend %button;
+//     }
+// }
 
-    li::before {
-        border-bottom-color: $lesson-color !important;
-        bottom: -50px !important;
-        color: $shade-black !important;
-    }
-}
+// #lesson {
+//     #supplement-info {
+//         // scss-lint:disable SelectorDepth
+//         #supplement-kan-breakdown,
+//         #supplement-voc-breakdown,
+//         #supplement-kan-related-vocabulary,
+//         #supplement-rad-related-kanji {
+//             ul li a {
+//                 color: $text-color;
+//             }
+//         }
+//     }
+//
+//     // icons for batch list, breakdown and examples
+//     #supplement-info,
+//     #batch-items {
+//         li span {
+//             // scss-lint:disable SelectorDepth
+//             @each $item in radical, kanji, vocabulary {
+//                 &.#{$item} {
+//                     @extend %icon;
+//                 }
+//             }
+//         }
+//     }
+// }
 
-#next-btn:hover,
-#prev-btn:hover {
-    background-color: $section-color !important;
-    border-radius: 5px !important;
-    filter: brightness(0.8) !important;
-}
+// // continue screen after quiz
+// #screen-lesson-ready {
+//     @extend %main-background;
+//
+//     z-index: 110 !important;
+// }
 
-// lesson content
-#supplement-info {
-    @extend %section;
+// // quiz ready screen after lesson
+// #screen-quiz-ready {
+//     @extend %main-background;
+//
+//     z-index: 110 !important;
+// }
 
-    color: $text-color;
+// // buttons on lesson/quiz ready screen
+// .btn-set {
+//     li {
+//         @extend %button;
+//     }
+// }
 
-    margin-top: 30px !important;
-
-    h2 {
-        border-bottom-color: $separator-color !important;
-    }
-}
-
-// lesson batch list
-#batch-items {
-    bottom: unset !important;
-    position: relative !important;
-    width: auto !important;
-
-    // quiz start button
-    [data-index="quiz"] > span {
-        @extend %button;
-    }
-}
-
-#lesson {
-    #supplement-info {
-        // scss-lint:disable SelectorDepth
-        #supplement-kan-breakdown,
-        #supplement-voc-breakdown,
-        #supplement-kan-related-vocabulary,
-        #supplement-rad-related-kanji {
-            ul li a {
-                color: $text-color;
-            }
-        }
-    }
-
-    // icons for batch list, breakdown and examples
-    #supplement-info,
-    #batch-items {
-        li span {
-            // scss-lint:disable SelectorDepth
-            @each $item in radical, kanji, vocabulary {
-                &.#{$item} {
-                    @extend %icon;
-                }
-            }
-        }
-    }
-}
-
-// continue screen after quiz
-#screen-lesson-ready {
-    @extend %main-background;
-
-    z-index: 110 !important;
-}
-
-// quiz ready screen after lesson
-#screen-quiz-ready {
-    @extend %main-background;
-
-    z-index: 110 !important;
-}
-
-// buttons on lesson/quiz ready screen
-.btn-set {
-    li {
-        @extend %button;
-    }
-}
-
-#supplement-voc-collocations-container {
-    @extend %collocation;
-}
+// #supplement-voc-collocations-container {
+//     @extend %collocation;
+// }
