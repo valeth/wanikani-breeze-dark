@@ -84,8 +84,7 @@ button.reading-with-audio__control {
 }
 
 // hotkeys in lower right corner
-// TODO: not getting applied, even though browser says it is
-.hotkeys-menu {
+.hotkeys-menu, .hotkeys-menu__header, .chat-button {
     @extend %button;
 }
 
