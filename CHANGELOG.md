@@ -9,6 +9,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *no notable changes*
 
+## [1.4.1] - 2023-03-28
+
+## Fixed
+
+- fixed ability to configure review/lesson item background
+- restored styling of navigation bar on lessons page
+- restored styling of info sections on lessons page
+- restored styling of queue on lessons page
+- restored styling of kanji composition on lessons page
+- restored styling of patterns of use (affects multiple pages)
+- restored styling of user synonyms (affects multiple pages)
+- restored styling of loading view on review page
+- restored styling of character grid (affects multiple pages)
+- fixed styling of keyboard menu and chat button
+
 ## [1.4.0] - 2023-03-27
 
 ## Fixed
@@ -343,6 +358,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <!-- links -->
 
 [Unreleased]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/master
+[1.4.1]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.4.1
 [1.4.0]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.4.0
 [1.3.18]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.18
 [1.3.17]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.17
