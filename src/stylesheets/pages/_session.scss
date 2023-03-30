@@ -100,12 +100,6 @@ button.reading-with-audio__control {
     &[data-question-type="meaning"] {
         @extend %meaning;
     }
-
-    // > .srs {
-    //     left: 70% !important;
-    //     top: initial !important;
-    //     width: initial !important;
-    // }
 }
 
 @each $x in 'true', 'false' {
@@ -224,15 +218,29 @@ button.reading-with-audio__control {
     }
 }
 
-// // last ten items in the review queue
-// #last-items li ul {
-//     background-color: $charcoal-grey !important;
-//
-//     [title*=meaning],
-//     [title*=reading] {
-//         color: $text-color !important;
-//     }
-// }
+// last ten items in the review queue
+#last-items li a {
+    @extend %popover;
+
+    background-color: $charcoal-grey !important;
+    color: $text-color;
+
+    @each $item in 'radical', 'kanji', 'vocabulary' {
+        .last-item__characters--#{$item} {
+            @include character($item);
+        }
+    }
+
+    .last-item__readings, .last-item__meanings, .last-item__srs-level {
+        .last-item__label {
+            opacity: 0.4;
+        }
+
+        span {
+            color: inherit;
+        }
+    }
+}
 
 // information about the current item
 #information {
@@ -264,6 +272,10 @@ aside.wk-hint, aside.subject-hint {
     i {
         @extend %shadowless;
     }
+}
+
+.user-note__character-count i {
+    @extend %shadowless;
 }
 
 a.user-synonyms__button {
