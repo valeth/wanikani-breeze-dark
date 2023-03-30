@@ -254,10 +254,10 @@ button.reading-with-audio__control {
             color: $text-color !important;
         }
     }
+}
 
-    aside {
-        @extend %popup;
-    }
+aside.wk-hint {
+    @extend %popup;
 }
 
 a.user-synonyms__button {
