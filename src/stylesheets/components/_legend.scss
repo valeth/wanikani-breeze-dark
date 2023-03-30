@@ -1,4 +1,4 @@
-.legend {
+.subject-legend {
     @extend %section;
 
     @each $range in ('0-20', '21-40', '41-60', '61-80', '81-100') {
@@ -13,34 +13,38 @@
         }
     }
 
+    h3 i {
+        @extend %shadowless;
+    }
+
 
     ul {
         span {
             @extend %shadowless;
+            @extend %no-background-image;
 
+            color: $character-text-color;
             margin-left: 1vh !important;
             margin-right: 1vh !important;
 
-            &.all {
+            &.subject-legend__item-badge--all {
                 @include character('radical');
             }
 
-            &.burned {
-                @include srs-level('burned', $text-only: false);
-
-                color: $inverted-text-color !important;
+            &.subject-legend__item-badge--locked {
+                filter: brightness(0.20);
             }
 
+            // TODO: styling burned correctly seem impossible, because firefox doesn't support `:has(...)` by default
+            // &.subject-legend__item-badge--burned {
+            //     filter: brightness(0.50);
+            // }
+
             @each $type in ('radicals', 'kanji', 'vocabulary') {
-                &.#{$type} {
+                &.subject-legend__item-badge--#{$type} {
                     @include character($type);
                 }
             }
-        }
-
-        .locked {
-            @extend %locked;
-            @extend %no-background-color;
         }
     }
 

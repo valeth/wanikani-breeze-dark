@@ -14,7 +14,9 @@
     }
 }
 
-.recently-unlocked-item {
+.character-item__badge {
+    @extend %shadowless;
+
     color: $character-text-color !important;
 }
 
