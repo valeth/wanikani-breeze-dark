@@ -29,7 +29,7 @@ $alert-info-color: lighten($beware-orange, 10%);
 }
 
 // alert message on top of dashboard (below search bar)
-.system-alert,
+.dashboard .system-alert,
 .alert-where-user-scripts-cant-ignore {
     @extend %section;
     @extend %no-background-image;
@@ -41,8 +41,8 @@ $alert-info-color: lighten($beware-orange, 10%);
         color: inherit !important;
     }
 
-    h2, h3 {
-        border-bottom: 1px solid $separator-color !important;
+    a {
+        border-bottom-color: $inverted-text-color !important;
     }
 }
 
