@@ -16,17 +16,32 @@
     }
 }
 
-.highlight-reading {
+.highlight-reading, .reading-highlight {
     @extend %reading;
 }
 
-.highlight-meaning {
+.highlight-meaning, .meaning-highlight {
     @extend %meaning;
 }
 
 .highlight-reading,
-.highlight-meaning {
+.highlight-meaning,
+.reading-highlight,
+.meaning-highlight {
     > span {
         color: $text-color !important;
+    }
+}
+
+@each $item in radical, kanji, vocabulary, reading, meaning {
+    .highlight-#{$item}, .#{$item}-highlight {
+        &::before {
+            @extend %popover;
+            color: $text-color;
+        }
+
+        &::after {
+            border-top-color: $popover-background-color !important;
+        }
     }
 }
