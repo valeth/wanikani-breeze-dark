@@ -1,4 +1,4 @@
-.progress {
+.progress, .progress-bar {
     @extend %no-background-image;
 
     align-items: center !important;
@@ -6,8 +6,9 @@
     border-radius: 10px !important;
     box-shadow: $shadow-i !important;
     display: flex !important;
+    margin-bottom: 5px;
 
-    > .bar {
+    > .progress-bar__bar {
         @extend %no-background-image;
 
         background-color: $icon-blue !important;
@@ -15,32 +16,37 @@
         box-shadow: $shadow !important;
         height: 50% !important;
         margin: 5px !important;
-        opacity: 0.75 !important;
 
-        > span {
+        > .progress-bar__label {
             background-color: darken($iron-grey, 2%) !important;
             border-radius: 5px !important;
             box-shadow: $shadow !important;
             color: $text-color !important;
+            height: 20px;
+            top: -25px;
 
             &::after {
                 border-top-color: darken($iron-grey, 2%) !important;
             }
-        }
 
-        > .threshold {
-            box-shadow: 1px 0 0 $iron-grey !important;
-            color: $iron-grey !important;
-            height: 60% !important;
-            line-height: 110% !important;
-            opacity: 0.50 !important;
-        }
-
-        @each $type in $character-types {
-            [class*=#{$type}] & {
-                @include character($type);
+            &::before {
+                display: none;
             }
         }
+
+        // > .threshold {
+        //     box-shadow: 1px 0 0 $iron-grey !important;
+        //     color: $iron-grey !important;
+        //     height: 60% !important;
+        //     line-height: 110% !important;
+        //     opacity: 0.50 !important;
+        // }
+
+        // @each $type in $character-types {
+        //     [class*=#{$type}] & {
+        //         @include character($type);
+        //     }
+        // }
     }
 }
 

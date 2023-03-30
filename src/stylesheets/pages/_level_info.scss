@@ -20,7 +20,7 @@
     color: $character-text-color !important;
 }
 
-section[id|=level] {
+section.character-grid {
     @extend %section;
 
     padding: 10px;
