@@ -94,25 +94,29 @@
                 color: $text-color !important;
             }
         }
+
+        &-widget-content {
+            color: $popover-text-color;
+        }
     }
 }
 
-#reviews, #lessons {
-    #summary-button {
-        [class*="-icon"], li {
-            box-shadow: none !important;
-        }
+#turbo-body #scripts-menu {
+    ul {
+        background-color: $navbar-color !important;
+        color: $text-color !important;
+        z-index: 100;
+    }
 
-        li:not(.scripts-header) {
-            transition: background 0.2s;
+    li:not(.scripts-header) {
+        transition: background 0.2s;
 
-            &:hover {
-                background-color: $navbar-highlighted-item-background !important;
-            }
+        &:hover {
+            background-color: $navbar-highlighted-item-background !important;
         }
+    }
 
-        .dropdown-menu .dropdown-menu {
-            margin-left: 5px;
-        }
+    .dropdown-menu .dropdown-menu {
+        margin-left: 5px;
     }
 }
