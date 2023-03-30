@@ -9,6 +9,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *no notable changes*
 
+## [1.4.2] - 2023-03-30
+
+## Fixed
+
+- applied hint style more broadly to affect lessons
+- applied character composition style more broadly to affect other views
+- fixed tooltip styles for inline vocab/kanji/radical/reading/meaning
+- restored styling of the items in the "last 10" section
+- set SRS change's background to make it readable with color background
+- fixed WKOF menu styling during reviews
+- fixed styling of the dashboard alert
+- fixed footer image on item/level info pages
+- fixed navigation bar on item/level info pages
+- made it much clearer that items are locked
+- restored styling of the legend in item/level info pages
+- restored styling of level info sections and progress bars
+
 ## [1.4.1] - 2023-03-28
 
 ## Fixed
@@ -358,6 +375,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <!-- links -->
 
 [Unreleased]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/master
+[1.4.2]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.4.2
 [1.4.1]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.4.1
 [1.4.0]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.4.0
 [1.3.18]: https://gitlab.com/valeth/wanikani-breeze-dark/tree/1.3.18
