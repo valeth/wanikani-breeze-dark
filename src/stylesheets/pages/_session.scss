@@ -256,8 +256,14 @@ button.reading-with-audio__control {
     }
 }
 
-aside.wk-hint {
+aside.wk-hint, aside.subject-hint {
     @extend %popup;
+
+    margin-right: 2px;
+
+    i {
+        @extend %shadowless;
+    }
 }
 
 a.user-synonyms__button {
