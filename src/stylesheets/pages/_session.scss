@@ -105,7 +105,7 @@ button.reading-with-audio__control {
 @each $x in 'true', 'false' {
     .character-header__srs-container[data-went-up="#{$x}"] {
         .character-header__srs-content {
-            @extend %no-background-color;
+            background-color: $shade-black;
             color: progress-color($x) !important;
 
             i, div {
