@@ -231,14 +231,12 @@ button.reading-with-audio__control {
         }
     }
 
-    .last-item__readings, .last-item__meanings, .last-item__srs-level {
-        .last-item__label {
-            opacity: 0.4;
-        }
+    .last-item__label {
+        opacity: 0.4;
+    }
 
-        span {
-            color: inherit;
-        }
+    .last-item__value {
+        color: inherit;
     }
 }
 

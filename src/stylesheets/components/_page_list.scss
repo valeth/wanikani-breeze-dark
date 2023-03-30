@@ -2,8 +2,8 @@
     @extend %section;
 
     .page-list-header, .page-nav__header {
-        width: 110px !important;
         padding-left: 20px;
+        width: 110px !important;
 
         span {
             @extend %borderless;

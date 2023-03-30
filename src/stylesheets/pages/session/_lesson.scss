@@ -61,12 +61,6 @@
     }
 }
 
-.subject-character {
-    span {
-        color: $text-color;
-    }
-}
-
 // icons for batch list, breakdown and examples
 .subject-character {
     @each $item in radical, kanji, vocabulary {
@@ -74,6 +68,10 @@
             @extend %icon;
             @include character($item);
         }
+    }
+
+    .subject-character__meaning {
+        color: $text-color;
     }
 }
 
